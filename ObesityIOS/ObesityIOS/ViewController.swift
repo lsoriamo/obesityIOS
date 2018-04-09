@@ -14,7 +14,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FirebaseApp.configure();
+//        FirebaseApp.configure();
         var ref = Database.database().reference();
         ref.child("users/2IaSdrayoQStcjVXT2g01i0ebrl2/info")
     }
