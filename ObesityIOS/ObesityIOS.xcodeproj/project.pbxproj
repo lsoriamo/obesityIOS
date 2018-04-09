@@ -16,6 +16,9 @@
 		7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7421C0FA207B55210026CCE2 /* LaunchScreen.storyboard */; };
 		7421C107207B55210026CCE2 /* ObesityIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421C106207B55210026CCE2 /* ObesityIOSTests.swift */; };
 		7421C112207B55210026CCE2 /* ObesityIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421C111207B55210026CCE2 /* ObesityIOSUITests.swift */; };
+		742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
+		742635DD207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
+		742635DE207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		7ABEF75862D8E22257A3DFE8 /* Pods_ObesityIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0E543DB86250DBB297CF5 /* Pods_ObesityIOS.framework */; };
 		C589376558DACD9236E0552A /* Pods_ObesityIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -58,6 +61,7 @@
 		7421C10D207B55210026CCE2 /* ObesityIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObesityIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7421C111207B55210026CCE2 /* ObesityIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObesityIOSUITests.swift; sourceTree = "<group>"; };
 		7421C113207B55210026CCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		742635DB207B612C006D0A83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8C059F409F51344FBA497CFF /* Pods-ObesityIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSUITests/Pods-ObesityIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObesityIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7344AC18A39243DE2E1E80B /* Pods-ObesityIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSTests/Pods-ObesityIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		7421C0ED207B551D0026CCE2 /* ObesityIOS */ = {
 			isa = PBXGroup;
 			children = (
+				742635DB207B612C006D0A83 /* GoogleService-Info.plist */,
 				7421C0EE207B551D0026CCE2 /* AppDelegate.swift */,
 				7421C0F0207B551D0026CCE2 /* ViewController.swift */,
 				7421C0F2207B551D0026CCE2 /* Main.storyboard */,
@@ -277,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */,
+				742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
 				7421C0F9207B55210026CCE2 /* Assets.xcassets in Resources */,
 				7421C0F4207B551D0026CCE2 /* Main.storyboard in Resources */,
 			);
@@ -286,6 +292,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742635DD207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +300,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742635DE207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -564,7 +572,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -579,7 +590,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOS;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -595,7 +609,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -612,7 +630,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -628,7 +650,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -644,7 +670,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
