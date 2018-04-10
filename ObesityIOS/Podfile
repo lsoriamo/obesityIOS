@@ -12,6 +12,7 @@ target 'ObesityIOS' do
   pod 'Firebase/Crash'
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
+  pod 'GoogleSignIn'
 
   target 'ObesityIOSTests' do
     inherit! :search_paths
