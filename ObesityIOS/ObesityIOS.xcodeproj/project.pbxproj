@@ -17,9 +17,9 @@
 		74178BE7207CDB8300E0BAC3 /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 74178BE6207CDB8200E0BAC3 /* logo_complete.png */; };
 		74178BE8207CDB8300E0BAC3 /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 74178BE6207CDB8200E0BAC3 /* logo_complete.png */; };
 		74178BE9207CDB8300E0BAC3 /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 74178BE6207CDB8200E0BAC3 /* logo_complete.png */; };
+		741DE0DF207DF79400F0EFB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741DE0DD207DF79400F0EFB9 /* Main.storyboard */; };
 		7421C0EF207B551D0026CCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421C0EE207B551D0026CCE2 /* AppDelegate.swift */; };
 		7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421C0F0207B551D0026CCE2 /* ViewController.swift */; };
-		7421C0F4207B551D0026CCE2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7421C0F2207B551D0026CCE2 /* Main.storyboard */; };
 		7421C0F7207B551D0026CCE2 /* ObesityIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7421C0F5207B551D0026CCE2 /* ObesityIOS.xcdatamodeld */; };
 		7421C0F9207B55210026CCE2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7421C0F8207B55210026CCE2 /* Assets.xcassets */; };
 		7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7421C0FA207B55210026CCE2 /* LaunchScreen.storyboard */; };
@@ -59,10 +59,10 @@
 		74178BD8207CAFB000E0BAC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		74178BDC207CAFC700E0BAC3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		74178BE6207CDB8200E0BAC3 /* logo_complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_complete.png; sourceTree = "<group>"; };
+		741DE0DE207DF79400F0EFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7421C0EB207B551D0026CCE2 /* ObesityIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObesityIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7421C0EE207B551D0026CCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7421C0F0207B551D0026CCE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7421C0F3207B551D0026CCE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7421C0F6207B551D0026CCE2 /* ObesityIOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ObesityIOS.xcdatamodel; sourceTree = "<group>"; };
 		7421C0F8207B55210026CCE2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7421C0FB207B55210026CCE2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -180,7 +180,7 @@
 				742635DB207B612C006D0A83 /* GoogleService-Info.plist */,
 				7421C0EE207B551D0026CCE2 /* AppDelegate.swift */,
 				7421C0F0207B551D0026CCE2 /* ViewController.swift */,
-				7421C0F2207B551D0026CCE2 /* Main.storyboard */,
+				741DE0DD207DF79400F0EFB9 /* Main.storyboard */,
 				7421C0F8207B55210026CCE2 /* Assets.xcassets */,
 				7421C0FA207B55210026CCE2 /* LaunchScreen.storyboard */,
 				7421C0FD207B55210026CCE2 /* Info.plist */,
@@ -330,10 +330,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				74178BE7207CDB8300E0BAC3 /* logo_complete.png in Resources */,
+				741DE0DF207DF79400F0EFB9 /* Main.storyboard in Resources */,
 				7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */,
 				742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
 				7421C0F9207B55210026CCE2 /* Assets.xcassets in Resources */,
-				7421C0F4207B551D0026CCE2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,10 +509,10 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7421C0F2207B551D0026CCE2 /* Main.storyboard */ = {
+		741DE0DD207DF79400F0EFB9 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				7421C0F3207B551D0026CCE2 /* Base */,
+				741DE0DE207DF79400F0EFB9 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -653,7 +653,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = reto.obesidad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -671,7 +671,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOS;
+				PRODUCT_BUNDLE_IDENTIFIER = reto.obesidad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
