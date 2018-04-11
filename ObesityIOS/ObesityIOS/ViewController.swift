@@ -71,14 +71,26 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
             user.email = email
             user.passhash = pass
             
-            Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
-                
+//            Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+//
+//                if let error = error {
+//                    print("ERROR: \(error)")
+//                    return
+//                }
+//                // Creando un elemento de Alert (Dialog en Android)
+//                let alert = UIAlertController(title: "BIEN", message: "Login correcto", preferredStyle: UIAlertControllerStyle.alert)
+//                alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//                // <-- Fin de Alert -->
+//            }
+            
+            Auth.auth().signIn(withEmail: email, password: pass) { (user, error) in
                 if let error = error {
-                    print("ERROR")
+                    print("ERROR: \(error)")
                     return
                 }
                 // Creando un elemento de Alert (Dialog en Android)
-                let alert = UIAlertController(title: "BIEN", message: "Login correcto", preferredStyle: UIAlertControllerStyle.alert)
+                let alert = UIAlertController(title: "LOGIN CORRECTO", message: "Acceso concedido", preferredStyle: UIAlertControllerStyle.alert)
                 alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
                 self.present(alert, animated: true, completion: nil)
                 // <-- Fin de Alert -->
@@ -88,22 +100,21 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
     }
     
     // TODO Por acabar
-    @IBAction func btnAccessGoogleAccount(_ sender: Any) {
-        let user:User = User()
-        
-        user.email = email
-        user.passhash = pass
-        
-        Auth.auth().signIn(with: credential) { (user, error) in
-            if let error = error {
-                // ...
-                return
-            }
-            // User is signed in
-            // ...
-        }
-    }
-    }
+//    @IBAction func btnAccessGoogleAccount(_ sender: Any) {
+//        let user:User = User()
+//
+//        user.email = email
+//        user.passhash = pass
+//
+//        Auth.auth().signIn(with: credential) { (user, error) in
+//            if let error = error {
+//                // ...
+//                return
+//            }
+//            // User is signed in
+//            // ...
+//        }
+//    }
     
 }
 
