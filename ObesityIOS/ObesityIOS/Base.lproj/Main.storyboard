@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_0" orientation="portrait">
+    <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,32 +15,45 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="H2O-0U-mKh">
-                                <rect key="frame" x="16" y="20" width="288" height="134"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="La confianza de un médico y el apoyo de un familiar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxq-TU-eNQ">
-                                <rect key="frame" x="16" y="162" width="288" height="16"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeW-A0-U8j">
-                                <rect key="frame" x="16" y="206" width="288" height="30"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8SH-73-LxK">
+                                <rect key="frame" x="16" y="12" width="382" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_complete.png" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NTK-aM-59I">
+                                        <rect key="frame" x="8" y="16" width="374" height="95"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="La confianza de un médico y el apoyo de un familiar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxq-TU-eNQ">
+                                        <rect key="frame" x="8" y="119" width="374" height="43"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
+                                        <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeW-A0-U8j">
+                                <rect key="frame" x="16" y="182" width="382" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="8" bottom="8" trailing="8"/>
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-Da-sJf">
-                                <rect key="frame" x="16" y="244" width="288" height="30"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-Da-sJf">
+                                <rect key="frame" x="16" y="220" width="382" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-jL-7wD">
-                                <rect key="frame" x="16" y="370" width="288" height="30"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-jL-7wD">
+                                <rect key="frame" x="16" y="258" width="382" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <color key="backgroundColor" red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Acceder con usuario y contraseña"/>
@@ -48,51 +61,27 @@
                                     <action selector="btnAccessUserAccount:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXC-qC-Cvp"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-4p-pRR" customClass="GIDSignInButton">
-                                <rect key="frame" x="16" y="408" width="288" height="36"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-5d-tKc">
-                                <rect key="frame" x="16" y="452" width="288" height="28"/>
+                            <button opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-5d-tKc">
+                                <rect key="frame" x="16" y="383" width="382" height="28"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
                                 <state key="normal" title="¿Aún no eres usuario de Preobar? Pulse aquí para registrarte">
                                     <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZMU-4p-pRR" customClass="GIDSignInButton">
+                                <rect key="frame" x="16" y="296" width="382" height="30"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ZMU-4p-pRR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="6Ty-D9-2fE"/>
-                            <constraint firstAttribute="trailing" secondItem="C0H-Da-sJf" secondAttribute="trailing" constant="16" id="8hK-9P-AIx"/>
-                            <constraint firstItem="C0H-Da-sJf" firstAttribute="top" secondItem="GeW-A0-U8j" secondAttribute="bottom" constant="8" id="9ga-1n-kdX"/>
-                            <constraint firstItem="bxq-TU-eNQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="APC-2t-wpo"/>
-                            <constraint firstItem="bxq-TU-eNQ" firstAttribute="top" secondItem="H2O-0U-mKh" secondAttribute="bottom" constant="8" id="B33-e0-dOA"/>
-                            <constraint firstItem="oYT-5d-tKc" firstAttribute="top" secondItem="ZMU-4p-pRR" secondAttribute="bottom" constant="8" id="D5Z-si-wTQ"/>
-                            <constraint firstItem="oPZ-jL-7wD" firstAttribute="top" secondItem="C0H-Da-sJf" secondAttribute="bottom" constant="96" id="EJc-eb-UFF"/>
-                            <constraint firstItem="C0H-Da-sJf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Eti-ol-Keu"/>
-                            <constraint firstAttribute="trailing" secondItem="bxq-TU-eNQ" secondAttribute="trailing" constant="16" id="Fbu-PQ-xzn"/>
-                            <constraint firstItem="GeW-A0-U8j" firstAttribute="top" secondItem="bxq-TU-eNQ" secondAttribute="bottom" constant="28" id="Kcl-tt-e5T"/>
-                            <constraint firstAttribute="trailing" secondItem="oYT-5d-tKc" secondAttribute="trailing" constant="16" id="M4S-yt-yBl"/>
-                            <constraint firstAttribute="trailing" secondItem="GeW-A0-U8j" secondAttribute="trailing" constant="16" id="NNP-6F-YxU"/>
-                            <constraint firstItem="oYT-5d-tKc" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="16" id="ZZi-9e-aFL"/>
-                            <constraint firstItem="bxq-TU-eNQ" firstAttribute="top" secondItem="H2O-0U-mKh" secondAttribute="bottom" constant="8" id="Zyf-LP-XD2"/>
-                            <constraint firstItem="GeW-A0-U8j" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="afy-Uj-IvR"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="H2O-0U-mKh" secondAttribute="trailing" constant="16" id="amf-qg-PVY"/>
-                            <constraint firstItem="H2O-0U-mKh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="cWS-Yt-TJQ"/>
-                            <constraint firstItem="oPZ-jL-7wD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="d4h-CO-dMP"/>
-                            <constraint firstAttribute="trailing" secondItem="ZMU-4p-pRR" secondAttribute="trailing" constant="16" id="f88-0k-pc3"/>
-                            <constraint firstItem="C0H-Da-sJf" firstAttribute="top" secondItem="GeW-A0-U8j" secondAttribute="bottom" constant="8" id="hUa-Yo-pxz"/>
-                            <constraint firstItem="oYT-5d-tKc" firstAttribute="top" secondItem="ZMU-4p-pRR" secondAttribute="bottom" constant="8" id="nfM-mE-xUE"/>
-                            <constraint firstAttribute="trailing" secondItem="oPZ-jL-7wD" secondAttribute="trailing" constant="16" id="oeo-Za-NwF"/>
-                            <constraint firstItem="ZMU-4p-pRR" firstAttribute="top" secondItem="oPZ-jL-7wD" secondAttribute="bottom" constant="8" id="tdW-Ax-Qn1"/>
-                            <constraint firstItem="GeW-A0-U8j" firstAttribute="top" secondItem="bxq-TU-eNQ" secondAttribute="bottom" constant="28" id="tx5-pC-pMF"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oYT-5d-tKc" secondAttribute="bottom" constant="44" id="zNI-wl-BBQ"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <toolbarItems/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="btnGoSignUp" destination="oYT-5d-tKc" id="RJu-j9-Kvd"/>
                         <outlet property="btnGoogleAccount" destination="ZMU-4p-pRR" id="vMH-8G-i9g"/>
                         <outlet property="tfEmail" destination="GeW-A0-U8j" id="Nax-3e-xH6"/>
                         <outlet property="tfPass" destination="C0H-Da-sJf" id="uhc-PW-N2u"/>
@@ -100,7 +89,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="135" y="133.09859154929578"/>
+            <point key="canvasLocation" x="129.375" y="128.75"/>
         </scene>
     </scenes>
     <resources>
