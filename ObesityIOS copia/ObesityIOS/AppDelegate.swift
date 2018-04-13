@@ -78,7 +78,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let photoUrl = user.profile.imageURL(withDimension: 120)
             
             
-            let stringPhotoUrl:String = try! String(contentsOf: photoUrl!)
+            let stringPhotoUrl:String = try! photoUrl!.absoluteString
             
             print("Nombre usuario: \(givenName!), email: \(email!), familyName: \(familyName!), displayName: \(displayName!), photoUrl: \(stringPhotoUrl), userId \(userId!)")
             

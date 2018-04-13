@@ -18,6 +18,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
     @IBOutlet weak var tfPass: UITextField!
     @IBOutlet weak var btnGoogleAccount: GIDSignInButton!
     @IBOutlet weak var btnGoSignUp: UIButton!
+    @IBOutlet weak var btnSignIn: UIButton!
+    
+    var handle: AuthStateDidChangeListenerHandle?
     
     var email: String = ""
     var pass: String = ""
@@ -37,6 +40,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         
         // TODO(developer) Configure the sign-in button look/feel
         // ...
+        
+        btnSignIn.layer.cornerRadius = 5
         
         btnGoSignUp.titleLabel?.textAlignment = NSTextAlignment.center
         
@@ -88,11 +93,16 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
                     
                     return
                 }
-                // Creando un elemento de Alert (Dialog en Android)
-                let alert = UIAlertController(title: "LOGIN CORRECTO", message: "Acceso concedido", preferredStyle: UIAlertControllerStyle.alert)
-                alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
-                self.present(alert, animated: true, completion: nil)
-                // <-- Fin de Alert -->
+//                // Creando un elemento de Alert (Dialog en Android)
+//                let alert = UIAlertController(title: "LOGIN CORRECTO", message: "Acceso concedido", preferredStyle: UIAlertControllerStyle.alert)
+//                alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
+//                self.present(alert, animated: true, completion: nil)
+//                // <-- Fin de Alert -->
+                
+                self.performSegue(withIdentifier: "segueWelcomeView", sender: self.email)
+                
+                
+                
             }
         }
         
@@ -104,6 +114,38 @@ class ViewController: UIViewController, GIDSignInUIDelegate{
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
         return emailTest.evaluate(with: emailToCheck)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "segueWelcomeView" {
+            let emailRecibido = sender as! String
+            
+            let objWelcomeView: WelcomeViewController = segue.destination as! WelcomeViewController
+            
+            objWelcomeView.emailWelcomeRecibido = emailRecibido
+        }
+    }
+    
+    
+    /*En cada una de las vistas de tu app que necesitan información sobre el usuario que accedió,
+     adjunta un agente de escucha al objeto FIRAuth.
+     Se llamará a este agente de escucha cada vez que cambie el estado de acceso del usuario.*/
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        handle = Auth.auth().addStateDidChangeListener { (auth, user) in
+            // [START_EXCLUDE]
+            // AQUÍ VA EL CÓDIGO
+            // [END_EXCLUDE]
+        }
+    }
+    
+    //Además, desvincula el agente de escucha del método viewWillDisappear del controlador de vista:
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // [START remove_auth_listener]
+        Auth.auth().removeStateDidChangeListener(handle!)
+        // [END remove_auth_listener]
     }
     
     //  <-- SNIP DE CÓDIGO PARA CREACIÓN DE USUARIO
