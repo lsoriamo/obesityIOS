@@ -13,7 +13,7 @@ import Firebase
 import GoogleSignIn
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
 
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         // Logueo con cuenta de Google
         GIDSignIn.sharedInstance().clientID = "621839903093-hjt7a5djm54cp94m75edt4vas814h54v.apps.googleusercontent.com"
-        GIDSignIn.sharedInstance().delegate = self
+//        GIDSignIn.sharedInstance().delegate = self
         return true
     }
     
@@ -57,40 +57,40 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
                                                     annotation: annotation)
     }
     
-    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
-        if let error = error {
-            print("\(error.localizedDescription)")
-        } else {
-            // Perform any operations on signed in user here.
-//            let userId = user.userID                  // For client-side use only!
-//            let idToken = user.authentication.idToken // Safe to send to the server
-//            let fullName = user.profile.name
+//    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+//        if let error = error {
+//            print("\(error.localizedDescription)")
+//        } else {
+//            // Perform any operations on signed in user here.
+////            let userId = user.userID                  // For client-side use only!
+////            let idToken = user.authentication.idToken // Safe to send to the server
+////            let fullName = user.profile.name
+////            let givenName = user.profile.givenName
+////            let familyName = user.profile.familyName
+////            let email = user.profile.email
+//            // ...
+//
 //            let givenName = user.profile.givenName
 //            let familyName = user.profile.familyName
+//            let displayName = user.profile.name
 //            let email = user.profile.email
-            // ...
-            
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let displayName = user.profile.name
-            let email = user.profile.email
-            let userId = user.userID
-            let photoUrl = user.profile.imageURL(withDimension: 120)
-            
-            
-            let stringPhotoUrl:String = try! String(contentsOf: photoUrl!)
-            
-            print("Nombre usuario: \(givenName!), email: \(email!), familyName: \(familyName!), displayName: \(displayName!), photoUrl: \(stringPhotoUrl), userId \(userId!)")
-            
-            let user:User = User(iduser: userId!, name: givenName!, surname: familyName!, nickname: displayName!, passhash: "", email: email!, image: stringPhotoUrl, sex: 1, profesion: "", phone: "")
-        }
-    }
+//            let userId = user.userID
+//            let photoUrl = user.profile.imageURL(withDimension: 120)
+//
+//
+//            let stringPhotoUrl:String = try! photoUrl!.absoluteString
+//
+//            print("Nombre usuario: \(givenName!), email: \(email!), familyName: \(familyName!), displayName: \(displayName!), photoUrl: \(stringPhotoUrl), userId \(userId!)")
+//
+//            let user:User = User(iduser: userId!, name: givenName!, surname: familyName!, nickname: displayName!, passhash: "", email: email!, image: stringPhotoUrl, sex: 1, profesion: "", phone: "")
+//        }
+//    }
     
-    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
-              withError error: Error!) {
-        // Perform any operations when the user disconnects from app here.
-        // ...
-    }
+//    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!,
+//              withError error: Error!) {
+//        // Perform any operations when the user disconnects from app here.
+//        // ...
+//    }
 
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.

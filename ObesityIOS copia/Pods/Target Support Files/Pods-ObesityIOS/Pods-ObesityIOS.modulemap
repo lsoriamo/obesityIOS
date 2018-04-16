@@ -1,6 +1,0 @@
-framework module Pods_ObesityIOS {
-  umbrella header "Pods-ObesityIOS-umbrella.h"
-
-  export *
-  module * { export * }
-}
