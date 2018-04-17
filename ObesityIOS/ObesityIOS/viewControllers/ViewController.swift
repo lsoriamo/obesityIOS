@@ -27,6 +27,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     var email: String = ""
     var pass: String = ""
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setToolbarHidden(true, animated: false)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,7 +70,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             email = user.profile.email
             
             
-            self.performSegue(withIdentifier: "segueWelcomeView", sender: self.email)
+            self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: self.email)
         }
     }
     
@@ -114,7 +118,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                     return
                 }
                 
-                self.performSegue(withIdentifier: "segueWelcomeView", sender: self.email)
+                self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: self.email)
                 
                 
                 
@@ -136,10 +140,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "segueWelcomeView" {
+        if segue.identifier == "WelcomeAssistantSegue" {
             let emailRecibido = sender as! String
             
-            let objWelcomeView: WelcomeViewController = segue.destination as! WelcomeViewController
+            let objWelcomeView: WelcomeAssistantViewController = segue.destination as! WelcomeAssistantViewController
             
             objWelcomeView.emailWelcomeRecibido = emailRecibido
         }
