@@ -131,7 +131,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1125" y="127.8169014084507"/>
+            <point key="canvasLocation" x="878" y="128"/>
         </scene>
         <!--Welcome Assistant View Controller-->
         <scene sceneID="tBr-ZW-wCO">
@@ -157,19 +157,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="vJz-C7-MBt">
-                                <rect key="frame" x="16" y="163" width="288" height="192"/>
+                                <rect key="frame" x="16" y="171" width="288" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="SeU-wx-s8n"/>
                                 </constraints>
                                 <string key="text">Antes de empezar a usar la aplicación, necesitamos conocer algunos datos sobre ti. A continuación, te pediremos que contestes a una serie de preguntas que nos ayudarán a tomar las mejores decisiones con el objetivo de preparate lo mejor posible para la intervención. Recuerda que esta aplicación te ayudará a controlar diversos aspectos esenciales antes de la cirugía, pero tí eres el único que puede hacer que todo sea un gran éxito. Serán unos días duros, pero la recompensa será  maravillosa.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Ánimo! Estamos seguros de que lo conseguirás" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="YaM-Si-h8H">
-                                <rect key="frame" x="16" y="363" width="288" height="16"/>
+                                <rect key="frame" x="16" y="371" width="288" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OCv-O2-nOR">
@@ -182,11 +182,15 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Cerrar sesión"/>
+                                <connections>
+                                    <action selector="actionBtnCerrarSesionAssistant:" destination="DcO-B5-fhW" eventType="touchUpInside" id="mMa-Tt-fOg"/>
+                                    <action selector="actionBtnSignOut:" destination="DcO-B5-fhW" eventType="touchUpInside" id="MyZ-cT-eP1"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Te has confundido al iniciar sesión?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="eiB-Kd-f4h">
                                 <rect key="frame" x="16" y="446" width="288" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -208,7 +212,7 @@
                             <constraint firstItem="Zu2-lq-oqE" firstAttribute="top" secondItem="eiB-Kd-f4h" secondAttribute="bottom" constant="8" id="WhF-aJ-yiP"/>
                             <constraint firstItem="qHZ-Sn-PbG" firstAttribute="trailing" secondItem="bld-d6-21T" secondAttribute="trailing" id="Xgq-X6-oaz"/>
                             <constraint firstItem="OCv-O2-nOR" firstAttribute="top" secondItem="Zu2-lq-oqE" secondAttribute="bottom" constant="24" id="b67-pr-78m"/>
-                            <constraint firstItem="vJz-C7-MBt" firstAttribute="top" secondItem="6qd-iz-rdT" secondAttribute="bottom" constant="8" id="bY7-YM-FYo"/>
+                            <constraint firstItem="vJz-C7-MBt" firstAttribute="top" secondItem="6qd-iz-rdT" secondAttribute="bottom" constant="16" id="bY7-YM-FYo"/>
                             <constraint firstItem="Zu2-lq-oqE" firstAttribute="leading" secondItem="bld-d6-21T" secondAttribute="leading" constant="16" id="drz-pT-JKR"/>
                             <constraint firstItem="bld-d6-21T" firstAttribute="trailing" secondItem="HnL-Lk-X6A" secondAttribute="trailing" constant="16" id="eGD-iQ-SZ7"/>
                             <constraint firstItem="vJz-C7-MBt" firstAttribute="leading" secondItem="bld-d6-21T" secondAttribute="leading" constant="16" id="eWi-6t-bqi"/>
@@ -222,13 +226,330 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="pga-YL-9Lh"/>
-                        <barButtonItem title="Siguiente" style="plain" id="Q5G-t5-OSr"/>
+                        <barButtonItem title="Siguiente" style="plain" id="Q5G-t5-OSr">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="DcO-B5-fhW" id="zk2-ST-9p1"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="progressBarWelcome" destination="OCv-O2-nOR" id="92p-Ll-jX2"/>
+                        <segue destination="Zcb-z6-i0t" kind="show" identifier="toNombreApellidosAssistantSegue" id="tvh-NF-Lj7"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginSignOutSegue" id="vEP-5c-qNM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hW-Zl-r7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1880.625" y="127.8169014084507"/>
+            <point key="canvasLocation" x="1643" y="128"/>
+        </scene>
+        <!--Nombre Apellidos Assistant Controller-->
+        <scene sceneID="fei-ci-P3z">
+            <objects>
+                <viewController id="Zcb-z6-i0t" customClass="NombreApellidosAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Aav-UP-ubF" customClass="WelcomeAssistant">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-ds-3rE">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinos tu nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lpk-Vl-2g0">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aún no estamos seguros de cómo te llamas. Por favor, dinos tu nombre para personalizar al máximo la experiencia con Preobar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="V28-2k-iXM">
+                                <rect key="frame" x="16" y="105" width="288" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-1z-8Ha">
+                                <rect key="frame" x="16" y="222" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-ps-SvG">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Jd-NC-BmT">
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="OQS-LH-Yjn" firstAttribute="trailing" secondItem="3Jd-NC-BmT" secondAttribute="trailing" constant="16" id="18L-sn-fKX"/>
+                            <constraint firstItem="3Jd-NC-BmT" firstAttribute="leading" secondItem="OQS-LH-Yjn" secondAttribute="leading" constant="16" id="8iX-jO-ON4"/>
+                            <constraint firstItem="V28-2k-iXM" firstAttribute="leading" secondItem="OQS-LH-Yjn" secondAttribute="leading" constant="16" id="Epz-2a-VjM"/>
+                            <constraint firstItem="BiA-1z-8Ha" firstAttribute="top" secondItem="3Jd-NC-BmT" secondAttribute="bottom" constant="8" id="Hwc-lQ-dlO"/>
+                            <constraint firstItem="U9P-ps-SvG" firstAttribute="leading" secondItem="Aav-UP-ubF" secondAttribute="leadingMargin" constant="16" id="JRg-eE-bji"/>
+                            <constraint firstItem="lpk-Vl-2g0" firstAttribute="top" secondItem="OQS-LH-Yjn" secondAttribute="top" constant="32" id="JeZ-uG-eQS"/>
+                            <constraint firstItem="Sed-ds-3rE" firstAttribute="top" secondItem="OQS-LH-Yjn" secondAttribute="top" id="U55-T0-MyB"/>
+                            <constraint firstItem="OQS-LH-Yjn" firstAttribute="trailing" secondItem="lpk-Vl-2g0" secondAttribute="trailing" constant="16" id="V1l-4w-6De"/>
+                            <constraint firstItem="lpk-Vl-2g0" firstAttribute="leading" secondItem="OQS-LH-Yjn" secondAttribute="leading" constant="16" id="WuL-fJ-Ukc"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="U9P-ps-SvG" secondAttribute="trailing" constant="16" id="XtV-nr-Eei"/>
+                            <constraint firstItem="Sed-ds-3rE" firstAttribute="trailing" secondItem="OQS-LH-Yjn" secondAttribute="trailing" id="Yzg-ri-FG6"/>
+                            <constraint firstItem="3Jd-NC-BmT" firstAttribute="top" secondItem="V28-2k-iXM" secondAttribute="bottom" constant="32" id="aUH-Fw-c7V"/>
+                            <constraint firstItem="V28-2k-iXM" firstAttribute="top" secondItem="lpk-Vl-2g0" secondAttribute="bottom" constant="32" id="brP-gh-Lj5"/>
+                            <constraint firstItem="Sed-ds-3rE" firstAttribute="leading" secondItem="OQS-LH-Yjn" secondAttribute="leading" id="hL1-Gw-erL"/>
+                            <constraint firstItem="Sed-ds-3rE" firstAttribute="bottom" secondItem="OQS-LH-Yjn" secondAttribute="bottom" id="puI-vL-Hiy"/>
+                            <constraint firstItem="OQS-LH-Yjn" firstAttribute="trailing" secondItem="V28-2k-iXM" secondAttribute="trailing" constant="16" id="tGY-c8-bev"/>
+                            <constraint firstItem="OQS-LH-Yjn" firstAttribute="bottom" secondItem="U9P-ps-SvG" secondAttribute="bottom" constant="16" id="tql-80-jwG"/>
+                            <constraint firstItem="OQS-LH-Yjn" firstAttribute="trailing" secondItem="BiA-1z-8Ha" secondAttribute="trailing" constant="16" id="vj0-Xx-kaZ"/>
+                            <constraint firstItem="BiA-1z-8Ha" firstAttribute="leading" secondItem="OQS-LH-Yjn" secondAttribute="leading" constant="16" id="vpe-hf-KCl"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="OQS-LH-Yjn"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="HTT-lr-0V1">
+                            <connections>
+                                <segue destination="DcO-B5-fhW" kind="show" id="6t0-yY-R2F"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GCf-kX-CKN"/>
+                        <barButtonItem title="Siguiente" id="5Kh-rB-WXr">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="Zcb-z6-i0t" id="YUa-eP-6Cx"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tfApellidos" destination="BiA-1z-8Ha" id="Awu-1x-s0u"/>
+                        <outlet property="tfNombre" destination="3Jd-NC-BmT" id="vkY-6P-ksl"/>
+                        <segue destination="UgB-DL-Crz" kind="show" identifier="toTelefonoAssistantSegue" id="VWQ-dK-R1d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saE-GL-oBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2387" y="128"/>
+        </scene>
+        <!--Telefono Assistant Controller-->
+        <scene sceneID="K0n-29-0pe">
+            <objects>
+                <viewController id="UgB-DL-Crz" customClass="TelefonoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fML-2u-RcQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sia-eb-217">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nos puedes dar tu teléfono" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-s8-ib6">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si quieres, puedes indicarnos tu número de teléfono para que el médico pueda contactar contigo sólo si es necesario" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="fKK-Uz-qr2">
+                                <rect key="frame" x="16" y="105" width="288" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-Ca-Zas">
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-SY-ZY1">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Sia-eb-217" firstAttribute="trailing" secondItem="yfS-h7-wg2" secondAttribute="trailing" id="0av-Ou-BMS"/>
+                            <constraint firstItem="Sia-eb-217" firstAttribute="bottom" secondItem="yfS-h7-wg2" secondAttribute="bottom" id="2p2-Ze-X5j"/>
+                            <constraint firstItem="pEn-Ca-Zas" firstAttribute="leading" secondItem="yfS-h7-wg2" secondAttribute="leading" constant="16" id="67U-7I-diC"/>
+                            <constraint firstItem="nBr-SY-ZY1" firstAttribute="leading" secondItem="fML-2u-RcQ" secondAttribute="leadingMargin" constant="16" id="9Sg-bN-SeQ"/>
+                            <constraint firstItem="Sia-eb-217" firstAttribute="top" secondItem="yfS-h7-wg2" secondAttribute="top" id="AG1-gv-J2d"/>
+                            <constraint firstItem="yfS-h7-wg2" firstAttribute="trailing" secondItem="pEn-Ca-Zas" secondAttribute="trailing" constant="16" id="B7Q-aU-38s"/>
+                            <constraint firstItem="yfS-h7-wg2" firstAttribute="trailing" secondItem="9cG-s8-ib6" secondAttribute="trailing" constant="16" id="LTD-XM-qi9"/>
+                            <constraint firstItem="fKK-Uz-qr2" firstAttribute="top" secondItem="9cG-s8-ib6" secondAttribute="bottom" constant="32" id="P1c-Ax-god"/>
+                            <constraint firstItem="pEn-Ca-Zas" firstAttribute="top" secondItem="fKK-Uz-qr2" secondAttribute="bottom" constant="32" id="XX8-u2-2pH"/>
+                            <constraint firstItem="fKK-Uz-qr2" firstAttribute="leading" secondItem="yfS-h7-wg2" secondAttribute="leading" constant="16" id="YXs-YJ-IE2"/>
+                            <constraint firstItem="Sia-eb-217" firstAttribute="leading" secondItem="yfS-h7-wg2" secondAttribute="leading" id="aM7-ud-sxQ"/>
+                            <constraint firstItem="9cG-s8-ib6" firstAttribute="leading" secondItem="yfS-h7-wg2" secondAttribute="leading" constant="16" id="il9-vV-zF4"/>
+                            <constraint firstItem="9cG-s8-ib6" firstAttribute="top" secondItem="yfS-h7-wg2" secondAttribute="top" constant="32" id="n5m-Kc-i7u"/>
+                            <constraint firstItem="yfS-h7-wg2" firstAttribute="trailing" secondItem="fKK-Uz-qr2" secondAttribute="trailing" constant="16" id="ndk-80-WSg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nBr-SY-ZY1" secondAttribute="trailing" constant="16" id="nqP-Ub-ttR"/>
+                            <constraint firstItem="yfS-h7-wg2" firstAttribute="bottom" secondItem="nBr-SY-ZY1" secondAttribute="bottom" constant="16" id="o5o-Cc-TFJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yfS-h7-wg2"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="dmN-zw-F5M">
+                            <connections>
+                                <segue destination="Zcb-z6-i0t" kind="show" id="jWo-3I-zEV"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="8yh-NH-6Fw"/>
+                        <barButtonItem title="Siguiente" id="RLp-rc-Msh">
+                            <connections>
+                                <action selector="actionBtnSiguienteTelefono:" destination="UgB-DL-Crz" id="3Mt-4v-xpY"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tfTelefono" destination="pEn-Ca-Zas" id="dUa-gC-tPy"/>
+                        <segue destination="S8D-7k-wL7" kind="show" identifier="toSexoAssistantSegue" id="AUM-Yv-7dE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fx7-0s-BN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3110.625" y="129.92957746478874"/>
+        </scene>
+        <!--Sex Assistant Controller-->
+        <scene sceneID="Q17-g3-GWZ">
+            <objects>
+                <viewController id="S8D-7k-wL7" customClass="SexAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="292-S0-EzM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PiO-1m-Bxs">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Él o ella?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-Co-R3e">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="uXJ-Fn-w28">
+                                <rect key="frame" x="16" y="105" width="288" height="62.5"/>
+                                <string key="text">Para darte consejos más útiles, necesitamos saber tu sexo. Recuerda que estos datos sólo serán compartidos con tu médico, así que no te preocupes</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WKg-f7-bW6">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AO4-lh-f7T">
+                                <rect key="frame" x="16" y="200" width="288" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="AO4-lh-f7T" firstAttribute="top" secondItem="uXJ-Fn-w28" secondAttribute="bottom" constant="32" id="54u-JW-qgR"/>
+                            <constraint firstItem="PiO-1m-Bxs" firstAttribute="leading" secondItem="wSa-ic-PXU" secondAttribute="leading" id="8bx-HI-Fce"/>
+                            <constraint firstItem="wSa-ic-PXU" firstAttribute="trailing" secondItem="PiO-1m-Bxs" secondAttribute="trailing" id="8zo-mP-eou"/>
+                            <constraint firstItem="uXJ-Fn-w28" firstAttribute="leading" secondItem="wSa-ic-PXU" secondAttribute="leading" constant="16" id="C57-D0-xf3"/>
+                            <constraint firstItem="wSa-ic-PXU" firstAttribute="trailing" secondItem="uXJ-Fn-w28" secondAttribute="trailing" constant="16" id="CKi-0E-ywj"/>
+                            <constraint firstItem="wSa-ic-PXU" firstAttribute="bottom" secondItem="PiO-1m-Bxs" secondAttribute="bottom" id="Ezg-ff-idP"/>
+                            <constraint firstItem="PiO-1m-Bxs" firstAttribute="top" secondItem="wSa-ic-PXU" secondAttribute="top" id="LNW-43-6U5"/>
+                            <constraint firstItem="AO4-lh-f7T" firstAttribute="leading" secondItem="wSa-ic-PXU" secondAttribute="leading" constant="16" id="PNJ-Iq-TRx"/>
+                            <constraint firstItem="WKg-f7-bW6" firstAttribute="leading" secondItem="292-S0-EzM" secondAttribute="leadingMargin" constant="16" id="Ss9-QD-4kx"/>
+                            <constraint firstItem="VF9-Co-R3e" firstAttribute="top" secondItem="wSa-ic-PXU" secondAttribute="top" constant="32" id="Ttn-EG-WrE"/>
+                            <constraint firstItem="uXJ-Fn-w28" firstAttribute="top" secondItem="VF9-Co-R3e" secondAttribute="bottom" constant="32" id="b9v-Nt-QRk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WKg-f7-bW6" secondAttribute="trailing" constant="16" id="ej5-ki-iAN"/>
+                            <constraint firstItem="wSa-ic-PXU" firstAttribute="bottom" secondItem="WKg-f7-bW6" secondAttribute="bottom" constant="16" id="iBd-Sr-m4C"/>
+                            <constraint firstItem="VF9-Co-R3e" firstAttribute="leading" secondItem="wSa-ic-PXU" secondAttribute="leading" constant="16" id="lgc-rH-4s2"/>
+                            <constraint firstItem="wSa-ic-PXU" firstAttribute="trailing" secondItem="AO4-lh-f7T" secondAttribute="trailing" constant="16" id="pow-1o-GOr"/>
+                            <constraint firstItem="wSa-ic-PXU" firstAttribute="trailing" secondItem="VF9-Co-R3e" secondAttribute="trailing" constant="16" id="tiN-Ck-Nog"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="wSa-ic-PXU"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="JCq-S7-OWf">
+                            <connections>
+                                <segue destination="UgB-DL-Crz" kind="show" id="I3P-MY-aGR"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="T1a-2c-r4a"/>
+                        <barButtonItem title="Siguiente" id="NnU-OJ-iCA">
+                            <connections>
+                                <action selector="actionBtnSiguienteSex:" destination="S8D-7k-wL7" id="84M-Xj-yxv"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pickerViewSex" destination="AO4-lh-f7T" id="6eP-Tz-VnI"/>
+                        <segue destination="WR6-s2-RA3" kind="show" identifier="toProfesionAssistantSegue" id="dev-Fv-juF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVd-uE-XSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3830.625" y="129.92957746478874"/>
+        </scene>
+        <!--Profesion Assistant Controller-->
+        <scene sceneID="S3r-Sg-jGZ">
+            <objects>
+                <viewController id="WR6-s2-RA3" customClass="ProfesionAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NsV-fL-LlQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-ov-9Fs">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿A qué te dedicas?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="shW-Q7-bcz">
+                                <rect key="frame" x="16" y="52" width="298" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De nuevo, para poder darte recomendaciones completamente personalizadas, puedes decirnos a qué te dedicas" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="6zu-yD-087">
+                                <rect key="frame" x="16" y="105" width="288" height="47"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce tu profesión" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-Mx-rb4">
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b80-GM-1T0">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gUw-ov-9Fs" firstAttribute="top" secondItem="ff5-Et-7Em" secondAttribute="top" id="8Fs-Ly-lAe"/>
+                            <constraint firstItem="gUw-ov-9Fs" firstAttribute="leading" secondItem="ff5-Et-7Em" secondAttribute="leading" id="F6l-E9-gML"/>
+                            <constraint firstItem="ff5-Et-7Em" firstAttribute="bottom" secondItem="b80-GM-1T0" secondAttribute="bottom" constant="16" id="FXT-ig-1gb"/>
+                            <constraint firstItem="shW-Q7-bcz" firstAttribute="leading" secondItem="ff5-Et-7Em" secondAttribute="leading" constant="16" id="JXZ-jF-f7E"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="b80-GM-1T0" secondAttribute="trailing" constant="16" id="KLo-k5-zta"/>
+                            <constraint firstItem="6zu-yD-087" firstAttribute="leading" secondItem="ff5-Et-7Em" secondAttribute="leading" constant="16" id="Nxb-KG-3LO"/>
+                            <constraint firstItem="b80-GM-1T0" firstAttribute="leading" secondItem="NsV-fL-LlQ" secondAttribute="leadingMargin" constant="16" id="Quo-cX-EL7"/>
+                            <constraint firstItem="6zu-yD-087" firstAttribute="top" secondItem="shW-Q7-bcz" secondAttribute="bottom" constant="32" id="RoW-fI-MlA"/>
+                            <constraint firstItem="NZ7-Mx-rb4" firstAttribute="leading" secondItem="ff5-Et-7Em" secondAttribute="leading" constant="16" id="UQZ-Db-y7x"/>
+                            <constraint firstItem="NZ7-Mx-rb4" firstAttribute="top" secondItem="6zu-yD-087" secondAttribute="bottom" constant="32" id="Who-cb-N8f"/>
+                            <constraint firstItem="ff5-Et-7Em" firstAttribute="trailing" secondItem="6zu-yD-087" secondAttribute="trailing" constant="16" id="YWJ-f6-WCM"/>
+                            <constraint firstItem="ff5-Et-7Em" firstAttribute="trailing" secondItem="shW-Q7-bcz" secondAttribute="trailing" constant="6" id="iNd-vw-w5Q"/>
+                            <constraint firstItem="ff5-Et-7Em" firstAttribute="trailing" secondItem="NZ7-Mx-rb4" secondAttribute="trailing" constant="16" id="iig-34-DV1"/>
+                            <constraint firstItem="ff5-Et-7Em" firstAttribute="bottom" secondItem="gUw-ov-9Fs" secondAttribute="bottom" id="nwF-Ii-vnm"/>
+                            <constraint firstItem="shW-Q7-bcz" firstAttribute="top" secondItem="ff5-Et-7Em" secondAttribute="top" constant="32" id="tIy-Nt-xOc"/>
+                            <constraint firstItem="ff5-Et-7Em" firstAttribute="trailing" secondItem="gUw-ov-9Fs" secondAttribute="trailing" id="wg8-3r-kyD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ff5-Et-7Em"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="WYI-Ky-X0V">
+                            <connections>
+                                <segue destination="S8D-7k-wL7" kind="show" id="lgP-sE-MQp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="LOi-XH-Ixy"/>
+                        <barButtonItem title="Siguiente" id="cnZ-gf-tHc"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Aeo-2p-SHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4566" y="130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JdJ-lw-mX9">
@@ -256,4 +577,11 @@
         <image name="logo_complete" width="1536" height="1962"/>
         <image name="logo_complete.png" width="1536" height="1962"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lgP-sE-MQp"/>
+        <segue reference="VWQ-dK-R1d"/>
+        <segue reference="tvh-NF-Lj7"/>
+        <segue reference="6t0-yY-R2F"/>
+        <segue reference="vEP-5c-qNM"/>
+    </inferredMetricsTieBreakers>
 </document>

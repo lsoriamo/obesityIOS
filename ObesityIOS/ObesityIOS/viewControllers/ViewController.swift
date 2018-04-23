@@ -88,13 +88,13 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         
         if email == "" || !bolTestEmail{
             // <-- Creando un elemento de Alert (Dialog en Android)
-            let alert = UIAlertController(title: "Error", message: "Email no válido", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "", message: "Email no válido", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             // Fin de Alert -->
         }else if pass == "" {
             // <-- Creando un elemento de Alert (Dialog en Android)
-            let alert = UIAlertController(title: "Error", message: "Contraseña no válida", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "", message: "Contraseña no válida", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             // Fin de Alert -->
@@ -110,7 +110,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                     print("ERROR: \(error)")
                     
                     // Creando un elemento de Alert (Dialog en Android)
-                    let alert = UIAlertController(title: "LOGIN INCORRECTO", message: "Email o contraseña incorrecta", preferredStyle: UIAlertControllerStyle.alert)
+                    let alert = UIAlertController(title: "", message: "Email o contraseña incorrecta", preferredStyle: UIAlertControllerStyle.alert)
                     alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
                     self.present(alert, animated: true, completion: nil)
                     // <-- Fin de Alert -->

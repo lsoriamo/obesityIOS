@@ -28,6 +28,11 @@
 		742635DD207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		742635DE207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		743B66BA2080867A00ADA83D /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 743B66B92080867A00ADA83D /* logo_complete.png */; };
+		7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F743208DF04500B57340 /* SexAssistantController.swift */; };
+		7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */; };
+		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
+		7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74B208E264300B57340 /* SexoAssistantController.swift */; };
+		7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */; };
 		7ABEF75862D8E22257A3DFE8 /* Pods_ObesityIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0E543DB86250DBB297CF5 /* Pods_ObesityIOS.framework */; };
 		C589376558DACD9236E0552A /* Pods_ObesityIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -76,6 +81,11 @@
 		7421C113207B55210026CCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742635DB207B612C006D0A83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		743B66B92080867A00ADA83D /* logo_complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_complete.png; path = ObesityIOS/Assets.xcassets/logo_complete.imageset/logo_complete.png; sourceTree = SOURCE_ROOT; };
+		7448F743208DF04500B57340 /* SexAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexAssistantController.swift; sourceTree = "<group>"; };
+		7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreApellidosAssistantController.swift; sourceTree = "<group>"; };
+		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
+		7448F74B208E264300B57340 /* SexoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexoAssistantController.swift; sourceTree = "<group>"; };
+		7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesionAssistantController.swift; sourceTree = "<group>"; };
 		8C059F409F51344FBA497CFF /* Pods-ObesityIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSUITests/Pods-ObesityIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObesityIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7344AC18A39243DE2E1E80B /* Pods-ObesityIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSTests/Pods-ObesityIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -122,8 +132,9 @@
 		740E1BD02085F62A00BF68FC /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7448F746208E254300B57340 /* AssistantUserData */,
 				7421C0F0207B551D0026CCE2 /* ViewController.swift */,
-				740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */,
+				7448F743208DF04500B57340 /* SexAssistantController.swift */,
 			);
 			path = viewControllers;
 			sourceTree = "<group>";
@@ -217,6 +228,18 @@
 				7421C113207B55210026CCE2 /* Info.plist */,
 			);
 			path = ObesityIOSUITests;
+			sourceTree = "<group>";
+		};
+		7448F746208E254300B57340 /* AssistantUserData */ = {
+			isa = PBXGroup;
+			children = (
+				740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */,
+				7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */,
+				7448F749208E260300B57340 /* TelefonoAssistantController.swift */,
+				7448F74B208E264300B57340 /* SexoAssistantController.swift */,
+				7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */,
+			);
+			path = AssistantUserData;
 			sourceTree = "<group>";
 		};
 		7E834CF0762D684CD8B97146 /* Pods */ = {
@@ -476,8 +499,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */,
+				7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */,
+				7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */,
+				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
+				7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */,
 				740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */,
 				7421C0EF207B551D0026CCE2 /* AppDelegate.swift in Sources */,
 				74178BDD207CAFC700E0BAC3 /* UserData.swift in Sources */,
