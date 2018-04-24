@@ -787,16 +787,17 @@
                     <connections>
                         <outlet property="pbPeso" destination="5WD-ul-DTx" id="pni-zG-GNB"/>
                         <outlet property="pvPeso" destination="2Gg-6J-CpP" id="9YV-ox-fQ7"/>
+                        <segue destination="Fov-hR-j9b" kind="show" identifier="toFotoAssistantSegue" id="LLf-rt-s9J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6n-qD-acb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6753.75" y="128.87323943661971"/>
         </scene>
-        <!--View Controller-->
+        <!--Imagen Perfil Assistant Controller-->
         <scene sceneID="zck-Ze-SuM">
             <objects>
-                <viewController id="Fov-hR-j9b" sceneMemberID="viewController">
+                <viewController id="Fov-hR-j9b" customClass="ImagenPerfilAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LeP-qb-aNo">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -811,41 +812,231 @@
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-pD-cmP">
-                                <rect key="frame" x="16" y="99" width="288" height="120"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-pD-cmP">
+                                <rect key="frame" x="16" y="105" width="288" height="109"/>
                                 <string key="text">Esta imagen tan sólo será visible para tu médico. De esta forma, será mucho más fácil que él te reconozca, especialmente durante la primera cita. Puedes elegir si deseas usar una foto que ya tengas en la galería o si, por el contrario, deseas hacerte una nueva foto usando la cámara del dispositivo</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-X9-SKk">
-                                <rect key="frame" x="110" y="237" width="101" height="94"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-X9-SKk">
+                                <rect key="frame" x="16" y="246" width="288" height="94"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="94" id="sjl-Gh-lmf"/>
+                                </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-jO-Iy8">
+                                <rect key="frame" x="16" y="356" width="288" height="30"/>
+                                <state key="normal" title="Sacar foto"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyf-5d-R8h">
+                                <rect key="frame" x="16" y="394" width="288" height="30"/>
+                                <state key="normal" title="Desde la galería"/>
+                            </button>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ANv-9R-WiZ">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="Ze4-gv-bHa" secondAttribute="trailing" constant="16" id="1kX-ni-dRz"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="zt1-pD-cmP" secondAttribute="trailing" constant="16" id="FeC-CK-a80"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="bottom" secondItem="ANv-9R-WiZ" secondAttribute="bottom" constant="16" id="Gr6-BV-mZj"/>
+                            <constraint firstItem="ANv-9R-WiZ" firstAttribute="leading" secondItem="LeP-qb-aNo" secondAttribute="leadingMargin" constant="16" id="IRz-Wj-8gC"/>
+                            <constraint firstItem="Gyf-5d-R8h" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" constant="16" id="JmQ-IZ-PQA"/>
+                            <constraint firstItem="zt1-pD-cmP" firstAttribute="top" secondItem="Ze4-gv-bHa" secondAttribute="bottom" constant="32" id="Kvb-tK-iKK"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="Gyf-5d-R8h" secondAttribute="trailing" constant="16" id="L6T-kR-JpK"/>
                             <constraint firstItem="Ze4-gv-bHa" firstAttribute="top" secondItem="kJK-zr-eWC" secondAttribute="top" constant="32" id="LED-wo-do8"/>
+                            <constraint firstItem="Ub3-X9-SKk" firstAttribute="top" secondItem="zt1-pD-cmP" secondAttribute="bottom" constant="32" id="MTQ-Rp-jXB"/>
+                            <constraint firstItem="nN6-jO-Iy8" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" constant="16" id="NxC-Z6-SmP"/>
+                            <constraint firstItem="zt1-pD-cmP" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" constant="16" id="PkH-Sx-3Ex"/>
+                            <constraint firstItem="Ub3-X9-SKk" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" constant="16" id="VXt-rU-qJx"/>
                             <constraint firstItem="kJK-zr-eWC" firstAttribute="bottom" secondItem="B3Z-bw-OKx" secondAttribute="bottom" id="Wen-ct-VUb"/>
+                            <constraint firstItem="Gyf-5d-R8h" firstAttribute="top" secondItem="nN6-jO-Iy8" secondAttribute="bottom" constant="8" id="bK7-Ri-kqv"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ANv-9R-WiZ" secondAttribute="trailing" constant="16" id="bvC-kU-bWT"/>
                             <constraint firstItem="Ze4-gv-bHa" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" constant="16" id="dsj-iM-qzd"/>
+                            <constraint firstItem="nN6-jO-Iy8" firstAttribute="top" secondItem="Ub3-X9-SKk" secondAttribute="bottom" constant="16" id="gol-DT-A8j"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="nN6-jO-Iy8" secondAttribute="trailing" constant="16" id="iSx-IG-4Ct"/>
                             <constraint firstItem="B3Z-bw-OKx" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" id="mpZ-0G-a9L"/>
                             <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="B3Z-bw-OKx" secondAttribute="trailing" id="nxh-SM-Bqr"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="Ub3-X9-SKk" secondAttribute="trailing" constant="16" id="p9b-yi-VDo"/>
                             <constraint firstItem="B3Z-bw-OKx" firstAttribute="top" secondItem="kJK-zr-eWC" secondAttribute="top" id="v1o-Ox-sRa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kJK-zr-eWC"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Anterior" id="wNQ-ji-Noc"/>
+                        <barButtonItem title="Anterior" id="wNQ-ji-Noc">
+                            <connections>
+                                <segue destination="sGH-Uh-22K" kind="show" id="UJb-mK-nKf"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="s2w-1B-Bnw"/>
-                        <barButtonItem title="Siguiente" id="TNU-Tr-yP9"/>
+                        <barButtonItem title="Siguiente" id="TNU-Tr-yP9">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="Fov-hR-j9b" id="cFn-9E-CKC"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbImagenPerfil" destination="ANv-9R-WiZ" id="S0X-BH-dtp"/>
+                        <segue destination="xnJ-qi-d1T" kind="show" identifier="toHipertensionAssistantSegue" id="diO-Ra-Vzn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RB-89-3mY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7494.375" y="129.92957746478874"/>
+        </scene>
+        <!--Hipertension Assistant Controller-->
+        <scene sceneID="Ljd-lK-aJM">
+            <objects>
+                <viewController id="xnJ-qi-d1T" customClass="HipertensionAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Dqe-B7-F2E">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dHq-hU-fMr">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Eres hipertenso?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-NN-ZZy">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="aI9-2a-5Td">
+                                <rect key="frame" x="16" y="105" width="288" height="93.5"/>
+                                <string key="text">La hipertensión es un problema frecuente en personas con uin índice de masa corporal elevado. Es un factor a tener en cuenta no sólo en la intervención, sino a la hora de realizar actividad física o de alimentarse adecuadamente</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBL-vy-p0M">
+                                <rect key="frame" x="16" y="231" width="288" height="216"/>
+                            </pickerView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qU0-W0-s8N">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aI9-2a-5Td" firstAttribute="leading" secondItem="2Gj-uE-xDe" secondAttribute="leading" constant="16" id="12B-93-69z"/>
+                            <constraint firstItem="dHq-hU-fMr" firstAttribute="leading" secondItem="2Gj-uE-xDe" secondAttribute="leading" id="12M-dC-32i"/>
+                            <constraint firstItem="qBL-vy-p0M" firstAttribute="top" secondItem="aI9-2a-5Td" secondAttribute="bottom" constant="32" id="8PU-8S-cnH"/>
+                            <constraint firstItem="2Gj-uE-xDe" firstAttribute="trailing" secondItem="qBL-vy-p0M" secondAttribute="trailing" constant="16" id="CDK-Bj-Lsj"/>
+                            <constraint firstItem="2Gj-uE-xDe" firstAttribute="bottom" secondItem="dHq-hU-fMr" secondAttribute="bottom" id="DCi-sj-7X2"/>
+                            <constraint firstItem="2Gj-uE-xDe" firstAttribute="trailing" secondItem="aI9-2a-5Td" secondAttribute="trailing" constant="16" id="NFd-Q7-eDr"/>
+                            <constraint firstItem="aI9-2a-5Td" firstAttribute="top" secondItem="4ek-NN-ZZy" secondAttribute="bottom" constant="32" id="SXZ-OL-9nz"/>
+                            <constraint firstItem="2Gj-uE-xDe" firstAttribute="trailing" secondItem="4ek-NN-ZZy" secondAttribute="trailing" constant="16" id="W3y-Us-zJT"/>
+                            <constraint firstItem="2Gj-uE-xDe" firstAttribute="bottom" secondItem="qU0-W0-s8N" secondAttribute="bottom" constant="16" id="Z7r-No-STH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="qU0-W0-s8N" secondAttribute="trailing" constant="16" id="Zgp-pi-paD"/>
+                            <constraint firstItem="qBL-vy-p0M" firstAttribute="leading" secondItem="2Gj-uE-xDe" secondAttribute="leading" constant="16" id="ayQ-E2-D3T"/>
+                            <constraint firstItem="4ek-NN-ZZy" firstAttribute="leading" secondItem="2Gj-uE-xDe" secondAttribute="leading" constant="16" id="iDS-6e-J0E"/>
+                            <constraint firstItem="dHq-hU-fMr" firstAttribute="top" secondItem="2Gj-uE-xDe" secondAttribute="top" id="ly6-cI-jbi"/>
+                            <constraint firstItem="2Gj-uE-xDe" firstAttribute="trailing" secondItem="dHq-hU-fMr" secondAttribute="trailing" id="pUa-XN-MeO"/>
+                            <constraint firstItem="4ek-NN-ZZy" firstAttribute="top" secondItem="2Gj-uE-xDe" secondAttribute="top" constant="32" id="qcX-R3-Ql5"/>
+                            <constraint firstItem="qU0-W0-s8N" firstAttribute="leading" secondItem="Dqe-B7-F2E" secondAttribute="leadingMargin" constant="16" id="rGR-wq-hEI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2Gj-uE-xDe"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="OBb-6v-RIB">
+                            <connections>
+                                <segue destination="Fov-hR-j9b" kind="show" id="9tp-rB-aK4"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="XCT-0f-UPD"/>
+                        <barButtonItem title="Siguiente" id="m5W-9L-HSj">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="xnJ-qi-d1T" id="447-Z1-IpK"/>
+                                <segue destination="WSq-rN-c0f" kind="show" identifier="toDiabetes1AssistantSegue" id="wRJ-YW-T1F"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbHipertension" destination="qU0-W0-s8N" id="GKL-FD-wHU"/>
+                        <outlet property="pvHipertension" destination="qBL-vy-p0M" id="Eyt-Ec-lun"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-Fg-xic" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8231" y="130"/>
+        </scene>
+        <!--Diabetes1 Assistant Controller-->
+        <scene sceneID="mxU-TA-Oat">
+            <objects>
+                <viewController id="WSq-rN-c0f" customClass="Diabetes1AssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fnm-MV-BHq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vrB-0K-aca">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Padeces de diabetes tipo I?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Tuf-Wv-V3R">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zH2-Xm-bpF">
+                                <rect key="frame" x="16" y="105" width="288" height="124.5"/>
+                                <string key="text">Si tienes diabetes tipo 1, es el momento de indicarlo. A lo largo del recorrido durante las semanas previas a la intervención, te ofreceremos una serie de consejos nutricionaes y recetas para comer adecuadamente. en el caso de que seas diabético, adaptaremos estas recetas para que no tengas ningún problema</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrk-EE-Ldt">
+                                <rect key="frame" x="16" y="262" width="288" height="216"/>
+                            </pickerView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="onE-OA-A0m">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Tuf-Wv-V3R" firstAttribute="leading" secondItem="qgX-Yf-h9D" secondAttribute="leading" constant="16" id="8Jd-dj-jEa"/>
+                            <constraint firstItem="qgX-Yf-h9D" firstAttribute="trailing" secondItem="zH2-Xm-bpF" secondAttribute="trailing" constant="16" id="FIn-jL-5Vc"/>
+                            <constraint firstItem="qgX-Yf-h9D" firstAttribute="bottom" secondItem="vrB-0K-aca" secondAttribute="bottom" id="HDg-cU-dzt"/>
+                            <constraint firstItem="qgX-Yf-h9D" firstAttribute="trailing" secondItem="Lrk-EE-Ldt" secondAttribute="trailing" constant="16" id="IKW-2S-UOA"/>
+                            <constraint firstItem="qgX-Yf-h9D" firstAttribute="trailing" secondItem="vrB-0K-aca" secondAttribute="trailing" id="Q3c-q3-VkY"/>
+                            <constraint firstItem="vrB-0K-aca" firstAttribute="top" secondItem="qgX-Yf-h9D" secondAttribute="top" id="RWa-OA-IyO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="onE-OA-A0m" secondAttribute="trailing" constant="16" id="SXE-Lr-fpP"/>
+                            <constraint firstItem="Tuf-Wv-V3R" firstAttribute="top" secondItem="qgX-Yf-h9D" secondAttribute="top" constant="32" id="XKy-Us-Bpw"/>
+                            <constraint firstItem="Lrk-EE-Ldt" firstAttribute="leading" secondItem="qgX-Yf-h9D" secondAttribute="leading" constant="16" id="Xg4-hq-EUL"/>
+                            <constraint firstItem="zH2-Xm-bpF" firstAttribute="top" secondItem="Tuf-Wv-V3R" secondAttribute="bottom" constant="32" id="aKp-on-bCh"/>
+                            <constraint firstItem="qgX-Yf-h9D" firstAttribute="bottom" secondItem="onE-OA-A0m" secondAttribute="bottom" constant="16" id="cWl-Fo-9Ab"/>
+                            <constraint firstItem="qgX-Yf-h9D" firstAttribute="trailing" secondItem="Tuf-Wv-V3R" secondAttribute="trailing" constant="16" id="ig4-Xn-CTG"/>
+                            <constraint firstItem="Lrk-EE-Ldt" firstAttribute="top" secondItem="zH2-Xm-bpF" secondAttribute="bottom" constant="32" id="rLD-hG-8b5"/>
+                            <constraint firstItem="zH2-Xm-bpF" firstAttribute="leading" secondItem="qgX-Yf-h9D" secondAttribute="leading" constant="16" id="rpj-Dq-g0n"/>
+                            <constraint firstItem="onE-OA-A0m" firstAttribute="leading" secondItem="fnm-MV-BHq" secondAttribute="leadingMargin" constant="16" id="vgn-gc-3WL"/>
+                            <constraint firstItem="vrB-0K-aca" firstAttribute="leading" secondItem="qgX-Yf-h9D" secondAttribute="leading" id="wH0-kN-sKb"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qgX-Yf-h9D"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="OxH-Jl-x3x">
+                            <connections>
+                                <segue destination="xnJ-qi-d1T" kind="show" id="4us-Wh-J6M"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Tcw-OX-XJx"/>
+                        <barButtonItem title="Siguiente" id="2r2-ir-eAg">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="WSq-rN-c0f" id="rQj-1v-bUz"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbDiabetes1" destination="onE-OA-A0m" id="V21-ST-CGn"/>
+                        <outlet property="pvDiabetes1" destination="Lrk-EE-Ldt" id="xKb-9X-4sl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zJn-ZG-Xhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8962.5" y="133.09859154929578"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JdJ-lw-mX9">
@@ -874,6 +1065,9 @@
         <image name="logo_complete.png" width="1536" height="1962"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="4us-Wh-J6M"/>
+        <segue reference="9tp-rB-aK4"/>
+        <segue reference="UJb-mK-nKf"/>
         <segue reference="xpE-hp-dvj"/>
         <segue reference="i1h-CY-NnX"/>
         <segue reference="dev-Fv-juF"/>

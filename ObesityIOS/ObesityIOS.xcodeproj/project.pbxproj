@@ -27,6 +27,11 @@
 		742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		742635DD207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		742635DE207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
+		742BCCE5208F714000677A92 /* ImagenPerfilAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */; };
+		742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */; };
+		742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */; };
+		742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */; };
+		742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */; };
 		743B66BA2080867A00ADA83D /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 743B66B92080867A00ADA83D /* logo_complete.png */; };
 		7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F743208DF04500B57340 /* SexAssistantController.swift */; };
 		7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */; };
@@ -83,6 +88,11 @@
 		7421C111207B55210026CCE2 /* ObesityIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObesityIOSUITests.swift; sourceTree = "<group>"; };
 		7421C113207B55210026CCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742635DB207B612C006D0A83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenPerfilAssistantController.swift; sourceTree = "<group>"; };
+		742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipertensionAssistantController.swift; sourceTree = "<group>"; };
+		742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes1AssistantController.swift; sourceTree = "<group>"; };
+		742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes2AssistantController.swift; sourceTree = "<group>"; };
+		742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetesMedicacionPrescritaController.swift; sourceTree = "<group>"; };
 		743B66B92080867A00ADA83D /* logo_complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_complete.png; path = ObesityIOS/Assets.xcassets/logo_complete.imageset/logo_complete.png; sourceTree = SOURCE_ROOT; };
 		7448F743208DF04500B57340 /* SexAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexAssistantController.swift; sourceTree = "<group>"; };
 		7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreApellidosAssistantController.swift; sourceTree = "<group>"; };
@@ -236,9 +246,20 @@
 			path = ObesityIOSUITests;
 			sourceTree = "<group>";
 		};
+		742BCCE8208F77D700677A92 /* DiabetesAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */,
+				742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */,
+				742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */,
+			);
+			path = DiabetesAssistant;
+			sourceTree = "<group>";
+		};
 		7448F746208E254300B57340 /* AssistantUserData */ = {
 			isa = PBXGroup;
 			children = (
+				742BCCE8208F77D700677A92 /* DiabetesAssistant */,
 				740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */,
 				7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */,
 				7448F749208E260300B57340 /* TelefonoAssistantController.swift */,
@@ -247,6 +268,8 @@
 				74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */,
 				74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */,
 				74CD14F4208F295300ECC99D /* PesoAssistantController.swift */,
+				742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */,
+				742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */,
 			);
 			path = AssistantUserData;
 			sourceTree = "<group>";
@@ -514,13 +537,18 @@
 				74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
+				742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */,
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
 				7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */,
 				740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */,
 				7421C0EF207B551D0026CCE2 /* AppDelegate.swift in Sources */,
+				742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */,
+				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
+				742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */,
 				74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */,
 				74178BDD207CAFC700E0BAC3 /* UserData.swift in Sources */,
+				742BCCE5208F714000677A92 /* ImagenPerfilAssistantController.swift in Sources */,
 				7421C0F7207B551D0026CCE2 /* ObesityIOS.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

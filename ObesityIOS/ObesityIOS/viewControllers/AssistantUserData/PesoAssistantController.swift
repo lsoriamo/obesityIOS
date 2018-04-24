@@ -38,7 +38,7 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        performSegue(withIdentifier: "a", sender: nil)
+        performSegue(withIdentifier: "toFotoAssistantSegue", sender: nil)
     }
     
     func cargarPesos() -> Array<Int> {
