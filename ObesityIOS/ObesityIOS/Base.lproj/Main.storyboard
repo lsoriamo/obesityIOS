@@ -234,7 +234,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="progressBarWelcome" destination="OCv-O2-nOR" id="92p-Ll-jX2"/>
+                        <outlet property="pbWelcome" destination="OCv-O2-nOR" id="Yhr-9r-Grm"/>
                         <segue destination="Zcb-z6-i0t" kind="show" identifier="toNombreApellidosAssistantSegue" id="tvh-NF-Lj7"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginSignOutSegue" id="vEP-5c-qNM"/>
                     </connections>
@@ -321,6 +321,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="pbNombreApellidos" destination="U9P-ps-SvG" id="qEo-43-QlH"/>
                         <outlet property="tfApellidos" destination="BiA-1z-8Ha" id="Awu-1x-s0u"/>
                         <outlet property="tfNombre" destination="3Jd-NC-BmT" id="vkY-6P-ksl"/>
                         <segue destination="UgB-DL-Crz" kind="show" identifier="toTelefonoAssistantSegue" id="VWQ-dK-R1d"/>
@@ -393,13 +394,14 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="8yh-NH-6Fw"/>
                         <barButtonItem title="Siguiente" id="RLp-rc-Msh">
                             <connections>
-                                <action selector="actionBtnSiguienteTelefono:" destination="UgB-DL-Crz" id="3Mt-4v-xpY"/>
+                                <action selector="actionBtnSiguiente:" destination="UgB-DL-Crz" id="c20-ot-UH7"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="tfTelefono" destination="pEn-Ca-Zas" id="dUa-gC-tPy"/>
+                        <outlet property="pbTelefono" destination="nBr-SY-ZY1" id="l1I-39-P57"/>
+                        <outlet property="tfTelefono" destination="pEn-Ca-Zas" id="0VO-Sf-Boe"/>
                         <segue destination="S8D-7k-wL7" kind="show" identifier="toSexoAssistantSegue" id="AUM-Yv-7dE"/>
                     </connections>
                 </viewController>
@@ -474,6 +476,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="pbSexo" destination="WKg-f7-bW6" id="DDP-6i-mCv"/>
                         <outlet property="pickerViewSex" destination="AO4-lh-f7T" id="6eP-Tz-VnI"/>
                         <segue destination="WR6-s2-RA3" kind="show" identifier="toProfesionAssistantSegue" id="dev-Fv-juF"/>
                     </connections>
@@ -490,9 +493,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-ov-9Fs">
-                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿A qué te dedicas?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="shW-Q7-bcz">
                                 <rect key="frame" x="16" y="52" width="298" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -514,6 +514,9 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b80-GM-1T0">
                                 <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-ov-9Fs">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -543,13 +546,306 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="LOi-XH-Ixy"/>
-                        <barButtonItem title="Siguiente" id="cnZ-gf-tHc"/>
+                        <barButtonItem title="Siguiente" id="cnZ-gf-tHc">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="WR6-s2-RA3" id="PV1-is-Zd0"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbProfesion" destination="b80-GM-1T0" id="RDh-0a-OoO"/>
+                        <outlet property="tfProfesion" destination="NZ7-Mx-rb4" id="3ur-rd-EBV"/>
+                        <segue destination="v4u-E4-GEw" kind="show" identifier="toFechaNacimientoAssistantSegue" id="9we-7x-IVM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeo-2p-SHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4566" y="130"/>
+        </scene>
+        <!--Fecha Nacimiento Assistant Controller-->
+        <scene sceneID="EaG-pm-G2d">
+            <objects>
+                <viewController id="v4u-E4-GEw" customClass="FechaNacimientoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xSL-B6-nc2">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BIv-1i-nvq">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-Fj-PK0">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ayc-ts-HoT">
+                                <rect key="frame" x="16" y="105" width="288" height="62.5"/>
+                                <string key="text">La fecha de nacimiento permitirá a PreoBar calcular los valores óptimos de consumo calórico y proponerte de forma personalizada los ejercicios más adecuados para tu edad</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="czm-l2-vrp">
+                                <rect key="frame" x="16" y="200" width="288" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="546248872.87170398">
+                                    <!--2018-04-24 07:47:52 +0000-->
+                                </date>
+                            </datePicker>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pVa-3H-dIZ">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="md5-CH-xPJ" firstAttribute="trailing" secondItem="PdY-Fj-PK0" secondAttribute="trailing" constant="16" id="6Vu-hm-FBM"/>
+                            <constraint firstItem="PdY-Fj-PK0" firstAttribute="leading" secondItem="md5-CH-xPJ" secondAttribute="leading" constant="16" id="6uD-K6-rq9"/>
+                            <constraint firstItem="czm-l2-vrp" firstAttribute="leading" secondItem="md5-CH-xPJ" secondAttribute="leading" constant="16" id="73l-vm-QKQ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pVa-3H-dIZ" secondAttribute="trailing" constant="16" id="9Wk-KV-0Qm"/>
+                            <constraint firstItem="ayc-ts-HoT" firstAttribute="leading" secondItem="md5-CH-xPJ" secondAttribute="leading" constant="16" id="Fq7-EM-rL1"/>
+                            <constraint firstItem="pVa-3H-dIZ" firstAttribute="leading" secondItem="xSL-B6-nc2" secondAttribute="leadingMargin" constant="16" id="J0X-qm-UsO"/>
+                            <constraint firstItem="md5-CH-xPJ" firstAttribute="bottom" secondItem="pVa-3H-dIZ" secondAttribute="bottom" constant="16" id="M5C-dg-XZn"/>
+                            <constraint firstItem="PdY-Fj-PK0" firstAttribute="top" secondItem="md5-CH-xPJ" secondAttribute="top" constant="32" id="aUM-ff-fV1"/>
+                            <constraint firstItem="md5-CH-xPJ" firstAttribute="trailing" secondItem="czm-l2-vrp" secondAttribute="trailing" constant="16" id="bxz-sZ-eyX"/>
+                            <constraint firstItem="BIv-1i-nvq" firstAttribute="top" secondItem="md5-CH-xPJ" secondAttribute="top" id="d5E-2r-uAl"/>
+                            <constraint firstItem="md5-CH-xPJ" firstAttribute="bottom" secondItem="BIv-1i-nvq" secondAttribute="bottom" id="hUm-QS-QGW"/>
+                            <constraint firstItem="BIv-1i-nvq" firstAttribute="leading" secondItem="md5-CH-xPJ" secondAttribute="leading" id="lHh-Sh-E5s"/>
+                            <constraint firstItem="md5-CH-xPJ" firstAttribute="trailing" secondItem="ayc-ts-HoT" secondAttribute="trailing" constant="16" id="lOM-R8-5yg"/>
+                            <constraint firstItem="md5-CH-xPJ" firstAttribute="trailing" secondItem="BIv-1i-nvq" secondAttribute="trailing" id="p9O-1P-QRH"/>
+                            <constraint firstItem="ayc-ts-HoT" firstAttribute="top" secondItem="PdY-Fj-PK0" secondAttribute="bottom" constant="32" id="ppS-cT-5Bu"/>
+                            <constraint firstItem="czm-l2-vrp" firstAttribute="top" secondItem="ayc-ts-HoT" secondAttribute="bottom" constant="32" id="tBb-an-Slp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="md5-CH-xPJ"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="b57-8u-s9R">
+                            <connections>
+                                <segue destination="WR6-s2-RA3" kind="show" id="Ls8-Ep-XdY"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="3AP-IP-TA4"/>
+                        <barButtonItem title="Siguiente" id="Fk7-QI-g3B">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="v4u-E4-GEw" id="4HK-C7-XBJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="dpFechaNacimiento" destination="czm-l2-vrp" id="vyY-MI-OOe"/>
+                        <outlet property="pbFechaNacimiento" destination="pVa-3H-dIZ" id="fgV-CY-ASB"/>
+                        <segue destination="ZeE-sg-83z" kind="show" identifier="toAlturaAssistantSegue" id="Czh-vA-mBs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K0W-4R-asR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5296.875" y="127.8169014084507"/>
+        </scene>
+        <!--Altura Assistant Controller-->
+        <scene sceneID="OoM-Rm-2BI">
+            <objects>
+                <viewController id="ZeE-sg-83z" customClass="AlturaAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XAg-PS-D5q">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Np5-26-pEp">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura (cm)" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Pt0-Cn-hbv">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-mO-O1q">
+                                <rect key="frame" x="16" y="105" width="288" height="93.5"/>
+                                <string key="text">Conocer la altura es fundamental para calcular el índice de masa corporal. Aunque no es excesivamente preciso, este valor nos servirá para determinar tu estado de forma y ofrecerte soluciones para bajar este índice antes de la intervención</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ein-Dl-Web">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxZ-iT-yzA">
+                                <rect key="frame" x="16" y="231" width="288" height="216"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="QsP-mO-O1q" firstAttribute="leading" secondItem="Zcy-3m-pUa" secondAttribute="leading" constant="16" id="0cD-sc-f7y"/>
+                            <constraint firstItem="Zcy-3m-pUa" firstAttribute="trailing" secondItem="Np5-26-pEp" secondAttribute="trailing" id="2MB-ZM-DsG"/>
+                            <constraint firstItem="Zcy-3m-pUa" firstAttribute="bottom" secondItem="Np5-26-pEp" secondAttribute="bottom" id="KvE-rV-qig"/>
+                            <constraint firstItem="Pt0-Cn-hbv" firstAttribute="leading" secondItem="Zcy-3m-pUa" secondAttribute="leading" constant="16" id="Mxi-yc-O7S"/>
+                            <constraint firstItem="ein-Dl-Web" firstAttribute="leading" secondItem="XAg-PS-D5q" secondAttribute="leadingMargin" constant="16" id="OC2-KX-JWl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ein-Dl-Web" secondAttribute="trailing" constant="16" id="Ow2-uV-fUC"/>
+                            <constraint firstItem="Zcy-3m-pUa" firstAttribute="trailing" secondItem="QsP-mO-O1q" secondAttribute="trailing" constant="16" id="Q0E-yD-9UN"/>
+                            <constraint firstItem="QsP-mO-O1q" firstAttribute="top" secondItem="Pt0-Cn-hbv" secondAttribute="bottom" constant="32" id="QSi-bn-hUU"/>
+                            <constraint firstItem="GxZ-iT-yzA" firstAttribute="top" secondItem="QsP-mO-O1q" secondAttribute="bottom" constant="32" id="ctS-8A-0hW"/>
+                            <constraint firstItem="Pt0-Cn-hbv" firstAttribute="top" secondItem="Zcy-3m-pUa" secondAttribute="top" constant="32" id="dOV-7I-Y51"/>
+                            <constraint firstItem="GxZ-iT-yzA" firstAttribute="leading" secondItem="Zcy-3m-pUa" secondAttribute="leading" constant="16" id="kB8-9Z-6Oo"/>
+                            <constraint firstItem="Zcy-3m-pUa" firstAttribute="trailing" secondItem="GxZ-iT-yzA" secondAttribute="trailing" constant="16" id="n0b-Vx-Tn9"/>
+                            <constraint firstItem="Zcy-3m-pUa" firstAttribute="trailing" secondItem="Pt0-Cn-hbv" secondAttribute="trailing" constant="16" id="ohU-XD-Gis"/>
+                            <constraint firstItem="Zcy-3m-pUa" firstAttribute="bottom" secondItem="ein-Dl-Web" secondAttribute="bottom" constant="16" id="qUp-EU-93f"/>
+                            <constraint firstItem="Np5-26-pEp" firstAttribute="top" secondItem="Zcy-3m-pUa" secondAttribute="top" id="vLH-c0-0Yb"/>
+                            <constraint firstItem="Np5-26-pEp" firstAttribute="leading" secondItem="Zcy-3m-pUa" secondAttribute="leading" id="x6s-i4-VqU"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Zcy-3m-pUa"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="GCb-bQ-gsU">
+                            <connections>
+                                <segue destination="v4u-E4-GEw" kind="show" id="i1h-CY-NnX"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="n3l-oy-gNx"/>
+                        <barButtonItem title="Siguiente" id="KkB-wV-1FH">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="ZeE-sg-83z" id="UDw-Ez-MB3"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbAltura" destination="ein-Dl-Web" id="g0E-GF-AeS"/>
+                        <outlet property="pvAltura" destination="GxZ-iT-yzA" id="8zy-iR-CKB"/>
+                        <segue destination="sGH-Uh-22K" kind="show" identifier="toPesoAssistantSegue" id="F0w-QF-eiz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="X6k-yC-mHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6022.5" y="128.87323943661971"/>
+        </scene>
+        <!--Peso Assistant Controller-->
+        <scene sceneID="feW-eY-BA6">
+            <objects>
+                <viewController id="sGH-Uh-22K" customClass="PesoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fZ9-mm-Dvp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GJu-AY-50i">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso (kg)" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-Jk-HSa">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-Dh-D49">
+                                <rect key="frame" x="16" y="105" width="288" height="93.5"/>
+                                <string key="text">Aunque llevaremos un registro de tu peso de manera frecuente una vez uses la aplicación, necesitamos conocer tu peso actual. Si tienes una báscula a mano, podrías usarla para indicarnos el peso exacto. Si no es posible, indicanos uno aproximado</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gg-6J-CpP">
+                                <rect key="frame" x="16" y="231" width="288" height="216"/>
+                            </pickerView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-ul-DTx">
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
+                            </progressView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2Gg-6J-CpP" firstAttribute="top" secondItem="LbT-Dh-D49" secondAttribute="bottom" constant="32" id="AOw-9m-451"/>
+                            <constraint firstItem="LbT-Dh-D49" firstAttribute="leading" secondItem="4K2-6o-pHm" secondAttribute="leading" constant="16" id="BeW-dI-eEY"/>
+                            <constraint firstItem="4Y1-Jk-HSa" firstAttribute="leading" secondItem="4K2-6o-pHm" secondAttribute="leading" constant="16" id="Ddr-Oa-y94"/>
+                            <constraint firstItem="5WD-ul-DTx" firstAttribute="leading" secondItem="fZ9-mm-Dvp" secondAttribute="leadingMargin" constant="16" id="HhS-Iv-84n"/>
+                            <constraint firstItem="4K2-6o-pHm" firstAttribute="trailing" secondItem="2Gg-6J-CpP" secondAttribute="trailing" constant="16" id="LTr-Zn-Iqu"/>
+                            <constraint firstItem="GJu-AY-50i" firstAttribute="leading" secondItem="4K2-6o-pHm" secondAttribute="leading" id="LWL-bQ-dqE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5WD-ul-DTx" secondAttribute="trailing" constant="16" id="QgH-A8-ak5"/>
+                            <constraint firstItem="LbT-Dh-D49" firstAttribute="top" secondItem="4Y1-Jk-HSa" secondAttribute="bottom" constant="32" id="Sk1-d4-kXx"/>
+                            <constraint firstItem="4K2-6o-pHm" firstAttribute="trailing" secondItem="GJu-AY-50i" secondAttribute="trailing" id="a08-z6-MhK"/>
+                            <constraint firstItem="4Y1-Jk-HSa" firstAttribute="top" secondItem="4K2-6o-pHm" secondAttribute="top" constant="32" id="aSl-oP-0xI"/>
+                            <constraint firstItem="4K2-6o-pHm" firstAttribute="trailing" secondItem="4Y1-Jk-HSa" secondAttribute="trailing" constant="16" id="bLz-Om-ldp"/>
+                            <constraint firstItem="GJu-AY-50i" firstAttribute="top" secondItem="4K2-6o-pHm" secondAttribute="top" id="hee-0L-iJ3"/>
+                            <constraint firstItem="4K2-6o-pHm" firstAttribute="bottom" secondItem="GJu-AY-50i" secondAttribute="bottom" id="lN6-Zd-Wvo"/>
+                            <constraint firstItem="2Gg-6J-CpP" firstAttribute="leading" secondItem="4K2-6o-pHm" secondAttribute="leading" constant="16" id="lyh-WB-cv0"/>
+                            <constraint firstItem="4K2-6o-pHm" firstAttribute="trailing" secondItem="LbT-Dh-D49" secondAttribute="trailing" constant="16" id="puS-PF-1PO"/>
+                            <constraint firstItem="4K2-6o-pHm" firstAttribute="bottom" secondItem="5WD-ul-DTx" secondAttribute="bottom" constant="16" id="uwI-gW-roo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="4K2-6o-pHm"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="LKh-uO-C4x">
+                            <connections>
+                                <segue destination="ZeE-sg-83z" kind="show" id="xpE-hp-dvj"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="YCV-L8-oiA"/>
+                        <barButtonItem title="Siguiente" id="cQf-qO-Vgz">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="sGH-Uh-22K" id="S6d-o3-vDJ"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbPeso" destination="5WD-ul-DTx" id="pni-zG-GNB"/>
+                        <outlet property="pvPeso" destination="2Gg-6J-CpP" id="9YV-ox-fQ7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6n-qD-acb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6753.75" y="128.87323943661971"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="zck-Ze-SuM">
+            <objects>
+                <viewController id="Fov-hR-j9b" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LeP-qb-aNo">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-bw-OKx">
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen de perfil" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ze4-gv-bHa">
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-pD-cmP">
+                                <rect key="frame" x="16" y="99" width="288" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">Esta imagen tan sólo será visible para tu médico. De esta forma, será mucho más fácil que él te reconozca, especialmente durante la primera cita. Puedes elegir si deseas usar una foto que ya tengas en la galería o si, por el contrario, deseas hacerte una nueva foto usando la cámara del dispositivo</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-X9-SKk">
+                                <rect key="frame" x="110" y="237" width="101" height="94"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="Ze4-gv-bHa" secondAttribute="trailing" constant="16" id="1kX-ni-dRz"/>
+                            <constraint firstItem="Ze4-gv-bHa" firstAttribute="top" secondItem="kJK-zr-eWC" secondAttribute="top" constant="32" id="LED-wo-do8"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="bottom" secondItem="B3Z-bw-OKx" secondAttribute="bottom" id="Wen-ct-VUb"/>
+                            <constraint firstItem="Ze4-gv-bHa" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" constant="16" id="dsj-iM-qzd"/>
+                            <constraint firstItem="B3Z-bw-OKx" firstAttribute="leading" secondItem="kJK-zr-eWC" secondAttribute="leading" id="mpZ-0G-a9L"/>
+                            <constraint firstItem="kJK-zr-eWC" firstAttribute="trailing" secondItem="B3Z-bw-OKx" secondAttribute="trailing" id="nxh-SM-Bqr"/>
+                            <constraint firstItem="B3Z-bw-OKx" firstAttribute="top" secondItem="kJK-zr-eWC" secondAttribute="top" id="v1o-Ox-sRa"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kJK-zr-eWC"/>
+                    </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="wNQ-ji-Noc"/>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="s2w-1B-Bnw"/>
+                        <barButtonItem title="Siguiente" id="TNU-Tr-yP9"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7RB-89-3mY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7494.375" y="129.92957746478874"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="JdJ-lw-mX9">
@@ -578,9 +874,12 @@
         <image name="logo_complete.png" width="1536" height="1962"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="xpE-hp-dvj"/>
+        <segue reference="i1h-CY-NnX"/>
+        <segue reference="dev-Fv-juF"/>
         <segue reference="lgP-sE-MQp"/>
-        <segue reference="VWQ-dK-R1d"/>
-        <segue reference="tvh-NF-Lj7"/>
+        <segue reference="I3P-MY-aGR"/>
+        <segue reference="jWo-3I-zEV"/>
         <segue reference="6t0-yY-R2F"/>
         <segue reference="vEP-5c-qNM"/>
     </inferredMetricsTieBreakers>

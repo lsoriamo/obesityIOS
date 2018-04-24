@@ -33,6 +33,9 @@
 		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
 		7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74B208E264300B57340 /* SexoAssistantController.swift */; };
 		7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */; };
+		74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */; };
+		74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */; };
+		74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F4208F295300ECC99D /* PesoAssistantController.swift */; };
 		7ABEF75862D8E22257A3DFE8 /* Pods_ObesityIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0E543DB86250DBB297CF5 /* Pods_ObesityIOS.framework */; };
 		C589376558DACD9236E0552A /* Pods_ObesityIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +89,9 @@
 		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74B208E264300B57340 /* SexoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesionAssistantController.swift; sourceTree = "<group>"; };
+		74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaNacimientoAssistantController.swift; sourceTree = "<group>"; };
+		74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlturaAssistantController.swift; sourceTree = "<group>"; };
+		74CD14F4208F295300ECC99D /* PesoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoAssistantController.swift; sourceTree = "<group>"; };
 		8C059F409F51344FBA497CFF /* Pods-ObesityIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSUITests/Pods-ObesityIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObesityIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7344AC18A39243DE2E1E80B /* Pods-ObesityIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSTests/Pods-ObesityIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -238,6 +244,9 @@
 				7448F749208E260300B57340 /* TelefonoAssistantController.swift */,
 				7448F74B208E264300B57340 /* SexoAssistantController.swift */,
 				7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */,
+				74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */,
+				74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */,
+				74CD14F4208F295300ECC99D /* PesoAssistantController.swift */,
 			);
 			path = AssistantUserData;
 			sourceTree = "<group>";
@@ -502,12 +511,15 @@
 				7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */,
 				7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */,
 				7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */,
+				74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
+				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
 				7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */,
 				740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */,
 				7421C0EF207B551D0026CCE2 /* AppDelegate.swift in Sources */,
+				74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */,
 				74178BDD207CAFC700E0BAC3 /* UserData.swift in Sources */,
 				7421C0F7207B551D0026CCE2 /* ObesityIOS.xcdatamodeld in Sources */,
 			);

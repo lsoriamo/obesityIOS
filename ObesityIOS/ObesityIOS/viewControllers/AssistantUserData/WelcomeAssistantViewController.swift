@@ -10,6 +10,7 @@ import UIKit
 
 class WelcomeAssistantViewController: UIViewController {
     
+    @IBOutlet weak var pbWelcome: UIProgressView!
     
     var emailWelcomeRecibido:String?
     
@@ -25,7 +26,7 @@ class WelcomeAssistantViewController: UIViewController {
             print("No hay email")
         }
         
-        progressBarWelcome.setProgress(0.05, animated: false)
+        pbWelcome.setProgress(0.05, animated: false)
         
     }
     
