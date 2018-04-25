@@ -38,6 +38,7 @@
 		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
 		7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74B208E264300B57340 /* SexoAssistantController.swift */; };
 		7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */; };
+		74C71FB8209091B2006CD470 /* TrastornoSuenyoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */; };
 		74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */; };
 		74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */; };
 		74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F4208F295300ECC99D /* PesoAssistantController.swift */; };
@@ -99,6 +100,7 @@
 		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74B208E264300B57340 /* SexoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesionAssistantController.swift; sourceTree = "<group>"; };
+		74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrastornoSuenyoAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaNacimientoAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlturaAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F4208F295300ECC99D /* PesoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoAssistantController.swift; sourceTree = "<group>"; };
@@ -270,6 +272,7 @@
 				74CD14F4208F295300ECC99D /* PesoAssistantController.swift */,
 				742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */,
 				742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */,
+				74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */,
 			);
 			path = AssistantUserData;
 			sourceTree = "<group>";
@@ -547,6 +550,7 @@
 				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
 				742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */,
 				74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */,
+				74C71FB8209091B2006CD470 /* TrastornoSuenyoAssistantController.swift in Sources */,
 				74178BDD207CAFC700E0BAC3 /* UserData.swift in Sources */,
 				742BCCE5208F714000677A92 /* ImagenPerfilAssistantController.swift in Sources */,
 				7421C0F7207B551D0026CCE2 /* ObesityIOS.xcdatamodeld in Sources */,

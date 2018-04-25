@@ -37,5 +37,6 @@ class Diabetes1AssistantController: UIViewController, UIPickerViewDelegate, UIPi
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        performSegue(withIdentifier: "toDiabetes2AssistantSegue", sender: nil)
     }
 }
