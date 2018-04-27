@@ -8,12 +8,34 @@
 
 import UIKit
 
-class LesionArticularAssistantController: UIViewController {
+class LesionArticularAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var pvLesionArticular: UIPickerView!
+    @IBOutlet weak var pbLesionArticular: UIProgressView!
+    
+    let confirmacion = ["Si", "No"]
+    
     override func viewDidLoad() {
+        pvLesionArticular.dataSource = self
+        pvLesionArticular.delegate = self
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        pbLesionArticular.setProgress(0.7, animated: false)
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return confirmacion.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return confirmacion[row]
     }
 
+    @IBAction func actionBtnSiguiente(_ sender: Any) {
+        performSegue(withIdentifier: "toColesterolAssistantSegue", sender: nil)
+    }
 }

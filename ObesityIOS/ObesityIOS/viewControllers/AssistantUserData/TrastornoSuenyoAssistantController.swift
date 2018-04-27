@@ -36,7 +36,7 @@ class TrastornoSuenyoAssistantController: UIViewController, UIPickerViewDelegate
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        performSegue(withIdentifier: "", sender: nil)
+        performSegue(withIdentifier: "toLesionArticularAssistantSegue", sender: nil)
     }
     
 }

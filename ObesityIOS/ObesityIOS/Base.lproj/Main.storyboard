@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ibX-lU-pFt">
-    <device id="retina5_5" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -16,11 +16,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="logo_complete" translatesAutoresizingMaskIntoConstraints="NO" id="JFX-Iq-ug7">
-                                <rect key="frame" x="16" y="28" width="382" height="304.33333333333331"/>
+                                <rect key="frame" x="16" y="28" width="288" height="120.5"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120.5" id="CcC-lY-XVi"/>
                                     <constraint firstAttribute="height" constant="136.5" id="F6s-xm-Bpc"/>
@@ -33,27 +33,27 @@
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="753" text="La confianza de un médico y el apoyo de un familiar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxq-TU-eNQ">
-                                <rect key="frame" x="16" y="348" width="382" height="15.666666666666686"/>
+                                <rect key="frame" x="16" y="164" width="288" height="31.5"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="752" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeW-A0-U8j">
-                                <rect key="frame" x="16" y="396" width="382" height="30"/>
+                                <rect key="frame" x="16" y="228" width="288" height="30"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="8" bottom="8" trailing="8"/>
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleAspectFit" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C0H-Da-sJf">
-                                <rect key="frame" x="16" y="434" width="382" height="30"/>
+                                <rect key="frame" x="16" y="266" width="288" height="30"/>
                                 <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleAspectFit" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oPZ-jL-7wD">
-                                <rect key="frame" x="16" y="544" width="382" height="30"/>
+                                <rect key="frame" x="16" y="376" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.36470588240000001" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="XjA-7F-2az"/>
@@ -73,14 +73,14 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="oYT-5d-tKc">
-                                <rect key="frame" x="16" y="635" width="382" height="28"/>
+                                <rect key="frame" x="16" y="467" width="288" height="28"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="13"/>
                                 <state key="normal" title="¿Aún no eres usuario de Preobar? Pulse aquí para registrarte">
                                     <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mvD-cK-7in">
-                                <rect key="frame" x="16" y="582" width="382" height="30"/>
+                                <rect key="frame" x="16" y="414" width="288" height="30"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.36470588240000001" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Acceder con cuenta de Google">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -138,26 +138,26 @@
             <objects>
                 <viewController id="DcO-B5-fhW" customClass="WelcomeAssistantViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OuS-2v-sDq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qHZ-Sn-PbG">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="HnL-Lk-X6A">
-                                <rect key="frame" x="16" y="28" width="382" height="90"/>
+                                <rect key="frame" x="16" y="28" width="288" height="90"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="NEx-Im-FMB"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a Preobar Jorge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-iz-rdT">
-                                <rect key="frame" x="16" y="134" width="382" height="21"/>
+                                <rect key="frame" x="16" y="134" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="vJz-C7-MBt">
-                                <rect key="frame" x="16" y="171" width="382" height="192"/>
+                                <rect key="frame" x="16" y="171" width="288" height="192"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="192" id="SeU-wx-s8n"/>
                                 </constraints>
@@ -167,16 +167,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Ánimo! Estamos seguros de que lo conseguirás" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="YaM-Si-h8H">
-                                <rect key="frame" x="16" y="371" width="382" height="16"/>
+                                <rect key="frame" x="16" y="371" width="288" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="OCv-O2-nOR">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zu2-lq-oqE">
-                                <rect key="frame" x="16" y="638" width="382" height="12"/>
+                                <rect key="frame" x="16" y="470" width="288" height="12"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="12" id="8kf-qc-tbl"/>
                                 </constraints>
@@ -188,7 +188,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Te has confundido al iniciar sesión?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="eiB-Kd-f4h">
-                                <rect key="frame" x="16" y="614" width="382" height="16"/>
+                                <rect key="frame" x="16" y="446" width="288" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -248,35 +248,35 @@
             <objects>
                 <viewController id="Zcb-z6-i0t" customClass="NombreApellidosAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aav-UP-ubF" customClass="WelcomeAssistant">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sed-ds-3rE">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dinos tu nombre" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="lpk-Vl-2g0">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aún no estamos seguros de cómo te llamas. Por favor, dinos tu nombre para personalizar al máximo la experiencia con Preobar" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="V28-2k-iXM">
-                                <rect key="frame" x="16" y="105.00000000000001" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="105" width="288" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980392156865" green="0.27450980392156865" blue="0.27450980392156865" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Apellidos" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BiA-1z-8Ha">
-                                <rect key="frame" x="16" y="221.66666666666666" width="382" height="30"/>
+                                <rect key="frame" x="16" y="222" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-ps-SvG">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Jd-NC-BmT">
-                                <rect key="frame" x="16" y="183.66666666666666" width="382" height="30"/>
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -336,32 +336,32 @@
             <objects>
                 <viewController id="UgB-DL-Crz" customClass="TelefonoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fML-2u-RcQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Sia-eb-217">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nos puedes dar tu teléfono" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9cG-s8-ib6">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si quieres, puedes indicarnos tu número de teléfono para que el médico pueda contactar contigo sólo si es necesario" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="fKK-Uz-qr2">
-                                <rect key="frame" x="16" y="105" width="382" height="31.333333333333343"/>
+                                <rect key="frame" x="16" y="105" width="288" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pEn-Ca-Zas">
-                                <rect key="frame" x="16" y="168.33333333333334" width="382" height="30"/>
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-SY-ZY1">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -414,30 +414,30 @@
             <objects>
                 <viewController id="S8D-7k-wL7" customClass="SexAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="292-S0-EzM">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PiO-1m-Bxs">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Él o ella?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VF9-Co-R3e">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="uXJ-Fn-w28">
-                                <rect key="frame" x="16" y="105.00000000000001" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="105" width="288" height="62.5"/>
                                 <string key="text">Para darte consejos más útiles, necesitamos saber tu sexo. Recuerda que estos datos sólo serán compartidos con tu médico, así que no te preocupes</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="WKg-f7-bW6">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AO4-lh-f7T">
-                                <rect key="frame" x="16" y="167.66666666666663" width="382" height="216"/>
+                                <rect key="frame" x="16" y="183.5" width="288" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -490,32 +490,32 @@
             <objects>
                 <viewController id="WR6-s2-RA3" customClass="ProfesionAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NsV-fL-LlQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gUw-ov-9Fs">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿A qué te dedicas?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="shW-Q7-bcz">
-                                <rect key="frame" x="16" y="52" width="392" height="21"/>
+                                <rect key="frame" x="16" y="52" width="298" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="De nuevo, para poder darte recomendaciones completamente personalizadas, puedes decirnos a qué te dedicas" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="6zu-yD-087">
-                                <rect key="frame" x="16" y="105" width="382" height="31.333333333333343"/>
+                                <rect key="frame" x="16" y="105" width="288" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Introduce tu profesión" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-Mx-rb4">
-                                <rect key="frame" x="16" y="168.33333333333334" width="382" height="30"/>
+                                <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b80-GM-1T0">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -568,33 +568,33 @@
             <objects>
                 <viewController id="v4u-E4-GEw" customClass="FechaNacimientoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xSL-B6-nc2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="BIv-1i-nvq">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de nacimiento" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="PdY-Fj-PK0">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ayc-ts-HoT">
-                                <rect key="frame" x="16" y="105.00000000000001" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="105" width="288" height="62.5"/>
                                 <string key="text">La fecha de nacimiento permitirá a Preobar calcular los valores óptimos de consumo calórico y proponerte de forma personalizada los ejercicios más adecuados para tu edad</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="czm-l2-vrp">
-                                <rect key="frame" x="16" y="167.66666666666663" width="382" height="216"/>
+                                <rect key="frame" x="16" y="183.5" width="288" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="546248872.87170398">
                                     <!--2018-04-24 07:47:52 +0000-->
                                 </date>
                             </datePicker>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="pVa-3H-dIZ">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -647,30 +647,30 @@
             <objects>
                 <viewController id="ZeE-sg-83z" customClass="AlturaAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XAg-PS-D5q">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Np5-26-pEp">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Altura (cm)" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Pt0-Cn-hbv">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="QsP-mO-O1q">
-                                <rect key="frame" x="16" y="105" width="382" height="77.666666666666686"/>
+                                <rect key="frame" x="16" y="105" width="288" height="93.5"/>
                                 <string key="text">Conocer la altura es fundamental para calcular el índice de masa corporal. Aunque no es excesivamente preciso, este valor nos servirá para determinar tu estado de forma y ofrecerte soluciones para bajar este índice antes de la intervención</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ein-Dl-Web">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxZ-iT-yzA">
-                                <rect key="frame" x="16" y="198.66666666666663" width="382" height="216"/>
+                                <rect key="frame" x="16" y="214.5" width="288" height="216"/>
                             </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -723,30 +723,30 @@
             <objects>
                 <viewController id="sGH-Uh-22K" customClass="PesoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fZ9-mm-Dvp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="GJu-AY-50i">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peso (kg)" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4Y1-Jk-HSa">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="LbT-Dh-D49">
-                                <rect key="frame" x="16" y="105" width="382" height="77.666666666666686"/>
+                                <rect key="frame" x="16" y="105" width="288" height="93.5"/>
                                 <string key="text">Aunque llevaremos un registro de tu peso de manera frecuente una vez uses la aplicación, necesitamos conocer tu peso actual. Si tienes una báscula a mano, podrías usarla para indicarnos el peso exacto. Si no es posible, indicanos uno aproximado</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Gg-6J-CpP">
-                                <rect key="frame" x="16" y="198.66666666666663" width="382" height="216"/>
+                                <rect key="frame" x="16" y="214.5" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="5WD-ul-DTx">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -799,42 +799,42 @@
             <objects>
                 <viewController id="Fov-hR-j9b" customClass="ImagenPerfilAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="LeP-qb-aNo">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="B3Z-bw-OKx">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen de perfil" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ze4-gv-bHa">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zt1-pD-cmP">
-                                <rect key="frame" x="16" y="105" width="382" height="93.333333333333314"/>
+                                <rect key="frame" x="16" y="105" width="288" height="109"/>
                                 <string key="text">Esta imagen tan sólo será visible para tu médico. De esta forma, será mucho más fácil que él te reconozca, especialmente durante la primera cita. Puedes elegir si deseas usar una foto que ya tengas en la galería o si, por el contrario, deseas hacerte una nueva foto usando la cámara del dispositivo</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-X9-SKk">
-                                <rect key="frame" x="16" y="230.33333333333337" width="382" height="94"/>
+                                <rect key="frame" x="16" y="246" width="288" height="94"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="94" id="sjl-Gh-lmf"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nN6-jO-Iy8">
-                                <rect key="frame" x="16" y="340.33333333333331" width="382" height="30"/>
+                                <rect key="frame" x="16" y="356" width="288" height="30"/>
                                 <state key="normal" title="Sacar foto"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gyf-5d-R8h">
-                                <rect key="frame" x="16" y="378.33333333333331" width="382" height="30"/>
+                                <rect key="frame" x="16" y="394" width="288" height="30"/>
                                 <state key="normal" title="Desde la galería"/>
                             </button>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ANv-9R-WiZ">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -892,30 +892,30 @@
             <objects>
                 <viewController id="xnJ-qi-d1T" customClass="HipertensionAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Dqe-B7-F2E">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dHq-hU-fMr">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Eres hipertenso?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="4ek-NN-ZZy">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="aI9-2a-5Td">
-                                <rect key="frame" x="16" y="104.99999999999999" width="382" height="62.333333333333329"/>
+                                <rect key="frame" x="16" y="105" width="288" height="93.5"/>
                                 <string key="text">La hipertensión es un problema frecuente en personas con uin índice de masa corporal elevado. Es un factor a tener en cuenta no sólo en la intervención, sino a la hora de realizar actividad física o de alimentarse adecuadamente</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qBL-vy-p0M">
-                                <rect key="frame" x="16" y="183.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="214.5" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qU0-W0-s8N">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -968,30 +968,30 @@
             <objects>
                 <viewController id="WSq-rN-c0f" customClass="Diabetes1AssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fnm-MV-BHq">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="vrB-0K-aca">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Padeces de diabetes tipo I?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="Tuf-Wv-V3R">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="zH2-Xm-bpF">
-                                <rect key="frame" x="16" y="105" width="382" height="93.333333333333314"/>
+                                <rect key="frame" x="16" y="105" width="288" height="124.5"/>
                                 <string key="text">Si tienes diabetes tipo I, es el momento de indicarlo. A lo largo del recorrido durante las semanas previas a la intervención, te ofreceremos una serie de consejos nutricionaes y recetas para comer adecuadamente. en el caso de que seas diabético, adaptaremos estas recetas para que no tengas ningún problema</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lrk-EE-Ldt">
-                                <rect key="frame" x="16" y="214.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="245.5" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="onE-OA-A0m">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1044,30 +1044,30 @@
             <objects>
                 <viewController id="kb9-oO-Xar" customClass="Diabetes2AssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="AMB-w9-hB4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tGy-p3-IJL">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Padeces diabetes tipo II?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="O9W-Og-YUs">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yGd-LG-Wdm">
-                                <rect key="frame" x="16" y="168.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="184" width="288" height="216"/>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Ty0-tF-UVa">
-                                <rect key="frame" x="16" y="105.00000000000001" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="105" width="288" height="62.5"/>
                                 <string key="text">Por favor, dinos si tienes diabetes tipo II. Esto nos ayudará a la hora de ofrecerte recomendaciones y consejos sobre nutrición y deporte</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ePC-dZ-dfW">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1120,30 +1120,30 @@
             <objects>
                 <viewController id="13g-gh-bmm" customClass="DiabetesMedicacionPrescritaController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="p9r-Zz-D3Y">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="tog-gd-92Y">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Si padeces diabetes, ¿qué tipo de medicación tienes prescrita?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="2ca-VZ-ayO">
-                                <rect key="frame" x="16" y="52" width="382" height="40.666666666666657"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ezb-7Y-tzH">
-                                <rect key="frame" x="16" y="124.66666666666667" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="125" width="288" height="62.5"/>
                                 <string key="text">Si nos indicas qué tipo de medicación tienes prescrita, tu médico sabrá qué contradindicaciones pueden tener los fármacos que sean necesarios durante el proceso</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PRA-ZM-HVm">
-                                <rect key="frame" x="16" y="188" width="382" height="216"/>
+                                <rect key="frame" x="16" y="204" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="F1B-Yp-6WC">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1196,29 +1196,29 @@
             <objects>
                 <viewController id="NOZ-1M-kiJ" customClass="TrastornoSuenyoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="W4f-L1-2jz">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="dcT-A6-HOP">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes trastornos del sueño?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ksO-MO-Rgp">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Los trastornos del sueño, como la apnea, son bastante frecuentes. Por favor, indicanos si tienes algún problema de este tipo" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="ftc-Bt-SDL">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="104.5" width="288" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rMM-8u-ZN4">
-                                <rect key="frame" x="16" y="167.66666666666663" width="382" height="216"/>
+                                <rect key="frame" x="16" y="168" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="dEr-7d-QaG">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1259,42 +1259,42 @@
                     <connections>
                         <outlet property="pbTrastornoSuenyo" destination="dEr-7d-QaG" id="vJA-Cf-1da"/>
                         <outlet property="pvTrastornoSuenyo" destination="rMM-8u-ZN4" id="tR0-kf-J6Q"/>
-                        <segue destination="alR-s6-M64" kind="show" id="kzr-oX-fps"/>
+                        <segue destination="alR-s6-M64" kind="show" identifier="toLesionArticularAssistantSegue" id="kzr-oX-fps"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ur-Kw-ilo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11330.625" y="133.09859154929578"/>
         </scene>
-        <!--View Controller-->
+        <!--Lesion Articular Assistant Controller-->
         <scene sceneID="4XL-sh-IQb">
             <objects>
-                <viewController id="alR-s6-M64" sceneMemberID="viewController">
+                <viewController id="alR-s6-M64" customClass="LesionArticularAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="h1b-Vs-Ic5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="lZh-ab-VEk">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes alguna lesión articular?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dK4-Wk-7nC">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="c8z-Dh-ScQ">
-                                <rect key="frame" x="16" y="104.33333333333331" width="382" height="77.666666666666686"/>
+                                <rect key="frame" x="16" y="104.5" width="288" height="93.5"/>
                                 <string key="text">Preobar también te ofrecerá la oportunidad de ejercitarte y preparar tu cuerpo para antes y después de la intervención. En caso de que tenfas algún problema o limitación articular, indícalo para mostrarte ejercicios que no dañen tus articulaciones</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0b-0p-JW5">
-                                <rect key="frame" x="16" y="198" width="382" height="216"/>
+                                <rect key="frame" x="16" y="214" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-Mm-5Xt">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1325,46 +1325,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="WtE-Ks-hjv"/>
-                        <barButtonItem title="Siguiente" id="Qiw-Ia-98C"/>
+                        <barButtonItem title="Siguiente" id="Qiw-Ia-98C">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="alR-s6-M64" id="S4E-RB-uOo"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="Sgh-2e-Qns" kind="show" id="029-CN-12O"/>
+                        <outlet property="pbLesionArticular" destination="zK6-Mm-5Xt" id="cyv-c1-UHT"/>
+                        <outlet property="pvLesionArticular" destination="k0b-0p-JW5" id="LeW-2j-7xd"/>
+                        <segue destination="Sgh-2e-Qns" kind="show" identifier="toColesterolAssistantSegue" id="029-CN-12O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UvI-vn-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12079" y="133"/>
         </scene>
-        <!--View Controller-->
+        <!--Colesterol Assistant Controller-->
         <scene sceneID="xHN-59-pbD">
             <objects>
-                <viewController id="Sgh-2e-Qns" sceneMemberID="viewController">
+                <viewController id="Sgh-2e-Qns" customClass="ColesterolAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zba-c4-Yn8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ayg-ug-lln">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes el colesterol elevado?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="IIB-t4-0Co">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="oBw-L9-tTF">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="104.5" width="288" height="62.5"/>
                                 <string key="text">Un índice de colesterol alto (hiperlipidemia) hace necesario plantear un esquema nutricional específico. Por favor, indícanos si tienes este problema</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TD3-Sv-87m">
-                                <rect key="frame" x="16" y="167" width="382" height="216"/>
+                                <rect key="frame" x="16" y="183" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="51A-a3-NNP">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1395,46 +1401,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="AbG-O5-GVI"/>
-                        <barButtonItem title="Siguiente" id="sUg-GJ-RNo"/>
+                        <barButtonItem title="Siguiente" id="sUg-GJ-RNo">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="Sgh-2e-Qns" id="Ek5-8q-mP4"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="fbM-dx-mxa" kind="show" id="bUh-4s-nTC"/>
+                        <outlet property="pbColesterol" destination="51A-a3-NNP" id="0Vp-f7-a13"/>
+                        <outlet property="pvColesterol" destination="TD3-Sv-87m" id="APf-eS-dzu"/>
+                        <segue destination="fbM-dx-mxa" kind="show" identifier="toPiedrasAssistantSegue" id="bUh-4s-nTC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RJ-e6-ndu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="12853" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--Piedras Assistant Controller-->
         <scene sceneID="FgE-O6-kzL">
             <objects>
-                <viewController id="fbM-dx-mxa" sceneMemberID="viewController">
+                <viewController id="fbM-dx-mxa" customClass="PiedrasAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3AB-FV-HFm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ACM-DY-iRB">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Has sido diagnosticado de piedras en la vesícula?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zDl-Uk-LO8">
-                                <rect key="frame" x="16" y="52" width="382" height="40.666666666666657"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="8" translatesAutoresizingMaskIntoConstraints="NO" id="JgU-ik-uVn">
-                                <rect key="frame" x="16" y="124.66666666666667" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="125" width="288" height="62.5"/>
                                 <string key="text">Los problemas de la vesícula biliar se presentan de varias formas. Si tienes piedras o cálculos en la vesícula, obstrucción o inflamación debes indicarlo a continuación</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ibB-CX-BL3">
-                                <rect key="frame" x="16" y="188" width="382" height="216"/>
+                                <rect key="frame" x="16" y="204" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="zQp-8u-O8N">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1465,46 +1477,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5se-0e-KS1"/>
-                        <barButtonItem title="Siguiente" id="4uu-iY-g08"/>
+                        <barButtonItem title="Siguiente" id="4uu-iY-g08">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="fbM-dx-mxa" id="TC2-k4-2Hl"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="dEq-MB-J0r" kind="show" id="fNW-gH-PPa"/>
+                        <outlet property="pbPiedras" destination="zQp-8u-O8N" id="Ru5-Zl-jlK"/>
+                        <outlet property="pvPiedras" destination="ibB-CX-BL3" id="GO8-8t-nLZ"/>
+                        <segue destination="dEq-MB-J0r" kind="show" identifier="toHigadoAssistantSegue" id="fNW-gH-PPa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3g-ew-l7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="13601" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--Higado Assistant Controller-->
         <scene sceneID="KwD-yS-kiO">
             <objects>
-                <viewController id="dEq-MB-J0r" sceneMemberID="viewController">
+                <viewController id="dEq-MB-J0r" customClass="HigadoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cjo-bg-Avr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="kW0-Wy-JAq">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tiene alguna enfermedad relacionada con el hígado?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="U7g-dU-dBk">
-                                <rect key="frame" x="16" y="52" width="382" height="40.666666666666657"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="VzE-LU-9GL">
-                                <rect key="frame" x="16" y="124.66666666666666" width="382" height="77.666666666666657"/>
+                                <rect key="frame" x="16" y="125" width="288" height="93.5"/>
                                 <string key="text">Una buena alimentación específica para pacientes con problemas hepáticos puede ayudar a aliviar o incluso hacer desaparecer los síntomas. Para recomendarte las mejores recetas, indícanos si tienes problemas relacionados con el hígado</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eLl-95-UJO">
-                                <rect key="frame" x="16" y="219" width="382" height="216"/>
+                                <rect key="frame" x="16" y="235" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="boA-8o-HGb">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1535,46 +1553,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="J3O-rV-gsP"/>
-                        <barButtonItem title="Siguiente" id="DOr-jx-8Ca"/>
+                        <barButtonItem title="Siguiente" id="DOr-jx-8Ca">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="dEq-MB-J0r" id="m81-I0-CKZ"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="287-SV-K8R" kind="show" id="5jL-L5-mVP"/>
+                        <outlet property="pbHigado" destination="boA-8o-HGb" id="fsx-1v-dYx"/>
+                        <outlet property="pvHigado" destination="eLl-95-UJO" id="fBi-ci-md7"/>
+                        <segue destination="287-SV-K8R" kind="show" identifier="toHuesosAssistantSegue" id="5jL-L5-mVP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tZ-d3-mD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="14368" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--Huesos Assistant Controller-->
         <scene sceneID="cyd-if-8OR">
             <objects>
-                <viewController id="287-SV-K8R" sceneMemberID="viewController">
+                <viewController id="287-SV-K8R" customClass="HuesosAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8jb-Tk-sc3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ISM-NJ-qpG">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes alguna enfermedad degenerativa del hueso como la osteoporosis?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="kAY-0b-pBo">
-                                <rect key="frame" x="16" y="52" width="382" height="40.666666666666657"/>
+                                <rect key="frame" x="16" y="52" width="288" height="61"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="268-yi-GGe">
-                                <rect key="frame" x="16" y="124.66666666666666" width="382" height="77.666666666666657"/>
+                                <rect key="frame" x="16" y="145" width="288" height="93.5"/>
                                 <string key="text">La osteoporosis tiene una gran prevalencia en mujeres de todas las edades, auqnue también se presenta en hombres. A la hora de ejercitarse, es aconsejable tener en cuenta una serie de limitaciones para no agravar el problema y convertir el ejercicio en una actividad lesiva</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ayt-br-AHV">
-                                <rect key="frame" x="16" y="218.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="254.5" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cBR-7d-LXj">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1605,46 +1629,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ZMn-el-di7"/>
-                        <barButtonItem title="Siguiente" id="ZTn-1d-vpx"/>
+                        <barButtonItem title="Siguiente" id="ZTn-1d-vpx">
+                            <connections>
+                                <action selector="actionBtnSIguiente:" destination="287-SV-K8R" id="7PV-rU-jgq"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="OiZ-KT-xYK" kind="show" id="X3F-ub-gDR"/>
+                        <outlet property="pbHuesos" destination="cBR-7d-LXj" id="0sl-fJ-Cqq"/>
+                        <outlet property="pvHuesos" destination="Ayt-br-AHV" id="8S2-H6-jJt"/>
+                        <segue destination="OiZ-KT-xYK" kind="show" identifier="toEnfermedadCardiacaAssistantSegue" id="X3F-ub-gDR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez6-a5-zt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15100" y="128.18590704647679"/>
         </scene>
-        <!--View Controller-->
+        <!--Enfermedad Cardiaca Assistant Controller-->
         <scene sceneID="qZS-0X-dyk">
             <objects>
-                <viewController id="OiZ-KT-xYK" sceneMemberID="viewController">
+                <viewController id="OiZ-KT-xYK" customClass="EnfermedadCardiacaAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KTu-Mc-eVv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ZJ2-bm-pbJ">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes alguna enfermedad cardíaca (problema del corazón)?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="UA3-cJ-5IC">
-                                <rect key="frame" x="16" y="52" width="382" height="40.666666666666657"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="11" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="xv0-aH-eMS">
-                                <rect key="frame" x="16" y="124.66666666666666" width="382" height="108.66666666666666"/>
+                                <rect key="frame" x="16" y="125" width="288" height="140"/>
                                 <string key="text">Las enfermedades cardiovasculares son la principal causa de muerte en todo el mundo, por lo que es conveniente tenerlas bajo control. En ocasiones, el problema no es sólo la enfermedad, si no los hábitos de vida que seguimos cuando la tenemos. Por favor, indícanos si has sufrido en alguna ocasión un accidente cardiovascular o si tienes alguna enfermedad relacionada con el corazón</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dsV-f8-B8f">
-                                <rect key="frame" x="16" y="249.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="281" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oNy-wl-Fns">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1675,46 +1705,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="P3i-Gr-Ezu"/>
-                        <barButtonItem title="Siguiente" id="roS-nU-Na2"/>
+                        <barButtonItem title="Siguiente" id="roS-nU-Na2">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="OiZ-KT-xYK" id="UMX-Ip-3gz"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="n6d-Fb-fqL" kind="show" id="4x9-6H-8vk"/>
+                        <outlet property="pbEnfermedadCardiaca" destination="oNy-wl-Fns" id="lHB-iK-fKO"/>
+                        <outlet property="pvEnfermedadCardiaca" destination="dsV-f8-B8f" id="miN-Sb-TDc"/>
+                        <segue destination="n6d-Fb-fqL" kind="show" identifier="toFumadorAssistantSegue" id="4x9-6H-8vk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN5-lN-K9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="15832.5" y="129.92957746478874"/>
         </scene>
-        <!--View Controller-->
+        <!--Fumador Assistant Controller-->
         <scene sceneID="yqI-gq-Nz2">
             <objects>
-                <viewController id="n6d-Fb-fqL" sceneMemberID="viewController">
+                <viewController id="n6d-Fb-fqL" customClass="FumadorAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KVb-jf-MTy">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="06h-mF-H8S">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Eres fumador? ¿cuántos cigarrillos fumas al día?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="BWg-uA-N5f">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="LnQ-DR-bZe">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="62.333333333333329"/>
+                                <rect key="frame" x="16" y="125" width="288" height="78"/>
                                 <string key="text">Además de que fumar puede causar serios daños a tu salud, también tiene una relación directa con la obesidad. Si eres fumador, nos lo puedes decir para que podamos ayudarte y darte consejos específicos</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FzH-jy-pX1">
-                                <rect key="frame" x="16" y="182.66666666666663" width="382" height="216"/>
+                                <rect key="frame" x="16" y="219" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cMF-CV-1hD">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1745,46 +1781,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="yE1-Tv-vGU"/>
-                        <barButtonItem title="Siguiente" id="Wk4-Hb-oh7"/>
+                        <barButtonItem title="Siguiente" id="Wk4-Hb-oh7">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="n6d-Fb-fqL" id="23B-X4-zEU"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="w62-vv-Zdx" kind="show" id="Igo-38-xe9"/>
+                        <outlet property="pbFumador" destination="cMF-CV-1hD" id="M1A-5Q-EpB"/>
+                        <outlet property="pvFumador" destination="FzH-jy-pX1" id="78m-WL-kp9"/>
+                        <segue destination="w62-vv-Zdx" kind="show" identifier="toAlcoholAssistantSegue" id="Igo-38-xe9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGe-vu-hib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="16607" y="129"/>
         </scene>
-        <!--View Controller-->
+        <!--Alcohol Assistant Controller-->
         <scene sceneID="IXn-5T-v5Q">
             <objects>
-                <viewController id="w62-vv-Zdx" sceneMemberID="viewController">
+                <viewController id="w62-vv-Zdx" customClass="AlcoholAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fHv-eL-ipm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="P3K-u8-Hvc">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Con qué frecuencia bebes alcohol?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="QS1-uc-beu">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="qYr-ob-5DC">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="104.5" width="288" height="62.5"/>
                                 <string key="text">El consumo excesivo de alcohol puede ser una de las causas de la obesidad. Si nos comentas con qué frecuencia bebes bebidas alcohólicas, podremos ayudarte aún más</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rc2-zk-JYk">
-                                <rect key="frame" x="16" y="167" width="382" height="216"/>
+                                <rect key="frame" x="16" y="183" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="KNC-oX-k4k">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1815,46 +1857,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="Skn-B3-Gkp"/>
-                        <barButtonItem title="Siguiente" id="B6I-6I-QuG"/>
+                        <barButtonItem title="Siguiente" id="B6I-6I-QuG">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="w62-vv-Zdx" id="Y35-eB-jeW"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="vjg-H3-kGZ" kind="show" id="YeZ-Zq-RT2"/>
+                        <outlet property="pbAlcohol" destination="KNC-oX-k4k" id="Wh7-NW-KFp"/>
+                        <outlet property="pvAlcohol" destination="Rc2-zk-JYk" id="x4r-rd-RTf"/>
+                        <segue destination="vjg-H3-kGZ" kind="show" identifier="toArdoresAssistantSegue" id="YeZ-Zq-RT2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iac-Ok-aJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="17358.75" y="129.92957746478874"/>
         </scene>
-        <!--View Controller-->
+        <!--Ardores Assistant Controller-->
         <scene sceneID="P1k-uz-ona">
             <objects>
-                <viewController id="vjg-H3-kGZ" sceneMemberID="viewController">
+                <viewController id="vjg-H3-kGZ" customClass="ArdoresAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="I5b-bL-g0T">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="WAl-jS-XRq">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes ardores (reflujo)?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="ox2-YM-nRq">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="p6e-hD-frw">
-                                <rect key="frame" x="16" y="105.00000000000001" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="105" width="288" height="62.5"/>
                                 <string key="text">Los ardores y el reflujo son síntomas bastante frecuentes. De todos modos, nos gistaría saber si tienes alguno de ellos para que tu médico pueda ofrecerte la mejor atención</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r5N-iz-Rvh">
-                                <rect key="frame" x="16" y="168.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="184" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SEk-N4-c7c">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1885,45 +1933,51 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="l4T-aZ-TvV"/>
-                        <barButtonItem title="Siguiente" id="puB-7o-itW"/>
+                        <barButtonItem title="Siguiente" id="puB-7o-itW">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="vjg-H3-kGZ" id="D2J-Rr-yKi"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="Nyh-pD-s9P" kind="show" id="w8P-XL-ykV"/>
+                        <outlet property="pbArdores" destination="SEk-N4-c7c" id="nkv-kX-3RP"/>
+                        <outlet property="pvArdores" destination="r5N-iz-Rvh" id="BBE-0l-u57"/>
+                        <segue destination="Nyh-pD-s9P" kind="show" identifier="toReflujoAssistantSegue" id="w8P-XL-ykV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAt-ko-QBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18110.625" y="123.59154929577466"/>
         </scene>
-        <!--View Controller-->
+        <!--Tratamiento Reflujo Assistant Controller-->
         <scene sceneID="UqC-3u-wNx">
             <objects>
-                <viewController id="Nyh-pD-s9P" sceneMemberID="viewController">
+                <viewController id="Nyh-pD-s9P" customClass="TratamientoReflujoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kJg-7d-DDm">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rFH-fG-0dc">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes tratamiento para el reflujo?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="nAS-84-ZtL">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="En caso de haber respondido afirmativamente a la pregunta anterior, nos vendría bien saber si estás en tratamiento" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="g34-FC-QKh">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="31.333333333333329"/>
+                                <rect key="frame" x="16" y="104.5" width="288" height="47"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sRb-IY-eHr">
-                                <rect key="frame" x="16" y="152.33333333333337" width="382" height="216"/>
+                                <rect key="frame" x="16" y="168" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fc3-JH-fGG">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1954,46 +2008,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="3dS-HE-Tik"/>
-                        <barButtonItem title="Siguiente" id="34O-mK-B1c"/>
+                        <barButtonItem title="Siguiente" id="34O-mK-B1c">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="Nyh-pD-s9P" id="IFC-Hn-Nbt"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="WQN-KS-1Ku" kind="show" id="68P-bu-ZRa"/>
+                        <outlet property="pbTratamientoReflujo" destination="fc3-JH-fGG" id="dNu-EB-8zx"/>
+                        <outlet property="pvTratamientoReflujo" destination="sRb-IY-eHr" id="ecv-01-ZHy"/>
+                        <segue destination="WQN-KS-1Ku" kind="show" identifier="toDeporteAssistantSegue" id="68P-bu-ZRa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEE-oy-syq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="18886.875" y="123.59154929577466"/>
         </scene>
-        <!--View Controller-->
+        <!--Deporte Assistant Controller-->
         <scene sceneID="YMP-fq-iAI">
             <objects>
-                <viewController id="WQN-KS-1Ku" sceneMemberID="viewController">
+                <viewController id="WQN-KS-1Ku" customClass="DeporteAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="eW9-BY-SvG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="j34-lI-nAt">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Cuánto tiempo llevas haciendo deporte?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dyk-4s-sOp">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="9" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="LRw-JJ-8s7">
-                                <rect key="frame" x="16" y="104.33333333333334" width="382" height="93.333333333333343"/>
+                                <rect key="frame" x="16" y="125" width="288" height="124.5"/>
                                 <string key="text">Hacer deporte puede salvarte la vida y, por supuesto, hacer reducir tu peso. Además de la alimentación, el deporte se considera un hábito de vida saludable siempre y cuando se haga de manera responsable. Preobar te asosará a la hora de realizar actividades, pero debemos conocer tu estado de forma. Por favor, dinos cuánto tiempo llevas haciendo deporte</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4h3-14-ndg">
-                                <rect key="frame" x="16" y="214" width="382" height="216"/>
+                                <rect key="frame" x="16" y="265.5" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="SXi-uk-KGC">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2024,46 +2084,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="ggj-PI-gqW"/>
-                        <barButtonItem title="Siguiente" id="njs-Ne-0s8"/>
+                        <barButtonItem title="Siguiente" id="njs-Ne-0s8">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="WQN-KS-1Ku" id="1ot-hL-h5T"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="6of-GX-mu4" kind="show" id="LDN-AY-H7R"/>
+                        <outlet property="pbDeporte" destination="SXi-uk-KGC" id="F6n-ea-mNq"/>
+                        <outlet property="pvDeporte" destination="4h3-14-ndg" id="Dxp-Rf-f2d"/>
+                        <segue destination="6of-GX-mu4" kind="show" identifier="toFechaIntervencionAssistantSegue" id="LDN-AY-H7R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0u-VR-Dw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19650" y="123.59154929577466"/>
         </scene>
-        <!--View Controller-->
+        <!--Fecha Intervencion Assistant Controller-->
         <scene sceneID="uTP-N2-02M">
             <objects>
-                <viewController id="6of-GX-mu4" sceneMemberID="viewController">
+                <viewController id="6of-GX-mu4" customClass="FechaIntervencionAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MVR-Gc-1vu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ggt-7S-EQC">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ya sabes cuándo se realizará la intervención?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="cnD-Q5-YIb">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="41"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="sJZ-fs-ixh">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="125" width="288" height="78"/>
                                 <string key="text">Puede que aún tu médico no te haya comunicado la fecha de la cirugía pero, si es así, índicalo a continuación para adaptar los consejos de Preobar en función de la proximidad de esta fecha</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-6e-OYx">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-6D-Vq0">
-                                <rect key="frame" x="16" y="167" width="382" height="216"/>
+                                <rect key="frame" x="16" y="219" width="288" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="546422482.40444899">
                                     <!--2018-04-26 08:01:22 +0000-->
                                 </date>
@@ -2097,46 +2163,52 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="huh-oE-dBk"/>
-                        <barButtonItem title="Siguiente" id="i0R-23-Kec"/>
+                        <barButtonItem title="Siguiente" id="i0R-23-Kec">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="6of-GX-mu4" id="LQt-Cv-vI6"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="L6g-lB-xTf" kind="show" id="hGJ-EI-Gac"/>
+                        <outlet property="dpFechaIntervencion" destination="WNl-6D-Vq0" id="h8t-X5-EKE"/>
+                        <outlet property="pbFechaIntervencion" destination="FrF-6e-OYx" id="9JD-dF-FbZ"/>
+                        <segue destination="L6g-lB-xTf" kind="show" identifier="toPesoObjetivoAssistantSegue" id="hGJ-EI-Gac"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IS6-BB-XGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20417" y="124"/>
         </scene>
-        <!--View Controller-->
+        <!--Peso Objetivo Assistant Controller-->
         <scene sceneID="jOp-e7-czn">
             <objects>
-                <viewController id="L6g-lB-xTf" sceneMemberID="viewController">
+                <viewController id="L6g-lB-xTf" customClass="PesoObjetivoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UOJ-LV-wgb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="gB3-Wh-4DX">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Tienes algún peso como objetivo?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="qBA-3B-ExP">
-                                <rect key="frame" x="16" y="52" width="382" height="20.333333333333329"/>
+                                <rect key="frame" x="16" y="52" width="288" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="1IP-iv-O57">
-                                <rect key="frame" x="16" y="104.33333333333333" width="382" height="46.666666666666671"/>
+                                <rect key="frame" x="16" y="104.5" width="288" height="62.5"/>
                                 <string key="text">Posiblemente tu médico te ha fijado un objetivo de peso de cara a la intevención Por favor, dinos este peso para poder ayudarte a conseguirlo</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jq-e1-WOW">
-                                <rect key="frame" x="16" y="167" width="382" height="216"/>
+                                <rect key="frame" x="16" y="183" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Hoe-eQ-00m">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2167,52 +2239,58 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="bZp-PV-NeN"/>
-                        <barButtonItem title="Siguiente" id="hSM-dH-baX"/>
+                        <barButtonItem title="Siguiente" id="hSM-dH-baX">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="L6g-lB-xTf" id="q7w-MC-RTP"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="3Vj-Is-Zt0" kind="show" id="U9P-nr-uHr"/>
+                        <outlet property="pbPesoObjetivo" destination="Hoe-eQ-00m" id="yaK-ZM-Y4j"/>
+                        <outlet property="pvPesoObjetivo" destination="7jq-e1-WOW" id="7vM-iK-1Kd"/>
+                        <segue destination="3Vj-Is-Zt0" kind="show" identifier="toEquipoMedicoAssistantSegue" id="U9P-nr-uHr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcg-Sh-dys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21161.25" y="122.53521126760563"/>
         </scene>
-        <!--View Controller-->
+        <!--Equipo Medico Assistant Controller-->
         <scene sceneID="g9y-R9-yGi">
             <objects>
-                <viewController id="3Vj-Is-Zt0" sceneMemberID="viewController">
+                <viewController id="3Vj-Is-Zt0" customClass="EquipoMedicoAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRb-QX-iyE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hT5-1t-gaB">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Equipo médico" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="x9j-o5-CAm">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="7" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="Wdp-YB-Ba8">
-                                <rect key="frame" x="16" y="104.99999999999999" width="382" height="62.333333333333329"/>
+                                <rect key="frame" x="16" y="105" width="288" height="78"/>
                                 <string key="text">Para poder usar Preobar, debes indicarnos en qué clínica estás recibiendo tratamiento y con qué doctor. es muy importante que selecciones al especiaista correcto, ya que él será la eprsona que te de acceso a Preobar</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige el centro médico" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OEj-rO-usY">
-                                <rect key="frame" x="16" y="199.33333333333334" width="382" height="21"/>
+                                <rect key="frame" x="16" y="215" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-kd-gYz">
-                                <rect key="frame" x="16" y="220" width="382" height="216"/>
+                            <pickerView contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="4zm-kd-gYz">
+                                <rect key="frame" x="16" y="235.5" width="288" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fmc-x2-UDK">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2246,59 +2324,65 @@
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="coX-tz-gAv"/>
-                        <barButtonItem title="Siguiente" id="VDH-oq-CHr"/>
+                        <barButtonItem title="Siguiente" id="VDH-oq-CHr">
+                            <connections>
+                                <action selector="actionBtnSiguiente:" destination="3Vj-Is-Zt0" id="ptf-IB-rNX"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <segue destination="8E6-p0-aEg" kind="show" id="bkj-n6-Mq6"/>
+                        <outlet property="pbEquipoMedico" destination="fmc-x2-UDK" id="HTs-xc-8hX"/>
+                        <outlet property="pvEquipoMedico" destination="4zm-kd-gYz" id="pS6-KF-b5r"/>
+                        <segue destination="8E6-p0-aEg" kind="show" identifier="toSeleccionDoctorAssistantSegue" id="bkj-n6-Mq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjv-D5-XwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="21941.25" y="123.59154929577466"/>
         </scene>
-        <!--View Controller-->
+        <!--Seleccion Doctor Assistant Controller-->
         <scene sceneID="mo5-tV-XQR">
             <objects>
-                <viewController id="8E6-p0-aEg" sceneMemberID="viewController">
+                <viewController id="8E6-p0-aEg" customClass="SeleccionDoctorAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="wdz-nP-Z7v">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Vfu-KD-gCX">
-                                <rect key="frame" x="0.0" y="20" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¡Perfecto! Ya hemos terminado" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="MSy-Ig-uW5">
-                                <rect key="frame" x="16" y="52" width="382" height="21"/>
+                                <rect key="frame" x="16" y="52" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="dJ8-XS-R0E">
-                                <rect key="frame" x="16" y="89" width="382" height="62.333333333333343"/>
+                                <rect key="frame" x="16" y="89" width="288" height="93.5"/>
                                 <string key="text">Ya tenemos toda la información que necesitamos para comenzar con el seguimiento. Ahora podrás registrar tu ejercicio, preguntar las dudas que tengas, ver información nutricional o firmar los documentos para la intervención</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="0w2-Dy-bBc">
-                                <rect key="frame" x="16" y="159.33333333333334" width="382" height="62.333333333333343"/>
+                                <rect key="frame" x="16" y="190.5" width="288" height="78"/>
                                 <string key="text">Recuerda que cualquier duda que tengas debes consultársela a tu médico y que, bajo ningún concepto, los consejos ofrecidos por la aplicación deben reemplazar a los de tu facultivo</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Elige doctor/a" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="zE4-Yc-3I2">
-                                <rect key="frame" x="16" y="229.66666666666666" width="382" height="21"/>
+                                <rect key="frame" x="16" y="284.5" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jUT-Up-fl8">
-                                <rect key="frame" x="32" y="251" width="350" height="216"/>
+                                <rect key="frame" x="32" y="305.5" width="256" height="216"/>
                             </pickerView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-kB-NRd">
-                                <rect key="frame" x="36" y="674" width="342" height="2"/>
+                                <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2316,7 +2400,7 @@
                             <constraint firstItem="pVk-lc-fWm" firstAttribute="trailing" secondItem="MSy-Ig-uW5" secondAttribute="trailing" constant="16" id="ZRf-0E-VVn"/>
                             <constraint firstItem="jUT-Up-fl8" firstAttribute="top" secondItem="zE4-Yc-3I2" secondAttribute="bottom" id="ctg-KA-By7"/>
                             <constraint firstItem="pVk-lc-fWm" firstAttribute="trailing" secondItem="0w2-Dy-bBc" secondAttribute="trailing" constant="16" id="fRh-ki-vhz"/>
-                            <constraint firstItem="zE4-Yc-3I2" firstAttribute="top" secondItem="0w2-Dy-bBc" secondAttribute="bottom" constant="8" id="fl3-ot-X2B"/>
+                            <constraint firstItem="zE4-Yc-3I2" firstAttribute="top" secondItem="0w2-Dy-bBc" secondAttribute="bottom" constant="16" id="fl3-ot-X2B"/>
                             <constraint firstItem="0w2-Dy-bBc" firstAttribute="leading" secondItem="pVk-lc-fWm" secondAttribute="leading" constant="16" id="nDt-E6-Uo2"/>
                             <constraint firstItem="zE4-Yc-3I2" firstAttribute="leading" secondItem="pVk-lc-fWm" secondAttribute="leading" constant="16" id="ogS-YO-qwN"/>
                             <constraint firstItem="Vfu-KD-gCX" firstAttribute="leading" secondItem="pVk-lc-fWm" secondAttribute="leading" id="qNr-wl-ANg"/>
@@ -2338,6 +2422,10 @@
                         <barButtonItem title="Finalizar" id="dBO-bz-aCq"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="pbSeleccionDoctor" destination="gd8-kB-NRd" id="B47-oX-GMU"/>
+                        <outlet property="pvSeleccionDoctor" destination="jUT-Up-fl8" id="Ihh-XS-S5L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nj-BH-rpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2370,27 +2458,28 @@
         <image name="logo_complete.png" width="1536" height="1962"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bkj-n6-Mq6"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
-        <segue reference="yPo-7c-Dc8"/>
-        <segue reference="LO1-wN-7Jl"/>
+        <segue reference="LDN-AY-H7R"/>
+        <segue reference="68P-bu-ZRa"/>
         <segue reference="dHc-hq-R46"/>
         <segue reference="wVz-YF-qiK"/>
-        <segue reference="Igo-38-xe9"/>
+        <segue reference="yzK-7m-ZiP"/>
         <segue reference="Fbj-VQ-SBy"/>
-        <segue reference="X3F-ub-gDR"/>
+        <segue reference="YgA-AF-hsB"/>
         <segue reference="S2Y-ow-gKr"/>
         <segue reference="zQV-5f-Pkl"/>
-        <segue reference="bUh-4s-nTC"/>
-        <segue reference="029-CN-12O"/>
+        <segue reference="959-hi-9Nj"/>
+        <segue reference="14Y-0F-agt"/>
         <segue reference="kzr-oX-fps"/>
         <segue reference="zhk-Cb-aN1"/>
-        <segue reference="Ph6-0T-Nnx"/>
+        <segue reference="t1y-5X-Atj"/>
         <segue reference="ucl-KE-nUO"/>
         <segue reference="9jL-a5-LzN"/>
         <segue reference="4us-Wh-J6M"/>
-        <segue reference="9tp-rB-aK4"/>
-        <segue reference="UJb-mK-nKf"/>
+        <segue reference="LLf-rt-s9J"/>
+        <segue reference="F0w-QF-eiz"/>
         <segue reference="xpE-hp-dvj"/>
         <segue reference="i1h-CY-NnX"/>
         <segue reference="Ls8-Ep-XdY"/>

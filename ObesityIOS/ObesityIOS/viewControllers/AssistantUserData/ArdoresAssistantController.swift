@@ -8,12 +8,36 @@
 
 import UIKit
 
-class ArdoresAssistantController: UIViewController {
+class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var pvArdores: UIPickerView!
+    @IBOutlet weak var pbArdores: UIProgressView!
+    
+    let eleccion = ["No", "Sí, esporádico", "Sí, frecuentemente"]
+    
     override func viewDidLoad() {
+        pvArdores.dataSource = self
+        pvArdores.delegate = self
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        pbArdores.setProgress(0.9, animated: false)
     }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return eleccion.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return eleccion[row]
+    }
+    
+    @IBAction func actionBtnSiguiente(_ sender: Any) {
+        performSegue(withIdentifier: "toReflujoAssistantSegue", sender: nil)
+    }
+    
 
 }

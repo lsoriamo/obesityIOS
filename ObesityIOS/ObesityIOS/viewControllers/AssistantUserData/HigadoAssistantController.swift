@@ -8,12 +8,37 @@
 
 import UIKit
 
-class HigadoAssistantController: UIViewController {
+class HigadoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var pvHigado: UIPickerView!
+    @IBOutlet weak var pbHigado: UIProgressView!
+    
+    let confirmacion = ["Si", "No"]
+
+    
     override func viewDidLoad() {
+        pvHigado.dataSource = self
+        pvHigado.delegate = self
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        pbHigado.setProgress(0.8, animated: false)
+        
     }
-
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return confirmacion.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return confirmacion[row]
+    }
+    
+    @IBAction func actionBtnSiguiente(_ sender: Any) {
+        performSegue(withIdentifier: "toHuesosAssistantSegue", sender: nil)
+    }
+    
 }

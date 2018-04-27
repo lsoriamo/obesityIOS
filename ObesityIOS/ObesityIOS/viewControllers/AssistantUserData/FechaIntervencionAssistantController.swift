@@ -10,10 +10,20 @@ import UIKit
 
 class FechaIntervencionAssistantController: UIViewController {
 
+    @IBOutlet weak var dpFechaIntervencion: UIDatePicker!
+    @IBOutlet weak var pbFechaIntervencion: UIProgressView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pbFechaIntervencion.setProgress(0.9, animated: false)
+        
+        dpFechaIntervencion.datePickerMode = UIDatePickerMode.date
 
-        // Do any additional setup after loading the view.
+        
     }
 
+    @IBAction func actionBtnSiguiente(_ sender: Any) {
+        performSegue(withIdentifier: "toPesoObjetivoAssistantSegue", sender: nil)
+    }
 }

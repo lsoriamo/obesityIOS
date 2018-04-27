@@ -8,11 +8,33 @@
 
 import UIKit
 
-class SeleccionDoctorAssistantController: UIViewController {
+class SeleccionDoctorAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var pvSeleccionDoctor: UIPickerView!
+    @IBOutlet weak var pbSeleccionDoctor: UIProgressView!
+    
+    // ARRAY TIENE QUE SER CARGADO POR BASE DE DATOS
+    var medicos = ["Aliaga Verdugo, Alberto", "Soria Morillo, Luismi", "Morales Conde, Salvador", "Amores Ortiz, Jorge"]
+    
     override func viewDidLoad() {
+        pvSeleccionDoctor.dataSource = self
+        pvSeleccionDoctor.delegate = self
         super.viewDidLoad()
+        
+        pbSeleccionDoctor.setProgress(0.9, animated: false)
 
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return medicos.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return medicos[row]
     }
 
 }

@@ -8,12 +8,35 @@
 
 import UIKit
 
-class PiedrasAssistantController: UIViewController {
+class PiedrasAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var pvPiedras: UIPickerView!
+    @IBOutlet weak var pbPiedras: UIProgressView!
+    
+    let confirmacion = ["Si", "No"]
 
     override func viewDidLoad() {
+        pvPiedras.dataSource = self
+        pvPiedras.delegate = self
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        pbPiedras.setProgress(0.75, animated: false)
+
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+    return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return confirmacion.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return confirmacion[row]
     }
 
+    @IBAction func actionBtnSiguiente(_ sender: Any) {
+        performSegue(withIdentifier: "toHigadoAssistantSegue", sender: nil)
+    }
 }
