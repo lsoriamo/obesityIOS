@@ -36,5 +36,9 @@ class SeleccionDoctorAssistantController: UIViewController, UIPickerViewDelegate
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return medicos[row]
     }
-
+    
+    @IBAction func actionBtnFinalizar(_ sender: Any) {
+        performSegue(withIdentifier: "toWaitConfirmationAssistantSegue", sender: nil)
+    }
+    
 }

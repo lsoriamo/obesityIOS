@@ -38,6 +38,8 @@
 		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
 		7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74B208E264300B57340 /* SexoAssistantController.swift */; };
 		7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */; };
+		744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */; };
+		744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */; };
 		748A96292091CCCF00364DCE /* LesionArticularAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96282091CCCF00364DCE /* LesionArticularAssistantController.swift */; };
 		748A962B2091CD1900364DCE /* ColesterolAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A962A2091CD1900364DCE /* ColesterolAssistantController.swift */; };
 		748A962D2091CD6900364DCE /* PiedrasAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A962C2091CD6900364DCE /* PiedrasAssistantController.swift */; };
@@ -115,6 +117,8 @@
 		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74B208E264300B57340 /* SexoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesionAssistantController.swift; sourceTree = "<group>"; };
+		744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitConfirmationAssistantController.swift; sourceTree = "<group>"; };
+		744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		748A96282091CCCF00364DCE /* LesionArticularAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesionArticularAssistantController.swift; sourceTree = "<group>"; };
 		748A962A2091CD1900364DCE /* ColesterolAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColesterolAssistantController.swift; sourceTree = "<group>"; };
 		748A962C2091CD6900364DCE /* PiedrasAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiedrasAssistantController.swift; sourceTree = "<group>"; };
@@ -180,6 +184,7 @@
 		740E1BD02085F62A00BF68FC /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				744F2E3C2099A7C5002DFDA5 /* SignUpUser */,
 				7448F746208E254300B57340 /* AssistantUserData */,
 				7421C0F0207B551D0026CCE2 /* ViewController.swift */,
 			);
@@ -318,8 +323,17 @@
 				748A96422091F6A600364DCE /* PesoObjetivoAssistantController.swift */,
 				748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */,
 				748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */,
+				744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */,
 			);
 			path = AssistantUserData;
+			sourceTree = "<group>";
+		};
+		744F2E3C2099A7C5002DFDA5 /* SignUpUser */ = {
+			isa = PBXGroup;
+			children = (
+				744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */,
+			);
+			path = SignUpUser;
 			sourceTree = "<group>";
 		};
 		7E834CF0762D684CD8B97146 /* Pods */ = {
@@ -587,9 +601,11 @@
 				74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */,
 				748A962F2091CD8600364DCE /* HigadoAssistantController.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
+				744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
 				748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */,
 				748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */,
+				744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */,
 				742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */,
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,

@@ -127,6 +127,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         
     }
     
+    @IBAction func actionBtnRegistro(_ sender: Any) {
+        performSegue(withIdentifier: "toRegistroUsuarioSegue", sender: nil)
+    }
     
     
     //        GIDSignIn.sharedInstance().signIn()
