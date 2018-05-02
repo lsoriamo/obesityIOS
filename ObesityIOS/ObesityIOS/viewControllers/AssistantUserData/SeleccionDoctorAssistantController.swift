@@ -21,7 +21,7 @@ class SeleccionDoctorAssistantController: UIViewController, UIPickerViewDelegate
         pvSeleccionDoctor.delegate = self
         super.viewDidLoad()
         
-        pbSeleccionDoctor.setProgress(0.9, animated: false)
+        pbSeleccionDoctor.setProgress(1, animated: false)
 
     }
     

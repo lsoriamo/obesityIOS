@@ -20,7 +20,7 @@ class FumadorAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         pvFumador.delegate = self
         super.viewDidLoad()
 
-        pbFumador.setProgress(0.9, animated: false)
+        pbFumador.setProgress(0.714, animated: false)
     
     }
     

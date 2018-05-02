@@ -20,7 +20,7 @@ class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         pvArdores.delegate = self
         super.viewDidLoad()
 
-        pbArdores.setProgress(0.9, animated: false)
+        pbArdores.setProgress(0.782, animated: false)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

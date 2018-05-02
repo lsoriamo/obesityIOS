@@ -20,7 +20,7 @@ class EnfermedadCardiacaAssistantController: UIViewController, UIPickerViewDeleg
         pvEnfermedadCardiaca.delegate = self
         super.viewDidLoad()
 
-        pbEnfermedadCardiaca.setProgress(0.85, animated: false)
+        pbEnfermedadCardiaca.setProgress(0.68, animated: false)
 
     }
     

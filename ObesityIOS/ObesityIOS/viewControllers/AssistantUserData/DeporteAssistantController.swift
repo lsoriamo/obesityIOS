@@ -20,7 +20,7 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         pvDeporte.delegate = self
         super.viewDidLoad()
         
-        pbDeporte.setProgress(0.9, animated: false)
+        pbDeporte.setProgress(0.85, animated: false)
         
     }
     

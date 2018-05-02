@@ -18,7 +18,7 @@ class TelefonoAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pbTelefono.setProgress(0.15, animated: false)
+        pbTelefono.setProgress(0.102, animated: false)
 
         // Do any additional setup after loading the view.
     }

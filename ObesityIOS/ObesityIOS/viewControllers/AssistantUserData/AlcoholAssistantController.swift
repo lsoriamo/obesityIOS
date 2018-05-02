@@ -20,7 +20,7 @@ class AlcoholAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         pvAlcohol.delegate = self
         super.viewDidLoad()
 
-        pbAlcohol.setProgress(0.9, animated: false)
+        pbAlcohol.setProgress(0.748, animated: false)
         
     }
     

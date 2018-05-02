@@ -16,7 +16,7 @@ class FechaIntervencionAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pbFechaIntervencion.setProgress(0.9, animated: false)
+        pbFechaIntervencion.setProgress(0.884, animated: false)
         
         dpFechaIntervencion.datePickerMode = UIDatePickerMode.date
 

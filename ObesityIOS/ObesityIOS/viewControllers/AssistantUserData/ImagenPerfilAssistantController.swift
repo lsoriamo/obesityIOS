@@ -15,7 +15,7 @@ class ImagenPerfilAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pbImagenPerfil.setProgress(0.4, animated: false)
+        pbImagenPerfil.setProgress(0.306, animated: false)
         
     }
 

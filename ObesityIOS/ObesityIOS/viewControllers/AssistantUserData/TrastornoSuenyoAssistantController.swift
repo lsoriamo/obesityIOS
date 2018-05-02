@@ -20,7 +20,7 @@ class TrastornoSuenyoAssistantController: UIViewController, UIPickerViewDelegate
         pvTrastornoSuenyo.delegate = self
         super.viewDidLoad()
 
-        pbTrastornoSuenyo.setProgress(0.65, animated: false)
+        pbTrastornoSuenyo.setProgress(0.476, animated: false)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

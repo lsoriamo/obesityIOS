@@ -26,7 +26,7 @@ class WelcomeAssistantViewController: UIViewController {
             print("No hay email")
         }
         
-        pbWelcome.setProgress(0.05, animated: false)
+        pbWelcome.setProgress(0.034, animated: false)
         
     }
     

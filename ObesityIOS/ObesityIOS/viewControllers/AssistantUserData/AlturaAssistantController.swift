@@ -20,7 +20,7 @@ class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         pvAltura.delegate = self
         super.viewDidLoad()
         
-        pbAltura.setProgress(0.3, animated: false)
+        pbAltura.setProgress(0.238, animated: false)
         
         alturas = cargarAlturas()
         

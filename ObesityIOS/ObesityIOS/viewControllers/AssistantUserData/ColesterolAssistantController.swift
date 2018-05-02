@@ -20,7 +20,7 @@ class ColesterolAssistantController: UIViewController, UIPickerViewDelegate, UIP
         pvColesterol.delegate = self
         super.viewDidLoad()
         
-        pbColesterol.setProgress(0.75, animated: false)
+        pbColesterol.setProgress(0.544, animated: false)
 
     }
     

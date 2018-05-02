@@ -20,7 +20,7 @@ class LesionArticularAssistantController: UIViewController, UIPickerViewDelegate
         pvLesionArticular.delegate = self
         super.viewDidLoad()
         
-        pbLesionArticular.setProgress(0.7, animated: false)
+        pbLesionArticular.setProgress(0.51, animated: false)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

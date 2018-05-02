@@ -18,7 +18,7 @@ class ProfesionAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        pbProfesion.setProgress(0.2, animated: false)
+        pbProfesion.setProgress(0.17, animated: false)
         
         // Do any additional setup after loading the view.
     }

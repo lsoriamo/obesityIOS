@@ -20,7 +20,7 @@ class Diabetes2AssistantController: UIViewController, UIPickerViewDelegate, UIPi
         pvDiabetes2.delegate = self
         super.viewDidLoad()
         
-        pbDiabetes2.setProgress(0.55, animated: false)
+        pbDiabetes2.setProgress(0.408, animated: false)
 
     }
     

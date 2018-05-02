@@ -20,7 +20,7 @@ class PiedrasAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         pvPiedras.delegate = self
         super.viewDidLoad()
 
-        pbPiedras.setProgress(0.75, animated: false)
+        pbPiedras.setProgress(0.578, animated: false)
 
     }
     

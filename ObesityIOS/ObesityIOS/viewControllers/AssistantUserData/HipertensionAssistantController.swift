@@ -21,7 +21,7 @@ class HipertensionAssistantController: UIViewController, UIPickerViewDelegate, U
         pvHipertension.delegate = self
         super.viewDidLoad()
 
-        pbHipertension.setProgress(0.45, animated: false)
+        pbHipertension.setProgress(0.34, animated: false)
 
     }
     

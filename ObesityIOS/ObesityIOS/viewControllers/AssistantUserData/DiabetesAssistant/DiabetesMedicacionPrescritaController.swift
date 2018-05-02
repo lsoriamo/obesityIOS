@@ -20,7 +20,7 @@ class DiabetesMedicacionPrescritaController: UIViewController, UIPickerViewDeleg
         pvMedicamentoPrescrito.delegate = self
         super.viewDidLoad()
         
-        pbMedicamentoPrescrito.setProgress(0.6, animated: false)
+        pbMedicamentoPrescrito.setProgress(0.442, animated: false)
 
     }
     

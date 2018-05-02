@@ -23,7 +23,7 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
         pickerViewSex.delegate = self
         super.viewDidLoad()
         
-        pbSexo.setProgress(0.2, animated: false)
+        pbSexo.setProgress(0.136, animated: false)
 
         // Do any additional setup after loading the view.
     }

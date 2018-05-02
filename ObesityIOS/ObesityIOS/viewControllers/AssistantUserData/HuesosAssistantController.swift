@@ -20,7 +20,7 @@ class HuesosAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         pvHuesos.delegate = self
         super.viewDidLoad()
 
-        pbHuesos.setProgress(0.85, animated: false)
+        pbHuesos.setProgress(0.646, animated: false)
         
     }
     

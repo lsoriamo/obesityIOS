@@ -20,7 +20,7 @@ class NombreApellidosAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pbNombreApellidos.setProgress(0.1, animated: false)
+        pbNombreApellidos.setProgress(0.068, animated: false)
 
 
         // Do any additional setup after loading the view.

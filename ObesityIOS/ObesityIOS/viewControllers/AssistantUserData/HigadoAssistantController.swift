@@ -21,7 +21,7 @@ class HigadoAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         pvHigado.delegate = self
         super.viewDidLoad()
 
-        pbHigado.setProgress(0.8, animated: false)
+        pbHigado.setProgress(0.612, animated: false)
         
     }
     

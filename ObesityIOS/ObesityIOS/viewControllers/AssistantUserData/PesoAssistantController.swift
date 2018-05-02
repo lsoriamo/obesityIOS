@@ -20,7 +20,7 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
         pvPeso.delegate = self
         super.viewDidLoad()
         
-        pbPeso.setProgress(0.35, animated: false)
+        pbPeso.setProgress(0.272, animated: false)
 
         pesos = cargarPesos()
     }

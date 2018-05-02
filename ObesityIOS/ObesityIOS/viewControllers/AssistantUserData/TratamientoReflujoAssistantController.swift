@@ -20,7 +20,7 @@ class TratamientoReflujoAssistantController: UIViewController, UIPickerViewDeleg
         pvTratamientoReflujo.delegate = self
         super.viewDidLoad()
 
-        pbTratamientoReflujo.setProgress(0.9, animated: false)
+        pbTratamientoReflujo.setProgress(0.816, animated: false)
         
     }
     

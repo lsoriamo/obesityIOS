@@ -21,7 +21,7 @@ class EquipoMedicoAssistantController: UIViewController, UIPickerViewDelegate, U
         pvEquipoMedico.delegate = self
         super.viewDidLoad()
         
-        pbEquipoMedico.setProgress(0.9, animated: false)
+        pbEquipoMedico.setProgress(0.975, animated: false)
 
     }
     

@@ -16,7 +16,7 @@ class FechaNacimientoAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        pbFechaNacimiento.setProgress(0.25, animated: false)
+        pbFechaNacimiento.setProgress(0.204, animated: false)
 
         dpFechaNacimiento.datePickerMode = UIDatePickerMode.date
         
