@@ -220,6 +220,7 @@
                         <outlet property="tfEmail" destination="81A-Yb-YSq" id="p6E-IW-HCr"/>
                         <outlet property="tfPass" destination="J5H-qt-W1f" id="Zbv-Dy-paI"/>
                         <outlet property="tfPassRep" destination="Ki6-xU-4vN" id="FLd-Ym-2JY"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginUsuarioSegue" id="6SV-nB-JFJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNw-RN-kGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2654,6 +2655,6 @@
         <segue reference="I3P-MY-aGR"/>
         <segue reference="tvh-NF-Lj7"/>
         <segue reference="2jP-Ms-ciJ"/>
-        <segue reference="vEP-5c-qNM"/>
+        <segue reference="6SV-nB-JFJ"/>
     </inferredMetricsTieBreakers>
 </document>

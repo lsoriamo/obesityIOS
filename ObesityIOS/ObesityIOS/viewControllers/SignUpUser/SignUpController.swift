@@ -59,10 +59,12 @@ class SignUpController: UIViewController {
             // Fin de Alert -->
         } else {
             // <-- Creando un elemento de Alert (Dialog en Android)
-            let alert = UIAlertController(title: "REGISTRO COMPLETADO", message: "", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "", message: "Hemos enviado un correo de verificación a \(email!). Pulsa el enlace que te hemos enviado y accede de nuevo con el correo electrónico y la contraseña que introdujiste antes", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             // Fin de Alert -->
+            
+            performSegue(withIdentifier: "toLoginUsuarioSegue", sender: nil)
         }
     }
     
