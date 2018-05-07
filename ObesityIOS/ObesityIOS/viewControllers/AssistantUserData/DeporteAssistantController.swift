@@ -37,7 +37,7 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        performSegue(withIdentifier: "toFechaIntervencionAssistantSegue", sender: nil)
+        performSegue(withIdentifier: "toFechaIntervencion2AssistantSegue", sender: nil)
     }
     
 }
