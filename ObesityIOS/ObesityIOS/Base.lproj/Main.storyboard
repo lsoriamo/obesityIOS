@@ -215,6 +215,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EC0-hb-3xv"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Anterior" id="Aqf-lz-NGC">
+                            <connections>
+                                <segue destination="BYZ-38-t0r" kind="show" id="VNo-ah-Zjn"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="btnRegistrar" destination="kqJ-wV-9Yg" id="2kD-5f-2EY"/>
                         <outlet property="tfEmail" destination="81A-Yb-YSq" id="p6E-IW-HCr"/>
@@ -277,7 +285,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Cerrar sesión"/>
                                 <connections>
-                                    <action selector="actionBtnCerrarSesionAssistant:" destination="DcO-B5-fhW" eventType="touchUpInside" id="mMa-Tt-fOg"/>
                                     <action selector="actionBtnSignOut:" destination="DcO-B5-fhW" eventType="touchUpInside" id="MyZ-cT-eP1"/>
                                 </connections>
                             </button>
@@ -2188,92 +2195,12 @@
                     <connections>
                         <outlet property="pbDeporte" destination="SXi-uk-KGC" id="F6n-ea-mNq"/>
                         <outlet property="pvDeporte" destination="4h3-14-ndg" id="Dxp-Rf-f2d"/>
-                        <segue destination="6of-GX-mu4" kind="show" identifier="toFechaIntervencionAssistantSegue" id="LDN-AY-H7R"/>
-                        <segue destination="kVT-UG-hQH" kind="show" identifier="toFechaIntervencion2AssistantSegue" id="Ug9-D9-QJD"/>
+                        <segue destination="kVT-UG-hQH" kind="show" identifier="toFechaIntervencionAssistantSegue" id="Ug9-D9-QJD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0u-VR-Dw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="19650" y="123.59154929577466"/>
-        </scene>
-        <!--Fecha Intervencion Assistant Controller-->
-        <scene sceneID="uTP-N2-02M">
-            <objects>
-                <viewController id="6of-GX-mu4" customClass="FechaIntervencionAssistantController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="MVR-Gc-1vu">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ggt-7S-EQC">
-                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Ya sabes cuándo se realizará la intervención?" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="cnD-Q5-YIb">
-                                <rect key="frame" x="16" y="52" width="288" height="41"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="sJZ-fs-ixh">
-                                <rect key="frame" x="16" y="125" width="288" height="78"/>
-                                <string key="text">Puede que aún tu médico no te haya comunicado la fecha de la cirugía pero, si es así, índicalo a continuación para adaptar los consejos de Preobar en función de la proximidad de esta fecha</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="FrF-6e-OYx">
-                                <rect key="frame" x="32" y="506" width="256" height="2"/>
-                            </progressView>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WNl-6D-Vq0">
-                                <rect key="frame" x="16" y="219" width="288" height="216"/>
-                                <date key="date" timeIntervalSinceReferenceDate="546422482.40444899">
-                                    <!--2018-04-26 08:01:22 +0000-->
-                                </date>
-                            </datePicker>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <constraints>
-                            <constraint firstItem="ggt-7S-EQC" firstAttribute="leading" secondItem="K5r-EB-cej" secondAttribute="leading" id="6eR-eI-h1v"/>
-                            <constraint firstItem="K5r-EB-cej" firstAttribute="trailing" secondItem="WNl-6D-Vq0" secondAttribute="trailing" constant="16" id="9Yl-pf-pgv"/>
-                            <constraint firstItem="K5r-EB-cej" firstAttribute="bottom" secondItem="ggt-7S-EQC" secondAttribute="bottom" id="9ze-CT-HrS"/>
-                            <constraint firstItem="K5r-EB-cej" firstAttribute="trailing" secondItem="cnD-Q5-YIb" secondAttribute="trailing" constant="16" id="FzU-Qs-Ufs"/>
-                            <constraint firstItem="K5r-EB-cej" firstAttribute="trailing" secondItem="sJZ-fs-ixh" secondAttribute="trailing" constant="16" id="HKK-Ab-M4u"/>
-                            <constraint firstItem="K5r-EB-cej" firstAttribute="bottom" secondItem="FrF-6e-OYx" secondAttribute="bottom" constant="16" id="OBx-Zb-FVa"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="FrF-6e-OYx" secondAttribute="trailing" constant="16" id="OyI-24-RMp"/>
-                            <constraint firstItem="WNl-6D-Vq0" firstAttribute="top" secondItem="sJZ-fs-ixh" secondAttribute="bottom" constant="16" id="RSU-Ct-pRs"/>
-                            <constraint firstItem="sJZ-fs-ixh" firstAttribute="leading" secondItem="K5r-EB-cej" secondAttribute="leading" constant="16" id="WOO-cc-o5g"/>
-                            <constraint firstItem="WNl-6D-Vq0" firstAttribute="leading" secondItem="K5r-EB-cej" secondAttribute="leading" constant="16" id="acN-S7-uag"/>
-                            <constraint firstItem="sJZ-fs-ixh" firstAttribute="top" secondItem="cnD-Q5-YIb" secondAttribute="bottom" constant="32" id="bcr-6e-hhf"/>
-                            <constraint firstItem="cnD-Q5-YIb" firstAttribute="top" secondItem="K5r-EB-cej" secondAttribute="top" constant="32" id="dvk-8m-Ctj"/>
-                            <constraint firstItem="FrF-6e-OYx" firstAttribute="leading" secondItem="MVR-Gc-1vu" secondAttribute="leadingMargin" constant="16" id="evq-cB-9sa"/>
-                            <constraint firstItem="ggt-7S-EQC" firstAttribute="top" secondItem="K5r-EB-cej" secondAttribute="top" id="gff-Yf-3LQ"/>
-                            <constraint firstItem="cnD-Q5-YIb" firstAttribute="leading" secondItem="K5r-EB-cej" secondAttribute="leading" constant="16" id="tiA-qR-rmg"/>
-                            <constraint firstItem="K5r-EB-cej" firstAttribute="trailing" secondItem="ggt-7S-EQC" secondAttribute="trailing" id="xMG-tj-9BF"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="K5r-EB-cej"/>
-                    </view>
-                    <toolbarItems>
-                        <barButtonItem title="Anterior" id="g40-8K-QS1">
-                            <connections>
-                                <segue destination="WQN-KS-1Ku" kind="show" id="LO1-wN-7Jl"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="huh-oE-dBk"/>
-                        <barButtonItem title="Siguiente" id="i0R-23-Kec">
-                            <connections>
-                                <action selector="actionBtnSiguiente:" destination="6of-GX-mu4" id="LQt-Cv-vI6"/>
-                            </connections>
-                        </barButtonItem>
-                    </toolbarItems>
-                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
-                    <connections>
-                        <outlet property="dpFechaIntervencion" destination="WNl-6D-Vq0" id="h8t-X5-EKE"/>
-                        <outlet property="pbFechaIntervencion" destination="FrF-6e-OYx" id="9JD-dF-FbZ"/>
-                        <segue destination="L6g-lB-xTf" kind="show" identifier="toPesoObjetivoAssistantSegue" id="hGJ-EI-Gac"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IS6-BB-XGQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="20417" y="124"/>
         </scene>
         <!--Fecha Intervencion2 Assistant Controller-->
         <scene sceneID="bWG-DC-gbT">
@@ -2369,12 +2296,13 @@
                         <outlet property="btnCancelarFecha" destination="dts-6b-yg0" id="DTj-E1-Ceh"/>
                         <outlet property="btnSeleccionarFecha" destination="Sky-Oc-Fg2" id="H8j-NM-VpK"/>
                         <outlet property="dpFechaIntervencion" destination="mQS-jo-lYm" id="Nc9-LX-mva"/>
-                        <segue destination="L6g-lB-xTf" kind="show" identifier="toPesoObejtivo2AssistantSegue" id="Tmn-KK-Gc5"/>
+                        <outlet property="pbFechaIntervencion" destination="pPM-V9-vfg" id="ufh-Se-AEz"/>
+                        <segue destination="L6g-lB-xTf" kind="show" identifier="toPesoObejtivoAssistantSegue" id="Tmn-KK-Gc5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA8-gp-AOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20417" y="1025"/>
+            <point key="canvasLocation" x="20411" y="124"/>
         </scene>
         <!--Peso Objetivo Assistant Controller-->
         <scene sceneID="jOp-e7-czn">
@@ -2431,7 +2359,7 @@
                     <toolbarItems>
                         <barButtonItem title="Anterior" id="Z36-Zp-ktU">
                             <connections>
-                                <segue destination="6of-GX-mu4" kind="show" id="yPo-7c-Dc8"/>
+                                <segue destination="kVT-UG-hQH" kind="show" id="3Sh-RJ-Xnx"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="bZp-PV-NeN"/>
@@ -2729,13 +2657,13 @@
         <image name="logo_complete.png" width="1536" height="1962"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zoG-5v-qod"/>
+        <segue reference="U9P-nr-uHr"/>
         <segue reference="Tmn-KK-Gc5"/>
-        <segue reference="yPo-7c-Dc8"/>
+        <segue reference="3Sh-RJ-Xnx"/>
         <segue reference="NrW-jN-tC9"/>
         <segue reference="dHc-hq-R46"/>
         <segue reference="wVz-YF-qiK"/>
-        <segue reference="yzK-7m-ZiP"/>
+        <segue reference="Igo-38-xe9"/>
         <segue reference="Fbj-VQ-SBy"/>
         <segue reference="YgA-AF-hsB"/>
         <segue reference="S2Y-ow-gKr"/>
@@ -2750,8 +2678,8 @@
         <segue reference="4us-Wh-J6M"/>
         <segue reference="9tp-rB-aK4"/>
         <segue reference="F0w-QF-eiz"/>
-        <segue reference="xpE-hp-dvj"/>
-        <segue reference="i1h-CY-NnX"/>
+        <segue reference="Czh-vA-mBs"/>
+        <segue reference="9we-7x-IVM"/>
         <segue reference="Ls8-Ep-XdY"/>
         <segue reference="lgP-sE-MQp"/>
         <segue reference="I3P-MY-aGR"/>

@@ -12,6 +12,7 @@ class WaitConfirmationAssistantController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.setToolbarHidden(true, animated: false)
 
         // Do any additional setup after loading the view.
     }

@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "ObesityIOS/viewControllers/SignUpUser/SignUpController.swift"
-            timestampString = "547027254.62956"
+            timestampString = "547379468.734199"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "actionBtnFinalizar(_:)"
             landmarkType = "7">
          </BreakpointContent>

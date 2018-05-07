@@ -13,7 +13,7 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pvDeporte: UIPickerView!
     @IBOutlet weak var pbDeporte: UIProgressView!
     
-    let eleccion = ["Nunca", "Hace años que no hago deporte", "Menos de un mes", "Entre 1 y 3 meses", "Más de 3 meses"]
+    let eleccion = ["Nunca", "Hace años", "Menos de un mes", "Entre 1 y 3 meses", "Más de 3 meses"]
     
     override func viewDidLoad() {
         pvDeporte.dataSource = self
@@ -37,7 +37,7 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        performSegue(withIdentifier: "toFechaIntervencion2AssistantSegue", sender: nil)
+        performSegue(withIdentifier: "toFechaIntervencionAssistantSegue", sender: nil)
     }
     
 }

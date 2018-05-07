@@ -24,6 +24,7 @@ class SignUpController: UIViewController {
         super.viewDidLoad()
         
         btnRegistrar.layer.cornerRadius = 4
+        navigationController?.setToolbarHidden(false, animated: false)
 
     }
     @IBAction func actionBtnFinalizar(_ sender: Any) {

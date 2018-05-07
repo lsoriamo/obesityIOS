@@ -11,6 +11,7 @@
 		740E1BCD2085E95000BF68FC /* information_background_lifestyle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */; };
 		740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */; };
 		7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */; };
+		7416823B20A051FD00870B76 /* FechaNacimientoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */; };
 		74178BD9207CAFB000E0BAC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BD8207CAFB000E0BAC3 /* User.swift */; };
 		74178BDA207CAFB000E0BAC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BD8207CAFB000E0BAC3 /* User.swift */; };
 		74178BDB207CAFB000E0BAC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BD8207CAFB000E0BAC3 /* User.swift */; };
@@ -52,12 +53,10 @@
 		748A96392091D10E00364DCE /* ArdoresAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96382091D10E00364DCE /* ArdoresAssistantController.swift */; };
 		748A963B2091D16300364DCE /* TratamientoReflujoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A963A2091D16300364DCE /* TratamientoReflujoAssistantController.swift */; };
 		748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A963C2091D18D00364DCE /* DeporteAssistantController.swift */; };
-		748A963F2091F5FA00364DCE /* FechaIntervencionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A963E2091F5FA00364DCE /* FechaIntervencionAssistantController.swift */; };
 		748A96432091F6A600364DCE /* PesoObjetivoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96422091F6A600364DCE /* PesoObjetivoAssistantController.swift */; };
 		748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */; };
 		748A96472091F74B00364DCE /* SeleccionDoctorAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */; };
 		74C71FB8209091B2006CD470 /* TrastornoSuenyoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */; };
-		74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */; };
 		74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */; };
 		74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F4208F295300ECC99D /* PesoAssistantController.swift */; };
 		7ABEF75862D8E22257A3DFE8 /* Pods_ObesityIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0E543DB86250DBB297CF5 /* Pods_ObesityIOS.framework */; };
@@ -91,6 +90,7 @@
 		740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = information_background_lifestyle.jpg; sourceTree = "<group>"; };
 		740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAssistantViewController.swift; sourceTree = "<group>"; };
 		7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaIntervencion2AssistantController.swift; sourceTree = "<group>"; };
+		7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechaNacimientoAssistantController.swift; sourceTree = "<group>"; };
 		74178BD8207CAFB000E0BAC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		74178BDC207CAFC700E0BAC3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		741DE0DE207DF79400F0EFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,12 +132,10 @@
 		748A96382091D10E00364DCE /* ArdoresAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArdoresAssistantController.swift; sourceTree = "<group>"; };
 		748A963A2091D16300364DCE /* TratamientoReflujoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TratamientoReflujoAssistantController.swift; sourceTree = "<group>"; };
 		748A963C2091D18D00364DCE /* DeporteAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeporteAssistantController.swift; sourceTree = "<group>"; };
-		748A963E2091F5FA00364DCE /* FechaIntervencionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaIntervencionAssistantController.swift; sourceTree = "<group>"; };
 		748A96422091F6A600364DCE /* PesoObjetivoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoObjetivoAssistantController.swift; sourceTree = "<group>"; };
 		748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipoMedicoAssistantController.swift; sourceTree = "<group>"; };
 		748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionDoctorAssistantController.swift; sourceTree = "<group>"; };
 		74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrastornoSuenyoAssistantController.swift; sourceTree = "<group>"; };
-		74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaNacimientoAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlturaAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F4208F295300ECC99D /* PesoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoAssistantController.swift; sourceTree = "<group>"; };
 		8C059F409F51344FBA497CFF /* Pods-ObesityIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSUITests/Pods-ObesityIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -303,8 +301,7 @@
 				7448F749208E260300B57340 /* TelefonoAssistantController.swift */,
 				7448F74B208E264300B57340 /* SexoAssistantController.swift */,
 				7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */,
-				74CD14F0208F196F00ECC99D /* FechaNacimientoAssistantController.swift */,
-				7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */,
+				7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */,
 				7448F743208DF04500B57340 /* SexAssistantController.swift */,
 				74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */,
 				74CD14F4208F295300ECC99D /* PesoAssistantController.swift */,
@@ -317,12 +314,12 @@
 				748A962E2091CD8600364DCE /* HigadoAssistantController.swift */,
 				748A96302091CDB200364DCE /* HuesosAssistantController.swift */,
 				748A96322091CDDE00364DCE /* EnfermedadCardiacaAssistantController.swift */,
+				7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */,
 				748A96342091CFDE00364DCE /* FumadorAssistantController.swift */,
 				748A96362091D0E500364DCE /* AlcoholAssistantController.swift */,
 				748A96382091D10E00364DCE /* ArdoresAssistantController.swift */,
 				748A963A2091D16300364DCE /* TratamientoReflujoAssistantController.swift */,
 				748A963C2091D18D00364DCE /* DeporteAssistantController.swift */,
-				748A963E2091F5FA00364DCE /* FechaIntervencionAssistantController.swift */,
 				748A96422091F6A600364DCE /* PesoObjetivoAssistantController.swift */,
 				748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */,
 				748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */,
@@ -601,7 +598,6 @@
 				7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */,
 				748A96312091CDB200364DCE /* HuesosAssistantController.swift in Sources */,
 				7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */,
-				74CD14F1208F196F00ECC99D /* FechaNacimientoAssistantController.swift in Sources */,
 				748A962F2091CD8600364DCE /* HigadoAssistantController.swift in Sources */,
 				7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
@@ -614,10 +610,10 @@
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
 				748A96332091CDDE00364DCE /* EnfermedadCardiacaAssistantController.swift in Sources */,
-				748A963F2091F5FA00364DCE /* FechaIntervencionAssistantController.swift in Sources */,
 				748A96432091F6A600364DCE /* PesoObjetivoAssistantController.swift in Sources */,
 				7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */,
 				748A962B2091CD1900364DCE /* ColesterolAssistantController.swift in Sources */,
+				7416823B20A051FD00870B76 /* FechaNacimientoAssistantController.swift in Sources */,
 				740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */,
 				7421C0EF207B551D0026CCE2 /* AppDelegate.swift in Sources */,
 				748A96472091F74B00364DCE /* SeleccionDoctorAssistantController.swift in Sources */,

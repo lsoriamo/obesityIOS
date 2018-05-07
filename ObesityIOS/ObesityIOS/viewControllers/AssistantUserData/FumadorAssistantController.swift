@@ -13,7 +13,7 @@ class FumadorAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pvFumador: UIPickerView!
     @IBOutlet weak var pbFumador: UIProgressView!
     
-    let eleccion = ["No fumo", "Fumo menos de 10 cigarros al día", "Fumo entre 10 y 20 cigarros al día", "Fumo más de una cajetilla al día"]
+    let eleccion = ["No fumo", "Menos de 10", "Entre 10 y 20", "Más de una cajetilla"]
     
     override func viewDidLoad() {
         pvFumador.dataSource = self

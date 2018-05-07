@@ -13,7 +13,7 @@ class FechaIntervencion2AssistantController: UIViewController {
     @IBOutlet weak var btnSeleccionarFecha: UIButton!
     @IBOutlet weak var btnCancelarFecha: UIButton!
     @IBOutlet weak var dpFechaIntervencion: UIDatePicker!
-    
+    @IBOutlet weak var pbFechaIntervencion: UIProgressView!
     
     var isSelectedFecha = false
     
@@ -23,6 +23,8 @@ class FechaIntervencion2AssistantController: UIViewController {
         dpFechaIntervencion.datePickerMode = UIDatePickerMode.date
         dpFechaIntervencion.isHidden = true
         btnCancelarFecha.isHidden = true
+        
+        pbFechaIntervencion.setProgress(0.884, animated: false)
     }
     
     @IBAction func actionBtnSeleccionarFecha(_ sender: Any) {
@@ -41,6 +43,6 @@ class FechaIntervencion2AssistantController: UIViewController {
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        performSegue(withIdentifier: "toPesoObejtivo2AssistantSegue", sender: nil)
+        performSegue(withIdentifier: "toPesoObejtivoAssistantSegue", sender: nil)
     }
 }

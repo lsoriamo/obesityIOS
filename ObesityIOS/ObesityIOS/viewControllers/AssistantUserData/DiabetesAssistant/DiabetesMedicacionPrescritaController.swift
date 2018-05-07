@@ -13,7 +13,7 @@ class DiabetesMedicacionPrescritaController: UIViewController, UIPickerViewDeleg
     @IBOutlet weak var pvMedicamentoPrescrito: UIPickerView!
     @IBOutlet weak var pbMedicamentoPrescrito: UIProgressView!
     
-    let medicamentosPrescritos = ["Antidabéticos orales", "Insulina", "Ambos tratamientos"]
+    let medicamentosPrescritos = ["No padezco", "Antidabéticos orales", "Insulina", "Ambos tratamientos"]
     
     override func viewDidLoad() {
         pvMedicamentoPrescrito.dataSource = self
