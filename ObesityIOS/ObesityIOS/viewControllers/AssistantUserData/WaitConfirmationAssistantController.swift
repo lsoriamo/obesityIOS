@@ -16,5 +16,9 @@ class WaitConfirmationAssistantController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func actionBtnSignOut(_ sender: Any) {
+        performSegue(withIdentifier: "toSignOutFromEndAssistant", sender: nil)
+    }
+    
 }
