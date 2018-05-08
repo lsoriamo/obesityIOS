@@ -56,7 +56,7 @@ class ImagenPerfilAssistantController: UIViewController, UIImagePickerController
         
         if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
             self.ivImagenPerfil.image = pickedImage
-            self.ivImagenPerfil.contentMode = .scaleToFill
+            self.ivImagenPerfil.contentMode = .scaleAspectFit
         }
         
         picker.dismiss(animated: true, completion: nil)

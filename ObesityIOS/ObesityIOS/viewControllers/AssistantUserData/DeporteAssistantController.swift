@@ -13,7 +13,7 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pvDeporte: UIPickerView!
     @IBOutlet weak var pbDeporte: UIProgressView!
     
-    let eleccion = ["Nunca", "Hace años", "Menos de un mes", "Entre 1 y 3 meses", "Más de 3 meses"]
+    let eleccion = ["Nunca", "Hace años", "Más de 3 meses", "Entre 1 y 3 meses", "Menos de un mes"]
     
     override func viewDidLoad() {
         pvDeporte.dataSource = self
