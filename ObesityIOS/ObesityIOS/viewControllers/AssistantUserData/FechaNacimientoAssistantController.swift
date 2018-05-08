@@ -16,11 +16,16 @@ class FechaNacimientoAssistantController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat =  "MM/dd/yyyy"
+        
+        let date = dateFormatter.date(from: "01/01/1990")
+        
         pbFechaNacimiento.setProgress(0.204, animated: false)
 
         dpFechaNacimiento.datePickerMode = UIDatePickerMode.date
+        dpFechaNacimiento.date = date!
         
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {

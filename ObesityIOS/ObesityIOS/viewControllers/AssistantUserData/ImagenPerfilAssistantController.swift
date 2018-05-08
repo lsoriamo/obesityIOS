@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
 
-class ImagenPerfilAssistantController: UIViewController, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class ImagenPerfilAssistantController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    
 
     @IBOutlet weak var pbImagenPerfil: UIProgressView!
     @IBOutlet weak var ivImagenPerfil: UIImageView!
@@ -30,7 +34,11 @@ class ImagenPerfilAssistantController: UIViewController, UIImagePickerController
             self.present(imagePicker, animated: true, completion: nil)
             
         } else {
-            print("Error inesperado, no se pudo acceder a la cámara")
+            // <-- Creando un elemento de Alert (Dialog en Android)
+            let alert = UIAlertController(title: "", message: "No hay cámara", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            // Fin de Alert -->
         }
     }
     
@@ -41,10 +49,15 @@ class ImagenPerfilAssistantController: UIViewController, UIImagePickerController
             imagePicker.delegate = self
             imagePicker.sourceType = UIImagePickerControllerSourceType.photoLibrary
             imagePicker.allowsEditing = true
+            
             self.present(imagePicker, animated: true, completion: nil)
             
         } else {
-            print("No se pudo obtener acceso a la librería de fotos")
+            // <-- Creando un elemento de Alert (Dialog en Android)
+            let alert = UIAlertController(title: "", message: "No se puede acceder a la galería", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+            // Fin de Alert -->
         }
     }
     

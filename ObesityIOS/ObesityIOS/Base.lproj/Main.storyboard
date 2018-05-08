@@ -335,6 +335,7 @@
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="labelTitleWelcome" destination="6qd-iz-rdT" id="kQV-sO-qDY"/>
                         <outlet property="pbWelcome" destination="OCv-O2-nOR" id="Yhr-9r-Grm"/>
                         <segue destination="Zcb-z6-i0t" kind="show" identifier="toNombreApellidosAssistantSegue" id="tvh-NF-Lj7"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toLoginSignOutSegue" id="vEP-5c-qNM"/>
@@ -371,7 +372,7 @@
                                 <rect key="frame" x="16" y="222" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" textContentType="name"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="U9P-ps-SvG">
                                 <rect key="frame" x="32" y="506" width="256" height="2"/>
@@ -380,7 +381,7 @@
                                 <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="yes" textContentType="name"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -459,7 +460,7 @@
                                 <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-SY-ZY1">
                                 <rect key="frame" x="32" y="506" width="256" height="2"/>
@@ -613,7 +614,7 @@
                                 <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" textContentType="organization-title"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="b80-GM-1T0">
                                 <rect key="frame" x="32" y="506" width="256" height="2"/>
@@ -689,7 +690,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="czm-l2-vrp">
-                                <rect key="frame" x="32" y="167.5" width="256" height="216"/>
+                                <rect key="frame" x="32" y="175.5" width="256" height="216"/>
                                 <date key="date" timeIntervalSinceReferenceDate="546248872.87170398">
                                     <!--2018-04-24 07:47:52 +0000-->
                                 </date>
@@ -715,7 +716,7 @@
                             <constraint firstItem="md5-CH-xPJ" firstAttribute="trailing" secondItem="ayc-ts-HoT" secondAttribute="trailing" constant="16" id="lOM-R8-5yg"/>
                             <constraint firstItem="md5-CH-xPJ" firstAttribute="trailing" secondItem="BIv-1i-nvq" secondAttribute="trailing" id="p9O-1P-QRH"/>
                             <constraint firstItem="ayc-ts-HoT" firstAttribute="top" secondItem="PdY-Fj-PK0" secondAttribute="bottom" constant="32" id="ppS-cT-5Bu"/>
-                            <constraint firstItem="czm-l2-vrp" firstAttribute="top" secondItem="ayc-ts-HoT" secondAttribute="bottom" id="tBb-an-Slp"/>
+                            <constraint firstItem="czm-l2-vrp" firstAttribute="top" secondItem="ayc-ts-HoT" secondAttribute="bottom" constant="8" id="tBb-an-Slp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="md5-CH-xPJ"/>
                     </view>
@@ -937,7 +938,7 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ANv-9R-WiZ">
                                 <rect key="frame" x="32" y="506" width="256" height="2"/>
                             </progressView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-X9-SKk">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user_avatar.png" translatesAutoresizingMaskIntoConstraints="NO" id="Ub3-X9-SKk">
                                 <rect key="frame" x="110" y="230" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="LCL-cW-0Nd"/>
@@ -2669,6 +2670,7 @@
         <image name="information_background_lifestyle.jpg" width="400" height="511"/>
         <image name="logo_complete" width="1536" height="1962"/>
         <image name="logo_complete.png" width="1536" height="1962"/>
+        <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="zoG-5v-qod"/>
@@ -2692,13 +2694,13 @@
         <segue reference="diO-Ra-Vzn"/>
         <segue reference="9tp-rB-aK4"/>
         <segue reference="UJb-mK-nKf"/>
-        <segue reference="xpE-hp-dvj"/>
-        <segue reference="i1h-CY-NnX"/>
+        <segue reference="Czh-vA-mBs"/>
+        <segue reference="9we-7x-IVM"/>
         <segue reference="Ls8-Ep-XdY"/>
         <segue reference="lgP-sE-MQp"/>
-        <segue reference="I3P-MY-aGR"/>
+        <segue reference="VWQ-dK-R1d"/>
         <segue reference="tvh-NF-Lj7"/>
-        <segue reference="2jP-Ms-ciJ"/>
-        <segue reference="dfF-X7-Zly"/>
+        <segue reference="6t0-yY-R2F"/>
+        <segue reference="vEP-5c-qNM"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -25,6 +25,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     var handle: AuthStateDidChangeListenerHandle?
     
     var email: String = ""
+    var nombre: String = ""
     var pass: String = ""
     
     override func viewDidAppear(_ animated: Bool) {
@@ -68,9 +69,10 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             print(user.profile.email)
             
             email = user.profile.email
+            nombre = user.profile.givenName
             
             
-            self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: self.email)
+            self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: self.nombre)
         }
     }
     
@@ -144,11 +146,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "WelcomeAssistantSegue" {
-            let emailRecibido = sender as! String
+            let nombreRecibido = sender as! String
             
             let objWelcomeView: WelcomeAssistantViewController = segue.destination as! WelcomeAssistantViewController
             
-            objWelcomeView.emailWelcomeRecibido = emailRecibido
+            objWelcomeView.nombreWelcomeRecibido = nombreRecibido
         }
     }
     

@@ -7,9 +7,16 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseDatabase
+import GoogleSignIn
 
-class WaitConfirmationAssistantController: UIViewController {
+class WaitConfirmationAssistantController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
+    func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setToolbarHidden(true, animated: false)
@@ -18,6 +25,7 @@ class WaitConfirmationAssistantController: UIViewController {
     }
     
     @IBAction func actionBtnSignOut(_ sender: Any) {
+        GIDSignIn.sharedInstance().signOut()
         performSegue(withIdentifier: "toSignOutFromEndAssistant", sender: nil)
     }
     

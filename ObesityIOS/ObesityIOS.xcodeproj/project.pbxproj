@@ -35,6 +35,7 @@
 		742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */; };
 		742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */; };
 		743B66BA2080867A00ADA83D /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 743B66B92080867A00ADA83D /* logo_complete.png */; };
+		7447431E20A19940005C6ACA /* user_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7447431D20A19940005C6ACA /* user_avatar.png */; };
 		7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F743208DF04500B57340 /* SexAssistantController.swift */; };
 		7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */; };
 		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
@@ -114,6 +115,7 @@
 		742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes2AssistantController.swift; sourceTree = "<group>"; };
 		742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetesMedicacionPrescritaController.swift; sourceTree = "<group>"; };
 		743B66B92080867A00ADA83D /* logo_complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_complete.png; path = ObesityIOS/Assets.xcassets/logo_complete.imageset/logo_complete.png; sourceTree = SOURCE_ROOT; };
+		7447431D20A19940005C6ACA /* user_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_avatar.png; sourceTree = "<group>"; };
 		7448F743208DF04500B57340 /* SexAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexAssistantController.swift; sourceTree = "<group>"; };
 		7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreApellidosAssistantController.swift; sourceTree = "<group>"; };
 		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 		74178BE1207CC87700E0BAC3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7447431D20A19940005C6ACA /* user_avatar.png */,
 				740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */,
 				743B66B92080867A00ADA83D /* logo_complete.png */,
 			);
@@ -462,6 +465,7 @@
 				741DE0DF207DF79400F0EFB9 /* Main.storyboard in Resources */,
 				7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */,
 				742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
+				7447431E20A19940005C6ACA /* user_avatar.png in Resources */,
 				743B66BA2080867A00ADA83D /* logo_complete.png in Resources */,
 				7421C0F9207B55210026CCE2 /* Assets.xcassets in Resources */,
 			);
