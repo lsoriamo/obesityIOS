@@ -120,7 +120,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                     return
                 }
                 
-                self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: self.email)
+                self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: self.email)
                 
                 
                 

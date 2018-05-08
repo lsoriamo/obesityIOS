@@ -36,6 +36,8 @@
 		742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */; };
 		743B66BA2080867A00ADA83D /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 743B66B92080867A00ADA83D /* logo_complete.png */; };
 		7447431E20A19940005C6ACA /* user_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7447431D20A19940005C6ACA /* user_avatar.png */; };
+		7447432020A1B14E005C6ACA /* calendar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7447431F20A1B14D005C6ACA /* calendar_icon.png */; };
+		7447432320A1C47D005C6ACA /* IntroDoctorAppointmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7447432220A1C47D005C6ACA /* IntroDoctorAppointmentController.swift */; };
 		7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F743208DF04500B57340 /* SexAssistantController.swift */; };
 		7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */; };
 		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
@@ -116,6 +118,8 @@
 		742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetesMedicacionPrescritaController.swift; sourceTree = "<group>"; };
 		743B66B92080867A00ADA83D /* logo_complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_complete.png; path = ObesityIOS/Assets.xcassets/logo_complete.imageset/logo_complete.png; sourceTree = SOURCE_ROOT; };
 		7447431D20A19940005C6ACA /* user_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_avatar.png; sourceTree = "<group>"; };
+		7447431F20A1B14D005C6ACA /* calendar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_icon.png; sourceTree = "<group>"; };
+		7447432220A1C47D005C6ACA /* IntroDoctorAppointmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroDoctorAppointmentController.swift; sourceTree = "<group>"; };
 		7448F743208DF04500B57340 /* SexAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexAssistantController.swift; sourceTree = "<group>"; };
 		7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreApellidosAssistantController.swift; sourceTree = "<group>"; };
 		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
@@ -186,6 +190,7 @@
 		740E1BD02085F62A00BF68FC /* viewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */,
 				744F2E3C2099A7C5002DFDA5 /* SignUpUser */,
 				7448F746208E254300B57340 /* AssistantUserData */,
 				7421C0F0207B551D0026CCE2 /* ViewController.swift */,
@@ -221,6 +226,7 @@
 		74178BE1207CC87700E0BAC3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7447431F20A1B14D005C6ACA /* calendar_icon.png */,
 				7447431D20A19940005C6ACA /* user_avatar.png */,
 				740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */,
 				743B66B92080867A00ADA83D /* logo_complete.png */,
@@ -293,6 +299,14 @@
 				742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */,
 			);
 			path = DiabetesAssistant;
+			sourceTree = "<group>";
+		};
+		7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				7447432220A1C47D005C6ACA /* IntroDoctorAppointmentController.swift */,
+			);
+			path = DoctorAppointmentCalendar;
 			sourceTree = "<group>";
 		};
 		7448F746208E254300B57340 /* AssistantUserData */ = {
@@ -462,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				740E1BCD2085E95000BF68FC /* information_background_lifestyle.jpg in Resources */,
+				7447432020A1B14E005C6ACA /* calendar_icon.png in Resources */,
 				741DE0DF207DF79400F0EFB9 /* Main.storyboard in Resources */,
 				7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */,
 				742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
@@ -624,6 +639,7 @@
 				748A963B2091D16300364DCE /* TratamientoReflujoAssistantController.swift in Sources */,
 				742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */,
 				748A96372091D0E500364DCE /* AlcoholAssistantController.swift in Sources */,
+				7447432320A1C47D005C6ACA /* IntroDoctorAppointmentController.swift in Sources */,
 				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
 				748A962D2091CD6900364DCE /* PiedrasAssistantController.swift in Sources */,
 				748A96292091CCCF00364DCE /* LesionArticularAssistantController.swift in Sources */,
