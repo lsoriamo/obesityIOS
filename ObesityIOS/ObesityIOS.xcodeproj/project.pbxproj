@@ -45,6 +45,8 @@
 		7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */; };
 		744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */; };
 		744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */; };
+		746451F120A30DAA0056A5F9 /* ic_checkbox_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 746451EF20A30DA80056A5F9 /* ic_checkbox_default.png */; };
+		746451F620A314A40056A5F9 /* ic_checkbox_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 746451F520A314A30056A5F9 /* ic_checkbox_selected.png */; };
 		748A96292091CCCF00364DCE /* LesionArticularAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96282091CCCF00364DCE /* LesionArticularAssistantController.swift */; };
 		748A962B2091CD1900364DCE /* ColesterolAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A962A2091CD1900364DCE /* ColesterolAssistantController.swift */; };
 		748A962D2091CD6900364DCE /* PiedrasAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A962C2091CD6900364DCE /* PiedrasAssistantController.swift */; };
@@ -127,6 +129,8 @@
 		7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesionAssistantController.swift; sourceTree = "<group>"; };
 		744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitConfirmationAssistantController.swift; sourceTree = "<group>"; };
 		744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
+		746451EF20A30DA80056A5F9 /* ic_checkbox_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox_default.png; sourceTree = "<group>"; };
+		746451F520A314A30056A5F9 /* ic_checkbox_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox_selected.png; sourceTree = "<group>"; };
 		748A96282091CCCF00364DCE /* LesionArticularAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesionArticularAssistantController.swift; sourceTree = "<group>"; };
 		748A962A2091CD1900364DCE /* ColesterolAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColesterolAssistantController.swift; sourceTree = "<group>"; };
 		748A962C2091CD6900364DCE /* PiedrasAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiedrasAssistantController.swift; sourceTree = "<group>"; };
@@ -226,6 +230,8 @@
 		74178BE1207CC87700E0BAC3 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				746451EF20A30DA80056A5F9 /* ic_checkbox_default.png */,
+				746451F520A314A30056A5F9 /* ic_checkbox_selected.png */,
 				7447431F20A1B14D005C6ACA /* calendar_icon.png */,
 				7447431D20A19940005C6ACA /* user_avatar.png */,
 				740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */,
@@ -477,8 +483,10 @@
 			files = (
 				740E1BCD2085E95000BF68FC /* information_background_lifestyle.jpg in Resources */,
 				7447432020A1B14E005C6ACA /* calendar_icon.png in Resources */,
+				746451F120A30DAA0056A5F9 /* ic_checkbox_default.png in Resources */,
 				741DE0DF207DF79400F0EFB9 /* Main.storyboard in Resources */,
 				7421C0FC207B55210026CCE2 /* LaunchScreen.storyboard in Resources */,
+				746451F620A314A40056A5F9 /* ic_checkbox_selected.png in Resources */,
 				742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */,
 				7447431E20A19940005C6ACA /* user_avatar.png in Resources */,
 				743B66BA2080867A00ADA83D /* logo_complete.png in Resources */,
