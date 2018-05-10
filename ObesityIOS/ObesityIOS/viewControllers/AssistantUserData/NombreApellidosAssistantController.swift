@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class NombreApellidosAssistantController: UIViewController {
 
@@ -14,16 +15,23 @@ class NombreApellidosAssistantController: UIViewController {
     @IBOutlet weak var tfApellidos: UITextField!
     @IBOutlet weak var pbNombreApellidos: UIProgressView!
     
+    var ref: DatabaseReference!
+    
     var nombre:String?
     var apellidos:String?
     
+    var userId:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
+        print("EL USERID ES: \(userId!)")
         
         pbNombreApellidos.setProgress(0.068, animated: false)
 
 
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
@@ -38,6 +46,9 @@ class NombreApellidosAssistantController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             // <-- Fin de Alert -->
         } else {
+            self.ref.child("users/\(userId!)/info/name").setValue(nombre)
+            self.ref.child("users/\(userId!)/info/surname").setValue(apellidos)
+            
             performSegue(withIdentifier: "toTelefonoAssistantSegue", sender: nil)
         }
     }

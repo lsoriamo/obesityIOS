@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5L1-VC-COV">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-XE-Al3">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -48,7 +48,7 @@
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTK-U0-8dA">
-                                <rect key="frame" x="16" y="523" width="164" height="29"/>
+                                <rect key="frame" x="16" y="479" width="164" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Comenzar a usar el diario"/>
                                 <connections>
@@ -57,13 +57,13 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="clip" numberOfLines="26" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JZ6-1s-cYb">
                                 <rect key="frame" x="16" y="123" width="288" height="372.5"/>
-                                <mutableString key="text">Citas pendientes, no recuerdas cuándo tienes que acurdir al médico, olvidas la hora o el lugar donde era la cita... Estas situaciones son más comunes de lo que imaginas. En Preobar queremos ayudarte a gestionar de manera más eficientes tus citas. Para ello, ponemos a tu disposición las herramientas necesarias para que esto sea una realidad.  Existen dos formas de añadir una cita. La primera es añadirla de manera maual. Para ello, cuando accedas a la sección de agenda verás arriba a la derecha un botón de añadir. Si lo pulsas, podrás añadir el lugar, la fecha y la hora, el médico o las cosas importantes que debes recordar sobre la cita médica.  La otra manera de anotar una cita es que tu médico la proponga a través de Preobar. En este caso verás un mensaje que te advertirá sobre esto y deberás pedir cita con el especialista que tu médico te ha indicado. Recuerda que para esto deberás llamar al centro médico donde desees coger cita para la consulta.  Una vez añadida la cita, verás que aparecen en el calendario con un punto bajo la fecha. Este punto indica que en esa fecha hay consultas programadas. Seleccionando la fecha concreta podrás ver las consultas programadas para esta fecha y modificar o eliminar estas citas</mutableString>
+                                <string key="text">Citas pendientes, no recuerdas cuándo tienes que acurdir al médico, olvidas la hora o el lugar donde era la cita... Estas situaciones son más comunes de lo que imaginas. En Preobar queremos ayudarte a gestionar de manera más eficientes tus citas. Para ello, ponemos a tu disposición las herramientas necesarias para que esto sea una realidad.  Existen dos formas de añadir una cita. La primera es añadirla de manera maual. Para ello, cuando accedas a la sección de agenda verás arriba a la derecha un botón de añadir. Si lo pulsas, podrás añadir el lugar, la fecha y la hora, el médico o las cosas importantes que debes recordar sobre la cita médica.  La otra manera de anotar una cita es que tu médico la proponga a través de Preobar. En este caso verás un mensaje que te advertirá sobre esto y deberás pedir cita con el especialista que tu médico te ha indicado. Recuerda que para esto deberás llamar al centro médico donde desees coger cita para la consulta.  Una vez añadida la cita, verás que aparecen en el calendario con un punto bajo la fecha. Este punto indica que en esa fecha hay consultas programadas. Seleccionando la fecha concreta podrás ver las consultas programadas para esta fecha y modificar o eliminar estas citas</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayQ-Xc-rRH">
-                                <rect key="frame" x="16" y="495" width="20" height="20"/>
+                                <rect key="frame" x="16" y="451" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="emZ-xP-A0l"/>
                                     <constraint firstAttribute="height" constant="20" id="hKc-U5-5ab"/>
@@ -75,7 +75,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No volver a mostrar esta información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJc-D7-dx4">
-                                <rect key="frame" x="40" y="498.5" width="208.5" height="14.5"/>
+                                <rect key="frame" x="40" y="454.5" width="208.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -149,7 +149,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="4" baselineAdjustment="alignBaselines" minimumFontSize="6" translatesAutoresizingMaskIntoConstraints="NO" id="3w5-2I-o45">
-                                <rect key="frame" x="16" y="493" width="288" height="43"/>
+                                <rect key="frame" x="16" y="449" width="288" height="43"/>
                                 <string key="text">No tienes ninguna cita a la vista con tu médico. Para añadir una cita a la agenda, pulsa el botón en la esquina inferior derecha</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -2846,7 +2846,6 @@
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Emv-l7-gy3"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -2874,8 +2873,8 @@
         <segue reference="lgP-sE-MQp"/>
         <segue reference="VWQ-dK-R1d"/>
         <segue reference="tvh-NF-Lj7"/>
-        <segue reference="2jP-Ms-ciJ"/>
-        <segue reference="0Hi-YO-dBP"/>
-        <segue reference="6Ah-YL-1YF"/>
+        <segue reference="6t0-yY-R2F"/>
+        <segue reference="vEP-5c-qNM"/>
+        <segue reference="Dn1-xR-vUU"/>
     </inferredMetricsTieBreakers>
 </document>

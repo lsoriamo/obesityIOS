@@ -28,6 +28,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     var nombre: String = ""
     var pass: String = ""
     
+    var userId: String?
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         navigationController?.setToolbarHidden(true, animated: false)
@@ -71,8 +73,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             email = user.profile.email
             nombre = user.profile.givenName
             
+            userId = user.userID
             
-            self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: self.nombre)
+            UserDefaults.standard.set(userId, forKey: "userId")
+            UserDefaults.standard.set(nombre, forKey: "givenName")
+            self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: nil)
         }
     }
     
@@ -144,15 +149,15 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         return emailTest.evaluate(with: emailToCheck)
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "WelcomeAssistantSegue" {
-            let nombreRecibido = sender as! String
-            
-            let objWelcomeView: WelcomeAssistantViewController = segue.destination as! WelcomeAssistantViewController
-            
-            objWelcomeView.nombreWelcomeRecibido = nombreRecibido
-        }
-    }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if segue.identifier == "WelcomeAssistantSegue" {
+//            let nombreRecibido = sender as! String
+//            
+//            let objWelcomeView: WelcomeAssistantViewController = segue.destination as! WelcomeAssistantViewController
+//            
+//            objWelcomeView.nombreWelcomeRecibido = nombreRecibido
+//        }
+//    }
     
     
     /*En cada una de las vistas de tu app que necesitan información sobre el usuario que accedió,
