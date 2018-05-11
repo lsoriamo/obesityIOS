@@ -26,6 +26,14 @@ class NombreApellidosAssistantController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         
+        if let nombre = UserDefaults.standard.string(forKey: "givenName") {
+            tfNombre.text = nombre
+        }
+        
+        if let apellidos = UserDefaults.standard.string(forKey: "familyName") {
+            tfApellidos.text = apellidos
+        }
+        
         userId = UserDefaults.standard.string(forKey: "userId")
         print("EL USERID ES: \(userId!)")
         
@@ -46,6 +54,7 @@ class NombreApellidosAssistantController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             // <-- Fin de Alert -->
         } else {
+            
             self.ref.child("users/\(userId!)/info/name").setValue(nombre)
             self.ref.child("users/\(userId!)/info/surname").setValue(apellidos)
             

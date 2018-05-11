@@ -422,7 +422,7 @@
                                     <constraint firstAttribute="height" constant="90" id="NEx-Im-FMB"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a Preobar Jorge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-iz-rdT">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a Preobar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="6qd-iz-rdT">
                                 <rect key="frame" x="16" y="134" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -630,7 +630,7 @@
                                 <rect key="frame" x="16" y="184" width="288" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="phonePad" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" textContentType="tel"/>
                             </textField>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="nBr-SY-ZY1">
                                 <rect key="frame" x="32" y="506" width="256" height="2"/>
@@ -2870,9 +2870,9 @@
         <segue reference="Czh-vA-mBs"/>
         <segue reference="9we-7x-IVM"/>
         <segue reference="Ls8-Ep-XdY"/>
-        <segue reference="lgP-sE-MQp"/>
+        <segue reference="AUM-Yv-7dE"/>
         <segue reference="VWQ-dK-R1d"/>
-        <segue reference="tvh-NF-Lj7"/>
+        <segue reference="jWo-3I-zEV"/>
         <segue reference="6t0-yY-R2F"/>
         <segue reference="vEP-5c-qNM"/>
         <segue reference="Dn1-xR-vUU"/>

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -17,11 +18,13 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     let sex = ["Hombre", "Mujer", "Otro"]
     
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pickerViewSex.dataSource = self
         pickerViewSex.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
         
         pbSexo.setProgress(0.136, animated: false)
 

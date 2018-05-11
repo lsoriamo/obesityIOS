@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TelefonoAssistantController: UIViewController {
     
@@ -14,9 +15,15 @@ class TelefonoAssistantController: UIViewController {
     @IBOutlet weak var pbTelefono: UIProgressView!
     
     var telefono:String?
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         pbTelefono.setProgress(0.102, animated: false)
 
@@ -26,11 +33,10 @@ class TelefonoAssistantController: UIViewController {
     @IBAction func actionBtnSiguiente(_ sender: Any) {
         telefono = tfTelefono.text
         
-        if telefono!.isEmpty {
-            performSegue(withIdentifier: "toSexoAssistantSegue", sender: nil)
-        } else {
-            // Habría que pasar el teléfono
-            performSegue(withIdentifier: "toSexoAssistantSegue", sender: nil)
+        if !telefono!.isEmpty {
+            self.ref.child("users/\(userId!)/info/phone").setValue(telefono)
         }
+        
+        performSegue(withIdentifier: "toSexoAssistantSegue", sender: nil)
     }
 }

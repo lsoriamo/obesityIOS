@@ -30,10 +30,10 @@ class WelcomeAssistantViewController: UIViewController, GIDSignInUIDelegate, GID
         nombreWelcomeRecibido = UserDefaults.standard.string(forKey: "givenName")
         
         if nombreWelcomeRecibido != nil {
-            print(nombreWelcomeRecibido!)
+//            print(nombreWelcomeRecibido!)
             
             labelTitleWelcome.text = "Bienvenido a Preobar \(nombreWelcomeRecibido!)"
-            
+                        
         } else {
             print("No hay nombre")
         }

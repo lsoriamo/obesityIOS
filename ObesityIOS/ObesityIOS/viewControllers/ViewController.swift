@@ -26,9 +26,11 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     
     var email: String = ""
     var nombre: String = ""
+    var apellidos: String = ""
     var pass: String = ""
+    var credentials:AuthCredential?
     
-    var userId: String?
+    var callback:AuthResultCallback?
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
@@ -68,15 +70,30 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         if error != nil {
             print(error.localizedDescription)
         } else {
-            print(user.profile.email)
             
             email = user.profile.email
             nombre = user.profile.givenName
+            apellidos = user.profile.familyName
             
-            userId = user.userID
             
-            UserDefaults.standard.set(userId, forKey: "userId")
+            
+            credentials = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
+            
+            Auth.auth().signIn(with: credentials!, completion: { (user, error) in
+                if let err = error {
+                    print("Failed to create a Firebase User with Google account: ", err)
+                    return
+                }
+                
+                let userId = user?.uid
+                
+                UserDefaults.standard.set(userId, forKey: "userId")
+                
+            })
+            
             UserDefaults.standard.set(nombre, forKey: "givenName")
+             UserDefaults.standard.set(apellidos, forKey: "familyName")
+            
             self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: nil)
         }
     }
@@ -125,7 +142,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                     return
                 }
                 
-                self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: self.email)
+                print("UserId: ", user!.uid)
+                
+                self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
                 
                 
                 
