@@ -7,16 +7,23 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ProfesionAssistantController: UIViewController {
 
     @IBOutlet weak var tfProfesion: UITextField!
     @IBOutlet weak var pbProfesion: UIProgressView!
     
+    var userId:String?
     var profesion:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbProfesion.setProgress(0.17, animated: false)
         
@@ -27,12 +34,11 @@ class ProfesionAssistantController: UIViewController {
         
         profesion = tfProfesion.text
         
-        if profesion!.isEmpty {
-            performSegue(withIdentifier: "toFechaNacimientoAssistantSegue", sender: nil)
-        } else {
-            // Falta pasar por segue profesión
-            performSegue(withIdentifier: "toFechaNacimientoAssistantSegue", sender: nil)
+        if !profesion!.isEmpty {
+            self.ref.child("users/\(userId!)/info/profesion").setValue(profesion)
         }
+        
+        performSegue(withIdentifier: "toFechaNacimientoAssistantSegue", sender: nil)
         
     }
 }

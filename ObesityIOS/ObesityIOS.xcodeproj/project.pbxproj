@@ -41,7 +41,6 @@
 		7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F743208DF04500B57340 /* SexAssistantController.swift */; };
 		7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */; };
 		7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F749208E260300B57340 /* TelefonoAssistantController.swift */; };
-		7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74B208E264300B57340 /* SexoAssistantController.swift */; };
 		7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */; };
 		744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */; };
 		744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */; };
@@ -125,7 +124,6 @@
 		7448F743208DF04500B57340 /* SexAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexAssistantController.swift; sourceTree = "<group>"; };
 		7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NombreApellidosAssistantController.swift; sourceTree = "<group>"; };
 		7448F749208E260300B57340 /* TelefonoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelefonoAssistantController.swift; sourceTree = "<group>"; };
-		7448F74B208E264300B57340 /* SexoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SexoAssistantController.swift; sourceTree = "<group>"; };
 		7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfesionAssistantController.swift; sourceTree = "<group>"; };
 		744F2E3A2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaitConfirmationAssistantController.swift; sourceTree = "<group>"; };
 		744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
@@ -322,7 +320,6 @@
 				740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */,
 				7448F747208E25D600B57340 /* NombreApellidosAssistantController.swift */,
 				7448F749208E260300B57340 /* TelefonoAssistantController.swift */,
-				7448F74B208E264300B57340 /* SexoAssistantController.swift */,
 				7448F74D208E266B00B57340 /* ProfesionAssistantController.swift */,
 				7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */,
 				7448F743208DF04500B57340 /* SexAssistantController.swift */,
@@ -638,7 +635,6 @@
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
 				748A96332091CDDE00364DCE /* EnfermedadCardiacaAssistantController.swift in Sources */,
 				748A96432091F6A600364DCE /* PesoObjetivoAssistantController.swift in Sources */,
-				7448F74C208E264300B57340 /* SexoAssistantController.swift in Sources */,
 				748A962B2091CD1900364DCE /* ColesterolAssistantController.swift in Sources */,
 				7416823B20A051FD00870B76 /* FechaNacimientoAssistantController.swift in Sources */,
 				740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */,

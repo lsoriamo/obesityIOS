@@ -16,7 +16,8 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBOutlet weak var pickerViewSex: UIPickerView!
     
-    let sex = ["Hombre", "Mujer", "Otro"]
+    let sex = ["Mujer", "Hombre", "Otro"]
+    var userId:String?
     
     var ref: DatabaseReference!
     
@@ -26,6 +27,7 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         ref = Database.database().reference()
         
+        userId = UserDefaults.standard.string(forKey: "userId")
         pbSexo.setProgress(0.136, animated: false)
 
         // Do any additional setup after loading the view.
@@ -45,7 +47,10 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     @IBAction func actionBtnSiguienteSex(_ sender: Any) {
-        //Falta implementar la lógica de guardar el sexo del usuario
+        print("Ha seleccionado el index: ", pickerViewSex.selectedRow(inComponent: 0))
+        
+        self.ref.child("users/\(userId!)/info/sex").setValue(pickerViewSex.selectedRow(inComponent: 0))
+        
         self.performSegue(withIdentifier: "toProfesionAssistantSegue", sender: nil)
     }
     

@@ -7,14 +7,22 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FechaNacimientoAssistantController: UIViewController {
 
     @IBOutlet weak var pbFechaNacimiento: UIProgressView!
     @IBOutlet weak var dpFechaNacimiento: UIDatePicker!
     
+    var userId:String?
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat =  "MM/dd/yyyy"
@@ -29,7 +37,11 @@ class FechaNacimientoAssistantController: UIViewController {
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        let fechaNacimiento = dpFechaNacimiento.date.timeIntervalSince1970
         
+        //NO ES SEGURO SI ES ESTA RUTA!
+//        self.ref.child("users/\(userId!)/info/fecha_nacimiento").setValue(fechaNacimiento)
+
         performSegue(withIdentifier: "toAlturaAssistantSegue", sender: nil)
     }
 }

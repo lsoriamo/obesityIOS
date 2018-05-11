@@ -15,6 +15,8 @@ class PesoObjetivoAssistantController: UIViewController, UIPickerViewDelegate, U
     
     var pesos = [Int]()
     
+    var pesoUsuario:Int?
+    
     override func viewDidLoad() {
         pvPesoObjetivo.dataSource = self
         pvPesoObjetivo.delegate = self
@@ -23,6 +25,7 @@ class PesoObjetivoAssistantController: UIViewController, UIPickerViewDelegate, U
         pbPesoObjetivo.setProgress(0.935, animated: false)
         
         pesos = cargarPesos()
+//        pvPesoObjetivo.
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

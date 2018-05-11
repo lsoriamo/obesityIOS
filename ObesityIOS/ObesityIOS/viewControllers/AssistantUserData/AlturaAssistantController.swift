@@ -24,6 +24,8 @@ class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         
         alturas = cargarAlturas()
         
+        pvAltura.selectRow(75, inComponent: 0, animated: true)
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {

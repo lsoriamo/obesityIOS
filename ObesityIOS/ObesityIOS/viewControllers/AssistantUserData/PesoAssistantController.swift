@@ -23,6 +23,8 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
         pbPeso.setProgress(0.272, animated: false)
 
         pesos = cargarPesos()
+        
+        pvPeso.selectRow(100, inComponent: 0, animated: true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -38,6 +40,8 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        UserDefaults.standard.set(pvPeso.selectedRow(inComponent: 0), forKey: "pesoUsuario")
+        
         performSegue(withIdentifier: "toFotoAssistantSegue", sender: nil)
     }
     
