@@ -7,11 +7,15 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FumadorAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var pvFumador: UIPickerView!
     @IBOutlet weak var pbFumador: UIProgressView!
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     let eleccion = ["No fumo", "Menos de 10", "Entre 10 y 20", "Más de una cajetilla"]
     
@@ -19,7 +23,10 @@ class FumadorAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         pvFumador.dataSource = self
         pvFumador.delegate = self
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
+        
         pbFumador.setProgress(0.714, animated: false)
     
     }
@@ -37,6 +44,9 @@ class FumadorAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        self.ref.child("users/\(userId!)/data/fumador").setValue(pvFumador.selectedRow(inComponent: 0))
+        
         performSegue(withIdentifier: "toAlcoholAssistantSegue", sender: nil)
     }
 }

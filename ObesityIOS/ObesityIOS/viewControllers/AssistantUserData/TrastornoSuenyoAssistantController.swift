@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TrastornoSuenyoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class TrastornoSuenyoAssistantController: UIViewController, UIPickerViewDelegate
     @IBOutlet weak var pbTrastornoSuenyo: UIProgressView!
     
     let confirmacion = ["Si", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvTrastornoSuenyo.dataSource = self
         pvTrastornoSuenyo.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbTrastornoSuenyo.setProgress(0.476, animated: false)
     }
@@ -36,6 +43,9 @@ class TrastornoSuenyoAssistantController: UIViewController, UIPickerViewDelegate
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvTrastornoSuenyo.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/apnea").setValue(true) : self.ref.child("users/\(userId!)/data/apnea").setValue(false)
+        
         performSegue(withIdentifier: "toLesionArticularAssistantSegue", sender: nil)
     }
     

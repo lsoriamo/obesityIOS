@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class TratamientoReflujoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,12 +15,18 @@ class TratamientoReflujoAssistantController: UIViewController, UIPickerViewDeleg
     @IBOutlet weak var pbTratamientoReflujo: UIProgressView!
     
     let confirmacion = ["Sí", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvTratamientoReflujo.dataSource = self
         pvTratamientoReflujo.delegate = self
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
+        
         pbTratamientoReflujo.setProgress(0.816, animated: false)
         
     }
@@ -37,6 +44,9 @@ class TratamientoReflujoAssistantController: UIViewController, UIPickerViewDeleg
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvTratamientoReflujo.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/tto_reflujo").setValue(true) : self.ref.child("users/\(userId!)/data/tto_reflujo").setValue(false)
+        
         performSegue(withIdentifier: "toDeporteAssistantSegue", sender: nil)
     }
     

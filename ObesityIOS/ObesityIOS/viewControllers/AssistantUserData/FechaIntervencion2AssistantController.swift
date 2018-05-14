@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class FechaIntervencion2AssistantController: UIViewController {
 
@@ -16,9 +17,15 @@ class FechaIntervencion2AssistantController: UIViewController {
     @IBOutlet weak var pbFechaIntervencion: UIProgressView!
     
     var isSelectedFecha = false
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         dpFechaIntervencion.datePickerMode = UIDatePickerMode.date
         dpFechaIntervencion.isHidden = true
@@ -43,6 +50,12 @@ class FechaIntervencion2AssistantController: UIViewController {
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        let fechaIntervencion = dpFechaIntervencion.date.timeIntervalSince1970
+        
+        if isSelectedFecha {
+            self.ref.child("users/\(userId!)/data/fecha_intervencion").setValue(fechaIntervencion)
+        }
+        
         performSegue(withIdentifier: "toPesoObejtivoAssistantSegue", sender: nil)
     }
 }

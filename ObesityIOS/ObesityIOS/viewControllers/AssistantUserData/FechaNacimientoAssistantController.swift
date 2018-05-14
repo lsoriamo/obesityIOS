@@ -39,8 +39,7 @@ class FechaNacimientoAssistantController: UIViewController {
     @IBAction func actionBtnSiguiente(_ sender: Any) {
         let fechaNacimiento = dpFechaNacimiento.date.timeIntervalSince1970
         
-        //NO ES SEGURO SI ES ESTA RUTA!
-//        self.ref.child("users/\(userId!)/info/fecha_nacimiento").setValue(fechaNacimiento)
+        self.ref.child("users/\(userId!)/data/nacimiento").setValue(fechaNacimiento)
 
         performSegue(withIdentifier: "toAlturaAssistantSegue", sender: nil)
     }

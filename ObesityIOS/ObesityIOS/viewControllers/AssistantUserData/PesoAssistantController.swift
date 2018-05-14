@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -14,11 +15,18 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
     @IBOutlet weak var pvPeso: UIPickerView!
     
     var pesos = [Int]()
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvPeso.dataSource = self
         pvPeso.delegate = self
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         pbPeso.setProgress(0.272, animated: false)
 
@@ -40,7 +48,9 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        UserDefaults.standard.set(pvPeso.selectedRow(inComponent: 0), forKey: "pesoUsuario")
+        UserDefaults.standard.set(pesos[pvPeso.selectedRow(inComponent: 0)], forKey: "pesoUsuario")
+        
+        self.ref.child("users/\(userId!)/data/peso").setValue(pesos[pvPeso.selectedRow(inComponent: 0)])
         
         performSegue(withIdentifier: "toFotoAssistantSegue", sender: nil)
     }

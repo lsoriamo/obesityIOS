@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -14,17 +15,25 @@ class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var pbAltura: UIProgressView!
     
     var alturas = [Int]()
+    var userId:String?
+    
+    var rowSelected:Int?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvAltura.dataSource = self
         pvAltura.delegate = self
         super.viewDidLoad()
         
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         pbAltura.setProgress(0.238, animated: false)
         
         alturas = cargarAlturas()
         
-        pvAltura.selectRow(75, inComponent: 0, animated: true)
+        pvAltura.selectRow(70, inComponent: 0, animated: true)
         
     }
     
@@ -37,10 +46,14 @@ class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        rowSelected = row
         return String(alturas[row])
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        self.ref.child("users/\(userId!)/data/altura").setValue(alturas[rowSelected!])
+
         performSegue(withIdentifier: "toPesoAssistantSegue", sender: nil)
     }
     

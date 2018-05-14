@@ -55,8 +55,35 @@ class NombreApellidosAssistantController: UIViewController {
             // <-- Fin de Alert -->
         } else {
             
+            let email = UserDefaults.standard.string(forKey: "email")
+            let image = UserDefaults.standard.string(forKey: "imageURL")
+            
             self.ref.child("users/\(userId!)/info/name").setValue(nombre)
+            
             self.ref.child("users/\(userId!)/info/surname").setValue(apellidos)
+            
+            self.ref.child("users/\(userId!)/info/nickname").setValue("\(nombre!) \(apellidos!)")
+            
+            self.ref.child("users/\(userId!)/info/email").setValue(email)
+            
+            self.ref.child("users/\(userId!)/info/avatar").setValue(image)
+            
+            self.ref.child("users/\(userId!)/info/image").setValue(image)
+            
+            self.ref.child("users/\(userId!)/info/id").setValue(userId!)
+            
+            self.ref.child("users/\(userId!)/info/iduser").setValue(userId!)
+            
+            self.ref.child("users/\(userId!)/info/passhash").setValue("")
+            
+            self.ref.child("users/\(userId!)/data/iduser_data").setValue(-1)
+            
+            self.ref.child("users/\(userId!)/data/user_id").setValue(userId!)
+            
+            // Fecha de primer uso de app
+            let fechaPrimerUsoApp = Date().timeIntervalSince1970
+            
+            self.ref.child("users/\(userId!)/data/fecha_primer_uso_app").setValue(fechaPrimerUsoApp)
             
             performSegue(withIdentifier: "toTelefonoAssistantSegue", sender: nil)
         }

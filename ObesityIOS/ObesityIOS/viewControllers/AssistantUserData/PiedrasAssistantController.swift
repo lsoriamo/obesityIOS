@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class PiedrasAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -14,11 +15,17 @@ class PiedrasAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pbPiedras: UIProgressView!
     
     let confirmacion = ["Si", "No"]
-
+    var userId:String?
+    
+    var ref: DatabaseReference!
+    
     override func viewDidLoad() {
         pvPiedras.dataSource = self
         pvPiedras.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbPiedras.setProgress(0.578, animated: false)
 
@@ -37,6 +44,7 @@ class PiedrasAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        pvPiedras.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/vesicula").setValue(true) : self.ref.child("users/\(userId!)/data/vesicula").setValue(false)
         performSegue(withIdentifier: "toHigadoAssistantSegue", sender: nil)
     }
 }

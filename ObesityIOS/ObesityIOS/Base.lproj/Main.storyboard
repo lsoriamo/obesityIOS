@@ -1228,8 +1228,7 @@
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="XCT-0f-UPD"/>
                         <barButtonItem title="Siguiente" id="m5W-9L-HSj">
                             <connections>
-                                <action selector="actionBtnSiguiente:" destination="xnJ-qi-d1T" id="447-Z1-IpK"/>
-                                <segue destination="WSq-rN-c0f" kind="show" identifier="toDiabetes1AssistantSegue" id="wRJ-YW-T1F"/>
+                                <action selector="actionBtnSiguiente:" destination="xnJ-qi-d1T" id="g6T-X1-JyJ"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -1237,6 +1236,7 @@
                     <connections>
                         <outlet property="pbHipertension" destination="qU0-W0-s8N" id="GKL-FD-wHU"/>
                         <outlet property="pvHipertension" destination="qBL-vy-p0M" id="Eyt-Ec-lun"/>
+                        <segue destination="WSq-rN-c0f" kind="show" identifier="toDiabetes1AssistantSegue" id="LRL-dt-SIU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-Fg-xic" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2846,6 +2846,7 @@
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="bkj-n6-Mq6"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -2862,16 +2863,16 @@
         <segue reference="kzr-oX-fps"/>
         <segue reference="zhk-Cb-aN1"/>
         <segue reference="t1y-5X-Atj"/>
-        <segue reference="HQc-48-MYK"/>
-        <segue reference="wRJ-YW-T1F"/>
-        <segue reference="diO-Ra-Vzn"/>
+        <segue reference="ucl-KE-nUO"/>
+        <segue reference="LRL-dt-SIU"/>
+        <segue reference="4us-Wh-J6M"/>
         <segue reference="9tp-rB-aK4"/>
-        <segue reference="UJb-mK-nKf"/>
-        <segue reference="Czh-vA-mBs"/>
-        <segue reference="9we-7x-IVM"/>
+        <segue reference="F0w-QF-eiz"/>
+        <segue reference="xpE-hp-dvj"/>
+        <segue reference="i1h-CY-NnX"/>
         <segue reference="dev-Fv-juF"/>
-        <segue reference="AUM-Yv-7dE"/>
-        <segue reference="I3P-MY-aGR"/>
+        <segue reference="lgP-sE-MQp"/>
+        <segue reference="VWQ-dK-R1d"/>
         <segue reference="jWo-3I-zEV"/>
         <segue reference="6t0-yY-R2F"/>
         <segue reference="vEP-5c-qNM"/>

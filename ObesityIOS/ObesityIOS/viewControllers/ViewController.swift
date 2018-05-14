@@ -28,6 +28,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
     var nombre: String = ""
     var apellidos: String = ""
     var pass: String = ""
+    var image: String = ""
     var credentials:AuthCredential?
     
     var callback:AuthResultCallback?
@@ -75,6 +76,12 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             nombre = user.profile.givenName
             apellidos = user.profile.familyName
             
+            if user.profile.hasImage {
+                image = user.profile.imageURL(withDimension: 100).absoluteString
+                
+                print("LA IMAGEN ES ÉSTA: ", image)
+            }
+            
             
             
             credentials = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
@@ -92,7 +99,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             })
             
             UserDefaults.standard.set(nombre, forKey: "givenName")
-             UserDefaults.standard.set(apellidos, forKey: "familyName")
+            UserDefaults.standard.set(apellidos, forKey: "familyName")
+            UserDefaults.standard.set(email, forKey: "email")
+            UserDefaults.standard.set(image, forKey: "imageURL")
             
             self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: nil)
         }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HuesosAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class HuesosAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var pbHuesos: UIProgressView!
     
     let confirmacion = ["Si", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvHuesos.dataSource = self
         pvHuesos.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbHuesos.setProgress(0.646, animated: false)
         
@@ -37,6 +44,9 @@ class HuesosAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func actionBtnSIguiente(_ sender: Any) {
+        
+        pvHuesos.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/osteoporosis").setValue(true) : self.ref.child("users/\(userId!)/data/osteoporosis").setValue(false)
+        
         performSegue(withIdentifier: "toEnfermedadCardiacaAssistantSegue", sender: nil)
     }
     

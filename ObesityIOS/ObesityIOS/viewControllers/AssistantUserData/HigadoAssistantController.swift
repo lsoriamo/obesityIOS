@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HigadoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,13 +15,18 @@ class HigadoAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
     @IBOutlet weak var pbHigado: UIProgressView!
     
     let confirmacion = ["Si", "No"]
-
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvHigado.dataSource = self
         pvHigado.delegate = self
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
+        
         pbHigado.setProgress(0.612, animated: false)
         
     }
@@ -38,6 +44,9 @@ class HigadoAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvHigado.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/higado").setValue(true) : self.ref.child("users/\(userId!)/data/higado").setValue(false)
+        
         performSegue(withIdentifier: "toHuesosAssistantSegue", sender: nil)
     }
     

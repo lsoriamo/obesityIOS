@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pbDeporte: UIProgressView!
     
     let eleccion = ["No practico", "Más de 3 meses", "Entre 1 y 3 meses", "Menos de un mes"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvDeporte.dataSource = self
         pvDeporte.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         pbDeporte.setProgress(0.85, animated: false)
         
@@ -37,6 +44,17 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        if pvDeporte.selectedRow(inComponent: 0) == 0 {
+            self.ref.child("users/\(userId!)/data/ejercicio").setValue(0)
+        } else if pvDeporte.selectedRow(inComponent: 0) == 1 {
+            self.ref.child("users/\(userId!)/data/ejercicio").setValue(16)
+        } else if pvDeporte.selectedRow(inComponent: 0) == 2 {
+            self.ref.child("users/\(userId!)/data/ejercicio").setValue(5)
+        } else {
+            self.ref.child("users/\(userId!)/data/ejercicio").setValue(1)
+        }
+        
         performSegue(withIdentifier: "toFechaIntervencionAssistantSegue", sender: nil)
     }
     

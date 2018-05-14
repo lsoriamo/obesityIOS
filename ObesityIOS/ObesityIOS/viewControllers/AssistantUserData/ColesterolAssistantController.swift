@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ColesterolAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class ColesterolAssistantController: UIViewController, UIPickerViewDelegate, UIP
     @IBOutlet weak var pbColesterol: UIProgressView!
     
     let confirmacion = ["Si", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
 
     override func viewDidLoad() {
         pvColesterol.dataSource = self
         pvColesterol.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         pbColesterol.setProgress(0.544, animated: false)
 
@@ -37,6 +44,9 @@ class ColesterolAssistantController: UIViewController, UIPickerViewDelegate, UIP
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvColesterol.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/hiperlipidemia").setValue(true) : self.ref.child("users/\(userId!)/data/hiperlipidemia").setValue(false)
+        
         performSegue(withIdentifier: "toPiedrasAssistantSegue", sender: nil)
     }
     

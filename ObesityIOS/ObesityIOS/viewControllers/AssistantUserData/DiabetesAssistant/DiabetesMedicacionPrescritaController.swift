@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class DiabetesMedicacionPrescritaController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class DiabetesMedicacionPrescritaController: UIViewController, UIPickerViewDeleg
     @IBOutlet weak var pbMedicamentoPrescrito: UIProgressView!
     
     let medicamentosPrescritos = ["No padezco", "Antidabéticos orales", "Insulina", "Ambos tratamientos"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvMedicamentoPrescrito.dataSource = self
         pvMedicamentoPrescrito.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         pbMedicamentoPrescrito.setProgress(0.442, animated: false)
 
@@ -37,6 +44,9 @@ class DiabetesMedicacionPrescritaController: UIViewController, UIPickerViewDeleg
     }
     
     @IBAction func actionBtnSIguiente(_ sender: Any) {
+        
+        self.ref.child("users/\(userId!)/data/diabetes_prescripcion").setValue(pvMedicamentoPrescrito.selectedRow(inComponent: 0))
+        
         performSegue(withIdentifier: "toTrastornoSueñoAssistantSegue", sender: nil)
     }
     

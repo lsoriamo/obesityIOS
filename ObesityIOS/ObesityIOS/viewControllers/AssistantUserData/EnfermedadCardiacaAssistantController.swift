@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class EnfermedadCardiacaAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class EnfermedadCardiacaAssistantController: UIViewController, UIPickerViewDeleg
     @IBOutlet weak var pbEnfermedadCardiaca: UIProgressView!
     
     let confirmacion = ["Si", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvEnfermedadCardiaca.dataSource = self
         pvEnfermedadCardiaca.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbEnfermedadCardiaca.setProgress(0.68, animated: false)
 
@@ -37,6 +44,9 @@ class EnfermedadCardiacaAssistantController: UIViewController, UIPickerViewDeleg
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvEnfermedadCardiaca.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/cardiaca").setValue(true) : self.ref.child("users/\(userId!)/data/cardiaca").setValue(false)
+        
         performSegue(withIdentifier: "toFumadorAssistantSegue", sender: nil)
     }
     

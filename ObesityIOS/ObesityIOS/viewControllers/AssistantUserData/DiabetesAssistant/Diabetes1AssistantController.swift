@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class Diabetes1AssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -14,11 +15,17 @@ class Diabetes1AssistantController: UIViewController, UIPickerViewDelegate, UIPi
     @IBOutlet weak var pbDiabetes1: UIProgressView!
     
     let confirmacion = ["Si", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvDiabetes1.dataSource = self
         pvDiabetes1.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
         
         pbDiabetes1.setProgress(0.374, animated: false)
         
@@ -37,6 +44,9 @@ class Diabetes1AssistantController: UIViewController, UIPickerViewDelegate, UIPi
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvDiabetes1.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/diabetes1").setValue(true) : self.ref.child("users/\(userId!)/data/diabetes1").setValue(false)
+        
         performSegue(withIdentifier: "toDiabetes2AssistantSegue", sender: nil)
     }
 }

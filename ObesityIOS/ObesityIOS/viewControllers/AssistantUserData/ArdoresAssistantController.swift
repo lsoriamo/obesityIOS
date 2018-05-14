@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
@@ -14,11 +15,17 @@ class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pbArdores: UIProgressView!
     
     let eleccion = ["No", "Sí, esporádico", "Sí, frecuentemente"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvArdores.dataSource = self
         pvArdores.delegate = self
         super.viewDidLoad()
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbArdores.setProgress(0.782, animated: false)
     }
@@ -36,6 +43,9 @@ class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvArdores.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/ardores").setValue(true) : self.ref.child("users/\(userId!)/data/ardores").setValue(false)
+        
         performSegue(withIdentifier: "toReflujoAssistantSegue", sender: nil)
     }
     

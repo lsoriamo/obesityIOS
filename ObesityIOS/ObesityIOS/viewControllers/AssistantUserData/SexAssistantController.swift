@@ -25,12 +25,12 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
         pickerViewSex.dataSource = self
         pickerViewSex.delegate = self
         super.viewDidLoad()
+        
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
         pbSexo.setProgress(0.136, animated: false)
 
-        // Do any additional setup after loading the view.
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -47,7 +47,6 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     
     @IBAction func actionBtnSiguienteSex(_ sender: Any) {
-        print("Ha seleccionado el index: ", pickerViewSex.selectedRow(inComponent: 0))
         
         self.ref.child("users/\(userId!)/info/sex").setValue(pickerViewSex.selectedRow(inComponent: 0))
         

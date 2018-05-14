@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class HipertensionAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -15,11 +16,18 @@ class HipertensionAssistantController: UIViewController, UIPickerViewDelegate, U
     @IBOutlet weak var pvHipertension: UIPickerView!
     
     let confirmacion = ["Si", "No"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvHipertension.dataSource = self
         pvHipertension.delegate = self
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
 
         pbHipertension.setProgress(0.34, animated: false)
 
@@ -38,6 +46,9 @@ class HipertensionAssistantController: UIViewController, UIPickerViewDelegate, U
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        pvHipertension.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/hipertension").setValue(true) : self.ref.child("users/\(userId!)/data/hipertension").setValue(false)
+        
         performSegue(withIdentifier: "toDiabetes1AssistantSegue", sender: nil)
     }
 }

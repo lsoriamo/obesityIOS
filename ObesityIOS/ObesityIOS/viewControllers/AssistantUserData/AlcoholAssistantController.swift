@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class AlcoholAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
@@ -14,12 +15,18 @@ class AlcoholAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var pbAlcohol: UIProgressView!
     
     let eleccion = ["Nunca", "Una vez al mes", "Una vez a la semana", "Varias veces a la semana"]
+    var userId:String?
+    
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvAlcohol.dataSource = self
         pvAlcohol.delegate = self
         super.viewDidLoad()
-
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
+        
         pbAlcohol.setProgress(0.748, animated: false)
         
     }
@@ -37,6 +44,9 @@ class AlcoholAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     }
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
+        
+        self.ref.child("users/\(userId!)/data/alcohol").setValue(pvAlcohol.selectedRow(inComponent: 0))
+
         performSegue(withIdentifier: "toArdoresAssistantSegue", sender: nil)
     }
     
