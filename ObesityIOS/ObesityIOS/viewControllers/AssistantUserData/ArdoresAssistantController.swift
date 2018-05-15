@@ -26,6 +26,22 @@ class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isArdores:Bool = value?["ardores"] as? Bool {
+                
+                if isArdores {
+                    self.pvArdores.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvArdores.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
 
         pbArdores.setProgress(0.782, animated: false)
     }

@@ -7,19 +7,47 @@
 //
 
 import UIKit
+import FirebaseDatabase
 
 class SeleccionDoctorAssistantController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var pvSeleccionDoctor: UIPickerView!
     @IBOutlet weak var pbSeleccionDoctor: UIProgressView!
     
-    // ARRAY TIENE QUE SER CARGADO POR BASE DE DATOS
-    var medicos = ["Aliaga Verdugo, Alberto", "Soria Morillo, Luismi", "Morales Conde, Salvador", "Amores Ortiz, Jorge"]
+    var medicos:[String] = []
+    var userId:String?
+    var indexHospitalSelected:Int?
+
+    var ref: DatabaseReference!
     
     override func viewDidLoad() {
         pvSeleccionDoctor.dataSource = self
         pvSeleccionDoctor.delegate = self
         super.viewDidLoad()
+        
+        ref = Database.database().reference()
+        
+        userId = UserDefaults.standard.string(forKey: "userId")
+        indexHospitalSelected = UserDefaults.standard.integer(forKey: "hospitalSelected")
+        
+//        ref.child("medicalCenters/\()").observeSingleEvent(of: .value) { (snapshot) in
+//            
+//            let dicHospitales = snapshot.value as? NSDictionary
+//            
+//            print(dicHospitales!.allKeys)
+//            
+//            for idHospital in dicHospitales!.allKeys {
+//                self.ref.child("medicalCenters/\(idHospital)/doctors").observeSingleEvent(of: .value) { (snapshot) in
+//                    
+////                    let value = snapshot.value as? NSDictionary
+////                    let nombreHospital = value?["name"] as? String ?? ""
+////
+////                    self.equiposMedico.append(nombreHospital)
+////
+////                    self.pvEquipoMedico.reloadAllComponents()
+//                }
+//            }
+//        }
         
         pbSeleccionDoctor.setProgress(1, animated: false)
 

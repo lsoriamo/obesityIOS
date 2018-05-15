@@ -27,6 +27,22 @@ class TratamientoReflujoAssistantController: UIViewController, UIPickerViewDeleg
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isTratamientoReflujo:Bool = value?["tto_reflujo"] as? Bool {
+                
+                if isTratamientoReflujo {
+                    self.pvTratamientoReflujo.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvTratamientoReflujo.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
+        
         pbTratamientoReflujo.setProgress(0.816, animated: false)
         
     }

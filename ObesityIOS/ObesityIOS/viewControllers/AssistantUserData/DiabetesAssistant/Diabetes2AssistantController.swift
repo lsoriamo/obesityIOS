@@ -27,6 +27,22 @@ class Diabetes2AssistantController: UIViewController, UIPickerViewDelegate, UIPi
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isDiabetes2:Bool = value?["diabetes2"] as? Bool {
+                
+                if isDiabetes2 {
+                    self.pvDiabetes2.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvDiabetes2.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
+        
         pbDiabetes2.setProgress(0.408, animated: false)
 
     }

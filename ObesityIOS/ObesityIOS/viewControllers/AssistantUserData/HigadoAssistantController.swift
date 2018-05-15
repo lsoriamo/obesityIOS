@@ -27,6 +27,22 @@ class HigadoAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isEnfermedadHigado:Bool = value?["higado"] as? Bool {
+                
+                if isEnfermedadHigado {
+                    self.pvHigado.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvHigado.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
+        
         pbHigado.setProgress(0.612, animated: false)
         
     }

@@ -26,6 +26,22 @@ class HuesosAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let iaOsteoporosis:Bool = value?["osteoporosis"] as? Bool {
+                
+                if iaOsteoporosis {
+                    self.pvHuesos.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvHuesos.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
 
         pbHuesos.setProgress(0.646, animated: false)
         

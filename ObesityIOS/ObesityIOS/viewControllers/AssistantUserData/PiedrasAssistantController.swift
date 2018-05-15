@@ -26,6 +26,22 @@ class PiedrasAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isPiedrasVesicula:Bool = value?["vesicula"] as? Bool {
+                
+                if isPiedrasVesicula {
+                    self.pvPiedras.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvPiedras.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
 
         pbPiedras.setProgress(0.578, animated: false)
 

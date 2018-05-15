@@ -24,10 +24,24 @@ class ProfesionAssistantController: UIViewController {
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/info").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let profesionRecibida:String = value?["profesion"] as? String ?? ""
+            
+            
+            if profesionRecibida != "" {
+                
+                self.tfProfesion.text = profesionRecibida
+                
+            }
+            
+        }
 
         pbProfesion.setProgress(0.17, animated: false)
         
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {

@@ -25,6 +25,22 @@ class TelefonoAssistantController: UIViewController {
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/info").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let telefonoRecibido:String = value?["phone"] as? String ?? ""
+            
+            
+            if telefonoRecibido != "" {
+                
+                self.tfTelefono.text = telefonoRecibido
+                
+            }
+            
+            
+        }
+        
         pbTelefono.setProgress(0.102, animated: false)
 
         // Do any additional setup after loading the view.

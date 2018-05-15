@@ -29,6 +29,22 @@ class SexAssistantController: UIViewController, UIPickerViewDelegate, UIPickerVi
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/info").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let sexoRecibido:Int = value?["sex"] as? Int ?? -1
+            
+            
+            if sexoRecibido != -1 {
+                
+                self.pickerViewSex.selectRow(sexoRecibido, inComponent: 0, animated: false)
+                
+            }
+            
+            
+        }
         pbSexo.setProgress(0.136, animated: false)
 
     }

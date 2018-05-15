@@ -27,6 +27,18 @@ class DiabetesMedicacionPrescritaController: UIViewController, UIPickerViewDeleg
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let diabestesPreescipcionRecibida:Int = value?["diabetes_prescripcion"] as? Int {
+                
+                self.pvMedicamentoPrescrito.selectRow(diabestesPreescipcionRecibida, inComponent: 0, animated: false)
+                
+            }
+            
+        }
+        
         pbMedicamentoPrescrito.setProgress(0.442, animated: false)
 
     }

@@ -26,6 +26,22 @@ class EnfermedadCardiacaAssistantController: UIViewController, UIPickerViewDeleg
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isCardiaca:Bool = value?["cardiaca"] as? Bool {
+                
+                if isCardiaca {
+                    self.pvEnfermedadCardiaca.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvEnfermedadCardiaca.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
 
         pbEnfermedadCardiaca.setProgress(0.68, animated: false)
 

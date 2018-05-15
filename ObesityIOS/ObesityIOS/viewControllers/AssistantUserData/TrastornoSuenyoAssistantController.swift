@@ -26,6 +26,22 @@ class TrastornoSuenyoAssistantController: UIViewController, UIPickerViewDelegate
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isTrastornoSuenyo:Bool = value?["apnea"] as? Bool {
+                
+                if isTrastornoSuenyo {
+                    self.pvTrastornoSuenyo.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvTrastornoSuenyo.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
 
         pbTrastornoSuenyo.setProgress(0.476, animated: false)
     }

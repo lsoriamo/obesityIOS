@@ -31,19 +31,36 @@ class PesoObjetivoAssistantController: UIViewController, UIPickerViewDelegate, U
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
-        pesoUsuario = UserDefaults.standard.integer(forKey: "pesoUsuario")
-        
-        pesoUsuarioObjetivoAprox = pesoUsuario! - (pesoUsuario! / 10)
-        
-        print(pesoUsuarioObjetivoAprox!)
-        
-        pbPesoObjetivo.setProgress(0.935, animated: false)
         
         pesos = cargarPesos()
         
-        indexPesoUsuario = findIndexByPeso(peso: pesoUsuarioObjetivoAprox!)
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let pesoRecibido:Int = value?["peso_objetivo"] as? Int ?? -1
+            
+            if pesoRecibido != -1 {
+                
+                let indexPeso = self.findPeso(peso: pesoRecibido)
+                
+                self.pvPesoObjetivo.selectRow(indexPeso, inComponent: 0, animated: false)
+                
+            } else {
+                
+                self.pesoUsuario = UserDefaults.standard.integer(forKey: "pesoUsuario")
+                
+                self.pesoUsuarioObjetivoAprox = self.pesoUsuario! - (self.pesoUsuario! / 10)
+                self.indexPesoUsuario = self.findPesoObjetivoAprox(peso: self.pesoUsuarioObjetivoAprox!)
+                
+                self.pvPesoObjetivo.selectRow(self.indexPesoUsuario!, inComponent: 0, animated: true)
+                
+            }
+            
+        }
         
-        pvPesoObjetivo.selectRow(indexPesoUsuario!, inComponent: 0, animated: true)
+        pbPesoObjetivo.setProgress(0.935, animated: false)
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -58,7 +75,20 @@ class PesoObjetivoAssistantController: UIViewController, UIPickerViewDelegate, U
         return String(pesos[row])
     }
     
-    func findIndexByPeso(peso: Int) -> Int {
+    func findPeso(peso:Int) -> Int {
+        var i:Int = 0
+        
+        for p in pesos {
+            if p == peso {
+                return i
+            }
+            i = i+1
+        }
+        
+        return 0
+    }
+    
+    func findPesoObjetivoAprox(peso: Int) -> Int {
         var i = 0
         
         for p in pesos {

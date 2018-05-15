@@ -25,12 +25,36 @@ class FechaIntervencion2AssistantController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         
-        userId = UserDefaults.standard.string(forKey: "userId")
-
         dpFechaIntervencion.datePickerMode = UIDatePickerMode.date
-        dpFechaIntervencion.isHidden = true
-        btnCancelarFecha.isHidden = true
         
+        userId = UserDefaults.standard.string(forKey: "userId")
+        
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let fechaIntervencionRecibidaUnix:Double = value?["fecha_intervencion"] as? Double ?? -1
+            
+            if fechaIntervencionRecibidaUnix != -1 {
+                
+                self.isSelectedFecha = true
+                self.dpFechaIntervencion.isHidden = false
+                self.btnCancelarFecha.isHidden = false
+                self.btnSeleccionarFecha.isHidden = true
+                
+                let fechaIntervencionRecibidaDate:Date = Date(timeIntervalSince1970: TimeInterval(fechaIntervencionRecibidaUnix))
+                
+                self.dpFechaIntervencion.date = fechaIntervencionRecibidaDate
+                
+            } else {
+                
+                self.dpFechaIntervencion.isHidden = true
+                self.btnCancelarFecha.isHidden = true
+                
+            }
+            
+        }
+
         pbFechaIntervencion.setProgress(0.884, animated: false)
     }
     
@@ -54,6 +78,8 @@ class FechaIntervencion2AssistantController: UIViewController {
         
         if isSelectedFecha {
             self.ref.child("users/\(userId!)/data/fecha_intervencion").setValue(fechaIntervencion)
+        } else {
+            self.ref.child("users/\(userId!)/data/fecha_intervencion").setValue(-1)
         }
         
         performSegue(withIdentifier: "toPesoObejtivoAssistantSegue", sender: nil)

@@ -27,6 +27,18 @@ class AlcoholAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let alcoholRecibido:Int = value?["alcohol"] as? Int {
+                
+                self.pvAlcohol.selectRow(alcoholRecibido, inComponent: 0, animated: false)
+                
+            }
+            
+        }
+        
         pbAlcohol.setProgress(0.748, animated: false)
         
     }

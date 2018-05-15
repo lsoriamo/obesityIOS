@@ -29,11 +29,30 @@ class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
-        pbAltura.setProgress(0.238, animated: false)
         
         alturas = cargarAlturas()
         
-        pvAltura.selectRow(70, inComponent: 0, animated: true)
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let alturaRecibida:Int = value?["altura"] as? Int ?? -1
+            
+            if alturaRecibida != -1 {
+                
+                let indexAltura = self.findAltura(altura: alturaRecibida)
+                
+                self.pvAltura.selectRow(indexAltura, inComponent: 0, animated: false)
+                
+            } else {
+                
+                self.pvAltura.selectRow(70, inComponent: 0, animated: true)
+                
+            }
+            
+        }
+        
+        pbAltura.setProgress(0.238, animated: false)
         
     }
     
@@ -55,6 +74,21 @@ class AlturaAssistantController: UIViewController, UIPickerViewDelegate, UIPicke
         self.ref.child("users/\(userId!)/data/altura").setValue(alturas[rowSelected!])
 
         performSegue(withIdentifier: "toPesoAssistantSegue", sender: nil)
+    }
+    
+    func findAltura(altura:Int) -> Int {
+        
+        var i:Int = 0
+        
+        for a in alturas {
+            if a == altura {
+                return i
+            }
+            i = i+1
+        }
+        
+        return -1
+        
     }
     
     func cargarAlturas() -> Array<Int> {

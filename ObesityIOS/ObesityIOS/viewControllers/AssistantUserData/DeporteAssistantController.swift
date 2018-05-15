@@ -27,6 +27,26 @@ class DeporteAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let deporteRecibido:Int = value?["ejercicio"] as? Int {
+                
+                if deporteRecibido == 0 {
+                    self.pvDeporte.selectRow(0, inComponent: 0, animated: false)
+                } else if deporteRecibido == 16 {
+                    self.pvDeporte.selectRow(1, inComponent: 0, animated: false)
+                } else if deporteRecibido == 5 {
+                    self.pvDeporte.selectRow(2, inComponent: 0, animated: false)
+                } else {
+                    self.pvDeporte.selectRow(3, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
+        
         pbDeporte.setProgress(0.85, animated: false)
         
     }

@@ -27,6 +27,22 @@ class LesionArticularAssistantController: UIViewController, UIPickerViewDelegate
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isLesionArticular:Bool = value?["lesion_articular"] as? Bool {
+                
+                if isLesionArticular {
+                    self.pvLesionArticular.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvLesionArticular.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
+        
         pbLesionArticular.setProgress(0.51, animated: false)
     }
     

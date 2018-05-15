@@ -28,11 +28,30 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
-        pbPeso.setProgress(0.272, animated: false)
-
         pesos = cargarPesos()
         
-        pvPeso.selectRow(100, inComponent: 0, animated: true)
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let pesoRecibido:Int = value?["peso"] as? Int ?? -1
+            
+            if pesoRecibido != -1 {
+                
+                let indexPeso = self.findPeso(peso: pesoRecibido)
+                
+                self.pvPeso.selectRow(indexPeso, inComponent: 0, animated: false)
+                
+            } else {
+                
+                self.pvPeso.selectRow(100, inComponent: 0, animated: true)
+                
+            }
+            
+        }
+        
+        pbPeso.setProgress(0.272, animated: false)
+
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -53,6 +72,19 @@ class PesoAssistantController: UIViewController, UIPickerViewDelegate, UIPickerV
         self.ref.child("users/\(userId!)/data/peso").setValue(pesos[pvPeso.selectedRow(inComponent: 0)])
         
         performSegue(withIdentifier: "toFotoAssistantSegue", sender: nil)
+    }
+    
+    func findPeso(peso:Int) -> Int {
+        var i:Int = 0
+        
+        for p in pesos {
+            if p == peso {
+                return i
+            }
+            i = i+1
+        }
+        
+        return 0
     }
     
     func cargarPesos() -> Array<Int> {

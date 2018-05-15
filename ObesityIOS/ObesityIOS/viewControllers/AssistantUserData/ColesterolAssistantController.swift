@@ -27,6 +27,22 @@ class ColesterolAssistantController: UIViewController, UIPickerViewDelegate, UIP
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let isColesterol:Bool = value?["hiperlipidemia"] as? Bool {
+                
+                if isColesterol {
+                    self.pvColesterol.selectRow(0, inComponent: 0, animated: false)
+                } else {
+                    self.pvColesterol.selectRow(1, inComponent: 0, animated: false)
+                }
+                
+            }
+            
+        }
+        
         pbColesterol.setProgress(0.544, animated: false)
 
     }

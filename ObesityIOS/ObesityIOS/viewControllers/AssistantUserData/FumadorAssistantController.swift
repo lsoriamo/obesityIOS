@@ -27,6 +27,18 @@ class FumadorAssistantController: UIViewController, UIPickerViewDelegate, UIPick
         
         userId = UserDefaults.standard.string(forKey: "userId")
         
+        ref.child("users/\(userId!)/data").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            if let fumadorRecibido:Int = value?["fumador"] as? Int {
+                
+                self.pvFumador.selectRow(fumadorRecibido, inComponent: 0, animated: false)
+                
+            }
+            
+        }
+        
         pbFumador.setProgress(0.714, animated: false)
     
     }

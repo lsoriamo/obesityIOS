@@ -26,16 +26,44 @@ class NombreApellidosAssistantController: UIViewController {
         super.viewDidLoad()
         ref = Database.database().reference()
         
-        if let nombre = UserDefaults.standard.string(forKey: "givenName") {
-            tfNombre.text = nombre
-        }
-        
-        if let apellidos = UserDefaults.standard.string(forKey: "familyName") {
-            tfApellidos.text = apellidos
-        }
-        
         userId = UserDefaults.standard.string(forKey: "userId")
-        print("EL USERID ES: \(userId!)")
+        
+        ref.child("users/\(userId!)/info").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let value = snapshot.value as? NSDictionary
+            
+            let nombreRecibido:String = value?["name"] as? String ?? ""
+            let apellidosRecibidos:String = value?["surname"] as? String ?? ""
+            
+            // Comprobamos que el usuario haya introducido su nombre y apellidos antes
+            if nombreRecibido != "" &&
+                apellidosRecibidos != "" {
+                
+                self.tfNombre.text = nombreRecibido
+                self.tfApellidos.text = apellidosRecibidos
+                
+            } else {
+                
+                // Fecha de primer uso de app
+                let fechaPrimerUsoApp = Date().timeIntervalSince1970
+                
+                self.ref.child("users/\(self.userId!)/data/fecha_primer_uso_app").setValue(fechaPrimerUsoApp)
+                
+                // Cargamos los datos de nombre y apellidos en el caso de que se rescataran
+                // de Google account
+                if let nombre = UserDefaults.standard.string(forKey: "givenName") {
+                    self.tfNombre.text = nombre
+                    
+                }
+                
+                if let apellidos = UserDefaults.standard.string(forKey: "familyName") {
+                    self.tfApellidos.text = apellidos
+                    
+                }
+            }
+            
+            
+        }
         
         pbNombreApellidos.setProgress(0.068, animated: false)
 
@@ -79,11 +107,6 @@ class NombreApellidosAssistantController: UIViewController {
             self.ref.child("users/\(userId!)/data/iduser_data").setValue(-1)
             
             self.ref.child("users/\(userId!)/data/user_id").setValue(userId!)
-            
-            // Fecha de primer uso de app
-            let fechaPrimerUsoApp = Date().timeIntervalSince1970
-            
-            self.ref.child("users/\(userId!)/data/fecha_primer_uso_app").setValue(fechaPrimerUsoApp)
             
             performSegue(withIdentifier: "toTelefonoAssistantSegue", sender: nil)
         }
