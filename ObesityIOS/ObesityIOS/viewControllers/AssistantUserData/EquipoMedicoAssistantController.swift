@@ -63,14 +63,11 @@ class EquipoMedicoAssistantController: UIViewController, UIPickerViewDelegate, U
         return equiposMedico[row]
     }
     
-    func getIdHospitalSelected(index: Int) -> String {
-        
-        print("INDEX: \(index)")
+    // Función que permite extraer el id del hospital seleccionado por el usuario, y lo añade a las preferencias para futuras pantallas
+    func getIdHospitalSelected(index: Int) {
         
         var arrIdsHospital:[String]?
         var idHospitalSelected:String?
-        
-        var aux:Bool = false
         
         ref.child("medicalCenters").observeSingleEvent(of: .value) { (snapshot) in
             
@@ -79,21 +76,15 @@ class EquipoMedicoAssistantController: UIViewController, UIPickerViewDelegate, U
             arrIdsHospital = dicHospitales?.allKeys as? [String]
             
             idHospitalSelected = arrIdsHospital![index]
-            aux = true
+            UserDefaults.standard.set(idHospitalSelected, forKey: "hospitalSelected")
             
         }
-        
-        //TODO HAY Q SOLUCIONARLO
-        print(idHospitalSelected!)
-        return idHospitalSelected!
     }
 
     @IBAction func actionBtnSiguiente(_ sender: Any) {
-        let idHospitalSelected = getIdHospitalSelected(index: pvEquipoMedico.selectedRow(inComponent: 0))
         
-        print(idHospitalSelected)
+        getIdHospitalSelected(index: pvEquipoMedico.selectedRow(inComponent: 0))
         
-        UserDefaults.standard.set(idHospitalSelected, forKey: "hospitalSelected")
         performSegue(withIdentifier: "toSeleccionDoctorAssistantSegue", sender: nil)
     }
 }

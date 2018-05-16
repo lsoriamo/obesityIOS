@@ -16,7 +16,7 @@ class SeleccionDoctorAssistantController: UIViewController, UIPickerViewDelegate
     
     var medicos:[String] = []
     var userId:String?
-    var indexHospitalSelected:Int?
+    var idHospitalSelected:String?
 
     var ref: DatabaseReference!
     
@@ -28,26 +28,28 @@ class SeleccionDoctorAssistantController: UIViewController, UIPickerViewDelegate
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
-        indexHospitalSelected = UserDefaults.standard.integer(forKey: "hospitalSelected")
+        idHospitalSelected = UserDefaults.standard.string(forKey: "hospitalSelected")
         
-//        ref.child("medicalCenters/\()").observeSingleEvent(of: .value) { (snapshot) in
-//            
-//            let dicHospitales = snapshot.value as? NSDictionary
-//            
-//            print(dicHospitales!.allKeys)
-//            
-//            for idHospital in dicHospitales!.allKeys {
-//                self.ref.child("medicalCenters/\(idHospital)/doctors").observeSingleEvent(of: .value) { (snapshot) in
-//                    
-////                    let value = snapshot.value as? NSDictionary
-////                    let nombreHospital = value?["name"] as? String ?? ""
-////
-////                    self.equiposMedico.append(nombreHospital)
-////
-////                    self.pvEquipoMedico.reloadAllComponents()
-//                }
-//            }
-//        }
+        ref.child("medicalCenters/\(idHospitalSelected!)/doctors").observeSingleEvent(of: .value) { (snapshot) in
+            
+            let dicDoctores = snapshot.value as? NSDictionary
+            
+            print(dicDoctores!.allKeys)
+            
+            for idDoctor in dicDoctores!.allKeys {
+                self.ref.child("medicalCenters/\(self.idHospitalSelected!)/doctors/\(idDoctor)").observeSingleEvent(of: .value) { (snapshot) in
+                    
+                    let value = snapshot.value as? NSDictionary
+                    
+                    let nombre = value?["name"] as? String ?? ""
+                    let apellidos = value?["surname"] as? String ?? ""
+
+                    self.medicos.append("\(apellidos), \(nombre)")
+
+                    self.pvSeleccionDoctor.reloadAllComponents()
+                }
+            }
+        }
         
         pbSeleccionDoctor.setProgress(1, animated: false)
 
