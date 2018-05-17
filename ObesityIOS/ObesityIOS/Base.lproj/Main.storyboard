@@ -133,6 +133,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem id="Lwe-UC-eDF">
+                                        <barButtonItem key="backBarButtonItem" title="Back" id="wbn-zl-fNU"/>
                                         <barButtonItem key="leftBarButtonItem" title="Atrás" id="tYh-F3-Seo">
                                             <connections>
                                                 <segue destination="X2v-Bz-42Y" kind="show" id="6Ah-YL-1YF"/>
@@ -298,9 +299,9 @@
                         <outlet property="btnSignIn" destination="oPZ-jL-7wD" id="FRU-YX-zQJ"/>
                         <outlet property="tfEmail" destination="GeW-A0-U8j" id="Nax-3e-xH6"/>
                         <outlet property="tfPass" destination="C0H-Da-sJf" id="uhc-PW-N2u"/>
-                        <segue destination="DcO-B5-fhW" kind="show" identifier="WelcomeAssistantSegue" id="2jP-Ms-ciJ"/>
                         <segue destination="hib-Ht-sbb" kind="show" identifier="toRegistroUsuarioSegue" id="B4R-UQ-4Kb"/>
                         <segue destination="X2v-Bz-42Y" kind="show" identifier="toIntroDoctorAppointmentSegue" id="Dn1-xR-vUU"/>
+                        <segue destination="DcO-B5-fhW" kind="show" identifier="WelcomeAssistantSegue" id="uZU-Cl-czo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -496,13 +497,16 @@
                         <viewLayoutGuide key="safeArea" id="bld-d6-21T"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="pga-YL-9Lh"/>
-                        <barButtonItem title="Siguiente" style="plain" id="Q5G-t5-OSr">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="nzZ-V3-68K"/>
+                        <barButtonItem title="Siguiente" id="Or4-Gs-Dd5">
                             <connections>
-                                <action selector="actionBtnSiguiente:" destination="DcO-B5-fhW" id="zk2-ST-9p1"/>
+                                <action selector="actionBtnSiguiente:" destination="DcO-B5-fhW" id="z0Z-lC-vtj"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
+                    <navigationItem key="navigationItem" id="zoz-Sq-7yE">
+                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="dEU-lf-rWF"/>
+                    </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="labelTitleWelcome" destination="6qd-iz-rdT" id="kQV-sO-qDY"/>
@@ -513,7 +517,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5hW-Zl-r7e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1643" y="128"/>
+            <point key="canvasLocation" x="2023" y="128"/>
         </scene>
         <!--Nombre Apellidos Assistant Controller-->
         <scene sceneID="fei-ci-P3z">
@@ -579,15 +583,15 @@
                         <viewLayoutGuide key="safeArea" id="OQS-LH-Yjn"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Anterior" id="HTT-lr-0V1">
+                        <barButtonItem title="Anterior" id="1dp-w8-2mq">
                             <connections>
-                                <segue destination="DcO-B5-fhW" kind="show" id="6t0-yY-R2F"/>
+                                <segue destination="DcO-B5-fhW" kind="show" id="2M8-86-ZW5"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="GCf-kX-CKN"/>
-                        <barButtonItem title="Siguiente" id="5Kh-rB-WXr">
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="5rj-aw-D4T"/>
+                        <barButtonItem title="Siguiente" id="GAu-TO-mER">
                             <connections>
-                                <action selector="actionBtnSiguiente:" destination="Zcb-z6-i0t" id="YUa-eP-6Cx"/>
+                                <action selector="actionBtnSiguiente:" destination="Zcb-z6-i0t" id="KbG-GQ-2cL"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -601,7 +605,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="saE-GL-oBg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2387" y="128"/>
+            <point key="canvasLocation" x="3122" y="130"/>
         </scene>
         <!--Telefono Assistant Controller-->
         <scene sceneID="K0n-29-0pe">
@@ -679,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fx7-0s-BN2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110.625" y="129.92957746478874"/>
+            <point key="canvasLocation" x="4001" y="128"/>
         </scene>
         <!--Sex Assistant Controller-->
         <scene sceneID="Q17-g3-GWZ">
@@ -755,7 +759,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iVd-uE-XSF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3830.625" y="129.92957746478874"/>
+            <point key="canvasLocation" x="4828.125" y="129.92957746478874"/>
         </scene>
         <!--Profesion Assistant Controller-->
         <scene sceneID="S3r-Sg-jGZ">
@@ -833,7 +837,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aeo-2p-SHF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4566" y="130"/>
+            <point key="canvasLocation" x="5563.125" y="129.92957746478874"/>
         </scene>
         <!--Fecha Nacimiento Assistant Controller-->
         <scene sceneID="EaG-pm-G2d">
@@ -912,7 +916,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0W-4R-asR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5296.875" y="127.8169014084507"/>
+            <point key="canvasLocation" x="6294.375" y="127.8169014084507"/>
         </scene>
         <!--Altura Assistant Controller-->
         <scene sceneID="OoM-Rm-2BI">
@@ -988,7 +992,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="X6k-yC-mHq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6022.5" y="128.87323943661971"/>
+            <point key="canvasLocation" x="7020" y="128.87323943661971"/>
         </scene>
         <!--Peso Assistant Controller-->
         <scene sceneID="feW-eY-BA6">
@@ -1064,7 +1068,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n6n-qD-acb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6753.75" y="128.87323943661971"/>
+            <point key="canvasLocation" x="7751.25" y="128.87323943661971"/>
         </scene>
         <!--Imagen Perfil Assistant Controller-->
         <scene sceneID="zck-Ze-SuM">
@@ -1165,7 +1169,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7RB-89-3mY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7494.375" y="129.92957746478874"/>
+            <point key="canvasLocation" x="8491.875" y="129.92957746478874"/>
         </scene>
         <!--Hipertension Assistant Controller-->
         <scene sceneID="Ljd-lK-aJM">
@@ -1241,7 +1245,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j3Q-Fg-xic" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8229.375" y="129.92957746478874"/>
+            <point key="canvasLocation" x="9226.875" y="129.92957746478874"/>
         </scene>
         <!--Diabetes1 Assistant Controller-->
         <scene sceneID="mxU-TA-Oat">
@@ -1317,7 +1321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zJn-ZG-Xhw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="8962.5" y="133.09859154929578"/>
+            <point key="canvasLocation" x="9960" y="133.09859154929578"/>
         </scene>
         <!--Diabetes2 Assistant Controller-->
         <scene sceneID="LDr-0w-NQS">
@@ -1393,7 +1397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fgW-pk-sJ6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="9735" y="133"/>
+            <point key="canvasLocation" x="10732.5" y="132.04225352112675"/>
         </scene>
         <!--Diabetes Medicacion Prescrita Controller-->
         <scene sceneID="a5v-od-c7m">
@@ -1469,7 +1473,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2GV-x8-Hgx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="10522.5" y="133.09859154929578"/>
+            <point key="canvasLocation" x="11520" y="133.09859154929578"/>
         </scene>
         <!--Trastorno Suenyo Assistant Controller-->
         <scene sceneID="plL-TU-Prf">
@@ -1544,7 +1548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ur-Kw-ilo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="11330.625" y="133.09859154929578"/>
+            <point key="canvasLocation" x="12328.125" y="133.09859154929578"/>
         </scene>
         <!--Lesion Articular Assistant Controller-->
         <scene sceneID="4XL-sh-IQb">
@@ -1620,7 +1624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UvI-vn-Djk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12078.75" y="132.04225352112675"/>
+            <point key="canvasLocation" x="13076.25" y="132.04225352112675"/>
         </scene>
         <!--Colesterol Assistant Controller-->
         <scene sceneID="xHN-59-pbD">
@@ -1696,7 +1700,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9RJ-e6-ndu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="12853" y="130"/>
+            <point key="canvasLocation" x="13848.75" y="129.92957746478874"/>
         </scene>
         <!--Piedras Assistant Controller-->
         <scene sceneID="FgE-O6-kzL">
@@ -1772,7 +1776,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V3g-ew-l7S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13599.375" y="129.92957746478874"/>
+            <point key="canvasLocation" x="14596.875" y="129.92957746478874"/>
         </scene>
         <!--Higado Assistant Controller-->
         <scene sceneID="KwD-yS-kiO">
@@ -1848,7 +1852,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tZ-d3-mD2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="14368" y="130"/>
+            <point key="canvasLocation" x="15363.75" y="129.92957746478874"/>
         </scene>
         <!--Huesos Assistant Controller-->
         <scene sceneID="cyd-if-8OR">
@@ -1924,7 +1928,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ez6-a5-zt5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15100" y="128.18590704647679"/>
+            <point key="canvasLocation" x="16096.875" y="127.8169014084507"/>
         </scene>
         <!--Enfermedad Cardiaca Assistant Controller-->
         <scene sceneID="qZS-0X-dyk">
@@ -2000,7 +2004,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fN5-lN-K9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="15832.5" y="129.92957746478874"/>
+            <point key="canvasLocation" x="16830" y="129.92957746478874"/>
         </scene>
         <!--Fumador Assistant Controller-->
         <scene sceneID="yqI-gq-Nz2">
@@ -2076,7 +2080,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGe-vu-hib" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16607" y="129"/>
+            <point key="canvasLocation" x="17604.375" y="128.87323943661971"/>
         </scene>
         <!--Alcohol Assistant Controller-->
         <scene sceneID="IXn-5T-v5Q">
@@ -2152,7 +2156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iac-Ok-aJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="17358.75" y="129.92957746478874"/>
+            <point key="canvasLocation" x="18356.25" y="129.92957746478874"/>
         </scene>
         <!--Ardores Assistant Controller-->
         <scene sceneID="P1k-uz-ona">
@@ -2228,7 +2232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UAt-ko-QBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18110.625" y="123.59154929577466"/>
+            <point key="canvasLocation" x="19108.125" y="123.59154929577466"/>
         </scene>
         <!--Tratamiento Reflujo Assistant Controller-->
         <scene sceneID="UqC-3u-wNx">
@@ -2303,7 +2307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EEE-oy-syq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18886.875" y="123.59154929577466"/>
+            <point key="canvasLocation" x="19884.375" y="123.59154929577466"/>
         </scene>
         <!--Deporte Assistant Controller-->
         <scene sceneID="YMP-fq-iAI">
@@ -2379,7 +2383,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R0u-VR-Dw1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="19650" y="123.59154929577466"/>
+            <point key="canvasLocation" x="20647.5" y="123.59154929577466"/>
         </scene>
         <!--Fecha Intervencion2 Assistant Controller-->
         <scene sceneID="bWG-DC-gbT">
@@ -2481,7 +2485,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CA8-gp-AOW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20411" y="124"/>
+            <point key="canvasLocation" x="21406.875" y="123.59154929577466"/>
         </scene>
         <!--Peso Objetivo Assistant Controller-->
         <scene sceneID="jOp-e7-czn">
@@ -2557,7 +2561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lcg-Sh-dys" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21161.25" y="122.53521126760563"/>
+            <point key="canvasLocation" x="22158.75" y="122.53521126760563"/>
         </scene>
         <!--Equipo Medico Assistant Controller-->
         <scene sceneID="g9y-R9-yGi">
@@ -2642,7 +2646,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pjv-D5-XwJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21941.25" y="123.59154929577466"/>
+            <point key="canvasLocation" x="22938.75" y="123.59154929577466"/>
         </scene>
         <!--Seleccion Doctor Assistant Controller-->
         <scene sceneID="mo5-tV-XQR">
@@ -2737,7 +2741,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9nj-BH-rpF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="22693.125" y="124.64788732394366"/>
+            <point key="canvasLocation" x="23690.625" y="124.64788732394366"/>
         </scene>
         <!--Wait Confirmation Assistant Controller-->
         <scene sceneID="ABF-vf-gdA">
@@ -2756,7 +2760,7 @@
                                     <constraint firstAttribute="height" constant="90" id="cI1-FL-dqH"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a Preobar Jorge" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9t7-ET-jex">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bienvenido a Preobar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="9t7-ET-jex">
                                 <rect key="frame" x="16" y="134" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -2808,6 +2812,7 @@
                         <viewLayoutGuide key="safeArea" id="pv8-56-Ge9"/>
                     </view>
                     <connections>
+                        <outlet property="lbTituloWaitConfimation" destination="9t7-ET-jex" id="iSz-xP-IKr"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="toSignOutFromEndAssistant" id="dfF-X7-Zly"/>
                     </connections>
                 </viewController>
@@ -2870,10 +2875,10 @@
         <segue reference="xpE-hp-dvj"/>
         <segue reference="9we-7x-IVM"/>
         <segue reference="Ls8-Ep-XdY"/>
-        <segue reference="lgP-sE-MQp"/>
-        <segue reference="I3P-MY-aGR"/>
-        <segue reference="jWo-3I-zEV"/>
-        <segue reference="6t0-yY-R2F"/>
+        <segue reference="AUM-Yv-7dE"/>
+        <segue reference="VWQ-dK-R1d"/>
+        <segue reference="tvh-NF-Lj7"/>
+        <segue reference="2M8-86-ZW5"/>
         <segue reference="vEP-5c-qNM"/>
         <segue reference="Dn1-xR-vUU"/>
     </inferredMetricsTieBreakers>

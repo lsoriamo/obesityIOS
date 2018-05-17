@@ -13,6 +13,10 @@ import GoogleSignIn
 
 class WaitConfirmationAssistantController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
 
+    @IBOutlet weak var lbTituloWaitConfimation: UILabel!
+    
+    var nombreWaitConfirmation:String?
+    
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         
     }
@@ -21,7 +25,10 @@ class WaitConfirmationAssistantController: UIViewController, GIDSignInUIDelegate
         super.viewDidLoad()
         navigationController?.setToolbarHidden(true, animated: false)
 
-        // Do any additional setup after loading the view.
+        nombreWaitConfirmation = UserDefaults.standard.string(forKey: "givenName") ?? ""
+        
+        lbTituloWaitConfimation.text = "Bienvenido a Preobar \(nombreWaitConfirmation!)"
+        
     }
     
     @IBAction func actionBtnSignOut(_ sender: Any) {
