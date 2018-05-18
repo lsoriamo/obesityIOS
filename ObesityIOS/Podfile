@@ -13,6 +13,7 @@ target 'ObesityIOS' do
   pod 'Firebase/Auth'
   pod 'Firebase/Storage'
   pod 'GoogleSignIn'
+  pod 'JTAppleCalendar', '~> 7.0'
 
   target 'ObesityIOSTests' do
     inherit! :search_paths
@@ -27,9 +28,5 @@ target 'ObesityIOS' do
   source 'https://github.com/CocoaPods/Specs.git'
   platform :ios, '11.0'
   use_frameworks!
-
-  target 'Jorge Amores Preobar' do
-      pod 'JTAppleCalendar', '~> 7.0'
-  end
 
 end
