@@ -29,6 +29,8 @@
 		742635DC207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		742635DD207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
 		742635DE207B612C006D0A83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 742635DB207B612C006D0A83 /* GoogleService-Info.plist */; };
+		742A460D20AEB40300C5A9B6 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A460C20AEB40300C5A9B6 /* Appointment.swift */; };
+		742A461420AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A461320AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift */; };
 		742BCCE5208F714000677A92 /* ImagenPerfilAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */; };
 		742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */; };
 		742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */; };
@@ -46,6 +48,7 @@
 		744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */; };
 		746451F120A30DAA0056A5F9 /* ic_checkbox_default.png in Resources */ = {isa = PBXBuildFile; fileRef = 746451EF20A30DA80056A5F9 /* ic_checkbox_default.png */; };
 		746451F620A314A40056A5F9 /* ic_checkbox_selected.png in Resources */ = {isa = PBXBuildFile; fileRef = 746451F520A314A30056A5F9 /* ic_checkbox_selected.png */; };
+		7474B04220AEBC0C00EB6A6A /* CalendarAppointmentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7474B04120AEBC0C00EB6A6A /* CalendarAppointmentController.swift */; };
 		748A96292091CCCF00364DCE /* LesionArticularAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96282091CCCF00364DCE /* LesionArticularAssistantController.swift */; };
 		748A962B2091CD1900364DCE /* ColesterolAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A962A2091CD1900364DCE /* ColesterolAssistantController.swift */; };
 		748A962D2091CD6900364DCE /* PiedrasAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A962C2091CD6900364DCE /* PiedrasAssistantController.swift */; };
@@ -112,6 +115,8 @@
 		7421C111207B55210026CCE2 /* ObesityIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObesityIOSUITests.swift; sourceTree = "<group>"; };
 		7421C113207B55210026CCE2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		742635DB207B612C006D0A83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		742A460C20AEB40300C5A9B6 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
+		742A461320AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemAppointmentTableViewCell.swift; sourceTree = "<group>"; };
 		742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenPerfilAssistantController.swift; sourceTree = "<group>"; };
 		742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipertensionAssistantController.swift; sourceTree = "<group>"; };
 		742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes1AssistantController.swift; sourceTree = "<group>"; };
@@ -129,6 +134,7 @@
 		744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		746451EF20A30DA80056A5F9 /* ic_checkbox_default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox_default.png; sourceTree = "<group>"; };
 		746451F520A314A30056A5F9 /* ic_checkbox_selected.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_checkbox_selected.png; sourceTree = "<group>"; };
+		7474B04120AEBC0C00EB6A6A /* CalendarAppointmentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarAppointmentController.swift; sourceTree = "<group>"; };
 		748A96282091CCCF00364DCE /* LesionArticularAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LesionArticularAssistantController.swift; sourceTree = "<group>"; };
 		748A962A2091CD1900364DCE /* ColesterolAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColesterolAssistantController.swift; sourceTree = "<group>"; };
 		748A962C2091CD6900364DCE /* PiedrasAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiedrasAssistantController.swift; sourceTree = "<group>"; };
@@ -203,6 +209,7 @@
 		74178BD6207CAF1A00E0BAC3 /* entities */ = {
 			isa = PBXGroup;
 			children = (
+				742A460B20AEB37B00C5A9B6 /* appointment */,
 				74178BD7207CAF8800E0BAC3 /* user */,
 			);
 			path = entities;
@@ -295,6 +302,22 @@
 			path = ObesityIOSUITests;
 			sourceTree = "<group>";
 		};
+		742A460B20AEB37B00C5A9B6 /* appointment */ = {
+			isa = PBXGroup;
+			children = (
+				742A460C20AEB40300C5A9B6 /* Appointment.swift */,
+			);
+			path = appointment;
+			sourceTree = "<group>";
+		};
+		742A460E20AEB71500C5A9B6 /* ListViewAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				742A461320AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift */,
+			);
+			path = ListViewAppointment;
+			sourceTree = "<group>";
+		};
 		742BCCE8208F77D700677A92 /* DiabetesAssistant */ = {
 			isa = PBXGroup;
 			children = (
@@ -308,7 +331,9 @@
 		7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				742A460E20AEB71500C5A9B6 /* ListViewAppointment */,
 				7447432220A1C47D005C6ACA /* IntroDoctorAppointmentController.swift */,
+				7474B04120AEBC0C00EB6A6A /* CalendarAppointmentController.swift */,
 			);
 			path = DoctorAppointmentCalendar;
 			sourceTree = "<group>";
@@ -620,6 +645,7 @@
 				7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */,
 				748A96352091CFDE00364DCE /* FumadorAssistantController.swift in Sources */,
 				7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */,
+				742A461420AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift in Sources */,
 				748A96312091CDB200364DCE /* HuesosAssistantController.swift in Sources */,
 				7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */,
 				748A962F2091CD8600364DCE /* HigadoAssistantController.swift in Sources */,
@@ -627,6 +653,7 @@
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
 				744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
+				7474B04220AEBC0C00EB6A6A /* CalendarAppointmentController.swift in Sources */,
 				748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */,
 				748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */,
 				744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */,
@@ -646,6 +673,7 @@
 				7447432320A1C47D005C6ACA /* IntroDoctorAppointmentController.swift in Sources */,
 				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
 				748A962D2091CD6900364DCE /* PiedrasAssistantController.swift in Sources */,
+				742A460D20AEB40300C5A9B6 /* Appointment.swift in Sources */,
 				748A96292091CCCF00364DCE /* LesionArticularAssistantController.swift in Sources */,
 				742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */,
 				748A96392091D10E00364DCE /* ArdoresAssistantController.swift in Sources */,

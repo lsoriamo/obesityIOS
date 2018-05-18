@@ -31,13 +31,9 @@ class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPick
             
             let value = snapshot.value as? NSDictionary
             
-            if let isArdores:Bool = value?["ardores"] as? Bool {
+            if let ardoresRecibidos:Int = value?["ardores"] as? Int {
                 
-                if isArdores {
-                    self.pvArdores.selectRow(0, inComponent: 0, animated: false)
-                } else {
-                    self.pvArdores.selectRow(1, inComponent: 0, animated: false)
-                }
+               self.pvArdores.selectRow(ardoresRecibidos, inComponent: 0, animated: false)
                 
             }
             
@@ -60,7 +56,7 @@ class ArdoresAssistantController: UIViewController, UIPickerViewDelegate, UIPick
     
     @IBAction func actionBtnSiguiente(_ sender: Any) {
         
-        pvArdores.selectedRow(inComponent: 0) == 0 ? self.ref.child("users/\(userId!)/data/ardores").setValue(true) : self.ref.child("users/\(userId!)/data/ardores").setValue(false)
+        self.ref.child("users/\(userId!)/data/ardores").setValue(pvArdores.selectedRow(inComponent: 0))
         
         performSegue(withIdentifier: "toReflujoAssistantSegue", sender: nil)
     }
