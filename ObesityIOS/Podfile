@@ -24,4 +24,12 @@ target 'ObesityIOS' do
     # Pods for testing
   end
 
+  source 'https://github.com/CocoaPods/Specs.git'
+  platform :ios, '11.0'
+  use_frameworks!
+
+  target 'Jorge Amores Preobar' do
+      pod 'JTAppleCalendar', '~> 7.0'
+  end
+
 end
