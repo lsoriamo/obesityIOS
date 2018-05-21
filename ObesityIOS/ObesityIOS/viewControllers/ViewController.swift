@@ -79,20 +79,33 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             if user.profile.hasImage {
                 image = user.profile.imageURL(withDimension: 100).absoluteString
                 
-                print("LA IMAGEN ES ÉSTA: ", image)
+//                print("LA IMAGEN ES ÉSTA: ", image)
             }
             
             
             
             credentials = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
             
-            Auth.auth().signIn(with: credentials!, completion: { (user, error) in
+//            Auth.auth().signIn(with: credentials!, completion: { (user, error) in
+//                if let err = error {
+//                    print("Failed to create a Firebase User with Google account: ", err)
+//                    return
+//                }
+//
+//                let userId = user?.uid
+//
+//                UserDefaults.standard.set(userId, forKey: "userId")
+//
+//            })
+            
+            Auth.auth().signInAndRetrieveData(with: credentials!, completion: { (user, error) in
                 if let err = error {
                     print("Failed to create a Firebase User with Google account: ", err)
                     return
                 }
                 
-                let userId = user?.uid
+                let userId = user?.user.uid
+                                
                 
                 UserDefaults.standard.set(userId, forKey: "userId")
                 
@@ -151,7 +164,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                     return
                 }
                 
-                print("UserId: ", user!.uid)
+//                print("UserId: ", user!.uid)
                 
                 self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
                 

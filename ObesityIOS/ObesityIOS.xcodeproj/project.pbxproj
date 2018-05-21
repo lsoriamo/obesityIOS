@@ -63,6 +63,7 @@
 		748A96432091F6A600364DCE /* PesoObjetivoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96422091F6A600364DCE /* PesoObjetivoAssistantController.swift */; };
 		748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */; };
 		748A96472091F74B00364DCE /* SeleccionDoctorAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */; };
+		749A617820B2DBBD00C9824C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A617720B2DBBD00C9824C /* CustomCell.swift */; };
 		74C71FB8209091B2006CD470 /* TrastornoSuenyoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */; };
 		74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */; };
 		74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F4208F295300ECC99D /* PesoAssistantController.swift */; };
@@ -149,6 +150,7 @@
 		748A96422091F6A600364DCE /* PesoObjetivoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoObjetivoAssistantController.swift; sourceTree = "<group>"; };
 		748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipoMedicoAssistantController.swift; sourceTree = "<group>"; };
 		748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionDoctorAssistantController.swift; sourceTree = "<group>"; };
+		749A617720B2DBBD00C9824C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrastornoSuenyoAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlturaAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F4208F295300ECC99D /* PesoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoAssistantController.swift; sourceTree = "<group>"; };
@@ -331,9 +333,9 @@
 		7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				749A617420B2DB4200C9824C /* CalendarAppointment */,
 				742A460E20AEB71500C5A9B6 /* ListViewAppointment */,
 				7447432220A1C47D005C6ACA /* IntroDoctorAppointmentController.swift */,
-				7474B04120AEBC0C00EB6A6A /* CalendarAppointmentController.swift */,
 			);
 			path = DoctorAppointmentCalendar;
 			sourceTree = "<group>";
@@ -379,6 +381,15 @@
 				744F2E3D2099A7F4002DFDA5 /* SignUpController.swift */,
 			);
 			path = SignUpUser;
+			sourceTree = "<group>";
+		};
+		749A617420B2DB4200C9824C /* CalendarAppointment */ = {
+			isa = PBXGroup;
+			children = (
+				7474B04120AEBC0C00EB6A6A /* CalendarAppointmentController.swift */,
+				749A617720B2DBBD00C9824C /* CustomCell.swift */,
+			);
+			path = CalendarAppointment;
 			sourceTree = "<group>";
 		};
 		7E834CF0762D684CD8B97146 /* Pods */ = {
@@ -672,6 +683,7 @@
 				748A963B2091D16300364DCE /* TratamientoReflujoAssistantController.swift in Sources */,
 				742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */,
 				748A96372091D0E500364DCE /* AlcoholAssistantController.swift in Sources */,
+				749A617820B2DBBD00C9824C /* CustomCell.swift in Sources */,
 				7447432320A1C47D005C6ACA /* IntroDoctorAppointmentController.swift in Sources */,
 				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
 				748A962D2091CD6900364DCE /* PiedrasAssistantController.swift in Sources */,
@@ -863,7 +875,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = reto.obesidad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -878,7 +893,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOS/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = reto.obesidad;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -894,7 +912,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -911,7 +933,11 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -927,7 +953,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -943,7 +973,11 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = ObesityIOSUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamoresortiz.ObesityIOSUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
