@@ -232,7 +232,7 @@
                                     </stackView>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AAH-St-SwX" customClass="JTAppleCalendarView" customModule="JTAppleCalendar">
                                         <rect key="frame" x="0.0" y="18" width="288" height="261"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1bY-qk-6SK">
                                             <size key="itemSize" width="98" height="95"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -247,6 +247,14 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="98" height="95"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
+                                                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oHb-LI-QI9">
+                                                            <rect key="frame" x="29" y="27" width="40" height="40"/>
+                                                            <color key="backgroundColor" red="0.21176470589999999" green="0.36470588240000001" blue="0.61568627450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="40" id="MWR-5k-jcf"/>
+                                                                <constraint firstAttribute="height" constant="40" id="tEc-Nn-06H"/>
+                                                            </constraints>
+                                                        </view>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SF5-Y9-rYC">
                                                             <rect key="frame" x="28" y="37" width="42" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -256,11 +264,14 @@
                                                     </subviews>
                                                 </view>
                                                 <constraints>
+                                                    <constraint firstItem="oHb-LI-QI9" firstAttribute="centerX" secondItem="I8c-kF-9Im" secondAttribute="centerX" id="123-t4-Ijq"/>
                                                     <constraint firstItem="SF5-Y9-rYC" firstAttribute="centerX" secondItem="I8c-kF-9Im" secondAttribute="centerX" id="Mfs-2t-T7N"/>
+                                                    <constraint firstItem="oHb-LI-QI9" firstAttribute="centerY" secondItem="I8c-kF-9Im" secondAttribute="centerY" id="eLA-Vr-QvA"/>
                                                     <constraint firstItem="SF5-Y9-rYC" firstAttribute="centerY" secondItem="I8c-kF-9Im" secondAttribute="centerY" id="wLR-Ib-SU1"/>
                                                 </constraints>
                                                 <connections>
                                                     <outlet property="dataLabel" destination="SF5-Y9-rYC" id="HKs-bS-vWe"/>
+                                                    <outlet property="selectedView" destination="oHb-LI-QI9" id="M5r-Fo-QzN"/>
                                                 </connections>
                                             </collectionViewCell>
                                         </cells>

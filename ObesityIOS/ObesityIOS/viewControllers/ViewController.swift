@@ -166,6 +166,8 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                 
 //                print("UserId: ", user!.uid)
                 
+                UserDefaults.standard.set(user!.user.uid, forKey: "userId")
+                
                 self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
                 
                 

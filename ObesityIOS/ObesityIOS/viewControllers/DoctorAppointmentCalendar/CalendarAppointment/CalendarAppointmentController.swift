@@ -28,7 +28,7 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
-
+        
 
         initAppointment();
         
@@ -63,6 +63,12 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         return cell
     }
     
+    func calendar(_ calendar: JTAppleCalendarView, didSelectDate date: Date, cell: JTAppleCell?, cellState: CellState) {
+        guard let validCell = cell as? CustomCell else {return}
+    
+        validCell.selectedView.isHidden = false
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.citas.count
     }
@@ -72,10 +78,6 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         let celda:ListItemAppointmentTableViewCell = self.tvAppointment.dequeueReusableCell(withIdentifier: "celda") as! ListItemAppointmentTableViewCell;
         
         let fechaCitaDate:Date = Date.init(timeIntervalSince1970: Double((self.citas[indexPath.row].citeTimestamp)/1000))
-        
-        print("EN UNIX: ", self.citas[indexPath.row].citeTimestamp)
-        
-        print("EN FECHA CORRIENTE", fechaCitaDate)
         
         let dateFormatter = DateFormatter()
         dateFormatter.locale = Locale(identifier: "es_ES")
@@ -126,29 +128,3 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
     }
 
 }
-
-//extension CalendarAppointmentController: JTAppleCalendarViewDelegate, JTAppleCalendarViewDataSource {
-//    func calendar(_ calendar: JTAppleCalendarView, willDisplay cell: JTAppleCell, forItemAt date: Date, cellState: CellState, indexPath: IndexPath) {
-//
-//    }
-//
-//    func configureCalendar(_ calendar: JTAppleCalendarView) -> ConfigurationParameters {
-//
-//        formatter.dateFormat = "yyyy MM dd"
-//        formatter.timeZone = Calendar.current.timeZone
-//        formatter.locale = Calendar.current.locale
-//
-//        let startDate = formatter.date(from: "2018 01 01")
-//        let endDate = formatter.date(from: "2018 12 31")
-//
-//        let parameters = ConfigurationParameters(startDate: startDate!, endDate: endDate!)
-//        return parameters
-//    }
-//
-//    func calendar(_ calendar: JTAppleCalendarView, cellForItemAt date: Date, cellState: CellState, indexPath: IndexPath) -> JTAppleCell {
-//        let cell = calendar.dequeueReusableJTAppleCell(withReuseIdentifier: "CustomCell", for: indexPath) as! CustomCell
-//        cell.dataLabel.text = cellState.text
-//        return cell
-//    }
-//
-//}

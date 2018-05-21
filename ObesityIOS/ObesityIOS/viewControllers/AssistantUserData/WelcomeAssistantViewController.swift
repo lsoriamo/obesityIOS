@@ -42,9 +42,6 @@ class WelcomeAssistantViewController: UIViewController, GIDSignInUIDelegate, GID
         
     }
     
-    
-    //Falta aplicar lógica para pasar parámetros
-    
     @IBAction func actionBtnSignOut(_ sender: Any) {
         GIDSignIn.sharedInstance().signOut()
         self.performSegue(withIdentifier: "toLoginSignOutSegue", sender: nil)
