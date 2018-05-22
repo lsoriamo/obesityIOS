@@ -50,10 +50,4 @@ class WelcomeAssistantViewController: UIViewController, GIDSignInUIDelegate, GID
     @IBAction func actionBtnSiguiente(_ sender: Any) {
         performSegue(withIdentifier: "toNombreApellidosAssistantSegue", sender: nil)
     }
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "toNombreApellidosAssistantSegue" {
-            
-        }
-    }
 }

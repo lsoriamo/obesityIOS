@@ -206,5 +206,10 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         
         }
     }
+    
+    @IBAction func actionBtnNewAppointment(_ sender: Any) {
+        self.performSegue(withIdentifier: "toAddAppointmentSegue", sender: nil)
+    }
+    
 
 }
