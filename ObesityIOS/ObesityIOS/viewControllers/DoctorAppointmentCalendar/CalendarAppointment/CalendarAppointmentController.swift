@@ -103,10 +103,20 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         formatter.timeZone = Calendar.current.timeZone
         formatter.locale = Calendar.current.locale
         
-        let startDate = formatter.date(from: "2018 01 01")
-        let endDate = formatter.date(from: "2020 12 31")
+        let currentDate = Date()
         
-        let parameters = ConfigurationParameters(startDate: startDate!, endDate: endDate!)
+        let yearToLess = -2
+        let yearToAdd = 3
+        
+        var dateComponent = DateComponents()
+        
+        dateComponent.year = yearToLess
+        let pastDate = Calendar.current.date(byAdding: dateComponent, to: currentDate)
+        
+        dateComponent.year = yearToAdd
+        let futureDate = Calendar.current.date(byAdding: dateComponent, to: currentDate)
+        
+        let parameters = ConfigurationParameters(startDate: currentDate, endDate: futureDate!)
         
         return parameters
     }
