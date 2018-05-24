@@ -23,6 +23,8 @@ class NewAppointmentViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        dpAppointmentDate.locale = Locale(identifier: "es_ES")
+        
         arrMedicos.append("Soria, Luismi (endocrino)")
         arrMedicos.append("Aliaga, Alberto (endocrino)")
         arrMedicos.append("Amores, Jorge (cirujano)")
@@ -30,5 +32,7 @@ class NewAppointmentViewController: UIViewController {
         tfDoctor.filterStrings(arrMedicos)
 
     }
-
+    @IBAction func actionBtnAddAppointment(_ sender: Any) {
+    }
+    
 }
