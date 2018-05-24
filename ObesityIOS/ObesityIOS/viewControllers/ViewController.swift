@@ -155,7 +155,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                 
                 UserDefaults.standard.set(user!.user.uid, forKey: "userId")
                 
-                self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
+                self.performSegue(withIdentifier: "toPruebasMedicasSegue", sender: nil)
                 
                 
                 

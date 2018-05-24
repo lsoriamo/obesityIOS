@@ -11,44 +11,51 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Intro Medical Test View Controller-->
         <scene sceneID="MST-gr-bUb">
             <objects>
-                <viewController id="QIN-Qc-34d" sceneMemberID="viewController">
+                <viewController id="QIN-Qc-34d" customClass="IntroMedicalTestViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="l7a-x2-DuD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKZ-Bt-OLD">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="Pruebas médicas" id="8UJ-jp-t7g">
-                                        <barButtonItem key="rightBarButtonItem" title="Añadir" id="Lkv-kF-hlW"/>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="Ose-bI-dCL">
-                                <rect key="frame" x="16" y="76" width="288" height="115"/>
+                                <rect key="frame" x="16" y="80" width="288" height="115"/>
                                 <string key="text">Aún no has registrado ninguna prueba médica. Recuerda que aunque el médico puede indicarte pruebas directamente a través de la aplicación, también puedes añadir las pruebas tú mismo. Para ello, haz click en el botón que verás en la esquina superior derecha</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AXc-tH-o4k">
-                                <rect key="frame" x="16" y="223" width="288" height="32"/>
+                                <rect key="frame" x="16" y="227" width="288" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Más información"/>
+                                <connections>
+                                    <segue destination="gnr-K4-YQ5" kind="show" id="SrZ-Qf-oGf"/>
+                                </connections>
                             </button>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKZ-Bt-OLD">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Pruebas médicas" id="8UJ-jp-t7g">
+                                        <barButtonItem key="rightBarButtonItem" title="Nuevo" id="Lkv-kF-hlW">
+                                            <connections>
+                                                <segue destination="djd-CX-aGF" kind="show" id="sTl-Iq-TRN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="dKZ-Bt-OLD" firstAttribute="trailing" secondItem="hvK-gT-PkM" secondAttribute="trailing" id="0EW-xi-lGL"/>
                             <constraint firstItem="hvK-gT-PkM" firstAttribute="trailing" secondItem="AXc-tH-o4k" secondAttribute="trailing" constant="16" id="Cuf-qY-XN2"/>
-                            <constraint firstItem="Ose-bI-dCL" firstAttribute="top" secondItem="dKZ-Bt-OLD" secondAttribute="bottom" constant="32" id="HnN-BT-Hg7"/>
                             <constraint firstItem="AXc-tH-o4k" firstAttribute="top" secondItem="Ose-bI-dCL" secondAttribute="bottom" constant="32" id="Iqp-gq-xny"/>
-                            <constraint firstItem="dKZ-Bt-OLD" firstAttribute="leading" secondItem="hvK-gT-PkM" secondAttribute="leading" id="NZo-mM-fIk"/>
                             <constraint firstItem="Ose-bI-dCL" firstAttribute="leading" secondItem="hvK-gT-PkM" secondAttribute="leading" constant="16" id="ZvK-Wp-hQJ"/>
-                            <constraint firstItem="dKZ-Bt-OLD" firstAttribute="top" secondItem="l7a-x2-DuD" secondAttribute="top" id="gzf-po-VsT"/>
+                            <constraint firstItem="dKZ-Bt-OLD" firstAttribute="leading" secondItem="hvK-gT-PkM" secondAttribute="leading" id="anx-6A-IV3"/>
+                            <constraint firstItem="dKZ-Bt-OLD" firstAttribute="trailing" secondItem="hvK-gT-PkM" secondAttribute="trailing" id="cRI-cM-ARY"/>
+                            <constraint firstItem="dKZ-Bt-OLD" firstAttribute="top" secondItem="hvK-gT-PkM" secondAttribute="top" id="llY-Za-QEV"/>
+                            <constraint firstItem="Ose-bI-dCL" firstAttribute="top" secondItem="dKZ-Bt-OLD" secondAttribute="bottom" constant="16" id="lsV-ck-4du"/>
                             <constraint firstItem="AXc-tH-o4k" firstAttribute="leading" secondItem="hvK-gT-PkM" secondAttribute="leading" constant="16" id="rZk-qa-iQP"/>
                             <constraint firstItem="hvK-gT-PkM" firstAttribute="trailing" secondItem="Ose-bI-dCL" secondAttribute="trailing" constant="16" id="xV1-fL-7zn"/>
                         </constraints>
@@ -59,6 +66,186 @@
             </objects>
             <point key="canvasLocation" x="885" y="-1482.0422535211267"/>
         </scene>
+        <!--Add Medical Test View Controller-->
+        <scene sceneID="CCs-R8-JDq">
+            <objects>
+                <viewController id="djd-CX-aGF" customClass="AddMedicalTestViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wc4-oM-29T">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cIb-o8-PiM">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Nueva prueba" id="Hvz-eh-DF5">
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="9sr-NH-f01">
+                                            <connections>
+                                                <segue destination="QIN-Qc-34d" kind="show" id="WkW-ub-2ys"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Añadir" id="e0w-jn-4Gl">
+                                            <connections>
+                                                <action selector="actionAddMedicalTest:" destination="djd-CX-aGF" id="QNM-hf-ugQ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información sobre la prueba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvK-Za-7jS">
+                                <rect key="frame" x="16" y="80" width="288" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tipo de prueba" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o0a-3a-74b" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="115.5" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción de la prueba" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DXJ-p5-mc0">
+                                <rect key="frame" x="16" y="161.5" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Médico que la indica" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="az0-hR-yF4" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="207.5" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comentarios del médico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qRM-tP-AJy">
+                                <rect key="frame" x="16" y="253.5" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información sobre la cita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSF-9j-idO">
+                                <rect key="frame" x="16" y="299.5" width="288" height="19.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="m1b-5T-jsk">
+                                <rect key="frame" x="16" y="335" width="288" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Q5i-pb-BJw"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="548848767.69779396">
+                                    <!--2018-05-24 09:59:27 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Persona que realizará la prueba" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yPv-gd-Bhf" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="451" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lugar de la cita" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YT9-Uf-jLw">
+                                <rect key="frame" x="16" y="497" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="yPv-gd-Bhf" firstAttribute="top" secondItem="m1b-5T-jsk" secondAttribute="bottom" constant="16" id="0Q8-il-vhx"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="DvK-Za-7jS" secondAttribute="trailing" constant="16" id="0sf-9N-7zH"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="BSF-9j-idO" secondAttribute="trailing" constant="16" id="3Av-8s-uMc"/>
+                            <constraint firstItem="DXJ-p5-mc0" firstAttribute="top" secondItem="o0a-3a-74b" secondAttribute="bottom" constant="16" id="3t3-M8-Q3G"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="qRM-tP-AJy" secondAttribute="trailing" constant="16" id="67A-ym-L4T"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="az0-hR-yF4" secondAttribute="trailing" constant="16" id="7qy-xc-h2P"/>
+                            <constraint firstItem="YT9-Uf-jLw" firstAttribute="top" secondItem="yPv-gd-Bhf" secondAttribute="bottom" constant="16" id="AGg-3I-wyr"/>
+                            <constraint firstItem="qRM-tP-AJy" firstAttribute="top" secondItem="az0-hR-yF4" secondAttribute="bottom" constant="16" id="BKH-2h-kKd"/>
+                            <constraint firstItem="o0a-3a-74b" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="C1S-zL-Gka"/>
+                            <constraint firstItem="m1b-5T-jsk" firstAttribute="top" secondItem="BSF-9j-idO" secondAttribute="bottom" constant="16" id="CWe-xu-raa"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="m1b-5T-jsk" secondAttribute="trailing" constant="16" id="EGx-F8-upr"/>
+                            <constraint firstItem="qRM-tP-AJy" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="EQM-uk-pj9"/>
+                            <constraint firstItem="az0-hR-yF4" firstAttribute="top" secondItem="DXJ-p5-mc0" secondAttribute="bottom" constant="16" id="FgE-O3-hKn"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="o0a-3a-74b" secondAttribute="trailing" constant="16" id="JBh-KX-0hB"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="yPv-gd-Bhf" secondAttribute="trailing" constant="16" id="Kdf-x0-cpX"/>
+                            <constraint firstItem="cIb-o8-PiM" firstAttribute="top" secondItem="dPl-b4-5wK" secondAttribute="top" id="N5U-ec-NH3"/>
+                            <constraint firstItem="DXJ-p5-mc0" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="QO7-LK-4kB"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="DXJ-p5-mc0" secondAttribute="trailing" constant="16" id="QWN-Kk-sKO"/>
+                            <constraint firstItem="DvK-Za-7jS" firstAttribute="top" secondItem="cIb-o8-PiM" secondAttribute="bottom" constant="16" id="Rh4-ND-IwI"/>
+                            <constraint firstItem="YT9-Uf-jLw" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="V6l-P7-qe9"/>
+                            <constraint firstItem="yPv-gd-Bhf" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="XGa-hE-z6h"/>
+                            <constraint firstItem="az0-hR-yF4" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="cQf-UL-VIk"/>
+                            <constraint firstItem="o0a-3a-74b" firstAttribute="top" secondItem="DvK-Za-7jS" secondAttribute="bottom" constant="16" id="cn0-Px-wLJ"/>
+                            <constraint firstItem="m1b-5T-jsk" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="dMY-8X-JT6"/>
+                            <constraint firstItem="BSF-9j-idO" firstAttribute="top" secondItem="qRM-tP-AJy" secondAttribute="bottom" constant="16" id="eVw-po-IJZ"/>
+                            <constraint firstItem="cIb-o8-PiM" firstAttribute="trailing" secondItem="dPl-b4-5wK" secondAttribute="trailing" id="hdZ-Jx-FJm"/>
+                            <constraint firstItem="BSF-9j-idO" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="iY3-ay-MZ4"/>
+                            <constraint firstItem="cIb-o8-PiM" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" id="pg4-4h-f3g"/>
+                            <constraint firstItem="dPl-b4-5wK" firstAttribute="trailing" secondItem="YT9-Uf-jLw" secondAttribute="trailing" constant="16" id="qwv-tf-fCQ"/>
+                            <constraint firstItem="DvK-Za-7jS" firstAttribute="leading" secondItem="dPl-b4-5wK" secondAttribute="leading" constant="16" id="ya9-j1-bjg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="dPl-b4-5wK"/>
+                    </view>
+                    <connections>
+                        <outlet property="dpFechaCita" destination="m1b-5T-jsk" id="TXB-Y1-Z6o"/>
+                        <outlet property="tfComentarioMedico" destination="qRM-tP-AJy" id="eCd-Qx-0YZ"/>
+                        <outlet property="tfDescripcionPrueba" destination="DXJ-p5-mc0" id="rwl-gZ-Roc"/>
+                        <outlet property="tfLugarCita" destination="YT9-Uf-jLw" id="SZe-2I-kpu"/>
+                        <outlet property="tfMedico" destination="az0-hR-yF4" id="xL7-zM-4fr"/>
+                        <outlet property="tfPersonaPrueba" destination="yPv-gd-Bhf" id="sfL-nE-PVz"/>
+                        <outlet property="tfTipoPrueba" destination="o0a-3a-74b" id="Xuy-y2-Sqh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6la-go-gGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1717.5" y="-1478.8732394366198"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="eIw-0i-75y">
+            <objects>
+                <viewController id="gnr-K4-YQ5" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0Z7-WP-fsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-eD-OPz">
+                                <rect key="frame" x="16" y="80" width="288" height="325"/>
+                                <mutableString key="text">En esta sección podrás añadir todas las pruebas médicas que te vayas realizando o que tenfas previstas. Es importante que añadas las pruebas y las marques como realizadas para que tu médico sepa el estado del proceso en el que te encuentras
+
+En primer lugar, podrás añadir una nueba prueba indicando el médico, el lugar y la fecha en la que te la realizarás.
+
+Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar una foto de éstos. Esto último es muy importante para que tu médico pueda analizar el informe de la prueba lo antes posible.</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y1L-nT-bE1">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Pruebas médicas" id="fsP-Ed-n8p">
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="TLK-Po-8Da">
+                                            <connections>
+                                                <segue destination="QIN-Qc-34d" kind="show" id="zsA-rh-6Du"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Y1L-nT-bE1" firstAttribute="leading" secondItem="Ig9-yd-rfR" secondAttribute="leading" id="YXl-az-Y81"/>
+                            <constraint firstItem="Ig9-yd-rfR" firstAttribute="trailing" secondItem="hl5-eD-OPz" secondAttribute="trailing" constant="16" id="ZZw-WT-ZvL"/>
+                            <constraint firstItem="hl5-eD-OPz" firstAttribute="leading" secondItem="Ig9-yd-rfR" secondAttribute="leading" constant="16" id="i8z-kS-JfF"/>
+                            <constraint firstItem="hl5-eD-OPz" firstAttribute="top" secondItem="Y1L-nT-bE1" secondAttribute="bottom" constant="16" id="nAr-UO-KWo"/>
+                            <constraint firstItem="Y1L-nT-bE1" firstAttribute="top" secondItem="Ig9-yd-rfR" secondAttribute="top" id="nTW-TZ-0h0"/>
+                            <constraint firstItem="Y1L-nT-bE1" firstAttribute="trailing" secondItem="Ig9-yd-rfR" secondAttribute="trailing" id="rAd-wc-7Rt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Ig9-yd-rfR"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgR-XS-6jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="885" y="-2287"/>
+        </scene>
         <!--Intro Doctor Appointment Controller-->
         <scene sceneID="VTC-UT-rxr">
             <objects>
@@ -68,7 +255,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5L1-VC-COV">
-                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-XE-Al3">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -77,7 +264,7 @@
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTK-U0-8dA">
-                                <rect key="frame" x="16" y="479" width="164" height="29"/>
+                                <rect key="frame" x="16" y="523" width="164" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Comenzar a usar el diario"/>
                                 <connections>
@@ -85,7 +272,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayQ-Xc-rRH">
-                                <rect key="frame" x="16" y="451" width="20" height="20"/>
+                                <rect key="frame" x="16" y="495" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="emZ-xP-A0l"/>
                                     <constraint firstAttribute="height" constant="20" id="hKc-U5-5ab"/>
@@ -97,7 +284,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No volver a mostrar esta información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJc-D7-dx4">
-                                <rect key="frame" x="40" y="454.5" width="208.5" height="14.5"/>
+                                <rect key="frame" x="40" y="498.5" width="208.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -283,7 +470,7 @@
                                 </constraints>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="OdQ-gR-EkL">
-                                <rect key="frame" x="16" y="336" width="288" height="180"/>
+                                <rect key="frame" x="16" y="380" width="288" height="180"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="180" id="8MG-mk-oXQ"/>
@@ -297,13 +484,13 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="miércoles 23 de mayo de 2018 a las 17:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyD-Dv-8Ly">
-                                                    <rect key="frame" x="16" y="45.5" width="350" height="15"/>
+                                                    <rect key="frame" x="23" y="43" width="242" height="15"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cita con: Alberto Aliaga (Endrocrino)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rxe-Ea-b1p">
-                                                    <rect key="frame" x="8" y="8" width="366" height="29.5"/>
+                                                    <rect key="frame" x="8" y="8" width="272" height="27"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -3141,7 +3328,6 @@
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B4R-UQ-4Kb"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -3172,6 +3358,7 @@
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
         <segue reference="Emv-l7-gy3"/>
-        <segue reference="Dn1-xR-vUU"/>
+        <segue reference="6Ah-YL-1YF"/>
+        <segue reference="WkW-ub-2ys"/>
     </inferredMetricsTieBreakers>
 </document>
