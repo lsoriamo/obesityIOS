@@ -80,6 +80,7 @@ PODS:
   - nanopb/decode (0.3.8)
   - nanopb/encode (0.3.8)
   - Protobuf (3.5.0)
+  - SearchTextField (1.2.0)
 
 DEPENDENCIES:
   - Firebase/Auth
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleSignIn
   - JTAppleCalendar (~> 7.0)
+  - SearchTextField
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
@@ -110,6 +112,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SearchTextField
 
 SPEC CHECKSUMS:
   Firebase: d6861c2059d8c32d1e6dd8932e22ada346d90a3a
@@ -129,7 +132,8 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 8a9838fba8dae3389230e1b7f8c104aa32389c03
+  SearchTextField: a5bb7e4c33affadb115afdbe8100d84ef10a8024
 
-PODFILE CHECKSUM: fbcca027370e86771211ce4a0cb68f3bea41e079
+PODFILE CHECKSUM: 44c14bb4cb436ef8122c3c363d26a912a824db64
 
 COCOAPODS: 1.5.0

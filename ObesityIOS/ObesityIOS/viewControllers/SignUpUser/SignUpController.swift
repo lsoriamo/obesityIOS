@@ -7,12 +7,13 @@
 //
 
 import UIKit
+import SearchTextField
 
 class SignUpController: UIViewController {
     
     @IBOutlet weak var btnRegistrar: UIButton!
     
-    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfEmail: SearchTextField!
     @IBOutlet weak var tfPass: UITextField!
     @IBOutlet weak var tfPassRep: UITextField!
     
@@ -22,6 +23,12 @@ class SignUpController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Autocomplete SearchTextField email
+        tfEmail.inlineMode = true
+        tfEmail.startFilteringAfter = "@"
+        tfEmail.startSuggestingInmediately = true
+        tfEmail.filterStrings(["gmail.com", "gmail.es", "yahoo.com", "hotmail.com", "hotmail.es", "us.es"])
         
         btnRegistrar.layer.cornerRadius = 4
         navigationController?.setToolbarHidden(false, animated: false)
@@ -59,13 +66,26 @@ class SignUpController: UIViewController {
             self.present(alert, animated: true, completion: nil)
             // Fin de Alert -->
         } else {
+            //  <-- SNIP DE CÓDIGO PARA CREACIÓN DE USUARIO
+            
+            //            Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
+            //
+            //                if let error = error {
+            //                    print("ERROR: \(error)")
+            //                    return
+            //                }
+            //            }
+            
+            // FIN -->
+            
+            performSegue(withIdentifier: "toLoginUsuarioSegue", sender: nil)
+            
             // <-- Creando un elemento de Alert (Dialog en Android)
             let alert = UIAlertController(title: "", message: "Hemos enviado un correo de verificación a \(email!). Pulsa el enlace que te hemos enviado y accede de nuevo con el correo electrónico y la contraseña que introdujiste antes", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "Cerrar", style: UIAlertActionStyle.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
             // Fin de Alert -->
             
-            performSegue(withIdentifier: "toLoginUsuarioSegue", sender: nil)
         }
     }
     

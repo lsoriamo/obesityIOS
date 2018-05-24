@@ -10,6 +10,7 @@
 		289830AE330F68B98ED8805E /* Pods_ObesityIOSUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6EA0E8DCDE635E2DD0239012 /* Pods_ObesityIOSUITests.framework */; };
 		740E1BCD2085E95000BF68FC /* information_background_lifestyle.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */; };
 		740E1BCF2085F5FF00BF68FC /* WelcomeAssistantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */; };
+		740FE10D20B6AE8C00E216D6 /* NewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FE10C20B6AE8C00E216D6 /* NewAppointmentViewController.swift */; };
 		7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */; };
 		7416823B20A051FD00870B76 /* FechaNacimientoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */; };
 		74178BD9207CAFB000E0BAC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BD8207CAFB000E0BAC3 /* User.swift */; };
@@ -97,6 +98,7 @@
 		6EA0E8DCDE635E2DD0239012 /* Pods_ObesityIOSUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObesityIOSUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		740E1BCC2085E95000BF68FC /* information_background_lifestyle.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = information_background_lifestyle.jpg; sourceTree = "<group>"; };
 		740E1BCE2085F5FF00BF68FC /* WelcomeAssistantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeAssistantViewController.swift; sourceTree = "<group>"; };
+		740FE10C20B6AE8C00E216D6 /* NewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppointmentViewController.swift; sourceTree = "<group>"; };
 		7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaIntervencion2AssistantController.swift; sourceTree = "<group>"; };
 		7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechaNacimientoAssistantController.swift; sourceTree = "<group>"; };
 		74178BD8207CAFB000E0BAC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -206,6 +208,14 @@
 				7421C0F0207B551D0026CCE2 /* ViewController.swift */,
 			);
 			path = viewControllers;
+			sourceTree = "<group>";
+		};
+		740FE10B20B6AE4800E216D6 /* NewAppointmentForm */ = {
+			isa = PBXGroup;
+			children = (
+				740FE10C20B6AE8C00E216D6 /* NewAppointmentViewController.swift */,
+			);
+			path = NewAppointmentForm;
 			sourceTree = "<group>";
 		};
 		74178BD6207CAF1A00E0BAC3 /* entities */ = {
@@ -333,6 +343,7 @@
 		7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */ = {
 			isa = PBXGroup;
 			children = (
+				740FE10B20B6AE4800E216D6 /* NewAppointmentForm */,
 				749A617420B2DB4200C9824C /* CalendarAppointment */,
 				742A460E20AEB71500C5A9B6 /* ListViewAppointment */,
 				7447432220A1C47D005C6ACA /* IntroDoctorAppointmentController.swift */,
@@ -630,6 +641,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SearchTextField/SearchTextField.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -640,6 +652,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SearchTextField.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -670,6 +683,7 @@
 				748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */,
 				748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */,
 				744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */,
+				740FE10D20B6AE8C00E216D6 /* NewAppointmentViewController.swift in Sources */,
 				742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */,
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
