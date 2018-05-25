@@ -21,6 +21,11 @@ class SignUpController: UIViewController {
     var pass:String?
     var passRep:String?
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        navigationController?.setToolbarHidden(true, animated: false)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

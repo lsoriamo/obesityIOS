@@ -9,18 +9,18 @@
 import Foundation
 
 class Appointment {
-    var timestamp:Int64 = -1
-    var citeTimestamp:Int64 = -1
+    var timestamp:Int64 = 0
+    var citeTimestamp:Int64 = 0
     var doctorId:String = ""
     var doctor:String = ""
     var description:String = ""
     var place:String = ""
     var things:String = ""
     var idUser:String = ""
-    var type:Int = -1
+    var type:Int = 0
     var typeEnum:String = ""
     var createdBy:String = ""
-    var userViewTimestamp:Int64 = -1
+    var userViewTimestamp:Int64 = 0
     
     init() {
     }

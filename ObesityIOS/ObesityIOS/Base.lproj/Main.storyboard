@@ -208,11 +208,11 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="hl5-eD-OPz">
                                 <rect key="frame" x="16" y="80" width="288" height="325"/>
-                                <mutableString key="text">En esta sección podrás añadir todas las pruebas médicas que te vayas realizando o que tenfas previstas. Es importante que añadas las pruebas y las marques como realizadas para que tu médico sepa el estado del proceso en el que te encuentras
+                                <string key="text">En esta sección podrás añadir todas las pruebas médicas que te vayas realizando o que tenfas previstas. Es importante que añadas las pruebas y las marques como realizadas para que tu médico sepa el estado del proceso en el que te encuentras
 
 En primer lugar, podrás añadir una nueba prueba indicando el médico, el lugar y la fecha en la que te la realizarás.
 
-Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar una foto de éstos. Esto último es muy importante para que tu médico pueda analizar el informe de la prueba lo antes posible.</mutableString>
+Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar una foto de éstos. Esto último es muy importante para que tu médico pueda analizar el informe de la prueba lo antes posible.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -255,7 +255,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="5L1-VC-COV">
-                                <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
                             </imageView>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bZ0-XE-Al3">
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
@@ -264,7 +264,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                                 </items>
                             </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xTK-U0-8dA">
-                                <rect key="frame" x="16" y="523" width="164" height="29"/>
+                                <rect key="frame" x="16" y="479" width="164" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Comenzar a usar el diario"/>
                                 <connections>
@@ -272,7 +272,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayQ-Xc-rRH">
-                                <rect key="frame" x="16" y="495" width="20" height="20"/>
+                                <rect key="frame" x="16" y="451" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="emZ-xP-A0l"/>
                                     <constraint firstAttribute="height" constant="20" id="hKc-U5-5ab"/>
@@ -284,7 +284,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No volver a mostrar esta información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJc-D7-dx4">
-                                <rect key="frame" x="40" y="498.5" width="208.5" height="14.5"/>
+                                <rect key="frame" x="40" y="454.5" width="208.5" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -689,7 +689,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                             <textField opaque="NO" contentMode="scaleAspectFit" verticalCompressionResistancePriority="752" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GeW-A0-U8j" customClass="SearchTextField" customModule="SearchTextField">
                                 <rect key="frame" x="16" y="228" width="288" height="30"/>
                                 <directionalEdgeInsets key="directionalLayoutMargins" top="32" leading="8" bottom="8" trailing="8"/>
-                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" red="0.0039215686274509803" green="0.098039215686274508" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
@@ -794,9 +794,6 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.14999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_background_lifestyle.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="9F2-XK-BSZ">
-                                <rect key="frame" x="0.0" y="20" width="320" height="504"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_complete.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZqX-gG-RXq">
                                 <rect key="frame" x="16" y="28" width="288" height="90"/>
                                 <constraints>
@@ -811,19 +808,19 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Correo electrónico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="81A-Yb-YSq" customClass="SearchTextField" customModule="SearchTextField">
                                 <rect key="frame" x="16" y="213" width="288" height="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="J5H-qt-W1f">
                                 <rect key="frame" x="16" y="251" width="288" height="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Escribe de nuevo la contraseña" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ki6-xU-4vN">
                                 <rect key="frame" x="16" y="289" width="288" height="30"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
@@ -839,19 +836,16 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9F2-XK-BSZ" firstAttribute="top" secondItem="EC0-hb-3xv" secondAttribute="top" id="4A0-bP-Le5"/>
                             <constraint firstItem="kqJ-wV-9Yg" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" constant="16" id="8qv-3y-li0"/>
                             <constraint firstItem="EC0-hb-3xv" firstAttribute="bottom" secondItem="kqJ-wV-9Yg" secondAttribute="bottom" constant="32" id="JKQ-Wg-tRz"/>
                             <constraint firstItem="J5H-qt-W1f" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" constant="16" id="M5t-pM-Dno"/>
                             <constraint firstItem="EC0-hb-3xv" firstAttribute="trailing" secondItem="81A-Yb-YSq" secondAttribute="trailing" constant="16" id="N21-vf-MPu"/>
                             <constraint firstItem="Ki6-xU-4vN" firstAttribute="top" secondItem="J5H-qt-W1f" secondAttribute="bottom" constant="8" id="Qcz-jZ-DuD"/>
                             <constraint firstItem="EC0-hb-3xv" firstAttribute="trailing" secondItem="ZqX-gG-RXq" secondAttribute="trailing" constant="16" id="UE1-lK-yEl"/>
-                            <constraint firstItem="9F2-XK-BSZ" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" id="Y18-Ui-1EW"/>
                             <constraint firstItem="EC0-hb-3xv" firstAttribute="trailing" secondItem="J5H-qt-W1f" secondAttribute="trailing" constant="16" id="cc6-Fe-rBh"/>
                             <constraint firstItem="EC0-hb-3xv" firstAttribute="trailing" secondItem="kqJ-wV-9Yg" secondAttribute="trailing" constant="16" id="ds9-yZ-DjF"/>
                             <constraint firstItem="ZqX-gG-RXq" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" constant="16" id="gEE-pd-W8X"/>
                             <constraint firstItem="J5H-qt-W1f" firstAttribute="top" secondItem="81A-Yb-YSq" secondAttribute="bottom" constant="8" id="gIT-fN-Zog"/>
-                            <constraint firstItem="EC0-hb-3xv" firstAttribute="bottom" secondItem="9F2-XK-BSZ" secondAttribute="bottom" id="gJ6-Pb-Svn"/>
                             <constraint firstItem="EC0-hb-3xv" firstAttribute="trailing" secondItem="Uu4-80-T1x" secondAttribute="trailing" constant="16" id="hPq-0l-DPt"/>
                             <constraint firstItem="Uu4-80-T1x" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" constant="16" id="iZ4-ac-ryo"/>
                             <constraint firstItem="ZqX-gG-RXq" firstAttribute="top" secondItem="EC0-hb-3xv" secondAttribute="top" constant="8" id="icX-8M-0F3"/>
@@ -859,15 +853,14 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                             <constraint firstItem="Ki6-xU-4vN" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" constant="16" id="pjM-MO-NX0"/>
                             <constraint firstItem="Uu4-80-T1x" firstAttribute="top" secondItem="ZqX-gG-RXq" secondAttribute="bottom" constant="16" id="qQU-cO-cqB"/>
                             <constraint firstItem="81A-Yb-YSq" firstAttribute="top" secondItem="Uu4-80-T1x" secondAttribute="bottom" constant="32" id="t08-0P-kTm"/>
-                            <constraint firstItem="EC0-hb-3xv" firstAttribute="trailing" secondItem="9F2-XK-BSZ" secondAttribute="trailing" id="vbp-Js-yqB"/>
                             <constraint firstItem="81A-Yb-YSq" firstAttribute="leading" secondItem="EC0-hb-3xv" secondAttribute="leading" constant="16" id="znK-fm-94e"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="EC0-hb-3xv"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="Anterior" id="Aqf-lz-NGC">
+                        <barButtonItem title="Anterior" id="NP8-65-5z4">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="show" id="VNo-ah-Zjn"/>
+                                <segue destination="BYZ-38-t0r" kind="show" id="1w0-dC-Vrw"/>
                             </connections>
                         </barButtonItem>
                     </toolbarItems>
@@ -882,7 +875,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YNw-RN-kGa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="890"/>
+            <point key="canvasLocation" x="878" y="953"/>
         </scene>
         <!--Welcome Assistant View Controller-->
         <scene sceneID="tBr-ZW-wCO">
@@ -3316,7 +3309,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iqu-CK-9wB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="127.5" y="127.8169014084507"/>
+            <point key="canvasLocation" x="-128" y="128"/>
         </scene>
     </scenes>
     <resources>
@@ -3328,6 +3321,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="B4R-UQ-4Kb"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -3357,8 +3351,8 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <segue reference="tvh-NF-Lj7"/>
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
-        <segue reference="Emv-l7-gy3"/>
-        <segue reference="6Ah-YL-1YF"/>
-        <segue reference="WkW-ub-2ys"/>
+        <segue reference="fG8-Ym-4kE"/>
+        <segue reference="Dn1-xR-vUU"/>
+        <segue reference="JUP-5e-3nS"/>
     </inferredMetricsTieBreakers>
 </document>

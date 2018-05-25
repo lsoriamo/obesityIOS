@@ -103,7 +103,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             UserDefaults.standard.set(email, forKey: "email")
             UserDefaults.standard.set(image, forKey: "imageURL")
             
-            self.performSegue(withIdentifier: "WelcomeAssistantSegue", sender: nil)
+            self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
         }
     }
     
@@ -151,13 +151,9 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                     return
                 }
                 
-//                print("UserId: ", user!.uid)
-                
                 UserDefaults.standard.set(user!.user.uid, forKey: "userId")
                 
-                self.performSegue(withIdentifier: "toPruebasMedicasSegue", sender: nil)
-                
-                
+                self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
                 
             }
         }
