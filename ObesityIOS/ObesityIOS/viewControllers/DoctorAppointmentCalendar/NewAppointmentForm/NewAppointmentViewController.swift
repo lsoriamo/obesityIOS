@@ -10,10 +10,10 @@ import UIKit
 import SearchTextField
 import FirebaseDatabase
 
-class NewAppointmentViewController: UIViewController {
+class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var tfDoctor: SearchTextField!
-    @IBOutlet weak var tfEspecialidad: UITextField!
+    @IBOutlet weak var pvEspecialidad: UIPickerView!
     @IBOutlet weak var dpAppointmentDate: UIDatePicker!
     @IBOutlet weak var tfDescripcion: UITextField!
     @IBOutlet weak var tfLugar: UITextField!
@@ -22,12 +22,16 @@ class NewAppointmentViewController: UIViewController {
     var arrMedicos:[String] = []
     var arrMedicosAux:[DoctorAux] = []
     
+    var arrEspecialidades:[String] = ["Sin determinar", "Endicronología", "Cirugía", "Anestesiología", "Psicología", "Atención primaria", "Medicina de familia", "Preparador físico", "Nutricionista"]
+    
     var userId:String?
     var nombreApellidosMedico:String?
     
     var ref: DatabaseReference!
     
     override func viewDidLoad() {
+        pvEspecialidad.dataSource = self
+        pvEspecialidad.delegate = self
         super.viewDidLoad()
         
         ref = Database.database().reference()
@@ -35,13 +39,19 @@ class NewAppointmentViewController: UIViewController {
         loadDoctorsArr()
         
         dpAppointmentDate.locale = Locale(identifier: "es_ES")
-        
-//        arrMedicos.append("Soria, Luismi (endocrino)")
-//        arrMedicos.append("Aliaga, Alberto (endocrino)")
-//        arrMedicos.append("Amores, Jorge (cirujano)")
-//
-//        tfDoctor.filterStrings(arrMedicos)
 
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return arrEspecialidades.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return arrEspecialidades[row]
     }
     
     func loadDoctorsArr() {

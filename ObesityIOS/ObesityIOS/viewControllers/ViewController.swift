@@ -103,7 +103,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             UserDefaults.standard.set(email, forKey: "email")
             UserDefaults.standard.set(image, forKey: "imageURL")
             
-            self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
+            self.performSegue(withIdentifier: "toPruebasMedicasSegue", sender: nil)
         }
     }
     
@@ -195,18 +195,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
         Auth.auth().removeStateDidChangeListener(handle!)
         // [END remove_auth_listener]
     }
-    
-    //  <-- SNIP DE CÓDIGO PARA CREACIÓN DE USUARIO
-    
-    //            Auth.auth().createUser(withEmail: email, password: pass) { (user, error) in
-    //
-    //                if let error = error {
-    //                    print("ERROR: \(error)")
-    //                    return
-    //                }
-    //            }
-    
-    // FIN -->
 
 }
 
