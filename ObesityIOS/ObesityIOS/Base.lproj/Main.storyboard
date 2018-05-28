@@ -570,7 +570,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                                     <navigationItem title="Nueva cita" id="Bpo-00-o7x">
                                         <barButtonItem key="leftBarButtonItem" title="Atrás" id="l65-h0-8qG">
                                             <connections>
-                                                <segue destination="Jho-78-isd" kind="show" id="fG8-Ym-4kE"/>
+                                                <action selector="actionBtnAtras:" destination="UhD-f0-HBd" id="0r5-dl-9cx"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="anz-vo-Wbq">
@@ -672,6 +672,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                         <outlet property="tfDoctor" destination="hgC-I9-zGc" id="LbV-Nd-JRE"/>
                         <outlet property="tfLugar" destination="gwi-MO-eUl" id="Ad1-D0-3iL"/>
                         <outlet property="tfNoOlvidar" destination="fXe-gA-Z3P" id="g3f-qo-BhS"/>
+                        <segue destination="Jho-78-isd" kind="show" identifier="toBackAgendaSegue" id="IpW-xS-uq7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yre-NQ-crG" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3371,7 +3372,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <segue reference="tvh-NF-Lj7"/>
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
-        <segue reference="fG8-Ym-4kE"/>
+        <segue reference="IpW-xS-uq7"/>
         <segue reference="Dn1-xR-vUU"/>
         <segue reference="WkW-ub-2ys"/>
     </inferredMetricsTieBreakers>

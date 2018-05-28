@@ -11,12 +11,14 @@ import Foundation
 class DoctorAux {
     var doctorId:String = ""
     var medicalCenterId:String = ""
+    var apellidosNombre:String = ""
     
     init() {
     }
     
-    init(doctorId:String, medicalCenterId:String) {
+    init(doctorId:String, medicalCenterId:String, apellidosNombre:String) {
         self.doctorId = doctorId
         self.medicalCenterId = medicalCenterId
+        self.apellidosNombre = apellidosNombre
     }
 }
