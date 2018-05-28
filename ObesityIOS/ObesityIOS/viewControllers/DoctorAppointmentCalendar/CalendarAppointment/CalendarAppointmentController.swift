@@ -193,13 +193,18 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
                     let typeEnum:String = value?["typeEnum"] as? String ?? ""
                     let citesTimestamp:Int64 = value?["citeTimestamp"] as? Int64 ?? 0
                     
-                    appointment.typeEnum = typeEnum
-                    appointment.citeTimestamp = citesTimestamp
-                    self.citas.append(appointment)
-                    let indexPath1 = IndexPath(row: self.citas.count-1, section: 0)
-                    self.tvAppointment.beginUpdates()
-                    self.tvAppointment.insertRows(at: [indexPath1], with: UITableViewRowAnimation.automatic)
-                    self.tvAppointment.endUpdates()
+                    let currentDate = Date()
+                    let appointmentDate = Date(timeIntervalSince1970: Double(citesTimestamp / 1000))
+                    
+                    if currentDate < appointmentDate {
+                        appointment.typeEnum = typeEnum
+                        appointment.citeTimestamp = citesTimestamp
+                        self.citas.append(appointment)
+                        let indexPath1 = IndexPath(row: self.citas.count-1, section: 0)
+                        self.tvAppointment.beginUpdates()
+                        self.tvAppointment.insertRows(at: [indexPath1], with: UITableViewRowAnimation.automatic)
+                        self.tvAppointment.endUpdates()
+                    }
                     
                 }
             }
