@@ -184,31 +184,53 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
             let appointment:Appointment = Appointment()
             
             let dicAppointment = snapshot.value as? NSDictionary
-
-            for idCita in dicAppointment!.allKeys {
-                
-                self.ref.child("\(urlAppointment)/\(idCita)").observeSingleEvent(of: .value) { (snapshot) in
-                    let value = snapshot.value as? NSDictionary
+            
+            if dicAppointment != nil {
+                for idCita in dicAppointment!.allKeys {
                     
-                    let typeEnum:String = value?["typeEnum"] as? String ?? ""
-                    let citesTimestamp:Int64 = value?["citeTimestamp"] as? Int64 ?? 0
-                    
-                    let currentDate = Date()
-                    let appointmentDate = Date(timeIntervalSince1970: Double(citesTimestamp / 1000))
-                    
-                    if currentDate < appointmentDate {
-                        appointment.typeEnum = typeEnum
-                        appointment.citeTimestamp = citesTimestamp
-                        self.citas.append(appointment)
-                        let indexPath1 = IndexPath(row: self.citas.count-1, section: 0)
-                        self.tvAppointment.beginUpdates()
-                        self.tvAppointment.insertRows(at: [indexPath1], with: UITableViewRowAnimation.automatic)
-                        self.tvAppointment.endUpdates()
+                    self.ref.child("\(urlAppointment)/\(idCita)").observeSingleEvent(of: .value) { (snapshot) in
+                        let value = snapshot.value as? NSDictionary
+                        
+                        var typeEnum:String = value?["typeEnum"] as? String ?? ""
+                        let citesTimestamp:Int64 = value?["citeTimestamp"] as? Int64 ?? 0
+                        
+                        let currentDate = Date()
+                        let appointmentDate = Date(timeIntervalSince1970: Double(citesTimestamp / 1000))
+                        
+                        if currentDate < appointmentDate {
+                            
+                            if typeEnum == "endocrino" {
+                                typeEnum = "Endocrino"
+                            } else if typeEnum == "cirujano" {
+                                typeEnum = "Cirujano"
+                            } else if typeEnum == "anestesista" {
+                                typeEnum = "Anestesista"
+                            } else if typeEnum == "psicologo" {
+                                typeEnum = "Psicólogo"
+                            } else if typeEnum == "atencion_primaria" {
+                                typeEnum = "Atención primaria"
+                            } else if typeEnum == "medico_familia" {
+                                typeEnum = "Médico de familia"
+                            } else if typeEnum == "preparador_fisico" {
+                                typeEnum = "Preparador físico"
+                            } else if typeEnum == "nutricionista" {
+                                typeEnum = "Nutricionista"
+                            } else if typeEnum == "fisioterapeuta" {
+                                typeEnum = "Fisioterapeuta"
+                            } else {
+                                typeEnum = "Otro especialista"
+                            }
+                            appointment.typeEnum = typeEnum
+                            appointment.citeTimestamp = citesTimestamp
+                            self.citas.append(appointment)
+                            let indexPath1 = IndexPath(row: self.citas.count-1, section: 0)
+                            self.tvAppointment.beginUpdates()
+                            self.tvAppointment.insertRows(at: [indexPath1], with: UITableViewRowAnimation.automatic)
+                            self.tvAppointment.endUpdates()
+                        }
                     }
-                    
                 }
             }
-        
         }
     }
     

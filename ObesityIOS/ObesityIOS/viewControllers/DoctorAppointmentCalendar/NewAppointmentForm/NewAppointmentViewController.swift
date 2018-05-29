@@ -108,8 +108,8 @@ class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPi
         let things:String = tfNoOlvidar.text!
         let place:String = tfLugar.text!
         
-        let typeEspecialidad = pvEspecialidad.selectedRow(inComponent: 0)
-        var typeEnumEspecialidad = ""
+        let typeEspecialidad:Int = pvEspecialidad.selectedRow(inComponent: 0)
+        var typeEnumEspecialidad:String = ""
         
         if doctorNombre.isEmpty {
             // Creando un elemento de Alert (Dialog en Android)
@@ -139,13 +139,13 @@ class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             } else if typeEspecialidad == 2 {
                 typeEnumEspecialidad = "anestesista"
             } else if typeEspecialidad == 3 {
-                typeEnumEspecialidad = "psicólogo"
+                typeEnumEspecialidad = "psicologo"
             } else if typeEspecialidad == 4 {
-                typeEnumEspecialidad = "primaria"
+                typeEnumEspecialidad = "atencion_primaria"
             } else if typeEspecialidad == 5 {
-                typeEnumEspecialidad = "médico de familia"
+                typeEnumEspecialidad = "medico_familia"
             } else if typeEspecialidad == 6 {
-                typeEnumEspecialidad = "preparador físico"
+                typeEnumEspecialidad = "preparador_fisico"
             } else if typeEspecialidad == 7 {
                 typeEnumEspecialidad = "nutricionista"
             } else if typeEspecialidad == 8 {
@@ -155,19 +155,7 @@ class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             }
             
             let urlAppointment = "users/\(userId!)/appointment/cites/\(timestampActual)"
-            
-//            print("URL: \(urlAppointment)")
-//            print("FECHA HORA CITA: \(fechaHoraCita)")
-//            print("CREATEDBY: \"\"")
-//            print("DESCRIPTION: \(description)")
-//            print("THINGS: \(things)")
-//            print("DOCTOR: \(doctorNombre)")
-//            print("DOCTORID: \(idDoctor)")
-//            print("IDUSER: \(userId!)")
-//            print("PLACE: \(place)")
-//            print("TIMESTAMP: \(timestampActual)")
-//            print("TYPE: \(typeEspecialidad)")
-//            print("TYPEENUM: \(typeEnumEspecialidad)")
+
             
             
             self.ref.child("\(urlAppointment)/citeTimestamp").setValue(fechaHoraCita)
@@ -181,6 +169,7 @@ class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             self.ref.child("\(urlAppointment)/timestamp").setValue(timestampActual)
             self.ref.child("\(urlAppointment)/type").setValue(typeEspecialidad)
             self.ref.child("\(urlAppointment)/typeEnum").setValue(typeEnumEspecialidad)
+            self.ref.child("\(urlAppointment)/userViewTimestamp").setValue(0)
             
             self.performSegue(withIdentifier: "toBackAgendaSegue", sender: nil)
 

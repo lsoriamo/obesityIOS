@@ -143,7 +143,10 @@ class AddMedicalTestViewController: UIViewController {
             
             let urlMedicalTest = "users/\(userId!)/medical_tests/cites/\(timestampActual)"
             
+            
             self.ref.child("\(urlMedicalTest)/createdBy").setValue("")
+            
+            
             self.ref.child("\(urlMedicalTest)/description").setValue(descripcion)
             self.ref.child("\(urlMedicalTest)/doctorCite").setValue(personaPrueba)
             self.ref.child("\(urlMedicalTest)/doctorCiteId").setValue(idDoctor2)
@@ -155,7 +158,7 @@ class AddMedicalTestViewController: UIViewController {
             self.ref.child("\(urlMedicalTest)/pendingType").setValue(innerTypePrueba)
 
             // Duda, no sé que fecha es, la pongo por defecto por ahora
-            self.ref.child("\(urlMedicalTest)/pictureTimestamp").setValue("")
+            self.ref.child("\(urlMedicalTest)/pictureTimestamp").setValue(0)
 
             self.ref.child("\(urlMedicalTest)/placeCite").setValue(lugarCita)
             self.ref.child("\(urlMedicalTest)/placeCiteId").setValue("")
@@ -166,13 +169,13 @@ class AddMedicalTestViewController: UIViewController {
             self.ref.child("\(urlMedicalTest)/timestampCite").setValue(timestampCita)
 
             // Duda, no sé que fecha es, la pongo por defecto por ahora
-            self.ref.child("\(urlMedicalTest)/timestampDone").setValue("")
+            self.ref.child("\(urlMedicalTest)/timestampDone").setValue(0)
 
             // Duda, no sé que fecha es, la pongo por defecto por ahora
-            self.ref.child("\(urlMedicalTest)/timestampResults").setValue("")
+            self.ref.child("\(urlMedicalTest)/timestampResults").setValue(0)
 
             // Duda, no sé que fecha es, la pongo por defecto por ahora
-            self.ref.child("\(urlMedicalTest)/userViewTimestamp").setValue("")
+            self.ref.child("\(urlMedicalTest)/userViewTimestamp").setValue(0)
 
 
             self.performSegue(withIdentifier: "toBackIntroPruebasMedicasSegue", sender: nil)

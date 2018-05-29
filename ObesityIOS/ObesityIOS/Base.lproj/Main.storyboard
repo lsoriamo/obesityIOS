@@ -3343,7 +3343,6 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="B4R-UQ-4Kb"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -3374,7 +3373,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
         <segue reference="IpW-xS-uq7"/>
-        <segue reference="Dn1-xR-vUU"/>
+        <segue reference="6Ah-YL-1YF"/>
         <segue reference="Q2a-Lw-MPc"/>
     </inferredMetricsTieBreakers>
 </document>
