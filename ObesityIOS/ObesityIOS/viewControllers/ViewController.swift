@@ -103,7 +103,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             UserDefaults.standard.set(email, forKey: "email")
             UserDefaults.standard.set(image, forKey: "imageURL")
             
-            self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
+            self.performSegue(withIdentifier: "toPruebasMedicasSegue", sender: nil)
         }
     }
     

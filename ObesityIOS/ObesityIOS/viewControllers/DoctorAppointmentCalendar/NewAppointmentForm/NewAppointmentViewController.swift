@@ -128,9 +128,9 @@ class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             
             let dateActual = Date()
             
-            let timestampActual:Int = Int(((dateActual.timeIntervalSince1970) * 1000).rounded())
+            let timestampActual:Int64 = Int64(((dateActual.timeIntervalSince1970) * 1000).rounded())
             
-            let fechaHoraCita:Int = Int(((dpAppointmentDate.date.timeIntervalSince1970) * 1000).rounded())
+            let fechaHoraCita:Int64 = Int64(((dpAppointmentDate.date.timeIntervalSince1970) * 1000).rounded())
             
             if typeEspecialidad == 0 {
                 typeEnumEspecialidad = "endocrino"
@@ -156,18 +156,18 @@ class NewAppointmentViewController: UIViewController, UIPickerViewDelegate, UIPi
             
             let urlAppointment = "users/\(userId!)/appointment/cites/\(timestampActual)"
             
-            print("URL: \(urlAppointment)")
-            print("FECHA HORA CITA: \(fechaHoraCita)")
-            print("CREATEDBY: \"\"")
-            print("DESCRIPTION: \(description)")
-            print("THINGS: \(things)")
-            print("DOCTOR: \(doctorNombre)")
-            print("DOCTORID: \(idDoctor)")
-            print("IDUSER: \(userId!)")
-            print("PLACE: \(place)")
-            print("TIMESTAMP: \(timestampActual)")
-            print("TYPE: \(typeEspecialidad)")
-            print("TYPEENUM: \(typeEnumEspecialidad)")
+//            print("URL: \(urlAppointment)")
+//            print("FECHA HORA CITA: \(fechaHoraCita)")
+//            print("CREATEDBY: \"\"")
+//            print("DESCRIPTION: \(description)")
+//            print("THINGS: \(things)")
+//            print("DOCTOR: \(doctorNombre)")
+//            print("DOCTORID: \(idDoctor)")
+//            print("IDUSER: \(userId!)")
+//            print("PLACE: \(place)")
+//            print("TIMESTAMP: \(timestampActual)")
+//            print("TYPE: \(typeEspecialidad)")
+//            print("TYPEENUM: \(typeEnumEspecialidad)")
             
             
             self.ref.child("\(urlAppointment)/citeTimestamp").setValue(fechaHoraCita)

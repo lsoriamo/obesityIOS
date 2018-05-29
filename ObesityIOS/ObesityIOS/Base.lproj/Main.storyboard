@@ -80,7 +80,7 @@
                                     <navigationItem title="Nueva prueba" id="Hvz-eh-DF5">
                                         <barButtonItem key="leftBarButtonItem" title="Atrás" id="9sr-NH-f01">
                                             <connections>
-                                                <segue destination="QIN-Qc-34d" kind="show" id="WkW-ub-2ys"/>
+                                                <action selector="actionBtnAtras:" destination="djd-CX-aGF" id="ztm-xD-ygJ"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="e0w-jn-4Gl">
@@ -203,6 +203,7 @@
                         <outlet property="tfMedico" destination="az0-hR-yF4" id="xL7-zM-4fr"/>
                         <outlet property="tfPersonaPrueba" destination="yPv-gd-Bhf" id="sfL-nE-PVz"/>
                         <outlet property="tfTipoPrueba" destination="o0a-3a-74b" id="Xuy-y2-Sqh"/>
+                        <segue destination="QIN-Qc-34d" kind="show" identifier="toBackIntroPruebasMedicasSegue" id="Q2a-Lw-MPc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6la-go-gGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3342,7 +3343,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="KVb-Cc-l1L"/>
+        <segue reference="B4R-UQ-4Kb"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -3373,7 +3374,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
         <segue reference="IpW-xS-uq7"/>
-        <segue reference="6Ah-YL-1YF"/>
-        <segue reference="WkW-ub-2ys"/>
+        <segue reference="Dn1-xR-vUU"/>
+        <segue reference="Q2a-Lw-MPc"/>
     </inferredMetricsTieBreakers>
 </document>

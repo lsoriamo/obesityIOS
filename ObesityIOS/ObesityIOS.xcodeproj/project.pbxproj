@@ -13,7 +13,7 @@
 		740FE10D20B6AE8C00E216D6 /* NewAppointmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FE10C20B6AE8C00E216D6 /* NewAppointmentViewController.swift */; };
 		740FE11120B6C57300E216D6 /* IntroMedicalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FE11020B6C57300E216D6 /* IntroMedicalTestViewController.swift */; };
 		740FE11320B6C9C000E216D6 /* MoreInfoMedicalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FE11220B6C9C000E216D6 /* MoreInfoMedicalTestViewController.swift */; };
-		740FE11520B6C9F500E216D6 /* AddMedicalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FE11420B6C9F500E216D6 /* AddMedicalTestViewController.swift */; };
+		740FE11520B6C9F500E216D6 /* NewMedicalTestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 740FE11420B6C9F500E216D6 /* NewMedicalTestViewController.swift */; };
 		7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */; };
 		7416823B20A051FD00870B76 /* FechaNacimientoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */; };
 		74178BD9207CAFB000E0BAC3 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BD8207CAFB000E0BAC3 /* User.swift */; };
@@ -105,7 +105,7 @@
 		740FE10C20B6AE8C00E216D6 /* NewAppointmentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAppointmentViewController.swift; sourceTree = "<group>"; };
 		740FE11020B6C57300E216D6 /* IntroMedicalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroMedicalTestViewController.swift; sourceTree = "<group>"; };
 		740FE11220B6C9C000E216D6 /* MoreInfoMedicalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoMedicalTestViewController.swift; sourceTree = "<group>"; };
-		740FE11420B6C9F500E216D6 /* AddMedicalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMedicalTestViewController.swift; sourceTree = "<group>"; };
+		740FE11420B6C9F500E216D6 /* NewMedicalTestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMedicalTestViewController.swift; sourceTree = "<group>"; };
 		7416823820A0376A00870B76 /* FechaIntervencion2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FechaIntervencion2AssistantController.swift; sourceTree = "<group>"; };
 		7416823A20A051FC00870B76 /* FechaNacimientoAssistantController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FechaNacimientoAssistantController.swift; sourceTree = "<group>"; };
 		74178BD8207CAFB000E0BAC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -230,8 +230,8 @@
 		740FE10E20B6C51F00E216D6 /* MedicalTest */ = {
 			isa = PBXGroup;
 			children = (
+				74AF96D920BD46E3002A757E /* NewMedicalTestForm */,
 				740FE10F20B6C54900E216D6 /* IntroMedicalTest */,
-				740FE11420B6C9F500E216D6 /* AddMedicalTestViewController.swift */,
 			);
 			path = MedicalTest;
 			sourceTree = "<group>";
@@ -429,6 +429,14 @@
 				749A617720B2DBBD00C9824C /* CustomCell.swift */,
 			);
 			path = CalendarAppointment;
+			sourceTree = "<group>";
+		};
+		74AF96D920BD46E3002A757E /* NewMedicalTestForm */ = {
+			isa = PBXGroup;
+			children = (
+				740FE11420B6C9F500E216D6 /* NewMedicalTestViewController.swift */,
+			);
+			path = NewMedicalTestForm;
 			sourceTree = "<group>";
 		};
 		7E834CF0762D684CD8B97146 /* Pods */ = {
@@ -706,7 +714,7 @@
 				7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
 				744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */,
-				740FE11520B6C9F500E216D6 /* AddMedicalTestViewController.swift in Sources */,
+				740FE11520B6C9F500E216D6 /* NewMedicalTestViewController.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
 				7474B04220AEBC0C00EB6A6A /* CalendarAppointmentController.swift in Sources */,
 				748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */,
