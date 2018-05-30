@@ -69,9 +69,11 @@
 		748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */; };
 		748A96472091F74B00364DCE /* SeleccionDoctorAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */; };
 		749A617820B2DBBD00C9824C /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749A617720B2DBBD00C9824C /* CustomCell.swift */; };
+		74A329EC20BECC29002EAB35 /* MedicalTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A329EB20BECC29002EAB35 /* MedicalTest.swift */; };
 		74C71FB8209091B2006CD470 /* TrastornoSuenyoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */; };
 		74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */; };
 		74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74CD14F4208F295300ECC99D /* PesoAssistantController.swift */; };
+		74F13C1D20BEAF2C001F544F /* ListItemPruebaMedicaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F13C1C20BEAF2C001F544F /* ListItemPruebaMedicaTableViewCell.swift */; };
 		7ABEF75862D8E22257A3DFE8 /* Pods_ObesityIOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20D0E543DB86250DBB297CF5 /* Pods_ObesityIOS.framework */; };
 		C589376558DACD9236E0552A /* Pods_ObesityIOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */; };
 /* End PBXBuildFile section */
@@ -161,9 +163,11 @@
 		748A96442091F6E100364DCE /* EquipoMedicoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EquipoMedicoAssistantController.swift; sourceTree = "<group>"; };
 		748A96462091F74B00364DCE /* SeleccionDoctorAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeleccionDoctorAssistantController.swift; sourceTree = "<group>"; };
 		749A617720B2DBBD00C9824C /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
+		74A329EB20BECC29002EAB35 /* MedicalTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalTest.swift; sourceTree = "<group>"; };
 		74C71FB7209091B2006CD470 /* TrastornoSuenyoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrastornoSuenyoAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F2208F22C400ECC99D /* AlturaAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlturaAssistantController.swift; sourceTree = "<group>"; };
 		74CD14F4208F295300ECC99D /* PesoAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesoAssistantController.swift; sourceTree = "<group>"; };
+		74F13C1C20BEAF2C001F544F /* ListItemPruebaMedicaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemPruebaMedicaTableViewCell.swift; sourceTree = "<group>"; };
 		8C059F409F51344FBA497CFF /* Pods-ObesityIOSUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSUITests/Pods-ObesityIOSUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		A25AD0AAAEF328B4D6154B7A /* Pods_ObesityIOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObesityIOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7344AC18A39243DE2E1E80B /* Pods-ObesityIOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObesityIOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ObesityIOSTests/Pods-ObesityIOSTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -239,6 +243,7 @@
 		740FE10F20B6C54900E216D6 /* IntroMedicalTest */ = {
 			isa = PBXGroup;
 			children = (
+				74F13C1B20BEAE8D001F544F /* ListItemPruebaMedica */,
 				740FE11020B6C57300E216D6 /* IntroMedicalTestViewController.swift */,
 				740FE11220B6C9C000E216D6 /* MoreInfoMedicalTestViewController.swift */,
 			);
@@ -248,6 +253,7 @@
 		74178BD6207CAF1A00E0BAC3 /* entities */ = {
 			isa = PBXGroup;
 			children = (
+				74A329EA20BECC12002EAB35 /* medicalTest */,
 				742A460B20AEB37B00C5A9B6 /* appointment */,
 				74178BD7207CAF8800E0BAC3 /* user */,
 			);
@@ -431,12 +437,28 @@
 			path = CalendarAppointment;
 			sourceTree = "<group>";
 		};
+		74A329EA20BECC12002EAB35 /* medicalTest */ = {
+			isa = PBXGroup;
+			children = (
+				74A329EB20BECC29002EAB35 /* MedicalTest.swift */,
+			);
+			path = medicalTest;
+			sourceTree = "<group>";
+		};
 		74AF96D920BD46E3002A757E /* NewMedicalTestForm */ = {
 			isa = PBXGroup;
 			children = (
 				740FE11420B6C9F500E216D6 /* NewMedicalTestViewController.swift */,
 			);
 			path = NewMedicalTestForm;
+			sourceTree = "<group>";
+		};
+		74F13C1B20BEAE8D001F544F /* ListItemPruebaMedica */ = {
+			isa = PBXGroup;
+			children = (
+				74F13C1C20BEAF2C001F544F /* ListItemPruebaMedicaTableViewCell.swift */,
+			);
+			path = ListItemPruebaMedica;
 			sourceTree = "<group>";
 		};
 		7E834CF0762D684CD8B97146 /* Pods */ = {
@@ -715,6 +737,7 @@
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
 				744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */,
 				740FE11520B6C9F500E216D6 /* NewMedicalTestViewController.swift in Sources */,
+				74A329EC20BECC29002EAB35 /* MedicalTest.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
 				7474B04220AEBC0C00EB6A6A /* CalendarAppointmentController.swift in Sources */,
 				748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */,
@@ -742,6 +765,7 @@
 				742A460D20AEB40300C5A9B6 /* Appointment.swift in Sources */,
 				748A96292091CCCF00364DCE /* LesionArticularAssistantController.swift in Sources */,
 				742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */,
+				74F13C1D20BEAF2C001F544F /* ListItemPruebaMedicaTableViewCell.swift in Sources */,
 				748A96392091D10E00364DCE /* ArdoresAssistantController.swift in Sources */,
 				74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */,
 				740FE11120B6C57300E216D6 /* IntroMedicalTestViewController.swift in Sources */,
