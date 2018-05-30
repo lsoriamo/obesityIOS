@@ -75,6 +75,14 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
             let dicMedicalTest = snapshot.value as? NSDictionary
             
             if dicMedicalTest != nil {
+                
+                self.lbInfo.removeFromSuperview()
+                self.btnMoreInfo.removeFromSuperview()
+                
+                self.tvPruebaMedica.translatesAutoresizingMaskIntoConstraints = false
+                
+                self.tvPruebaMedica.topAnchor.constraintEqualToSystemSpacingBelow(self.view.topAnchor, multiplier: 16).isActive = true
+                
                 for idCita in dicMedicalTest!.allKeys {
                     
                     self.ref.child("\(urlMedicalTest)/\(idCita)").observeSingleEvent(of: .value) { (snapshot) in
@@ -97,18 +105,17 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
                         }
                     }
                 }
+            } else {
+                
+                self.tvPruebaMedica.removeFromSuperview()
+                
             }
         }
     }
 
     @IBAction func actionBtnMoreInfo(_ sender: Any) {
         
-        if lbInfo != nil {
-            lbInfo.removeFromSuperview()
-            btnMoreInfo.translatesAutoresizingMaskIntoConstraints = false
-            
-            btnMoreInfo.topAnchor.constraintEqualToSystemSpacingBelow(view.topAnchor, multiplier: 8).isActive = true
-        }
+        self.performSegue(withIdentifier: "toMoreInfoPruebasMedicasSegue", sender: nil)
         
     }
 }
