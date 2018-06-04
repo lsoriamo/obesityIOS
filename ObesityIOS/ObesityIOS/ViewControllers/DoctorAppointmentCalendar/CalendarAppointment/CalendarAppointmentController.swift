@@ -22,6 +22,8 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
     
     var ref: DatabaseReference!
     
+    var timestamp:Int64?
+    
     @IBOutlet weak var tvAppointment: UITableView!
     @IBOutlet weak var jtAppleCalendar: JTAppleCalendarView!
     @IBOutlet weak var month: UILabel!
@@ -29,7 +31,7 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
     let outsideMonthColor = UIColor.lightGray
     let monthColor = UIColor.black
     let selectedMonthColor = UIColor.init(red: 62, green: 93, blue: 152, alpha: 1)
-    let currentDateSelectedViewColor = UIColor.init(red: 255, green: 0, blue: 0, alpha: 1) //Ni idea de cual es
+    let currentDateSelectedViewColor = UIColor.init(red: 54, green: 93, blue: 157, alpha: 1) //Ni idea de cual es
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -165,11 +167,7 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         
         let fechaCitaStringFormatter = dateFormatter.string(from: fechaCitaDate)
         
-        //fechaCitaDate = dateFormatter.dateFormat("dddd, dd de MMMM de yyyy")
-        
-        
         celda.lbEspecialista.text = "Cita con: \(self.citas[indexPath.row].typeEnum)"
-        //celda.lbFechaCita.text = String(self.citas[indexPath.row].citeTimestamp)
         celda.lbFechaCita.text = fechaCitaStringFormatter
         
         return celda;
@@ -184,8 +182,10 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
             
             let alertController = UIAlertController(title: "", message: "¿Desea eliminar la cita?", preferredStyle: .alert)
             
-            let action1 = UIAlertAction(title: "Aceptar", style: .default) { (action:UIAlertAction) in
-                
+            let action1 = UIAlertAction(title: "Cancelar", style: .default) { (action:UIAlertAction) in
+            }
+            
+            let action2 = UIAlertAction(title: "Eliminar", style: .destructive) { (action:UIAlertAction) in
                 self.ref.child("users/\(self.userId!)/appointment/cites/\(self.citas[indexPath.row].timestamp)").removeValue()
                 
                 self.citas.remove(at: indexPath.row)
@@ -193,10 +193,6 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
                 tableView.beginUpdates()
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.endUpdates()
-
-            }
-            
-            let action2 = UIAlertAction(title: "Cancelar", style: .destructive) { (action:UIAlertAction) in
             }
             
             alertController.addAction(action1)
@@ -205,13 +201,25 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
             
         }
         
+        timestamp = self.citas[indexPath.row].timestamp
+        
         let edit = UITableViewRowAction(style: .normal, title: "Editar") { (action, indexPath) in
-            // share item at indexPath
+            self.performSegue(withIdentifier: "toEditAppointmentSegue", sender: self.timestamp)
         }
         
         edit.backgroundColor = UIColor.blue
         
         return [delete, edit]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toEditAppointmentSegue" {
+            let destino = segue.destination as! EditAppointmentFormViewController
+            
+            destino.timestamp = timestamp
+        }
+        
     }
     
     func initAppointment() {

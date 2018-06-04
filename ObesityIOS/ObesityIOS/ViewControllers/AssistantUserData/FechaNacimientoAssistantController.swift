@@ -38,8 +38,6 @@ class FechaNacimientoAssistantController: UIViewController {
                 
                 self.dpFechaNacimiento.date = fechaNacimientoRecibidaDate
                 
-                print(fechaNacimientoRecibidaDate)
-                
             } else {
                 
                 let dateFormatter = DateFormatter()

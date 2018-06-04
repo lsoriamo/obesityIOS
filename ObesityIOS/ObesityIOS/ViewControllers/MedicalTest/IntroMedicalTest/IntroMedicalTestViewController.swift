@@ -23,6 +23,8 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
     
     var ref: DatabaseReference!
     
+    var timestamp:Int64?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,11 +56,7 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
         
         let fechaCitaStringFormatter = dateFormatter.string(from: fechaCitaDate)
         
-        //fechaCitaDate = dateFormatter.dateFormat("dddd, dd de MMMM de yyyy")
-        
-        
         celda.lbTipoPrueba.text = "\(self.pruebasMedicas[indexPath.row].name)"
-        //celda.lbFechaCita.text = String(self.citas[indexPath.row].citeTimestamp)
         celda.lbFechaCita.text = fechaCitaStringFormatter
         
         return celda;
@@ -70,8 +68,10 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
             
             let alertController = UIAlertController(title: "", message: "¿Desea eliminar la prueba médica?", preferredStyle: .alert)
             
-            let action1 = UIAlertAction(title: "Aceptar", style: .default) { (action:UIAlertAction) in
-                
+            let action1 = UIAlertAction(title: "Cancelar", style: .default) { (action:UIAlertAction) in
+            }
+            
+            let action2 = UIAlertAction(title: "Eliminar", style: .destructive) { (action:UIAlertAction) in
                 self.ref.child("users/\(self.userId!)/medical_tests/cites/\(self.pruebasMedicas[indexPath.row].timestamp)").removeValue()
                 
                 self.pruebasMedicas.remove(at: indexPath.row)
@@ -79,10 +79,6 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
                 tableView.beginUpdates()
                 tableView.deleteRows(at: [indexPath], with: .automatic)
                 tableView.endUpdates()
-                
-            }
-            
-            let action2 = UIAlertAction(title: "Cancelar", style: .destructive) { (action:UIAlertAction) in
             }
             
             alertController.addAction(action1)
@@ -91,13 +87,26 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
             
         }
         
+        timestamp = self.pruebasMedicas[indexPath.row].timestamp
+        
         let edit = UITableViewRowAction(style: .normal, title: "Editar") { (action, indexPath) in
-            // share item at indexPath
+                self.performSegue(withIdentifier: "toEditMedicalTestSegue", sender: self.timestamp)
+            
         }
         
         edit.backgroundColor = UIColor.blue
         
         return [delete, edit]
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "toEditMedicalTestSegue" {
+            let destino = segue.destination as! EditMedicalTestViewController
+            
+            destino.timestamp = timestamp
+        }
+        
     }
     
     func initAppointment() {

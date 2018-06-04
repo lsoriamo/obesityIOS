@@ -47,7 +47,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUi-HP-VE4">
-                                <rect key="frame" x="16" y="275" width="288" height="233"/>
+                                <rect key="frame" x="16" y="275" width="288" height="277"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" rowHeight="81" id="Jlh-5w-HDp" customClass="ListItemPruebaMedicaTableViewCell" customModule="ObesityIOS" customModuleProvider="target">
@@ -111,11 +111,12 @@
                         <outlet property="lbInfo" destination="Ose-bI-dCL" id="GPR-xH-enk"/>
                         <outlet property="tvPruebaMedica" destination="NUi-HP-VE4" id="WOd-6H-ahr"/>
                         <segue destination="gnr-K4-YQ5" kind="show" identifier="toMoreInfoPruebasMedicasSegue" id="Drz-ZZ-r2p"/>
+                        <segue destination="ctL-bZ-SUI" kind="show" identifier="toEditMedicalTestSegue" id="Vrv-Jj-3j8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bto-Ey-UIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="-1482.0422535211267"/>
+            <point key="canvasLocation" x="878" y="-2683"/>
         </scene>
         <!--Add Medical Test View Controller-->
         <scene sceneID="CCs-R8-JDq">
@@ -259,7 +260,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6la-go-gGu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1717.5" y="-1478.8732394366198"/>
+            <point key="canvasLocation" x="2843" y="-3192"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="eIw-0i-75y">
@@ -307,7 +308,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PgR-XS-6jA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="885" y="-2287"/>
+            <point key="canvasLocation" x="-1386" y="-1479"/>
         </scene>
         <!--Intro Doctor Appointment Controller-->
         <scene sceneID="VTC-UT-rxr">
@@ -387,7 +388,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="to7-7s-G8i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="878" y="-675"/>
+            <point key="canvasLocation" x="878" y="-1001"/>
         </scene>
         <!--Calendar Appointment Controller-->
         <scene sceneID="6kj-j4-1x1">
@@ -602,11 +603,277 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                         <outlet property="month" destination="2zE-5X-932" id="SYw-ed-xYs"/>
                         <outlet property="tvAppointment" destination="OdQ-gR-EkL" id="v6p-gV-qZA"/>
                         <segue destination="UhD-f0-HBd" kind="show" identifier="toAddAppointmentSegue" id="KVb-Cc-l1L"/>
+                        <segue destination="8Hm-8z-yvh" kind="show" identifier="toEditAppointmentSegue" id="zT1-F8-BF7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zMO-mD-Rhx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1741.875" y="-675"/>
+            <point key="canvasLocation" x="1742" y="-1001"/>
+        </scene>
+        <!--Edit Appointment Form View Controller-->
+        <scene sceneID="0B1-To-XUU">
+            <objects>
+                <viewController id="8Hm-8z-yvh" customClass="EditAppointmentFormViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AAg-P8-lmu">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KAL-Tn-f3f">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Editar cita" id="nGl-1z-uoQ">
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="Dzp-qR-5RF">
+                                            <connections>
+                                                <action selector="actionBtnAtras:" destination="8Hm-8z-yvh" id="qzU-By-29C"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Editar" id="cg2-2x-nMw">
+                                            <connections>
+                                                <action selector="actionBtnEdit:" destination="8Hm-8z-yvh" id="Nzu-LD-SHV"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doctor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-op-x4t" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="80" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Especialidad" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbS-fG-zdI">
+                                <rect key="frame" x="16" y="126" width="288" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XUm-sf-bLQ">
+                                <rect key="frame" x="16" y="151" width="288" height="110"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="hUi-0b-gSB"/>
+                                </constraints>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha y hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xdU-yz-mEO">
+                                <rect key="frame" x="16" y="277" width="288" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="3DJ-RT-1jR">
+                                <rect key="frame" x="16" y="302" width="288" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="6Sj-fF-Euh"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="549797209.82767606">
+                                    <!--2018-06-04 09:26:49 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="e5M-26-69e">
+                                <rect key="frame" x="16" y="423" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Lugar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eYl-J7-0yT">
+                                <rect key="frame" x="16" y="469" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No olvidar" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNs-Mk-Tig">
+                                <rect key="frame" x="16" y="515" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eYl-J7-0yT" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="0bz-CD-CzU"/>
+                            <constraint firstItem="oNs-Mk-Tig" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="0c5-Kh-d0r"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="XUm-sf-bLQ" secondAttribute="trailing" constant="16" id="0fx-1p-p9B"/>
+                            <constraint firstItem="pbS-fG-zdI" firstAttribute="top" secondItem="ffh-op-x4t" secondAttribute="bottom" constant="16" id="0pc-CD-eb9"/>
+                            <constraint firstItem="e5M-26-69e" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="4I4-Xw-i7H"/>
+                            <constraint firstItem="KAL-Tn-f3f" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" id="8im-0Q-IkP"/>
+                            <constraint firstItem="eYl-J7-0yT" firstAttribute="top" secondItem="e5M-26-69e" secondAttribute="bottom" constant="16" id="FGb-aO-qh1"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="xdU-yz-mEO" secondAttribute="trailing" constant="16" id="Fzu-f9-5WX"/>
+                            <constraint firstItem="pbS-fG-zdI" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="Jao-Np-put"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="eYl-J7-0yT" secondAttribute="trailing" constant="16" id="JnF-Sw-RfF"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="pbS-fG-zdI" secondAttribute="trailing" constant="16" id="NWY-oL-jDw"/>
+                            <constraint firstItem="KAL-Tn-f3f" firstAttribute="top" secondItem="WRE-xi-B8h" secondAttribute="top" id="QBC-Wh-UTY"/>
+                            <constraint firstItem="xdU-yz-mEO" firstAttribute="top" secondItem="XUm-sf-bLQ" secondAttribute="bottom" constant="16" id="Qym-Vq-UVJ"/>
+                            <constraint firstItem="XUm-sf-bLQ" firstAttribute="top" secondItem="pbS-fG-zdI" secondAttribute="bottom" constant="8" id="UG0-KY-YdD"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="oNs-Mk-Tig" secondAttribute="trailing" constant="16" id="WPa-WT-1In"/>
+                            <constraint firstItem="e5M-26-69e" firstAttribute="top" secondItem="3DJ-RT-1jR" secondAttribute="bottom" constant="16" id="cUy-T7-4Kv"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="ffh-op-x4t" secondAttribute="trailing" constant="16" id="gUh-Qi-hop"/>
+                            <constraint firstItem="xdU-yz-mEO" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="gsb-cm-vJM"/>
+                            <constraint firstItem="KAL-Tn-f3f" firstAttribute="trailing" secondItem="WRE-xi-B8h" secondAttribute="trailing" id="hqA-qB-CwS"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="e5M-26-69e" secondAttribute="trailing" constant="16" id="jft-DX-t9t"/>
+                            <constraint firstItem="3DJ-RT-1jR" firstAttribute="top" secondItem="xdU-yz-mEO" secondAttribute="bottom" constant="8" id="ktQ-hA-BfK"/>
+                            <constraint firstItem="3DJ-RT-1jR" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="n5R-B8-wXp"/>
+                            <constraint firstItem="oNs-Mk-Tig" firstAttribute="top" secondItem="eYl-J7-0yT" secondAttribute="bottom" constant="16" id="nZ4-Be-S80"/>
+                            <constraint firstItem="WRE-xi-B8h" firstAttribute="trailing" secondItem="3DJ-RT-1jR" secondAttribute="trailing" constant="16" id="pyR-18-6wA"/>
+                            <constraint firstItem="ffh-op-x4t" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="uQK-Hd-Kjj"/>
+                            <constraint firstItem="ffh-op-x4t" firstAttribute="top" secondItem="KAL-Tn-f3f" secondAttribute="bottom" constant="16" id="uT7-q5-4r9"/>
+                            <constraint firstItem="XUm-sf-bLQ" firstAttribute="leading" secondItem="WRE-xi-B8h" secondAttribute="leading" constant="16" id="x8c-K0-iXX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="WRE-xi-B8h"/>
+                    </view>
+                    <connections>
+                        <outlet property="dpAppointmentDate" destination="3DJ-RT-1jR" id="GZI-MI-idT"/>
+                        <outlet property="pvEspecialidad" destination="XUm-sf-bLQ" id="MLP-L7-rHt"/>
+                        <outlet property="tfDescripcion" destination="e5M-26-69e" id="IhW-ha-rGY"/>
+                        <outlet property="tfDoctor" destination="ffh-op-x4t" id="PAa-2M-bIT"/>
+                        <outlet property="tfLugar" destination="eYl-J7-0yT" id="qTY-uh-DAx"/>
+                        <outlet property="tfNoOlvidar" destination="oNs-Mk-Tig" id="IBh-0r-9xb"/>
+                        <segue destination="Jho-78-isd" kind="show" identifier="toBackAgendaFromEditSegue" id="xyF-B5-6IP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o1o-0C-A6d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2842.5" y="-738.38028169014081"/>
+        </scene>
+        <!--Edit Medical Test View Controller-->
+        <scene sceneID="iXI-I9-RoM">
+            <objects>
+                <viewController id="ctL-bZ-SUI" customClass="EditMedicalTestViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jxm-dc-rSM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ciO-eB-Fjh">
+                                <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                                <items>
+                                    <navigationItem title="Editar prueba" id="RID-6h-WIR">
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="dGd-Ic-kJ7">
+                                            <connections>
+                                                <action selector="actionBtnAtras:" destination="ctL-bZ-SUI" id="yJM-ex-Qwb"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Editar" id="Cdv-gv-JGK">
+                                            <connections>
+                                                <action selector="actionBtnEditMedicalTest:" destination="ctL-bZ-SUI" id="3UL-wc-Hag"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Información sobre la prueba" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKG-1X-bBD">
+                                <rect key="frame" x="16" y="80" width="288" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="información sobre la cita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dxz-H1-BYc">
+                                <rect key="frame" x="16" y="300" width="288" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tipo de prueba" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AR5-mw-zJL" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="116" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descripción de la prueba" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ptq-1Q-sBL">
+                                <rect key="frame" x="16" y="162" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Médico que la indica" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Vdj-OE-ZXS" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="208" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Comentarios del médico" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jlp-5o-r99">
+                                <rect key="frame" x="16" y="254" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Persona que realizará la prueba" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ib8-sc-P8w" customClass="SearchTextField" customModule="SearchTextField">
+                                <rect key="frame" x="16" y="477" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha y hora" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="35G-8y-SnG">
+                                <rect key="frame" x="16" y="336" width="288" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="636-Dp-Gc9">
+                                <rect key="frame" x="16" y="361" width="288" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="YfZ-fW-6fa"/>
+                                </constraints>
+                                <date key="date" timeIntervalSinceReferenceDate="549813909.824">
+                                    <!--2018-06-04 14:05:09 +0000-->
+                                </date>
+                            </datePicker>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="lugar de la cita" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Udf-Eo-qVC">
+                                <rect key="frame" x="16" y="523" width="288" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RKG-1X-bBD" firstAttribute="top" secondItem="ciO-eB-Fjh" secondAttribute="bottom" constant="16" id="15X-cg-kfV"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="Vdj-OE-ZXS" secondAttribute="trailing" constant="16" id="4yU-b6-20k"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="35G-8y-SnG" secondAttribute="trailing" constant="16" id="6Fc-bc-ryH"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="RKG-1X-bBD" secondAttribute="trailing" constant="16" id="8bm-9b-tbk"/>
+                            <constraint firstItem="Jlp-5o-r99" firstAttribute="top" secondItem="Vdj-OE-ZXS" secondAttribute="bottom" constant="16" id="9Z5-Af-elg"/>
+                            <constraint firstItem="AR5-mw-zJL" firstAttribute="top" secondItem="RKG-1X-bBD" secondAttribute="bottom" constant="16" id="Dwp-qO-rlC"/>
+                            <constraint firstItem="ptq-1Q-sBL" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="FgF-Ri-83S"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="AR5-mw-zJL" secondAttribute="trailing" constant="16" id="GZ2-tO-yTh"/>
+                            <constraint firstItem="Jlp-5o-r99" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="LpV-Xy-nSL"/>
+                            <constraint firstItem="ciO-eB-Fjh" firstAttribute="top" secondItem="SRz-MD-cjN" secondAttribute="top" id="RXx-aP-hE5"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="ptq-1Q-sBL" secondAttribute="trailing" constant="16" id="Rzb-aW-XDP"/>
+                            <constraint firstItem="35G-8y-SnG" firstAttribute="top" secondItem="dxz-H1-BYc" secondAttribute="bottom" constant="16" id="UOA-sg-lgZ"/>
+                            <constraint firstItem="dxz-H1-BYc" firstAttribute="top" secondItem="Jlp-5o-r99" secondAttribute="bottom" constant="16" id="VdN-AV-c7r"/>
+                            <constraint firstItem="Ib8-sc-P8w" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="WBi-Q0-2i3"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="Udf-Eo-qVC" secondAttribute="trailing" constant="16" id="WOT-BS-hTp"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="636-Dp-Gc9" secondAttribute="trailing" constant="16" id="XXq-9h-GF0"/>
+                            <constraint firstItem="Vdj-OE-ZXS" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="YVk-KG-nas"/>
+                            <constraint firstItem="Udf-Eo-qVC" firstAttribute="top" secondItem="Ib8-sc-P8w" secondAttribute="bottom" constant="16" id="Yir-jc-Zj7"/>
+                            <constraint firstItem="Vdj-OE-ZXS" firstAttribute="top" secondItem="ptq-1Q-sBL" secondAttribute="bottom" constant="16" id="aQq-C2-RDg"/>
+                            <constraint firstItem="Ib8-sc-P8w" firstAttribute="top" secondItem="636-Dp-Gc9" secondAttribute="bottom" constant="16" id="cTV-cx-gXx"/>
+                            <constraint firstItem="636-Dp-Gc9" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="cpk-fG-jDK"/>
+                            <constraint firstItem="35G-8y-SnG" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="eya-t1-arl"/>
+                            <constraint firstItem="ciO-eB-Fjh" firstAttribute="trailing" secondItem="SRz-MD-cjN" secondAttribute="trailing" id="f7j-1i-bVn"/>
+                            <constraint firstItem="Udf-Eo-qVC" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="fBw-bU-FXV"/>
+                            <constraint firstItem="AR5-mw-zJL" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="fpP-zC-Syv"/>
+                            <constraint firstItem="ciO-eB-Fjh" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" id="g48-6u-G5J"/>
+                            <constraint firstItem="636-Dp-Gc9" firstAttribute="top" secondItem="35G-8y-SnG" secondAttribute="bottom" constant="8" id="iQk-tn-sg7"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="Ib8-sc-P8w" secondAttribute="trailing" constant="16" id="me7-Jr-B4j"/>
+                            <constraint firstItem="RKG-1X-bBD" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="q85-SQ-CgH"/>
+                            <constraint firstItem="dxz-H1-BYc" firstAttribute="leading" secondItem="SRz-MD-cjN" secondAttribute="leading" constant="16" id="tzU-Q1-Xor"/>
+                            <constraint firstItem="ptq-1Q-sBL" firstAttribute="top" secondItem="AR5-mw-zJL" secondAttribute="bottom" constant="16" id="wBH-GN-7CK"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="Jlp-5o-r99" secondAttribute="trailing" constant="16" id="y4E-J1-ss7"/>
+                            <constraint firstItem="SRz-MD-cjN" firstAttribute="trailing" secondItem="dxz-H1-BYc" secondAttribute="trailing" constant="16" id="yto-R6-6Mv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="SRz-MD-cjN"/>
+                    </view>
+                    <connections>
+                        <outlet property="dpFechaCita" destination="636-Dp-Gc9" id="HSH-tn-2vw"/>
+                        <outlet property="tfComentarioMedico" destination="Jlp-5o-r99" id="ua9-vM-LPz"/>
+                        <outlet property="tfDescripcionPrueba" destination="ptq-1Q-sBL" id="NXl-7V-fob"/>
+                        <outlet property="tfLugarCita" destination="Udf-Eo-qVC" id="d5g-ky-9RD"/>
+                        <outlet property="tfMedico" destination="Vdj-OE-ZXS" id="ZPU-JG-Dca"/>
+                        <outlet property="tfPersonaPrueba" destination="Ib8-sc-P8w" id="Wyf-kf-F7i"/>
+                        <outlet property="tfTipoPrueba" destination="AR5-mw-zJL" id="o6H-oU-9K1"/>
+                        <segue destination="QIN-Qc-34d" kind="show" identifier="toMedicalTestBackFromEditSegue" id="JX9-Z0-kMg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3H-Pp-jcH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2843" y="-2360"/>
         </scene>
         <!--New Appointment View Controller-->
         <scene sceneID="xBG-Zx-oNa">
@@ -729,7 +996,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yre-NQ-crG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2642" y="-629"/>
+            <point key="canvasLocation" x="2843" y="-1538"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -3423,8 +3690,8 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <segue reference="tvh-NF-Lj7"/>
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
-        <segue reference="Emv-l7-gy3"/>
-        <segue reference="Dn1-xR-vUU"/>
-        <segue reference="JUP-5e-3nS"/>
+        <segue reference="xyF-B5-6IP"/>
+        <segue reference="6Ah-YL-1YF"/>
+        <segue reference="JX9-Z0-kMg"/>
     </inferredMetricsTieBreakers>
 </document>
