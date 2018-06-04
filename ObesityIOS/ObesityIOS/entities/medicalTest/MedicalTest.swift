@@ -10,13 +10,15 @@ import Foundation
 
 class MedicalTest {
     
+    var timestamp:Int64 = 0
     var citeTimestamp:Int64 = 0
     var name:String = ""
     
     init() {
     }
     
-    init(citeTimestamp:Int64, name:String) {
+    init(timestamp:Int64, citeTimestamp:Int64, name:String) {
+        self.timestamp = timestamp
         self.citeTimestamp = citeTimestamp
         self.name = name
     }

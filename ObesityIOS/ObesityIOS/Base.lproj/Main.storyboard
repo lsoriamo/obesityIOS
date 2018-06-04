@@ -47,7 +47,7 @@
                                 </items>
                             </navigationBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NUi-HP-VE4">
-                                <rect key="frame" x="16" y="275" width="288" height="277"/>
+                                <rect key="frame" x="16" y="275" width="288" height="233"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" rowHeight="81" id="Jlh-5w-HDp" customClass="ListItemPruebaMedicaTableViewCell" customModule="ObesityIOS" customModuleProvider="target">
@@ -110,7 +110,7 @@
                         <outlet property="btnMoreInfo" destination="AXc-tH-o4k" id="yyd-df-uWz"/>
                         <outlet property="lbInfo" destination="Ose-bI-dCL" id="GPR-xH-enk"/>
                         <outlet property="tvPruebaMedica" destination="NUi-HP-VE4" id="WOd-6H-ahr"/>
-                        <segue destination="gnr-K4-YQ5" kind="show" id="Drz-ZZ-r2p"/>
+                        <segue destination="gnr-K4-YQ5" kind="show" identifier="toMoreInfoPruebasMedicasSegue" id="Drz-ZZ-r2p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bto-Ey-UIi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -3394,7 +3394,6 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Drz-ZZ-r2p"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -3425,7 +3424,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
         <segue reference="uZU-Cl-czo"/>
         <segue reference="6SV-nB-JFJ"/>
         <segue reference="Emv-l7-gy3"/>
-        <segue reference="6Ah-YL-1YF"/>
-        <segue reference="zsA-rh-6Du"/>
+        <segue reference="Dn1-xR-vUU"/>
+        <segue reference="JUP-5e-3nS"/>
     </inferredMetricsTieBreakers>
 </document>

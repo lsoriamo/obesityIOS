@@ -64,13 +64,47 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
         return celda;
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Eliminar") { (action, indexPath) in
+            
+            let alertController = UIAlertController(title: "", message: "¿Desea eliminar la prueba médica?", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Aceptar", style: .default) { (action:UIAlertAction) in
+                
+                self.ref.child("users/\(self.userId!)/medical_tests/cites/\(self.pruebasMedicas[indexPath.row].timestamp)").removeValue()
+                
+                self.pruebasMedicas.remove(at: indexPath.row)
+                
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.endUpdates()
+                
+            }
+            
+            let action2 = UIAlertAction(title: "Cancelar", style: .destructive) { (action:UIAlertAction) in
+            }
+            
+            alertController.addAction(action1)
+            alertController.addAction(action2)
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+        
+        let edit = UITableViewRowAction(style: .normal, title: "Editar") { (action, indexPath) in
+            // share item at indexPath
+        }
+        
+        edit.backgroundColor = UIColor.blue
+        
+        return [delete, edit]
+    }
+    
     func initAppointment() {
         
         let urlMedicalTest = "users/\(userId!)/medical_tests/cites"
         
         ref.child("users/\(userId!)/medical_tests/cites").observeSingleEvent(of: .value) { (snapshot) in
-            
-            let medicalTest:MedicalTest = MedicalTest()
             
             let dicMedicalTest = snapshot.value as? NSDictionary
             
@@ -85,6 +119,10 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
                 
                 for idCita in dicMedicalTest!.allKeys {
                     
+                    let timestampString:String = idCita as! String
+                    
+                    let timestamp:Int64 = Int64(timestampString)!
+                    
                     self.ref.child("\(urlMedicalTest)/\(idCita)").observeSingleEvent(of: .value) { (snapshot) in
                         let value = snapshot.value as? NSDictionary
                         
@@ -95,8 +133,12 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
                         let appointmentDate = Date(timeIntervalSince1970: Double(citesTimestamp / 1000))
                         
                         if currentDate < appointmentDate {
+                            let medicalTest:MedicalTest = MedicalTest()
+                            
                             medicalTest.name = name
                             medicalTest.citeTimestamp = citesTimestamp
+                            medicalTest.timestamp = timestamp
+                            
                             self.pruebasMedicas.append(medicalTest)
                             let indexPath1 = IndexPath(row: self.pruebasMedicas.count-1, section: 0)
                             self.tvPruebaMedica.beginUpdates()

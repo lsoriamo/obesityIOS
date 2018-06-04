@@ -176,17 +176,58 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         
     }
     
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        
+        let delete = UITableViewRowAction(style: .destructive, title: "Eliminar") { (action, indexPath) in
+            
+            print("Quiere borrar cita con id: \(self.citas[indexPath.row].timestamp)")
+            
+            let alertController = UIAlertController(title: "", message: "¿Desea eliminar la cita?", preferredStyle: .alert)
+            
+            let action1 = UIAlertAction(title: "Aceptar", style: .default) { (action:UIAlertAction) in
+                
+                self.ref.child("users/\(self.userId!)/appointment/cites/\(self.citas[indexPath.row].timestamp)").removeValue()
+                
+                self.citas.remove(at: indexPath.row)
+                
+                tableView.beginUpdates()
+                tableView.deleteRows(at: [indexPath], with: .automatic)
+                tableView.endUpdates()
+
+            }
+            
+            let action2 = UIAlertAction(title: "Cancelar", style: .destructive) { (action:UIAlertAction) in
+            }
+            
+            alertController.addAction(action1)
+            alertController.addAction(action2)
+            self.present(alertController, animated: true, completion: nil)
+            
+        }
+        
+        let edit = UITableViewRowAction(style: .normal, title: "Editar") { (action, indexPath) in
+            // share item at indexPath
+        }
+        
+        edit.backgroundColor = UIColor.blue
+        
+        return [delete, edit]
+    }
+    
     func initAppointment() {
         
         let urlAppointment = "users/\(userId!)/appointment/cites"
         
         ref.child(urlAppointment).observeSingleEvent(of: .value) { (snapshot) in
-            let appointment:Appointment = Appointment()
             
             let dicAppointment = snapshot.value as? NSDictionary
             
             if dicAppointment != nil {
                 for idCita in dicAppointment!.allKeys {
+                    
+                    let timestampString:String = idCita as! String
+                    
+                    let timestamp:Int64 = Int64(timestampString)!
                     
                     self.ref.child("\(urlAppointment)/\(idCita)").observeSingleEvent(of: .value) { (snapshot) in
                         let value = snapshot.value as? NSDictionary
@@ -220,9 +261,14 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
                             } else {
                                 typeEnum = "Otro especialista"
                             }
+                            let appointment:Appointment = Appointment()
+                            
                             appointment.typeEnum = typeEnum
                             appointment.citeTimestamp = citesTimestamp
+                            appointment.timestamp = timestamp
+                            
                             self.citas.append(appointment)
+                            
                             let indexPath1 = IndexPath(row: self.citas.count-1, section: 0)
                             self.tvAppointment.beginUpdates()
                             self.tvAppointment.insertRows(at: [indexPath1], with: UITableViewRowAnimation.automatic)
