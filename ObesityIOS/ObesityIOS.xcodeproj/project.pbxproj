@@ -42,6 +42,9 @@
 		742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */; };
 		742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */; };
 		742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */; };
+		742E2DF820C674FA00486803 /* IntroMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E2DF720C674FA00486803 /* IntroMedicationViewController.swift */; };
+		742E2DFA20C6751200486803 /* MoreInfoMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E2DF920C6751200486803 /* MoreInfoMedicationViewController.swift */; };
+		742E2DFC20C6758D00486803 /* ListItemMedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E2DFB20C6758D00486803 /* ListItemMedicationTableViewCell.swift */; };
 		743B66BA2080867A00ADA83D /* logo_complete.png in Resources */ = {isa = PBXBuildFile; fileRef = 743B66B92080867A00ADA83D /* logo_complete.png */; };
 		7447431E20A19940005C6ACA /* user_avatar.png in Resources */ = {isa = PBXBuildFile; fileRef = 7447431D20A19940005C6ACA /* user_avatar.png */; };
 		7447432020A1B14E005C6ACA /* calendar_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 7447431F20A1B14D005C6ACA /* calendar_icon.png */; };
@@ -138,6 +141,9 @@
 		742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes1AssistantController.swift; sourceTree = "<group>"; };
 		742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes2AssistantController.swift; sourceTree = "<group>"; };
 		742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetesMedicacionPrescritaController.swift; sourceTree = "<group>"; };
+		742E2DF720C674FA00486803 /* IntroMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroMedicationViewController.swift; sourceTree = "<group>"; };
+		742E2DF920C6751200486803 /* MoreInfoMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoMedicationViewController.swift; sourceTree = "<group>"; };
+		742E2DFB20C6758D00486803 /* ListItemMedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemMedicationTableViewCell.swift; sourceTree = "<group>"; };
 		743B66B92080867A00ADA83D /* logo_complete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = logo_complete.png; path = ObesityIOS/Assets.xcassets/logo_complete.imageset/logo_complete.png; sourceTree = SOURCE_ROOT; };
 		7447431D20A19940005C6ACA /* user_avatar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = user_avatar.png; sourceTree = "<group>"; };
 		7447431F20A1B14D005C6ACA /* calendar_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = calendar_icon.png; sourceTree = "<group>"; };
@@ -218,6 +224,7 @@
 		740E1BD02085F62A00BF68FC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				742E2DF420C6747500486803 /* Medication */,
 				740FE10E20B6C51F00E216D6 /* MedicalTest */,
 				7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */,
 				744F2E3C2099A7C5002DFDA5 /* SignUpUser */,
@@ -385,6 +392,32 @@
 				742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */,
 			);
 			path = DiabetesAssistant;
+			sourceTree = "<group>";
+		};
+		742E2DF420C6747500486803 /* Medication */ = {
+			isa = PBXGroup;
+			children = (
+				742E2DF520C6749800486803 /* IntroMedication */,
+			);
+			path = Medication;
+			sourceTree = "<group>";
+		};
+		742E2DF520C6749800486803 /* IntroMedication */ = {
+			isa = PBXGroup;
+			children = (
+				742E2DF620C674CE00486803 /* ListItemMedication */,
+				742E2DF720C674FA00486803 /* IntroMedicationViewController.swift */,
+				742E2DF920C6751200486803 /* MoreInfoMedicationViewController.swift */,
+			);
+			path = IntroMedication;
+			sourceTree = "<group>";
+		};
+		742E2DF620C674CE00486803 /* ListItemMedication */ = {
+			isa = PBXGroup;
+			children = (
+				742E2DFB20C6758D00486803 /* ListItemMedicationTableViewCell.swift */,
+			);
+			path = ListItemMedication;
 			sourceTree = "<group>";
 		};
 		7447432120A1C3A8005C6ACA /* DoctorAppointmentCalendar */ = {
@@ -748,6 +781,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				742E2DFA20C6751200486803 /* MoreInfoMedicationViewController.swift in Sources */,
 				7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */,
 				748A96352091CFDE00364DCE /* FumadorAssistantController.swift in Sources */,
 				7412917320C543DB0006B7D0 /* EditAppointmentFormViewController.swift in Sources */,
@@ -755,6 +789,7 @@
 				742A461420AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift in Sources */,
 				748A96312091CDB200364DCE /* HuesosAssistantController.swift in Sources */,
 				7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */,
+				742E2DF820C674FA00486803 /* IntroMedicationViewController.swift in Sources */,
 				748A962F2091CD8600364DCE /* HigadoAssistantController.swift in Sources */,
 				7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
@@ -782,6 +817,7 @@
 				742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */,
 				748A96372091D0E500364DCE /* AlcoholAssistantController.swift in Sources */,
 				749A617820B2DBBD00C9824C /* CustomCell.swift in Sources */,
+				742E2DFC20C6758D00486803 /* ListItemMedicationTableViewCell.swift in Sources */,
 				7447432320A1C47D005C6ACA /* IntroDoctorAppointmentController.swift in Sources */,
 				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
 				7428FC7520B80A2F00027E96 /* DoctorAux.swift in Sources */,
