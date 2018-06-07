@@ -1024,9 +1024,9 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="21" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="dig-Tn-clu">
                                 <rect key="frame" x="16" y="106" width="288" height="352"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <mutableString key="text">Mediante esta sección podrás llevar el control de toda la medicación. el médico sabrá en todo momento qué medicamentos tienes prescritos y podrá indicarte nuevos fármacos sin tener que desplazarte a la consulta.
+                                <string key="text">Mediante esta sección podrás llevar el control de toda la medicación. el médico sabrá en todo momento qué medicamentos tienes prescritos y podrá indicarte nuevos fármacos sin tener que desplazarte a la consulta.
 
-Cuando accedes a la sección de medicación verás todos los fármacos que estás tomando y cuándo tienes la siguiente toma. Podrás modificar o eliminar esta medicación de tu lista cuando desees. Además, si el médico te sugiere a través de Preobar un nuevo fármaco, lo verás automáticamente en esta lista.  Para añadir una nueva medicación a tu lista. tan sólo debel pulsar el botón Nuevo que aparecerá en la esquina superior derecha, seleccionar el nombre del fármaco que quieres añadir y completar la información sobre las tomas y las dosis.</mutableString>
+Cuando accedes a la sección de medicación verás todos los fármacos que estás tomando y cuándo tienes la siguiente toma. Podrás modificar o eliminar esta medicación de tu lista cuando desees. Además, si el médico te sugiere a través de Preobar un nuevo fármaco, lo verás automáticamente en esta lista.  Para añadir una nueva medicación a tu lista. tan sólo debel pulsar el botón Nuevo que aparecerá en la esquina superior derecha, seleccionar el nombre del fármaco que quieres añadir y completar la información sobre las tomas y las dosis.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1081,17 +1081,17 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         <viewLayoutGuide key="safeArea" id="Cux-6q-ScP"/>
                     </view>
                     <connections>
-                        <segue destination="9g9-VF-5J2" kind="show" id="71q-t5-L23"/>
+                        <segue destination="9g9-VF-5J2" kind="show" identifier="toNewMedicationFormSegue" id="71q-t5-L23"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="77W-hg-vXy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5563" y="-3192"/>
         </scene>
-        <!--View Controller-->
+        <!--New Medication Form Base View Controller-->
         <scene sceneID="cNH-E1-X6F">
             <objects>
-                <viewController id="9g9-VF-5J2" sceneMemberID="viewController">
+                <viewController id="9g9-VF-5J2" customClass="NewMedicationFormBaseViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nwj-KM-NHv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1189,6 +1189,13 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Ss0-c2-edR"/>
                     </view>
+                    <connections>
+                        <segue destination="PDE-Na-aKH" kind="show" identifier="toDiariamenteXVecesSegue" id="bhm-H9-moW"/>
+                        <segue destination="5Qi-VL-1vc" kind="show" identifier="toDiariamenteXHorasSegue" id="Skg-c7-lCz"/>
+                        <segue destination="tnp-Yl-rBU" kind="show" identifier="toCadaXDiasSegue" id="LZv-Iv-ei3"/>
+                        <segue destination="7If-9g-noI" kind="show" identifier="toDiasDeLaSemanaSegue" id="DR8-PK-ZXr"/>
+                        <segue destination="rUc-Yj-gHf" kind="show" identifier="toXDiasDeDescansoSegue" id="OlL-e7-2Lu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7m1-j0-7KW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1926,7 +1933,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="16" y="234.5" width="288" height="317.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="134" id="guP-bx-6gV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="celda" rowHeight="134" id="guP-bx-6gV" customClass="ListItemMedicationTableViewCell" customModule="ObesityIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="288" height="134"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="guP-bx-6gV" id="H2u-ZV-9Hm">
@@ -1974,6 +1981,12 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                                 <constraint firstAttribute="trailingMargin" secondItem="8U7-b5-0xs" secondAttribute="trailing" constant="8" id="yCq-bN-e8l"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="lbDateSiguienteToma" destination="Of4-ca-Nks" id="q0Q-de-9W6"/>
+                                            <outlet property="lbDosis" destination="8U7-b5-0xs" id="fzZ-YN-lDw"/>
+                                            <outlet property="lbNombreMedicamento" destination="FDj-xP-sHm" id="9bR-AW-cru"/>
+                                            <outlet property="lbSiguienteToma" destination="Gxk-Mu-K3p" id="11g-j0-rMZ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -1997,7 +2010,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         <viewLayoutGuide key="safeArea" id="RnN-gN-5Ji"/>
                     </view>
                     <connections>
+                        <outlet property="btnMoreInfo" destination="7hz-VG-V9h" id="yeX-vJ-ciY"/>
+                        <outlet property="lbInfoMedication" destination="T21-Up-liQ" id="DK1-me-IVb"/>
+                        <outlet property="tvMedication" destination="TbJ-cv-Hht" id="3IF-0z-Vnb"/>
                         <segue destination="MAT-bd-lzf" kind="show" id="2ip-UU-WMp"/>
+                        <segue destination="hIC-39-cqB" kind="show" identifier="toChooseNewMedicationSegue" id="x3x-af-cuz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2v8-22-N4c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -4668,7 +4685,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tHE-d9-TM2"/>
+        <segue reference="2ip-UU-WMp"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>

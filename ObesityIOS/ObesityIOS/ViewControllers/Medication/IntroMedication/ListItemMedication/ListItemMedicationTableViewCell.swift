@@ -9,6 +9,11 @@
 import UIKit
 
 class ListItemMedicationTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var lbNombreMedicamento: UILabel!
+    @IBOutlet weak var lbSiguienteToma: UILabel!
+    @IBOutlet weak var lbDateSiguienteToma: UILabel!
+    @IBOutlet weak var lbDosis: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()

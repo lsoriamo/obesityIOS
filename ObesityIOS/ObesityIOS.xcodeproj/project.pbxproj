@@ -37,6 +37,14 @@
 		7428FC7520B80A2F00027E96 /* DoctorAux.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7428FC7420B80A2F00027E96 /* DoctorAux.swift */; };
 		742A460D20AEB40300C5A9B6 /* Appointment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A460C20AEB40300C5A9B6 /* Appointment.swift */; };
 		742A461420AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742A461320AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift */; };
+		742B609F20C91257008E4849 /* NewMedicationFormBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B609E20C91257008E4849 /* NewMedicationFormBaseViewController.swift */; };
+		742B60A220C9156C008E4849 /* DiariamenteXVecesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60A120C9156C008E4849 /* DiariamenteXVecesViewController.swift */; };
+		742B60A420C91583008E4849 /* DiariamenteXHorasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60A320C91583008E4849 /* DiariamenteXHorasViewController.swift */; };
+		742B60A620C91590008E4849 /* CadaXDiasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60A520C91590008E4849 /* CadaXDiasViewController.swift */; };
+		742B60A920C915B5008E4849 /* DiasDeLaSemanaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60A820C915B5008E4849 /* DiasDeLaSemanaViewController.swift */; };
+		742B60AB20C915CB008E4849 /* XDiasDescansoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60AA20C915CB008E4849 /* XDiasDescansoViewController.swift */; };
+		742B60AE20C91924008E4849 /* Medication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60AD20C91924008E4849 /* Medication.swift */; };
+		742B60B020C91A95008E4849 /* MedicationSideEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742B60AF20C91A95008E4849 /* MedicationSideEffect.swift */; };
 		742BCCE5208F714000677A92 /* ImagenPerfilAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */; };
 		742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */; };
 		742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */; };
@@ -136,6 +144,14 @@
 		7428FC7420B80A2F00027E96 /* DoctorAux.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoctorAux.swift; sourceTree = "<group>"; };
 		742A460C20AEB40300C5A9B6 /* Appointment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appointment.swift; sourceTree = "<group>"; };
 		742A461320AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemAppointmentTableViewCell.swift; sourceTree = "<group>"; };
+		742B609E20C91257008E4849 /* NewMedicationFormBaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMedicationFormBaseViewController.swift; sourceTree = "<group>"; };
+		742B60A120C9156C008E4849 /* DiariamenteXVecesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiariamenteXVecesViewController.swift; sourceTree = "<group>"; };
+		742B60A320C91583008E4849 /* DiariamenteXHorasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiariamenteXHorasViewController.swift; sourceTree = "<group>"; };
+		742B60A520C91590008E4849 /* CadaXDiasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CadaXDiasViewController.swift; sourceTree = "<group>"; };
+		742B60A820C915B5008E4849 /* DiasDeLaSemanaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiasDeLaSemanaViewController.swift; sourceTree = "<group>"; };
+		742B60AA20C915CB008E4849 /* XDiasDescansoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDiasDescansoViewController.swift; sourceTree = "<group>"; };
+		742B60AD20C91924008E4849 /* Medication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medication.swift; sourceTree = "<group>"; };
+		742B60AF20C91A95008E4849 /* MedicationSideEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicationSideEffect.swift; sourceTree = "<group>"; };
 		742BCCE4208F714000677A92 /* ImagenPerfilAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagenPerfilAssistantController.swift; sourceTree = "<group>"; };
 		742BCCE6208F73A700677A92 /* HipertensionAssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HipertensionAssistantController.swift; sourceTree = "<group>"; };
 		742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes1AssistantController.swift; sourceTree = "<group>"; };
@@ -273,6 +289,7 @@
 		74178BD6207CAF1A00E0BAC3 /* entities */ = {
 			isa = PBXGroup;
 			children = (
+				742B60AC20C91914008E4849 /* medication */,
 				74A329EA20BECC12002EAB35 /* medicalTest */,
 				742A460B20AEB37B00C5A9B6 /* appointment */,
 				74178BD7207CAF8800E0BAC3 /* user */,
@@ -384,6 +401,36 @@
 			path = ListViewAppointment;
 			sourceTree = "<group>";
 		};
+		742B609D20C9108A008E4849 /* NewMedicationForm */ = {
+			isa = PBXGroup;
+			children = (
+				742B60A020C91281008E4849 /* NewMedicationFormParts */,
+				742B609E20C91257008E4849 /* NewMedicationFormBaseViewController.swift */,
+			);
+			path = NewMedicationForm;
+			sourceTree = "<group>";
+		};
+		742B60A020C91281008E4849 /* NewMedicationFormParts */ = {
+			isa = PBXGroup;
+			children = (
+				742B60A120C9156C008E4849 /* DiariamenteXVecesViewController.swift */,
+				742B60A320C91583008E4849 /* DiariamenteXHorasViewController.swift */,
+				742B60A520C91590008E4849 /* CadaXDiasViewController.swift */,
+				742B60A820C915B5008E4849 /* DiasDeLaSemanaViewController.swift */,
+				742B60AA20C915CB008E4849 /* XDiasDescansoViewController.swift */,
+			);
+			path = NewMedicationFormParts;
+			sourceTree = "<group>";
+		};
+		742B60AC20C91914008E4849 /* medication */ = {
+			isa = PBXGroup;
+			children = (
+				742B60AD20C91924008E4849 /* Medication.swift */,
+				742B60AF20C91A95008E4849 /* MedicationSideEffect.swift */,
+			);
+			path = medication;
+			sourceTree = "<group>";
+		};
 		742BCCE8208F77D700677A92 /* DiabetesAssistant */ = {
 			isa = PBXGroup;
 			children = (
@@ -397,6 +444,7 @@
 		742E2DF420C6747500486803 /* Medication */ = {
 			isa = PBXGroup;
 			children = (
+				742B609D20C9108A008E4849 /* NewMedicationForm */,
 				742E2DF520C6749800486803 /* IntroMedication */,
 			);
 			path = Medication;
@@ -786,14 +834,19 @@
 				748A96352091CFDE00364DCE /* FumadorAssistantController.swift in Sources */,
 				7412917320C543DB0006B7D0 /* EditAppointmentFormViewController.swift in Sources */,
 				7448F744208DF04500B57340 /* SexAssistantController.swift in Sources */,
+				742B60A220C9156C008E4849 /* DiariamenteXVecesViewController.swift in Sources */,
 				742A461420AEB84500C5A9B6 /* ListItemAppointmentTableViewCell.swift in Sources */,
+				742B60A420C91583008E4849 /* DiariamenteXHorasViewController.swift in Sources */,
 				748A96312091CDB200364DCE /* HuesosAssistantController.swift in Sources */,
 				7448F74A208E260300B57340 /* TelefonoAssistantController.swift in Sources */,
+				742B60A920C915B5008E4849 /* DiasDeLaSemanaViewController.swift in Sources */,
 				742E2DF820C674FA00486803 /* IntroMedicationViewController.swift in Sources */,
 				748A962F2091CD8600364DCE /* HigadoAssistantController.swift in Sources */,
 				7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */,
+				742B60B020C91A95008E4849 /* MedicationSideEffect.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
 				744F2E3B2099A5F6002DFDA5 /* WaitConfirmationAssistantController.swift in Sources */,
+				742B609F20C91257008E4849 /* NewMedicationFormBaseViewController.swift in Sources */,
 				740FE11520B6C9F500E216D6 /* NewMedicalTestViewController.swift in Sources */,
 				74A329EC20BECC29002EAB35 /* MedicalTest.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
@@ -802,6 +855,8 @@
 				748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */,
 				744F2E3E2099A7F4002DFDA5 /* SignUpController.swift in Sources */,
 				740FE10D20B6AE8C00E216D6 /* NewAppointmentViewController.swift in Sources */,
+				742B60A620C91590008E4849 /* CadaXDiasViewController.swift in Sources */,
+				742B60AB20C915CB008E4849 /* XDiasDescansoViewController.swift in Sources */,
 				742BCCE7208F73A700677A92 /* HipertensionAssistantController.swift in Sources */,
 				74178BD9207CAFB000E0BAC3 /* User.swift in Sources */,
 				7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */,
@@ -815,6 +870,7 @@
 				748A96472091F74B00364DCE /* SeleccionDoctorAssistantController.swift in Sources */,
 				748A963B2091D16300364DCE /* TratamientoReflujoAssistantController.swift in Sources */,
 				742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */,
+				742B60AE20C91924008E4849 /* Medication.swift in Sources */,
 				748A96372091D0E500364DCE /* AlcoholAssistantController.swift in Sources */,
 				749A617820B2DBBD00C9824C /* CustomCell.swift in Sources */,
 				742E2DFC20C6758D00486803 /* ListItemMedicationTableViewCell.swift in Sources */,

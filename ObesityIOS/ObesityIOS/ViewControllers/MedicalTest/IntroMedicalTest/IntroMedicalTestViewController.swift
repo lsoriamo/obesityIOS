@@ -30,9 +30,6 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
         
         ref = Database.database().reference()
         
-        userId = UserDefaults.standard.string(forKey: "userId")
-        print("ID USER: \(userId!)")
-        
         initAppointment();
         
         self.tvPruebaMedica.delegate = self;
