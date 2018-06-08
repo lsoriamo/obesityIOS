@@ -24,6 +24,8 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
     
     var tiempoQueQueda:[String] = []
     
+    var isSomeDate = false
+    
     
 
     
@@ -59,17 +61,63 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         let cantidadDosis:String = parts[0]
         let tipoDosis:String = parts[1]
         
-        if self.medicaciones[indexPath.row].days.contains(":::") {
-            
-            tiempoQueQueda = self.medicaciones[indexPath.row].days.components(separatedBy: ":::")
+        if self.medicaciones[indexPath.row].days == "" {
             
         } else {
             
-            tiempoQueQueda.append(self.medicaciones[indexPath.row].days)
-            
-            
+            if self.medicaciones[indexPath.row].days.contains(":::") {
+                
+                tiempoQueQueda = self.medicaciones[indexPath.row].days.components(separatedBy: ":::")
+                
+                repeat {
+                    
+                    for fecha in tiempoQueQueda {
+                        
+                        var fechaTimestamp = Double(fecha)
+                        
+                        let currentDate = Date()
+                        let currentDateTimestamp:Double = Double(currentDate.timeIntervalSince1970)
+                        
+                        if fechaTimestamp! > currentDateTimestamp {
+                            
+                            let fechaDate = Date(timeIntervalSince1970: fechaTimestamp!)
+                            let calendar = Calendar(identifier: .gregorian)
+                            
+                            let hourFecha = calendar.component(.hour, from: fechaDate)
+                            let minuteFecha = calendar.component(.minute, from: fechaDate)
+                            let secondFecha = calendar.component(.second, from: fechaDate)
+                            
+                            let secondTotalesFecha = (hourFecha * 3600) + (minuteFecha * 60) + secondFecha
+                            
+                            let hourCurrent = calendar.component(.hour, from: currentDate)
+                            let minuteCurrent = calendar.component(.minute, from: currentDate)
+                            let secondCurrent = calendar.component(.second, from: currentDate)
+                            
+                            let secondTotalesCurrent = (hourCurrent*3600) + (minuteCurrent*60) + secondCurrent
+                            
+                            let diferenciaSegundos:Double = Double(secondTotalesFecha - secondTotalesCurrent)
+                            
+                            let diferenciaDate = Date(timeIntervalSince1970: diferenciaSegundos)
+                            
+                            let hourDiferencia = calendar.component(.hour, from: diferenciaDate)
+                            let minuteDirefencia = calendar.component(.minute, from: diferenciaDate)
+                            
+                            isSomeDate = true
+                            break
+                        }
+                    }
+                    
+                    if !isSomeDate {
+//                        LÓGICA PARA SUMARLE UN DÍA AL FECHATIMESTAMP
+                    }
+                    
+                } while !isSomeDate
+                
+            } else {
+                
+                tiempoQueQueda.append(self.medicaciones[indexPath.row].days)
+            }
         }
-        
         
         
         celda.lbDateSiguienteToma.text = fechaMedicacionStringFormatter
@@ -79,22 +127,23 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         return celda;
     }
     
-    func comprobarFechaDeTomaPastilla(currentDate:Date, nextDate:Date) -> Int64 {
+    func comprobarFechaDeTomaPastilla(currentDate:Date, nextDate:Date) -> Date {
         
         let calendar = Calendar.current
+        var dateComponent = DateComponents()
         
-        let day = calendar.component(.day, from: currentDate)
-        let month = calendar.component(.month, from: currentDate)
-        let year = calendar.component(.year, from: currentDate)
+        dateComponent.day = calendar.component(.day, from: currentDate)
+        dateComponent.month = calendar.component(.month, from: currentDate)
+        dateComponent.year = calendar.component(.year, from: currentDate)
         
-        let hour = calendar.component(.hour, from: currentDate)
-        let minute = calendar.component(.minute, from: currentDate)
-        let second = calendar.component(.second, from: currentDate)
+        dateComponent.hour = calendar.component(.hour, from: nextDate)
+        dateComponent.minute = calendar.component(.minute, from: nextDate)
+        dateComponent.second = calendar.component(.second, from: nextDate)
         
+        let dateFrankestein:Date = dateComponent.date!
         
+        return dateFrankestein
         
-        
-
     }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
