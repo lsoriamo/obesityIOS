@@ -30,6 +30,8 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
         
         ref = Database.database().reference()
         
+        userId = UserDefaults.standard.string(forKey: "userId")
+        
         initAppointment();
         
         self.tvPruebaMedica.delegate = self;
@@ -110,7 +112,7 @@ class IntroMedicalTestViewController: UIViewController, UITableViewDelegate, UIT
         
         let urlMedicalTest = "users/\(userId!)/medical_tests/cites"
         
-        ref.child("users/\(userId!)/medical_tests/cites").observeSingleEvent(of: .value) { (snapshot) in
+        ref.child(urlMedicalTest).observeSingleEvent(of: .value) { (snapshot) in
             
             let dicMedicalTest = snapshot.value as? NSDictionary
             
