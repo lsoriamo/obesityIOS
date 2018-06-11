@@ -79,11 +79,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                 
             }
             
-            
-            
             credentials = GoogleAuthProvider.credential(withIDToken: user.authentication.idToken, accessToken: user.authentication.accessToken)
-            
-
             
             Auth.auth().signInAndRetrieveData(with: credentials!, completion: { (user, error) in
                 if let err = error {
@@ -93,7 +89,6 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                 
                 let userId = user?.user.uid
                                 
-                
                 UserDefaults.standard.set(userId, forKey: "userId")
                 
             })
@@ -103,7 +98,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
             UserDefaults.standard.set(email, forKey: "email")
             UserDefaults.standard.set(image, forKey: "imageURL")
             
-            self.performSegue(withIdentifier: "toPruebasMedicasSegue", sender: nil)
+            self.performSegue(withIdentifier: "toIntroMedicationSegue", sender: nil)
         }
     }
     
@@ -153,7 +148,7 @@ class ViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate{
                 
                 UserDefaults.standard.set(user!.user.uid, forKey: "userId")
                 
-                self.performSegue(withIdentifier: "toIntroDoctorAppointmentSegue", sender: nil)
+                self.performSegue(withIdentifier: "toIntroMedicationSegue", sender: nil)
                 
             }
         }

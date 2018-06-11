@@ -35,6 +35,7 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
+        print("USERID: ",userId!)
         
         initMedication();
         
@@ -52,6 +53,10 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         
         var parts:[String] = self.medicaciones[indexPath.row].dosage.components(separatedBy: ":::")
         
+        print("DOSAGE: ", self.medicaciones[indexPath.row].dosage)
+        
+        print("Cantidad: \(parts[0]), tipo \(parts[1])")
+        
         let cantidadDosis:String = parts[0]
         let tipoDosis:String = parts[1]
         
@@ -63,7 +68,9 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
                 
                 tiempoQueQueda = self.medicaciones[indexPath.row].days.components(separatedBy: ":::")
                 
-                var currentDate = Date()
+                let currentDate = Date()
+                var fechaTimestamp:Double = 0
+                var fechaDate = Date(timeIntervalSince1970: Double(tiempoQueQueda[0])! / 1000)
                 
                 var hourDiferencia = 0
                 var minuteDirefencia = 0
@@ -72,13 +79,13 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
                     
                     for fecha in tiempoQueQueda {
                         
-                        let fechaTimestamp = Double(fecha)
+                        fechaTimestamp = fechaDate.timeIntervalSince1970
                         
                         let currentDateTimestamp:Double = Double(currentDate.timeIntervalSince1970)
                         
-                        if fechaTimestamp! > currentDateTimestamp {
+                        if fechaTimestamp > currentDateTimestamp {
                             
-                            let fechaDate = Date(timeIntervalSince1970: fechaTimestamp!)
+                            let fechaDate = Date(timeIntervalSince1970: fechaTimestamp)
                             let calendar = Calendar(identifier: .gregorian)
                             
                             let hourFecha = calendar.component(.hour, from: fechaDate)
@@ -119,7 +126,7 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
                         
                         dateComponent.day = dayToAdd
                         
-                        currentDate = Calendar.current.date(byAdding: dateComponent, to: currentDate)!
+                        fechaDate = Calendar.current.date(byAdding: dateComponent, to: fechaDate)!
                     }
                     
                 } while !isSomeDate
@@ -148,18 +155,23 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
                 
                 tiempoQueQueda.append(self.medicaciones[indexPath.row].days)
                 
-                var currentDate = Date()
+                let currentDate = Date()
+                var fechaTimestamp:Double = 0
+                var fechaDate = Date(timeIntervalSince1970: Double(tiempoQueQueda[0])! / 1000)
                 
                 var hourDiferencia = 0
                 var minuteDirefencia = 0
                 
                 repeat{
                     
-                    let fechaTimestamp = Double(tiempoQueQueda[0])
-                    let currentTimestamp = Double(currentDate.timeIntervalSince1970)
+                    fechaTimestamp = fechaDate.timeIntervalSince1970
+                    print("FECHATIMESTAMP: ",fechaTimestamp)
                     
-                    if fechaTimestamp! > currentTimestamp {
-                        let fechaDate = Date(timeIntervalSince1970: fechaTimestamp!)
+                    let currentTimestamp = Double(currentDate.timeIntervalSince1970)
+                    print("FECHACURRENTTIMESTAMP: ",currentTimestamp)
+                    
+                    if fechaTimestamp > currentTimestamp {
+                        let fechaDate = Date(timeIntervalSince1970: fechaTimestamp)
                         let calendar = Calendar(identifier: .gregorian)
                         
                         let hourFecha = calendar.component(.hour, from: fechaDate)
@@ -191,6 +203,17 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
                         isSomeDate = true
                     }
                     
+                    if !isSomeDate {
+                        
+                        let dayToAdd = 1
+                        var dateComponent = DateComponents()
+                        
+                        dateComponent.day = dayToAdd
+                        
+                        fechaDate = Calendar.current.date(byAdding: dateComponent, to: fechaDate)!
+                        print(fechaDate)
+                    }
+                    
                 } while !isSomeDate
                 
                 if hourDiferencia == 0 && minuteDirefencia == 0{
@@ -216,29 +239,38 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         
         
         celda.lbNombreMedicamento.text = "\(self.medicaciones[indexPath.row].medicine)"
-        celda.lbDosis.text = "Dosis: \(cantidadDosis) \(tipoDosis)"
+        
+        var unidadDosis = ""
+        
+        if tipoDosis == "0" {
+            unidadDosis = "pastilla/s"
+        } else if tipoDosis == "1" {
+            unidadDosis = "gota/s"
+        } else if tipoDosis == "2" {
+            unidadDosis = "ampolla/s"
+        } else if tipoDosis == "3" {
+            unidadDosis = "aplicación/es"
+        } else if tipoDosis == "4" {
+            unidadDosis = "mililitro"
+        } else if tipoDosis == "5" {
+            unidadDosis = "gramo/s"
+        } else if tipoDosis == "6" {
+            unidadDosis = "supositorio/s"
+        } else if tipoDosis == "7" {
+            unidadDosis = "pieza/s"
+        } else if tipoDosis == "8" {
+            unidadDosis = "unidad/es"
+        } else if tipoDosis == "9" {
+            unidadDosis = "miligramo/s"
+        } else if tipoDosis == "10" {
+            unidadDosis = "cápsula/s"
+        } else {
+            unidadDosis = "inhalación/es"
+        }
+        celda.lbDosis.text = "Dosis: \(cantidadDosis) \(unidadDosis)"
         
         return celda;
     }
-    
-//    func comprobarFechaDeTomaPastilla(currentDate:Date, nextDate:Date) -> Date {
-//
-//        let calendar = Calendar.current
-//        var dateComponent = DateComponents()
-//
-//        dateComponent.day = calendar.component(.day, from: currentDate)
-//        dateComponent.month = calendar.component(.month, from: currentDate)
-//        dateComponent.year = calendar.component(.year, from: currentDate)
-//
-//        dateComponent.hour = calendar.component(.hour, from: nextDate)
-//        dateComponent.minute = calendar.component(.minute, from: nextDate)
-//        dateComponent.second = calendar.component(.second, from: nextDate)
-//
-//        let dateFrankestein:Date = dateComponent.date!
-//
-//        return dateFrankestein
-//
-//    }
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         

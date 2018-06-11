@@ -41,7 +41,7 @@ class CalendarAppointmentController: UIViewController, UITableViewDelegate, UITa
         ref = Database.database().reference()
         
         userId = UserDefaults.standard.string(forKey: "userId")
-        
+        print("USERID: ",userId!)
 
         initAppointment();
         
