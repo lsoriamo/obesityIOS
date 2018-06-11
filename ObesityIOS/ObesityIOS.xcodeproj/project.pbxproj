@@ -50,6 +50,7 @@
 		742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */; };
 		742BCCEC208F781500677A92 /* Diabetes2AssistantController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */; };
 		742BCCEF208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */; };
+		742BFFE620CEBFF2006CEC87 /* NewChooseMedicationFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BFFE520CEBFF2006CEC87 /* NewChooseMedicationFormViewController.swift */; };
 		742E2DF820C674FA00486803 /* IntroMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E2DF720C674FA00486803 /* IntroMedicationViewController.swift */; };
 		742E2DFA20C6751200486803 /* MoreInfoMedicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E2DF920C6751200486803 /* MoreInfoMedicationViewController.swift */; };
 		742E2DFC20C6758D00486803 /* ListItemMedicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742E2DFB20C6758D00486803 /* ListItemMedicationTableViewCell.swift */; };
@@ -157,6 +158,7 @@
 		742BCCE9208F77FA00677A92 /* Diabetes1AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes1AssistantController.swift; sourceTree = "<group>"; };
 		742BCCEB208F781500677A92 /* Diabetes2AssistantController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diabetes2AssistantController.swift; sourceTree = "<group>"; };
 		742BCCEE208F783F00677A92 /* DiabetesMedicacionPrescritaController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiabetesMedicacionPrescritaController.swift; sourceTree = "<group>"; };
+		742BFFE520CEBFF2006CEC87 /* NewChooseMedicationFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChooseMedicationFormViewController.swift; sourceTree = "<group>"; };
 		742E2DF720C674FA00486803 /* IntroMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroMedicationViewController.swift; sourceTree = "<group>"; };
 		742E2DF920C6751200486803 /* MoreInfoMedicationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoMedicationViewController.swift; sourceTree = "<group>"; };
 		742E2DFB20C6758D00486803 /* ListItemMedicationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemMedicationTableViewCell.swift; sourceTree = "<group>"; };
@@ -406,6 +408,7 @@
 			children = (
 				742B60A020C91281008E4849 /* NewMedicationFormParts */,
 				742B609E20C91257008E4849 /* NewMedicationFormBaseViewController.swift */,
+				742BFFE520CEBFF2006CEC87 /* NewChooseMedicationFormViewController.swift */,
 			);
 			path = NewMedicationForm;
 			sourceTree = "<group>";
@@ -874,6 +877,7 @@
 				748A96372091D0E500364DCE /* AlcoholAssistantController.swift in Sources */,
 				749A617820B2DBBD00C9824C /* CustomCell.swift in Sources */,
 				742E2DFC20C6758D00486803 /* ListItemMedicationTableViewCell.swift in Sources */,
+				742BFFE620CEBFF2006CEC87 /* NewChooseMedicationFormViewController.swift in Sources */,
 				7447432320A1C47D005C6ACA /* IntroDoctorAppointmentController.swift in Sources */,
 				742BCCEA208F77FA00677A92 /* Diabetes1AssistantController.swift in Sources */,
 				7428FC7520B80A2F00027E96 /* DoctorAux.swift in Sources */,

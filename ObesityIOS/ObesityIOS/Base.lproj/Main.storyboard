@@ -1045,10 +1045,10 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
             </objects>
             <point key="canvasLocation" x="4357.5" y="-3530.2816901408451"/>
         </scene>
-        <!--View Controller-->
+        <!--New Choose Medication Form View Controller-->
         <scene sceneID="qxu-ME-i9d">
             <objects>
-                <viewController id="hIC-39-cqB" sceneMemberID="viewController">
+                <viewController id="hIC-39-cqB" customClass="NewChooseMedicationFormViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fd6-p8-jAV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1058,7 +1058,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <items>
                                     <navigationItem title="Nueva medicación" id="Z0D-QJ-Kzv">
                                         <barButtonItem key="leftBarButtonItem" title="Atrás" id="UEp-9A-1ug"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="Uay-hF-Chd"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="Uay-hF-Chd">
+                                            <connections>
+                                                <action selector="actionBtnSiguiente:" destination="hIC-39-cqB" id="FqA-zn-60e"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1081,6 +1085,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         <viewLayoutGuide key="safeArea" id="Cux-6q-ScP"/>
                     </view>
                     <connections>
+                        <outlet property="tfNombreMedicamento" destination="6F2-aY-1HX" id="6Mc-GD-f7i"/>
                         <segue destination="9g9-VF-5J2" kind="show" identifier="toNewMedicationFormSegue" id="71q-t5-L23"/>
                     </connections>
                 </viewController>
@@ -1919,7 +1924,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                                 <segue destination="BYZ-38-t0r" kind="show" id="69Z-1O-Mqp"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Nuevo" id="Ncj-c0-E1S"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Nuevo" id="Ncj-c0-E1S">
+                                            <connections>
+                                                <action selector="actionBtnSiguiente:" destination="XRJ-fu-dkU" id="JY8-e3-oaB"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
