@@ -347,7 +347,7 @@ Una vez tengas los resultados, podrás indicar que ya los has recogido y sacar u
                                 <state key="normal" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected.png"/>
                                 <connections>
-                                    <action selector="actionCheckBoxTapped:" destination="X2v-Bz-42Y" eventType="touchUpInside" id="3PM-ls-gRb"/>
+                                    <action selector="actionCheckBoxTapped:" destination="X2v-Bz-42Y" eventType="touchUpInside" id="9iE-U7-Btw"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No volver a mostrar esta información" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JJc-D7-dx4">
@@ -1057,7 +1057,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="Z0D-QJ-Kzv">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="UEp-9A-1ug"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="UEp-9A-1ug">
+                                            <connections>
+                                                <segue destination="XRJ-fu-dkU" kind="show" id="SVV-8O-YdL"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Siguiente" id="Uay-hF-Chd">
                                             <connections>
                                                 <action selector="actionBtnSiguiente:" destination="hIC-39-cqB" id="FqA-zn-60e"/>
@@ -1105,8 +1109,16 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="bwj-mQ-LD0">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="cWW-Pq-mxw"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="5tz-U4-1e6"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="cWW-Pq-mxw">
+                                            <connections>
+                                                <segue destination="hIC-39-cqB" kind="show" id="WmT-Qa-vIq"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Siguiente" id="5tz-U4-1e6">
+                                            <connections>
+                                                <action selector="actionBtnSiguiente:" destination="9g9-VF-5J2" id="DPb-VC-Nfk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1140,7 +1152,10 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="041-iU-F6e">
                                 <rect key="frame" x="16" y="367" width="288" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <state key="normal" title="Sin fecha de finalización"/>
+                                <state key="normal" title="Asignar fecha de finalización"/>
+                                <connections>
+                                    <action selector="actionBtnAsignarFecha:" destination="9g9-VF-5J2" eventType="touchUpInside" id="UVR-s0-bGN"/>
+                                </connections>
                             </button>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="fqh-oz-ZE0">
                                 <rect key="frame" x="16" y="413" width="288" height="90"/>
@@ -1154,6 +1169,9 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MLG-53-lu4">
                                 <rect key="frame" x="16" y="519" width="288" height="30"/>
                                 <state key="normal" title="Cancelar"/>
+                                <connections>
+                                    <action selector="actionBtnCancelar:" destination="9g9-VF-5J2" eventType="touchUpInside" id="PGn-NU-PyT"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha de inicio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVa-bO-wtJ">
                                 <rect key="frame" x="16" y="211" width="288" height="17"/>
@@ -1195,6 +1213,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         <viewLayoutGuide key="safeArea" id="Ss0-c2-edR"/>
                     </view>
                     <connections>
+                        <outlet property="btnAsignarFechaFinalizacion" destination="041-iU-F6e" id="ZXY-cO-Uah"/>
+                        <outlet property="btnCancelarFechaFinalizacion" destination="MLG-53-lu4" id="g4M-Eb-TeC"/>
+                        <outlet property="dpFechaFinalizacion" destination="fqh-oz-ZE0" id="dOD-bc-NVZ"/>
+                        <outlet property="dpFechaInicio" destination="wKt-6G-ax5" id="H0p-vR-V04"/>
+                        <outlet property="pvModoAdministracion" destination="DA3-Gf-DIm" id="BjL-rm-bMN"/>
                         <segue destination="PDE-Na-aKH" kind="show" identifier="toDiariamenteXVecesSegue" id="bhm-H9-moW"/>
                         <segue destination="5Qi-VL-1vc" kind="show" identifier="toDiariamenteXHorasSegue" id="Skg-c7-lCz"/>
                         <segue destination="tnp-Yl-rBU" kind="show" identifier="toCadaXDiasSegue" id="LZv-Iv-ei3"/>
@@ -1206,10 +1229,10 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
             </objects>
             <point key="canvasLocation" x="6474.375" y="-3192.2535211267605"/>
         </scene>
-        <!--View Controller-->
+        <!--CadaX Dias View Controller-->
         <scene sceneID="qKZ-5B-wub">
             <objects>
-                <viewController id="tnp-Yl-rBU" sceneMemberID="viewController">
+                <viewController id="tnp-Yl-rBU" customClass="CadaXDiasViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GV9-mx-ZbY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1218,40 +1241,35 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="Fyn-SY-ndE">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="2uX-2t-JES"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="2uX-2t-JES">
+                                            <connections>
+                                                <segue destination="9g9-VF-5J2" kind="show" id="f3v-Ua-7wR"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="gIa-vc-6rv"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ0-h6-Zf7">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar cada X días" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZ0-h6-Zf7">
                                 <rect key="frame" x="16" y="80" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="jEj-0e-pUx">
-                                <rect key="frame" x="16" y="105" width="288" height="125"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="3HH-iw-62E"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="549893269.19192696">
-                                    <!--2018-06-05 12:07:49 +0000-->
-                                </date>
-                            </datePicker>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dosis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLy-1z-Mam">
                                 <rect key="frame" x="16" y="293" width="136" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-EH-2fk">
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdd-EH-2fk">
                                 <rect key="frame" x="160" y="238" width="144" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="0OH-Vj-JZY"/>
                                     <constraint firstAttribute="width" constant="144" id="FBv-wB-meO"/>
                                 </constraints>
                             </pickerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc1-dD-Des">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horas de administración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mc1-dD-Des">
                                 <rect key="frame" x="16" y="384" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -1262,7 +1280,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <state key="normal" title="Añadir otra hora"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r18-ht-3Wo">
-                                <rect key="frame" x="16" y="447" width="288" height="69"/>
+                                <rect key="frame" x="16" y="447" width="288" height="113"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="5KF-a6-u5N">
@@ -1289,6 +1307,12 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Dx8-4R-wrg">
+                                <rect key="frame" x="16" y="105" width="288" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="YdT-NR-oys"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -1297,37 +1321,44 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <constraint firstItem="X6v-qA-FKh" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="6EY-Rd-4Ed"/>
                             <constraint firstItem="JlE-dO-kA0" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" id="7Y9-9r-ZgW"/>
                             <constraint firstItem="Mc1-dD-Des" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="9e6-nG-dgQ"/>
-                            <constraint firstItem="TLy-1z-Mam" firstAttribute="top" secondItem="jEj-0e-pUx" secondAttribute="bottom" constant="63" id="ALY-jG-v5z"/>
                             <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="r18-ht-3Wo" secondAttribute="trailing" constant="16" id="CuD-YV-j3m"/>
-                            <constraint firstItem="Gdd-EH-2fk" firstAttribute="top" secondItem="jEj-0e-pUx" secondAttribute="bottom" constant="8" id="GYg-nO-bbu"/>
                             <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="Gdd-EH-2fk" secondAttribute="trailing" constant="16" id="Lyj-bf-L1X"/>
                             <constraint firstItem="DZ0-h6-Zf7" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="NAQ-f5-bGw"/>
                             <constraint firstItem="JlE-dO-kA0" firstAttribute="top" secondItem="vvB-sz-a0h" secondAttribute="top" id="Nm8-cC-WkL"/>
                             <constraint firstItem="Mc1-dD-Des" firstAttribute="top" secondItem="Gdd-EH-2fk" secondAttribute="bottom" constant="8" id="PF8-eF-jgS"/>
                             <constraint firstItem="DZ0-h6-Zf7" firstAttribute="top" secondItem="JlE-dO-kA0" secondAttribute="bottom" constant="16" id="Pur-BJ-hZZ"/>
                             <constraint firstItem="JlE-dO-kA0" firstAttribute="trailing" secondItem="vvB-sz-a0h" secondAttribute="trailing" id="UKC-LT-p53"/>
+                            <constraint firstItem="Gdd-EH-2fk" firstAttribute="top" secondItem="Dx8-4R-wrg" secondAttribute="bottom" constant="8" id="Yvd-ib-6fZ"/>
                             <constraint firstItem="Gdd-EH-2fk" firstAttribute="leading" secondItem="TLy-1z-Mam" secondAttribute="trailing" constant="8" id="bjd-VG-5Gu"/>
                             <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="Mc1-dD-Des" secondAttribute="trailing" constant="16" id="c74-EX-e5c"/>
                             <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="DZ0-h6-Zf7" secondAttribute="trailing" constant="16" id="d70-Fv-mFF"/>
+                            <constraint firstItem="Dx8-4R-wrg" firstAttribute="top" secondItem="DZ0-h6-Zf7" secondAttribute="bottom" constant="8" id="dQH-rs-HFS"/>
                             <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="X6v-qA-FKh" secondAttribute="trailing" constant="16" id="gGM-0s-pmZ"/>
-                            <constraint firstItem="jEj-0e-pUx" firstAttribute="top" secondItem="DZ0-h6-Zf7" secondAttribute="bottom" constant="8" id="hfF-3S-bhr"/>
+                            <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="Dx8-4R-wrg" secondAttribute="trailing" constant="16" id="gSN-Dv-zog"/>
+                            <constraint firstItem="TLy-1z-Mam" firstAttribute="top" secondItem="Dx8-4R-wrg" secondAttribute="bottom" constant="63" id="gfI-bc-uG0"/>
                             <constraint firstItem="vvB-sz-a0h" firstAttribute="bottom" secondItem="r18-ht-3Wo" secondAttribute="bottom" constant="8" id="i54-YD-lcY"/>
-                            <constraint firstItem="jEj-0e-pUx" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="jjN-UF-NbG"/>
                             <constraint firstItem="TLy-1z-Mam" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="kJE-XJ-HIL"/>
-                            <constraint firstItem="vvB-sz-a0h" firstAttribute="trailing" secondItem="jEj-0e-pUx" secondAttribute="trailing" constant="16" id="l9H-9k-f4I"/>
+                            <constraint firstItem="Dx8-4R-wrg" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="yvj-jf-5iQ"/>
                             <constraint firstItem="r18-ht-3Wo" firstAttribute="leading" secondItem="vvB-sz-a0h" secondAttribute="leading" constant="16" id="zWd-oc-loi"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vvB-sz-a0h"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAnadirHora" destination="X6v-qA-FKh" id="7NK-1V-Uin"/>
+                        <outlet property="pvCadaXDias" destination="Dx8-4R-wrg" id="VJs-6D-WzV"/>
+                        <outlet property="pvUnidadDosis" destination="Gdd-EH-2fk" id="BCU-WD-Puf"/>
+                        <outlet property="tfNumeroDosis" destination="TLy-1z-Mam" id="NBK-ML-cgs"/>
+                        <outlet property="tvHoras" destination="r18-ht-3Wo" id="jJw-Sl-abI"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLP-1b-sGO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7472" y="-3192"/>
+            <point key="canvasLocation" x="7471.875" y="-3192.2535211267605"/>
         </scene>
-        <!--View Controller-->
+        <!--Dias De La Semana View Controller-->
         <scene sceneID="IgU-VN-Udt">
             <objects>
-                <viewController id="7If-9g-noI" sceneMemberID="viewController">
+                <viewController id="7If-9g-noI" customClass="DiasDeLaSemanaViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Iid-cp-qT1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1336,145 +1367,170 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="4k2-Ji-UAJ">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="00x-uO-yWI"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="00x-uO-yWI">
+                                            <connections>
+                                                <segue destination="9g9-VF-5J2" kind="show" id="Esm-KS-DY2"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="OcO-vt-2CP"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomas los siguientes días" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-qf-PNJ">
-                                <rect key="frame" x="16" y="36" width="288" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar los siguientes días" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSM-qf-PNJ">
+                                <rect key="frame" x="16" y="80" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="whs-Ol-aiH">
-                                <rect key="frame" x="16" y="69" width="20" height="20"/>
+                                <rect key="frame" x="16" y="113" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="5X6-cB-OfC"/>
                                     <constraint firstAttribute="height" constant="20" id="aLh-Oa-mrL"/>
                                 </constraints>
                                 <state key="normal" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="y5q-NT-io7"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lunes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kBC-bZ-d97">
-                                <rect key="frame" x="44" y="69" width="44" height="20"/>
+                                <rect key="frame" x="44" y="113" width="44" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qvf-fU-SbP">
-                                <rect key="frame" x="16" y="105" width="20" height="20"/>
+                                <rect key="frame" x="16" y="149" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="sPZ-SZ-kgZ"/>
                                     <constraint firstAttribute="width" constant="20" id="x9g-4y-nLM"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="Jha-fi-l4D"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Martes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ice-Yx-Qsr">
-                                <rect key="frame" x="44" y="105" width="51" height="20"/>
+                                <rect key="frame" x="44" y="149" width="51" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dos-n1-ybA">
-                                <rect key="frame" x="16" y="141" width="20" height="20"/>
+                                <rect key="frame" x="16" y="185" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="AoC-a3-mJC"/>
                                     <constraint firstAttribute="width" constant="20" id="Z2g-o4-ECm"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="1hE-Yw-lz7"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdq-Hf-k2C">
-                                <rect key="frame" x="16" y="177" width="20" height="20"/>
+                                <rect key="frame" x="16" y="221" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="5xI-aC-bsu"/>
                                     <constraint firstAttribute="height" constant="20" id="HEp-tQ-k3o"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="Rn3-x2-tRl"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyE-8C-H6M">
-                                <rect key="frame" x="206" y="69" width="20" height="20"/>
+                                <rect key="frame" x="206" y="113" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="NDh-Hu-A2z"/>
                                     <constraint firstAttribute="height" constant="20" id="bGw-cJ-Zyt"/>
                                 </constraints>
                                 <state key="normal" title="Button" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="eTj-UN-tZ6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrT-HD-JIg">
-                                <rect key="frame" x="206" y="105" width="20" height="20"/>
+                                <rect key="frame" x="206" y="149" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="dtd-8x-w2l"/>
                                     <constraint firstAttribute="width" constant="20" id="qhN-fo-Eon"/>
                                 </constraints>
                                 <state key="normal" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="L8X-zG-exh"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8R-Mw-eNw">
-                                <rect key="frame" x="206" y="141" width="20" height="20"/>
+                                <rect key="frame" x="206" y="185" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="4gb-Xs-M5c"/>
                                     <constraint firstAttribute="width" constant="20" id="5AQ-ji-2HR"/>
                                 </constraints>
                                 <state key="normal" image="ic_checkbox_default.png"/>
                                 <state key="selected" image="ic_checkbox_selected"/>
+                                <connections>
+                                    <action selector="actionCheckBoxTapped:" destination="7If-9g-noI" eventType="touchUpInside" id="P9F-NC-X1n"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Miércoles" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EwL-Rq-BCb">
-                                <rect key="frame" x="44" y="141" width="71" height="20"/>
+                                <rect key="frame" x="44" y="185" width="71" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Jueves" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gIk-so-IP3">
-                                <rect key="frame" x="44" y="177" width="54" height="21"/>
+                                <rect key="frame" x="44" y="221" width="54" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Viernes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nvl-nl-XjA">
-                                <rect key="frame" x="234" y="69" width="55" height="20"/>
+                                <rect key="frame" x="234" y="113" width="55" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sábado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9n8-FQ-phS">
-                                <rect key="frame" x="234" y="105" width="56" height="20"/>
+                                <rect key="frame" x="234" y="149" width="56" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Domingo" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRQ-qr-d43">
-                                <rect key="frame" x="234" y="141" width="66" height="20"/>
+                                <rect key="frame" x="234" y="185" width="66" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Z4N-Fy-el8">
-                                <rect key="frame" x="131" y="69" width="59" height="128"/>
+                                <rect key="frame" x="131" y="113" width="59" height="128"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HNJ-80-1oq">
-                                <rect key="frame" x="160" y="205" width="144" height="138"/>
+                                <rect key="frame" x="160" y="249" width="144" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="URY-8j-fpR"/>
                                     <constraint firstAttribute="width" constant="144" id="jpx-hL-sDx"/>
                                 </constraints>
                             </pickerView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Horas de administración" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bMF-DD-gOD">
-                                <rect key="frame" x="16" y="351" width="288" height="17"/>
+                                <rect key="frame" x="16" y="395" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K19-TV-803">
-                                <rect key="frame" x="16" y="376" width="288" height="30"/>
+                                <rect key="frame" x="16" y="420" width="288" height="30"/>
                                 <state key="normal" title="Añadir otra hora"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-1H-O04">
-                                <rect key="frame" x="16" y="414" width="288" height="102"/>
+                                <rect key="frame" x="16" y="458" width="288" height="102"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="hG0-2V-nLM">
@@ -1502,7 +1558,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 </prototypes>
                             </tableView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dosis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-zd-sVJ">
-                                <rect key="frame" x="16" y="259" width="136" height="30"/>
+                                <rect key="frame" x="16" y="303" width="136" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1567,15 +1623,28 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qQg-ZH-63h"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAnadirHora" destination="K19-TV-803" id="obi-KQ-Mgs"/>
+                        <outlet property="cbDomingo" destination="M8R-Mw-eNw" id="w6k-P5-7wm"/>
+                        <outlet property="cbJueves" destination="sdq-Hf-k2C" id="K0x-Ac-fD7"/>
+                        <outlet property="cbLunes" destination="whs-Ol-aiH" id="N4e-wN-iiR"/>
+                        <outlet property="cbMartes" destination="qvf-fU-SbP" id="PA3-8v-Z4M"/>
+                        <outlet property="cbMiercoles" destination="Dos-n1-ybA" id="EPo-Sa-Skv"/>
+                        <outlet property="cbSabado" destination="OrT-HD-JIg" id="lLA-xh-m6j"/>
+                        <outlet property="cbViernes" destination="vyE-8C-H6M" id="xdF-jk-z5j"/>
+                        <outlet property="pvUnidadDosis" destination="HNJ-80-1oq" id="lyK-Zx-HlY"/>
+                        <outlet property="tfNumeroDosis" destination="IOc-zd-sVJ" id="maW-9z-QCi"/>
+                        <outlet property="tvHoras" destination="LGY-1H-O04" id="ILb-G7-kOM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6wa-H2-zg1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7470" y="-2409.5070422535214"/>
         </scene>
-        <!--View Controller-->
+        <!--Dias Descanso View Controller-->
         <scene sceneID="QvK-I9-wvj">
             <objects>
-                <viewController id="rUc-Yj-gHf" sceneMemberID="viewController">
+                <viewController id="rUc-Yj-gHf" customClass="XDiasDescansoViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BAT-Y9-G2j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1584,7 +1653,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="pqU-FJ-rQZ">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="yUm-wj-F5z"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="yUm-wj-F5z">
+                                            <connections>
+                                                <segue destination="9g9-VF-5J2" kind="show" id="X5l-Fn-HpB"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="oWK-Vh-C7f"/>
                                     </navigationItem>
                                 </items>
@@ -1601,20 +1674,20 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-DG-XMP">
+                            <pickerView tag="3" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MY8-DG-XMP">
                                 <rect key="frame" x="160" y="274" width="144" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="Jcu-Xx-477"/>
                                     <constraint firstAttribute="width" constant="144" id="Nxu-CW-NN7"/>
                                 </constraints>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-KW-e37">
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tyt-KW-e37">
                                 <rect key="frame" x="16" y="105" width="288" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="cdS-h7-3ub"/>
                                 </constraints>
                             </pickerView>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ1-7s-p2U">
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RZ1-7s-p2U">
                                 <rect key="frame" x="16" y="206" width="288" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="XN4-vl-KFU"/>
@@ -1631,7 +1704,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <state key="normal" title="Añadir otra hora"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oKo-qb-60p">
-                                <rect key="frame" x="16" y="483" width="288" height="33"/>
+                                <rect key="frame" x="16" y="483" width="288" height="77"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="32" id="FlZ-FS-DMt">
@@ -1658,8 +1731,8 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nf7-p1-fpg">
-                                <rect key="frame" x="127" y="328" width="25" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Dosis" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nf7-p1-fpg">
+                                <rect key="frame" x="16" y="328" width="136" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1691,6 +1764,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <constraint firstItem="xk3-3a-9Me" firstAttribute="leading" secondItem="cRP-JQ-kOl" secondAttribute="leading" constant="16" id="iLg-jF-oT0"/>
                             <constraint firstItem="cRP-JQ-kOl" firstAttribute="trailing" secondItem="MY8-DG-XMP" secondAttribute="trailing" constant="16" id="idd-H5-faq"/>
                             <constraint firstItem="Nf7-p1-fpg" firstAttribute="top" secondItem="RZ1-7s-p2U" secondAttribute="bottom" constant="62" id="jx9-84-rnN"/>
+                            <constraint firstItem="Nf7-p1-fpg" firstAttribute="leading" secondItem="cRP-JQ-kOl" secondAttribute="leading" constant="16" id="lsM-KA-JZJ"/>
                             <constraint firstItem="tyt-KW-e37" firstAttribute="top" secondItem="4XO-wW-9qM" secondAttribute="bottom" constant="8" id="ohU-mO-Qd8"/>
                             <constraint firstItem="I4A-PR-uzE" firstAttribute="top" secondItem="xk3-3a-9Me" secondAttribute="bottom" constant="8" id="qEq-Re-uQZ"/>
                             <constraint firstItem="cRP-JQ-kOl" firstAttribute="trailing" secondItem="I4A-PR-uzE" secondAttribute="trailing" constant="16" id="tAH-p6-xUz"/>
@@ -1699,15 +1773,22 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cRP-JQ-kOl"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAnadirHora" destination="I4A-PR-uzE" id="cKV-dY-qZ7"/>
+                        <outlet property="pvDiasActivos" destination="tyt-KW-e37" id="V5u-ss-IYe"/>
+                        <outlet property="pvDiasDescanso" destination="RZ1-7s-p2U" id="CJW-d7-iCS"/>
+                        <outlet property="pvUnidadDosis" destination="MY8-DG-XMP" id="muA-S5-udB"/>
+                        <outlet property="tvHoras" destination="oKo-qb-60p" id="MyR-LR-UZ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RCl-An-K4d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7470" y="-1582"/>
         </scene>
-        <!--View Controller-->
+        <!--DiariamenteX Horas View Controller-->
         <scene sceneID="x1M-gu-k9h">
             <objects>
-                <viewController id="5Qi-VL-1vc" sceneMemberID="viewController">
+                <viewController id="5Qi-VL-1vc" customClass="DiariamenteXHorasViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e6a-eO-bae">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1716,18 +1797,22 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="zq7-xQ-jiK">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="CJO-jU-BMv"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="CJO-jU-BMv">
+                                            <connections>
+                                                <segue destination="9g9-VF-5J2" kind="show" id="W93-iq-b0J"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="6gt-bl-zUM"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar cada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdb-D6-dDZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomar cada X horas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdb-D6-dDZ">
                                 <rect key="frame" x="16" y="80" width="288" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zV3-bY-UTe">
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zV3-bY-UTe">
                                 <rect key="frame" x="16" y="105" width="288" height="105"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="105" id="tFS-7X-4By"/>
@@ -1748,7 +1833,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                     <!--2018-06-05 10:32:38 +0000-->
                                 </date>
                             </datePicker>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXP-e4-ow9">
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CXP-e4-ow9">
                                 <rect key="frame" x="160" y="372" width="144" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="2KK-u2-Luo"/>
@@ -1787,15 +1872,21 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NNM-We-QcH"/>
                     </view>
+                    <connections>
+                        <outlet property="dpPrimeraToma" destination="xfb-tS-Aim" id="Cbi-46-Jqs"/>
+                        <outlet property="pvCadaXHoras" destination="zV3-bY-UTe" id="lj0-QG-JO9"/>
+                        <outlet property="pvUnidadDosis" destination="CXP-e4-ow9" id="L6H-ci-7cE"/>
+                        <outlet property="tfNumeroDosis" destination="xfj-cB-86P" id="wYD-BA-aHs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hm8-Rd-7QW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7472" y="-3994"/>
         </scene>
-        <!--View Controller-->
+        <!--DiariamenteX Veces View Controller-->
         <scene sceneID="77s-hq-eiY">
             <objects>
-                <viewController id="PDE-Na-aKH" sceneMemberID="viewController">
+                <viewController id="PDE-Na-aKH" customClass="DiariamenteXVecesViewController" customModule="ObesityIOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RS3-c0-xL3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1804,7 +1895,11 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <rect key="frame" x="0.0" y="20" width="320" height="44"/>
                                 <items>
                                     <navigationItem title="Nueva medicación" id="a8b-lq-a8N">
-                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="KsI-wk-2R3"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Atrás" id="KsI-wk-2R3">
+                                            <connections>
+                                                <segue destination="9g9-VF-5J2" kind="show" id="STl-d0-BFU"/>
+                                            </connections>
+                                        </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Añadir" id="Z76-e6-Xgn"/>
                                     </navigationItem>
                                 </items>
@@ -1815,7 +1910,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <color key="textColor" red="0.27450980390000002" green="0.27450980390000002" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnj-fI-W9Y">
+                            <pickerView tag="1" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tnj-fI-W9Y">
                                 <rect key="frame" x="16" y="105" width="288" height="125"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="125" id="qn5-jP-spG"/>
@@ -1827,7 +1922,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-vw-TDe">
+                            <pickerView tag="2" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DvT-vw-TDe">
                                 <rect key="frame" x="160" y="238" width="144" height="138"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="138" id="A0N-8c-W1G"/>
@@ -1841,7 +1936,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eZ7-TB-YH9">
-                                <rect key="frame" x="16" y="447" width="288" height="69"/>
+                                <rect key="frame" x="16" y="447" width="288" height="113"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="46" id="jnM-YN-p55">
@@ -1902,6 +1997,13 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ihB-OV-sdZ"/>
                     </view>
+                    <connections>
+                        <outlet property="btnAnadirHora" destination="ASE-Xc-Hnc" id="69u-qX-tRS"/>
+                        <outlet property="pvNumeroVeces" destination="tnj-fI-W9Y" id="Mgg-G3-brc"/>
+                        <outlet property="pvUnidadDosis" destination="DvT-vw-TDe" id="ySy-vu-hy7"/>
+                        <outlet property="tbHoras" destination="eZ7-TB-YH9" id="Jk5-bb-BRf"/>
+                        <outlet property="tfNumeroDosis" destination="8Ou-HB-Bwe" id="Cxi-dX-Wz9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lDl-Vr-4t7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4700,6 +4802,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="OlL-e7-2Lu"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -4730,6 +4833,8 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
         <segue reference="uZU-Cl-czo"/>
         <segue reference="69Z-1O-Mqp"/>
         <segue reference="2kP-8g-GXn"/>
+        <segue reference="X5l-Fn-HpB"/>
+        <segue reference="WmT-Qa-vIq"/>
         <segue reference="Emv-l7-gy3"/>
         <segue reference="Dn1-xR-vUU"/>
         <segue reference="JUP-5e-3nS"/>

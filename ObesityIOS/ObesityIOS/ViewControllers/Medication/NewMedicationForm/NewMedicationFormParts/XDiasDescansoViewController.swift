@@ -8,11 +8,55 @@
 
 import UIKit
 
-class XDiasDescansoViewController: UIViewController {
-
+class XDiasDescansoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+    
+    @IBOutlet weak var pvDiasActivos: UIPickerView!
+    @IBOutlet weak var pvDiasDescanso: UIPickerView!
+    @IBOutlet weak var pvUnidadDosis: UIPickerView!
+    @IBOutlet weak var btnAnadirHora: UIButton!
+    @IBOutlet weak var tvHoras: UITableView!
+    
+    let diasActivos = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
+    
+    let diasDescanso = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
+    
+    let unidadDosis = ["Pastilla/s", "Gota/s", "Ampolla/s", "Aplicación/es", "Mililitro/s", "Gramo/s", "Supositorio/s", "Pieza/s", "Unidad/s", "Miligramo/s", "Cápsula/s", "Inhalación/es"]
+    
     override func viewDidLoad() {
+        pvDiasActivos.dataSource = self
+        pvDiasActivos.delegate = self
+        pvDiasDescanso.dataSource = self
+        pvDiasDescanso.delegate = self
+        pvUnidadDosis.dataSource = self
+        pvUnidadDosis.delegate = self
         super.viewDidLoad()
+        
+        tvHoras.isHidden = true
 
+    }
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1 {
+            return diasActivos.count
+        } else if pickerView.tag == 2 {
+            return diasDescanso.count
+        } else {
+            return unidadDosis.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 1 {
+            return diasActivos[row]
+        } else if pickerView.tag == 2{
+            return diasDescanso[row]
+        } else {
+           return unidadDosis[row]
+        }
     }
 
 }

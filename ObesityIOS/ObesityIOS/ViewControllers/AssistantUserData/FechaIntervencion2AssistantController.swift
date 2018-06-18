@@ -68,6 +68,7 @@ class FechaIntervencion2AssistantController: UIViewController {
     
     @IBAction func actionBtnCancelarFecha(_ sender: Any) {
         isSelectedFecha = false
+        
         btnCancelarFecha.isHidden = true
         btnSeleccionarFecha.isHidden = false
         dpFechaIntervencion.isHidden = true

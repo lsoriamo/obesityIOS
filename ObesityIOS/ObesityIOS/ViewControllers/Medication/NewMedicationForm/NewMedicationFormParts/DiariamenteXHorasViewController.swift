@@ -8,28 +8,44 @@
 
 import UIKit
 
-class DiariamenteXHorasViewController: UIViewController {
+class DiariamenteXHorasViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 
+    @IBOutlet weak var dpPrimeraToma: UIDatePicker!
+    @IBOutlet weak var pvCadaXHoras: UIPickerView!
+    @IBOutlet weak var pvUnidadDosis: UIPickerView!
+    @IBOutlet weak var tfNumeroDosis: UITextField!
+    
+    let numeroHoras = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24"]
+    
+    let unidadDosis = ["Pastilla/s", "Gota/s", "Ampolla/s", "Aplicación/es", "Mililitro/s", "Gramo/s", "Supositorio/s", "Pieza/s", "Unidad/s", "Miligramo/s", "Cápsula/s", "Inhalación/es"]
+    
     override func viewDidLoad() {
+        pvUnidadDosis.dataSource = self
+        pvCadaXHoras.delegate = self
+        pvUnidadDosis.dataSource = self
+        pvUnidadDosis.delegate = self
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
     }
-    */
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        if pickerView.tag == 1 {
+            return numeroHoras.count
+        } else {
+            return unidadDosis.count
+        }
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        if pickerView.tag == 1 {
+            return numeroHoras[row]
+        } else {
+            return unidadDosis[row]
+        }
+    }
 
 }
