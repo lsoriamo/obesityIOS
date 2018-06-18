@@ -1278,6 +1278,9 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6v-qA-FKh">
                                 <rect key="frame" x="16" y="409" width="288" height="30"/>
                                 <state key="normal" title="Añadir otra hora"/>
+                                <connections>
+                                    <action selector="actionBtnAnadirHora:" destination="tnp-Yl-rBU" eventType="touchUpInside" id="Dvt-M7-Sky"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="r18-ht-3Wo">
                                 <rect key="frame" x="16" y="447" width="288" height="113"/>
@@ -1528,6 +1531,9 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K19-TV-803">
                                 <rect key="frame" x="16" y="420" width="288" height="30"/>
                                 <state key="normal" title="Añadir otra hora"/>
+                                <connections>
+                                    <action selector="actionBtnAnadirHora:" destination="7If-9g-noI" eventType="touchUpInside" id="OkP-ud-4kM"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LGY-1H-O04">
                                 <rect key="frame" x="16" y="458" width="288" height="102"/>
@@ -1702,6 +1708,9 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I4A-PR-uzE">
                                 <rect key="frame" x="16" y="445" width="288" height="30"/>
                                 <state key="normal" title="Añadir otra hora"/>
+                                <connections>
+                                    <action selector="actionBtnAnadirHora:" destination="rUc-Yj-gHf" eventType="touchUpInside" id="Yne-5X-Hmp"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oKo-qb-60p">
                                 <rect key="frame" x="16" y="483" width="288" height="77"/>
@@ -1966,6 +1975,9 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ASE-Xc-Hnc">
                                 <rect key="frame" x="16" y="409" width="288" height="30"/>
                                 <state key="normal" title="Añadir otra hora"/>
+                                <connections>
+                                    <action selector="actionBtnAnadirHora:" destination="PDE-Na-aKH" eventType="touchUpInside" id="HiD-iy-7wQ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2044,6 +2056,9 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7hz-VG-V9h">
                                 <rect key="frame" x="16" y="188.5" width="288" height="30"/>
                                 <state key="normal" title="Mas información"/>
+                                <connections>
+                                    <action selector="actionBtnMoreInfo:" destination="XRJ-fu-dkU" eventType="touchUpInside" id="bEV-3A-NVV"/>
+                                </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TbJ-cv-Hht">
                                 <rect key="frame" x="16" y="234.5" width="288" height="273.5"/>
@@ -2129,7 +2144,7 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
                         <outlet property="btnMoreInfo" destination="7hz-VG-V9h" id="yeX-vJ-ciY"/>
                         <outlet property="lbInfoMedication" destination="T21-Up-liQ" id="DK1-me-IVb"/>
                         <outlet property="tvMedication" destination="TbJ-cv-Hht" id="3IF-0z-Vnb"/>
-                        <segue destination="MAT-bd-lzf" kind="show" id="2ip-UU-WMp"/>
+                        <segue destination="MAT-bd-lzf" kind="show" identifier="toMoreInfoMedicacionSegue" id="2ip-UU-WMp"/>
                         <segue destination="hIC-39-cqB" kind="show" identifier="toChooseNewMedicationSegue" id="x3x-af-cuz"/>
                     </connections>
                 </viewController>
@@ -4802,7 +4817,6 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
         <image name="user_avatar.png" width="512" height="512"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="OlL-e7-2Lu"/>
         <segue reference="zoG-5v-qod"/>
         <segue reference="ryn-Dt-wGt"/>
         <segue reference="3Sh-RJ-Xnx"/>
@@ -4833,10 +4847,10 @@ Cuando accedes a la sección de medicación verás todos los fármacos que está
         <segue reference="uZU-Cl-czo"/>
         <segue reference="69Z-1O-Mqp"/>
         <segue reference="2kP-8g-GXn"/>
-        <segue reference="X5l-Fn-HpB"/>
-        <segue reference="WmT-Qa-vIq"/>
+        <segue reference="STl-d0-BFU"/>
+        <segue reference="x3x-af-cuz"/>
         <segue reference="Emv-l7-gy3"/>
-        <segue reference="Dn1-xR-vUU"/>
+        <segue reference="6Ah-YL-1YF"/>
         <segue reference="JUP-5e-3nS"/>
     </inferredMetricsTieBreakers>
 </document>

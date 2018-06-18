@@ -104,9 +104,7 @@ class NewMedicationFormBaseViewController: UIViewController, UIPickerViewDelegat
         modoAdministracion = eleccion[pvModoAdministracion.selectedRow(inComponent: 0)]
         fechaInicioTimestamp = Int64(dpFechaInicio.date.timeIntervalSince1970 * 1000)
         fechaFinalizacionTimestamp = Int64(dpFechaFinalizacion.date.timeIntervalSince1970 * 1000)
-        
-        print("IS SELECTED FECHA: \(isSelectedFechaFinalizacion)")
-        
+                
         if isSelectedFechaFinalizacion {
             
             if dpFechaFinalizacion.date < dpFechaInicio.date {

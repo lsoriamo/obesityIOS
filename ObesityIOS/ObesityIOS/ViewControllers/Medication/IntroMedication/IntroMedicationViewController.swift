@@ -383,5 +383,8 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         performSegue(withIdentifier: "toChooseNewMedicationSegue", sender: nil)
     }
     
-
+    @IBAction func actionBtnMoreInfo(_ sender: Any) {
+        performSegue(withIdentifier: "toMoreInfoMedicacionSegue", sender: nil)
+    }
+    
 }

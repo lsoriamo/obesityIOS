@@ -50,5 +50,26 @@ class DiariamenteXVecesViewController: UIViewController, UIPickerViewDelegate, U
             return unidadDosis[row]
         }
     }
-
+    @IBAction func actionBtnAnadirHora(_ sender: Any) {
+        
+        let vc = UIViewController()
+        vc.preferredContentSize = CGSize(width: 250,height: 300)
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 250, height: 300))
+        datePicker.datePickerMode = UIDatePickerMode.time
+        vc.view.addSubview(datePicker)
+        let editRadiusAlert = UIAlertController(title: "Elija una hora", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        //TODO ACABAR ESTO
+        let action1 = UIAlertAction(title: "Cancelar", style: .destructive) { (action:UIAlertAction) in
+            
+        }
+        
+        let action2 = UIAlertAction(title: "Aceptar", style: .default) { (action:UIAlertAction) in
+            
+        }
+        editRadiusAlert.setValue(vc, forKey: "contentViewController")
+        editRadiusAlert.addAction(action1)
+        editRadiusAlert.addAction(action2)
+        self.present(editRadiusAlert, animated: true)
+    }
+    
 }

@@ -58,5 +58,19 @@ class XDiasDescansoViewController: UIViewController, UIPickerViewDelegate, UIPic
            return unidadDosis[row]
         }
     }
+    
+    @IBAction func actionBtnAnadirHora(_ sender: Any) {
+        
+        let vc = UIViewController()
+        vc.preferredContentSize = CGSize(width: 250,height: 300)
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: 250, height: 300))
+        datePicker.datePickerMode = UIDatePickerMode.time
+        vc.view.addSubview(datePicker)
+        let editRadiusAlert = UIAlertController(title: "Elija una hora", message: "", preferredStyle: UIAlertControllerStyle.alert)
+        editRadiusAlert.setValue(vc, forKey: "contentViewController")
+        editRadiusAlert.addAction(UIAlertAction(title: "Aceptar", style: .default, handler: nil))
+        editRadiusAlert.addAction(UIAlertAction(title: "Cancelar", style: .cancel, handler: nil))
+        self.present(editRadiusAlert, animated: true)
+    }
 
 }
