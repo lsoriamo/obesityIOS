@@ -53,10 +53,6 @@ class IntroMedicationViewController: UIViewController, UITableViewDelegate, UITa
         
         var parts:[String] = self.medicaciones[indexPath.row].dosage.components(separatedBy: ":::")
         
-        print("DOSAGE: ", self.medicaciones[indexPath.row].dosage)
-        
-        print("Cantidad: \(parts[0]), tipo \(parts[1])")
-        
         let cantidadDosis:String = parts[0]
         let tipoDosis:String = parts[1]
         

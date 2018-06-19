@@ -24,6 +24,11 @@
 		74178BDE207CAFC700E0BAC3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BDC207CAFC700E0BAC3 /* UserData.swift */; };
 		74178BDF207CAFC700E0BAC3 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74178BDC207CAFC700E0BAC3 /* UserData.swift */; };
 		741DE0DF207DF79400F0EFB9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 741DE0DD207DF79400F0EFB9 /* Main.storyboard */; };
+		74217B1920D8F389001E34CB /* ListItemDiariamenteXVecesViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74217B1820D8F389001E34CB /* ListItemDiariamenteXVecesViewCell.swift */; };
+		74217B1B20D8F39D001E34CB /* ListItemDiariamenteXHorasViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74217B1A20D8F39D001E34CB /* ListItemDiariamenteXHorasViewCell.swift */; };
+		74217B1D20D8F3B6001E34CB /* ListItemCadaXDiasViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74217B1C20D8F3B6001E34CB /* ListItemCadaXDiasViewCell.swift */; };
+		74217B1F20D8F3D4001E34CB /* ListItemDiasDeLaSemanaViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74217B1E20D8F3D4001E34CB /* ListItemDiasDeLaSemanaViewCell.swift */; };
+		74217B2120D8F3F0001E34CB /* ListItemXDiasDescansoViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74217B2020D8F3F0001E34CB /* ListItemXDiasDescansoViewCell.swift */; };
 		7421C0EF207B551D0026CCE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421C0EE207B551D0026CCE2 /* AppDelegate.swift */; };
 		7421C0F1207B551D0026CCE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421C0F0207B551D0026CCE2 /* ViewController.swift */; };
 		7421C0F7207B551D0026CCE2 /* ObesityIOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7421C0F5207B551D0026CCE2 /* ObesityIOS.xcdatamodeld */; };
@@ -128,6 +133,11 @@
 		74178BD8207CAFB000E0BAC3 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		74178BDC207CAFC700E0BAC3 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		741DE0DE207DF79400F0EFB9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		74217B1820D8F389001E34CB /* ListItemDiariamenteXVecesViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemDiariamenteXVecesViewCell.swift; sourceTree = "<group>"; };
+		74217B1A20D8F39D001E34CB /* ListItemDiariamenteXHorasViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemDiariamenteXHorasViewCell.swift; sourceTree = "<group>"; };
+		74217B1C20D8F3B6001E34CB /* ListItemCadaXDiasViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCadaXDiasViewCell.swift; sourceTree = "<group>"; };
+		74217B1E20D8F3D4001E34CB /* ListItemDiasDeLaSemanaViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemDiasDeLaSemanaViewCell.swift; sourceTree = "<group>"; };
+		74217B2020D8F3F0001E34CB /* ListItemXDiasDescansoViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemXDiasDescansoViewCell.swift; sourceTree = "<group>"; };
 		7421C0EB207B551D0026CCE2 /* ObesityIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ObesityIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7421C0EE207B551D0026CCE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7421C0F0207B551D0026CCE2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -329,6 +339,51 @@
 			path = images;
 			sourceTree = "<group>";
 		};
+		74217B1320D8F2D8001E34CB /* DiariamenteXVeces */ = {
+			isa = PBXGroup;
+			children = (
+				742B60A120C9156C008E4849 /* DiariamenteXVecesViewController.swift */,
+				74217B1820D8F389001E34CB /* ListItemDiariamenteXVecesViewCell.swift */,
+			);
+			path = DiariamenteXVeces;
+			sourceTree = "<group>";
+		};
+		74217B1420D8F2FF001E34CB /* DiariamenteXHoras */ = {
+			isa = PBXGroup;
+			children = (
+				742B60A320C91583008E4849 /* DiariamenteXHorasViewController.swift */,
+				74217B1A20D8F39D001E34CB /* ListItemDiariamenteXHorasViewCell.swift */,
+			);
+			path = DiariamenteXHoras;
+			sourceTree = "<group>";
+		};
+		74217B1520D8F311001E34CB /* CadaXDias */ = {
+			isa = PBXGroup;
+			children = (
+				742B60A520C91590008E4849 /* CadaXDiasViewController.swift */,
+				74217B1C20D8F3B6001E34CB /* ListItemCadaXDiasViewCell.swift */,
+			);
+			path = CadaXDias;
+			sourceTree = "<group>";
+		};
+		74217B1620D8F31F001E34CB /* DiasDeLaSemana */ = {
+			isa = PBXGroup;
+			children = (
+				742B60A820C915B5008E4849 /* DiasDeLaSemanaViewController.swift */,
+				74217B1E20D8F3D4001E34CB /* ListItemDiasDeLaSemanaViewCell.swift */,
+			);
+			path = DiasDeLaSemana;
+			sourceTree = "<group>";
+		};
+		74217B1720D8F32E001E34CB /* XDiasDescanso */ = {
+			isa = PBXGroup;
+			children = (
+				742B60AA20C915CB008E4849 /* XDiasDescansoViewController.swift */,
+				74217B2020D8F3F0001E34CB /* ListItemXDiasDescansoViewCell.swift */,
+			);
+			path = XDiasDescanso;
+			sourceTree = "<group>";
+		};
 		7421C0E2207B551D0026CCE2 = {
 			isa = PBXGroup;
 			children = (
@@ -416,11 +471,11 @@
 		742B60A020C91281008E4849 /* NewMedicationFormParts */ = {
 			isa = PBXGroup;
 			children = (
-				742B60A120C9156C008E4849 /* DiariamenteXVecesViewController.swift */,
-				742B60A320C91583008E4849 /* DiariamenteXHorasViewController.swift */,
-				742B60A520C91590008E4849 /* CadaXDiasViewController.swift */,
-				742B60A820C915B5008E4849 /* DiasDeLaSemanaViewController.swift */,
-				742B60AA20C915CB008E4849 /* XDiasDescansoViewController.swift */,
+				74217B1320D8F2D8001E34CB /* DiariamenteXVeces */,
+				74217B1420D8F2FF001E34CB /* DiariamenteXHoras */,
+				74217B1520D8F311001E34CB /* CadaXDias */,
+				74217B1620D8F31F001E34CB /* DiasDeLaSemana */,
+				74217B1720D8F32E001E34CB /* XDiasDescanso */,
 			);
 			path = NewMedicationFormParts;
 			sourceTree = "<group>";
@@ -832,6 +887,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74217B1B20D8F39D001E34CB /* ListItemDiariamenteXHorasViewCell.swift in Sources */,
 				742E2DFA20C6751200486803 /* MoreInfoMedicationViewController.swift in Sources */,
 				7448F74E208E266B00B57340 /* ProfesionAssistantController.swift in Sources */,
 				748A96352091CFDE00364DCE /* FumadorAssistantController.swift in Sources */,
@@ -845,6 +901,7 @@
 				742B60A920C915B5008E4849 /* DiasDeLaSemanaViewController.swift in Sources */,
 				742E2DF820C674FA00486803 /* IntroMedicationViewController.swift in Sources */,
 				748A962F2091CD8600364DCE /* HigadoAssistantController.swift in Sources */,
+				74217B2120D8F3F0001E34CB /* ListItemXDiasDescansoViewCell.swift in Sources */,
 				7416823920A0376A00870B76 /* FechaIntervencion2AssistantController.swift in Sources */,
 				742B60B020C91A95008E4849 /* MedicationSideEffect.swift in Sources */,
 				7448F748208E25D600B57340 /* NombreApellidosAssistantController.swift in Sources */,
@@ -853,6 +910,8 @@
 				740FE11520B6C9F500E216D6 /* NewMedicalTestViewController.swift in Sources */,
 				74A329EC20BECC29002EAB35 /* MedicalTest.swift in Sources */,
 				74CD14F5208F295300ECC99D /* PesoAssistantController.swift in Sources */,
+				74217B1920D8F389001E34CB /* ListItemDiariamenteXVecesViewCell.swift in Sources */,
+				74217B1D20D8F3B6001E34CB /* ListItemCadaXDiasViewCell.swift in Sources */,
 				7474B04220AEBC0C00EB6A6A /* CalendarAppointmentController.swift in Sources */,
 				748A963D2091D18D00364DCE /* DeporteAssistantController.swift in Sources */,
 				748A96452091F6E100364DCE /* EquipoMedicoAssistantController.swift in Sources */,
@@ -890,6 +949,7 @@
 				74CD14F3208F22C400ECC99D /* AlturaAssistantController.swift in Sources */,
 				740FE11120B6C57300E216D6 /* IntroMedicalTestViewController.swift in Sources */,
 				74C71FB8209091B2006CD470 /* TrastornoSuenyoAssistantController.swift in Sources */,
+				74217B1F20D8F3D4001E34CB /* ListItemDiasDeLaSemanaViewCell.swift in Sources */,
 				74178BDD207CAFC700E0BAC3 /* UserData.swift in Sources */,
 				742BCCE5208F714000677A92 /* ImagenPerfilAssistantController.swift in Sources */,
 				7421C0F7207B551D0026CCE2 /* ObesityIOS.xcdatamodeld in Sources */,
